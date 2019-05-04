@@ -1,0 +1,21 @@
+uuid: cf67c22b-0072-4146-be91-03079048a8c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - text
+id: paragraph.attachments.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: attachments
+label: Text
+description: 'Component content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
