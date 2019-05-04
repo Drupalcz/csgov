@@ -1,0 +1,54 @@
+uuid: e97f989c-e4bc-49c8-8c92-2e3527191bb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_layout_classes
+field_name: field_layout_classes
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: list-layout--full-width
+      label: 'Full width'
+    -
+      value: list-layout--equal
+      label: 'Equal (dynamic up to 6 item)'
+    -
+      value: list-layout--halves6
+      label: Halves
+    -
+      value: list-layout--thirds
+      label: Thirds
+    -
+      value: list-layout--quarters
+      label: Quarters
+    -
+      value: list-layout--fifths
+      label: Fifths
+    -
+      value: list-layout--sixths
+      label: Sixths
+    -
+      value: list-layout--one-two
+      label: 'One to two'
+    -
+      value: list-layout--one-three
+      label: 'Three to one'
+    -
+      value: list-layout--two-one
+      label: 'Two to one'
+    -
+      value: list-layout--one-two-one
+      label: 'One to two to one'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
