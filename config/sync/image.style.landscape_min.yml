@@ -1,0 +1,17 @@
+uuid: 2c5182db-d1a0-4ea8-b9e3-10c93e9981b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: landscape_min
+label: 'Landscape min'
+effects:
+  c4383f92-98b7-432b-9421-838d2dad8561:
+    uuid: c4383f92-98b7-432b-9421-838d2dad8561
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      crop_type: focal_point

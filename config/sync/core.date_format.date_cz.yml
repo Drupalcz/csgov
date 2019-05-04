@@ -1,0 +1,8 @@
+uuid: b6f674df-274c-46d8-9d73-8b0dc57706c0
+langcode: en
+status: true
+dependencies: {  }
+id: date_cz
+label: 'Czech date'
+locked: false
+pattern: 'j. n. Y'

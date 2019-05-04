@@ -1,0 +1,8 @@
+uuid: 77a5bd76-65b3-47b6-98a5-4dc66fa6e337
+langcode: en
+status: true
+dependencies: {  }
+id: date_time_cz
+label: 'Czech Date time'
+locked: false
+pattern: 'j. n. Y – H:i'

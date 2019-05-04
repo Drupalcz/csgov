@@ -1,0 +1,17 @@
+uuid: d50f5aba-dfff-4f34-a22a-e843915fff62
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: landscape_max
+label: 'Landscape max'
+effects:
+  560f9011-5b35-4e1c-83ab-16447d554a47:
+    uuid: 560f9011-5b35-4e1c-83ab-16447d554a47
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 800
+      crop_type: focal_point

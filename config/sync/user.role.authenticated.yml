@@ -1,0 +1,14 @@
+uuid: e8a880e7-1adb-49dd-a985-2b4f6f020ad9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'opt-in or out of google analytics tracking'
+  - 'view media'
