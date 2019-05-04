@@ -1,0 +1,33 @@
+uuid: dfe83b60-bef7-4334-88d5-4b6a1315efc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color_classes
+field_name: field_color_classes
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: color--primary
+      label: Primary
+    -
+      value: color--secondary
+      label: Secondary
+    -
+      value: color--light
+      label: Light
+    -
+      value: color--dark
+      label: Dark
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

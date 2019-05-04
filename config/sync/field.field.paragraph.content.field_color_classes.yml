@@ -1,0 +1,21 @@
+uuid: 798ad52e-d0e7-4bbd-abe3-64515a615c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_classes
+    - paragraphs.paragraphs_type.content
+  module:
+    - options
+id: paragraph.content.field_color_classes
+field_name: field_color_classes
+entity_type: paragraph
+bundle: content
+label: 'Color pallete'
+description: 'Change color of the component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
