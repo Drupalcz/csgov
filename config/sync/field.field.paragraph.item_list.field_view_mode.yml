@@ -1,0 +1,24 @@
+uuid: 513a8b0c-887a-49a4-8b27-94e66ecd0e00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_mode
+    - paragraphs.paragraphs_type.item_list
+  module:
+    - entity_reference_display
+id: paragraph.item_list.field_view_mode
+field_name: field_view_mode
+entity_type: paragraph
+bundle: item_list
+label: 'View mode'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    teaser: teaser
+  negate: 1
+field_type: entity_reference_display
