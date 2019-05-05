@@ -2,6 +2,8 @@ uuid: d4633de6-25c1-414e-8ea9-395c80cb3e54
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
   theme:
     - czgov_theme
 _core:
@@ -9,7 +11,7 @@ _core:
 id: czgov_theme_page_title
 theme: czgov_theme
 region: content
-weight: -30
+weight: -1
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,11 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
