@@ -1,8 +1,9 @@
-uuid: 66300df5-74d8-4bf9-b224-42cabbc8ccc2
+uuid: d1c30157-60cc-4869-a36a-7775a9c2c99b
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.field_body
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
@@ -13,12 +14,17 @@ dependencies:
     - node.type.page
   module:
     - entity_reference_revisions
+    - layout_builder
     - text
     - user
-id: node.page.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   field_body:
     weight: 101
@@ -81,7 +87,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

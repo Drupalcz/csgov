@@ -1,0 +1,22 @@
+uuid: 6dc18d8e-c228-4370-93f4-94650f47fa63
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - czgov_theme
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: czgov_theme_messages
+theme: czgov_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

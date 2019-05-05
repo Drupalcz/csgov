@@ -1,8 +1,9 @@
-uuid: 66300df5-74d8-4bf9-b224-42cabbc8ccc2
+uuid: 73fa1ab9-f86b-4035-b0c7-7572182f65b5
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.title
     - field.field.node.page.field_body
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
@@ -13,12 +14,46 @@ dependencies:
     - node.type.page
   module:
     - entity_reference_revisions
+    - layout_builder
+    - layout_library
     - text
     - user
-id: node.page.default
+  theme:
+    - czgov_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: title
+        layout_settings: {  }
+        components:
+          9c463c55-c170-4fd2-98bc-de7c70d9476a:
+            uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
+            region: title
+            configuration:
+              id: 'field_block:node:page:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: node.page.title
 targetEntityType: node
 bundle: page
-mode: default
+mode: title
 content:
   field_body:
     weight: 101

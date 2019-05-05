@@ -1,9 +1,9 @@
-uuid: 733f00ef-e124-4982-a979-a3c9ca818223
+uuid: 9096a5c6-7557-4990-bd32-4b657e434d29
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_small
     - field.field.node.page.field_body
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
@@ -13,8 +13,10 @@ dependencies:
     - field.field.node.page.field_thumbnail
     - node.type.page
   module:
+    - entity_reference_revisions
     - layout_builder
     - layout_library
+    - text
     - user
   theme:
     - czgov_theme
@@ -24,11 +26,11 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: teaser
+        layout_id: teaser_small
         layout_settings: {  }
         components:
-          29df2456-1107-4ace-8637-94799a42d189:
-            uuid: 29df2456-1107-4ace-8637-94799a42d189
+          b9133a8a-8446-4a9b-a7ba-f0edbe415766:
+            uuid: b9133a8a-8446-4a9b-a7ba-f0edbe415766
             region: title
             configuration:
               id: 'field_block:node:page:title'
@@ -45,8 +47,8 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          5a16f364-fae0-4855-bd95-bd51d561881a:
-            uuid: 5a16f364-fae0-4855-bd95-bd51d561881a
+          60d023bf-dfb4-4dd4-af2a-92020a679f58:
+            uuid: 60d023bf-dfb4-4dd4-af2a-92020a679f58
             region: image
             configuration:
               id: 'field_block:node:page:field_thumbnail'
@@ -63,8 +65,8 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          ce606e96-e974-4bde-9a66-a4a1305b2c4a:
-            uuid: ce606e96-e974-4bde-9a66-a4a1305b2c4a
+          4de3addd-43ea-400f-aaad-f80301a1468d:
+            uuid: 4de3addd-43ea-400f-aaad-f80301a1468d
             region: summary
             configuration:
               id: 'field_block:node:page:field_teaser'
@@ -75,7 +77,7 @@ third_party_settings:
                 label: hidden
                 type: text_trimmed
                 settings:
-                  trim_length: 250
+                  trim_length: 160
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -84,21 +86,73 @@ third_party_settings:
         third_party_settings: {  }
   layout_library:
     enable: false
-id: node.page.teaser
+id: node.page.teaser_small
 targetEntityType: node
 bundle: page
-mode: teaser
+mode: teaser_small
 content:
+  field_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_components:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_keywords:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_search_exclude:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_teaser:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_thumbnail:
+    type: entity_reference_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  field_body: true
-  field_components: true
-  field_hero_components: true
-  field_keywords: true
-  field_search_exclude: true
-  field_teaser: true
-  field_thumbnail: true
+hidden: {  }

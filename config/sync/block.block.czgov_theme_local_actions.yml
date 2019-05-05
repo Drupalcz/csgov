@@ -1,0 +1,20 @@
+uuid: e758361a-133e-491e-b5b5-b1ed4fde29b5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - czgov_theme
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: czgov_theme_local_actions
+theme: czgov_theme
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
