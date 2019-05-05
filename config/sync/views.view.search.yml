@@ -334,6 +334,36 @@ display:
         metatag_display_extender: {  }
         simple_sitemap_display_extender: {  }
       block_hide_empty: false
+      cache:
+        type: none
+      defaults:
+        cache: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+      tags:
+        - 'config:field.storage.node.field_keywords'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+        simple_sitemap_display_extender:
+          index: false
+          variant: null
+          priority: '0.5'
+          changefreq: ''
+          arguments: {  }
+          max_links: 100
+      exposed_block: true
+      path: search
     cache_metadata:
       max-age: -1
       contexts:
