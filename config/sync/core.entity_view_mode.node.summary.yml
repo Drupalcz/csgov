@@ -1,0 +1,10 @@
+uuid: 9cdaa762-f22d-4396-a58f-1b6bce9370b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.summary
+label: Summary
+targetEntityType: node
+cache: true
