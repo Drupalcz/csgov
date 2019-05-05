@@ -1,0 +1,10 @@
+uuid: 32795ea6-9795-4e9b-9cea-e791bc921030
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.tile
+label: Tile
+targetEntityType: paragraph
+cache: true

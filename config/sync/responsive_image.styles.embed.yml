@@ -1,0 +1,45 @@
+uuid: 28a2621f-36ba-4e55-b249-857bd3fc3fd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.embed
+    - image.style.embed_max
+    - image.style.embed_min
+  theme:
+    - czgov_theme
+id: embed
+label: Embed
+image_style_mappings:
+  -
+    breakpoint_id: czgov_theme.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed_max
+  -
+    breakpoint_id: czgov_theme.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed_max
+  -
+    breakpoint_id: czgov_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed
+  -
+    breakpoint_id: czgov_theme.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed
+  -
+    breakpoint_id: czgov_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed_min
+  -
+    breakpoint_id: czgov_theme.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed
+breakpoint_group: czgov_theme
+fallback_image_style: embed_min

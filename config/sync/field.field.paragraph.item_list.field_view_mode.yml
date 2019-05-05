@@ -19,6 +19,12 @@ default_value: {  }
 default_value_callback: ''
 settings:
   exclude:
+    card: card
+    card_detail: card_detail
+    summary: summary
     teaser: teaser
+    teaser_small: teaser_small
+    tile: tile
+    title: title
   negate: 1
 field_type: entity_reference_display

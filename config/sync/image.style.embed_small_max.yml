@@ -1,0 +1,15 @@
+uuid: dddbd6ad-77f5-473d-99a3-95263f8243f5
+langcode: en
+status: true
+dependencies: {  }
+name: embed_small_max
+label: 'Embed small max'
+effects:
+  27beb4fa-7bd2-468b-989f-c11853644147:
+    uuid: 27beb4fa-7bd2-468b-989f-c11853644147
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false
