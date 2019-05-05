@@ -1,0 +1,90 @@
+uuid: 70642867-8809-4fd0-8fb7-46fa63b6a048
+langcode: en
+status: true
+dependencies: {  }
+id: page_edgy
+label: 'Page – edgy'
+targetEntityType: node
+targetBundle: page
+layout:
+  -
+    layout_id: one_column_edgy
+    layout_settings: {  }
+    components:
+      fb87bf32-ee09-46a0-99b6-adac081de12b:
+        uuid: fb87bf32-ee09-46a0-99b6-adac081de12b
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_hero_components'
+          label: 'Hero components'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_revisions_entity_view
+            settings:
+              view_mode: default
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
+    layout_id: one_column_edgy
+    layout_settings: {  }
+    components:
+      4751a41f-17b1-4119-b062-a91deb77dc21:
+        uuid: 4751a41f-17b1-4119-b062-a91deb77dc21
+        region: content
+        configuration:
+          id: 'field_block:node:page:title'
+          label: Title
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: string
+            settings:
+              link_to_entity: false
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+      bea59786-a90f-42d2-a174-7fac53b4a899:
+        uuid: bea59786-a90f-42d2-a174-7fac53b4a899
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_body'
+          label: Body
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: text_default
+            settings: {  }
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 1
+      d7d8cfbf-4204-4f9f-a8cf-396ea8836710:
+        uuid: d7d8cfbf-4204-4f9f-a8cf-396ea8836710
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_components'
+          label: Components
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_revisions_entity_view
+            settings:
+              view_mode: default
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 2
+    third_party_settings: {  }

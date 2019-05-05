@@ -1,94 +1,92 @@
 ####
-# Page layouts
+# Section layouts
 ####
-page_12_12:
-  label: Stacked
-  category: "CZGov: Page"
-  template: templates/page_layouts/page_12_12
-  icon: templates/page_layouts/images/page_12_12.png
+one_column:
+  label: One Column
+  category: "CZGov: Sections – One Column"
+  template: templates/section_layouts/one_column_standard
+  icon: templates/section_layouts/images/one_column.png
   regions:
-    header:
-      label: Header
-    content_top:
-      label: Content top
+    content:
+      label: Content
+one_column_edgy:
+  label: One Column Edgy
+  category: "CZGov: Sections – One Column"
+  template: templates/section_layouts/one_column_edgy
+  icon: templates/section_layouts/images/one_column_edgy.png
+  regions:
+    content:
+      label: Content
+two_columns_4_8:
+  label: Two Columns 48
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_4_8
+  icon: templates/section_layouts/images/two_columns_4_8.png
+  regions:
     content:
       label: Content
     sidebar:
       label: Sidebar
-    content_bottom:
-      label: Content bottom
-    footer:
-      label: Footer
-page_edgy:
-  label: Edge to edge
-  category: "CZGov: Page"
-  template: templates/page_layouts/page_edgy
-  icon: templates/page_layouts/images/page_edgy.png
+two_columns_8_4:
+  label: Two Columns 84
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_8_4
+  icon: templates/section_layouts/images/two_columns_8_4.png
   regions:
-    header:
-      label: Header
-    content_top:
-      label: Content top
-    content:
-      label: Content
-    content_bottom:
-      label: Content bottom
-    footer:
-      label: Footer
-page_6_6:
-  label: Two columns (1:1)
-  category: "CZGov: Page"
-  template: templates/page_layouts/page_6_6
-  icon: templates/page_layouts/images/page_6_6.png
-  regions:
-    header:
-      label: Header
-    content_top:
-      label: Content top
     content:
       label: Content
     sidebar:
       label: Sidebar
-    content_bottom:
-      label: Content bottom
-    footer:
-      label: Footer
-page_8_4:
-  label: Sidebar Right (2:1)
-  category: "CZGov: Page"
-  template: templates/page_layouts/page_8_4
-  icon: templates/page_layouts/images/page_8_4.png
+two_columns_3_9:
+  label: Two Columns 39
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_3_9
+  icon: templates/section_layouts/images/two_columns_3_9.png
   regions:
-    header:
-      label: Header
-    content_top:
-      label: Content top
     content:
       label: Content
     sidebar:
       label: Sidebar
-    content_bottom:
-      label: Content bottom
-    footer:
-      label: Footer
-page_4_8:
-  label: Sidebar Left (1:2)
-  category: "CZGov: Page"
-  template: templates/page_layouts/page_4_8
-  icon: templates/page_layouts/images/page_4_8.png
+two_columns_9_3:
+  label: Two Columns 93
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_9_3
+  icon: templates/section_layouts/images/two_columns_9_3.png
   regions:
-    header:
-      label: Header
-    content_top:
-      label: Content top
     content:
       label: Content
     sidebar:
       label: Sidebar
-    content_bottom:
-      label: Content bottom
-    footer:
-      label: Footer
+two_columns_5_7:
+  label: Two Columns 57
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_5_7
+  icon: templates/section_layouts/images/two_columns_5_7.png
+  regions:
+    content:
+      label: Content
+    sidebar:
+      label: Sidebar
+two_columns_7_5:
+  label: Two Columns 75
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_7_5
+  icon: templates/section_layouts/images/two_columns_7_5.png
+  regions:
+    content:
+      label: Content
+    sidebar:
+      label: Sidebar
+two_columns_6_6:
+  label: Two Columns 66
+  category: "CZGov: Sections – Two Columns"
+  template: templates/section_layouts/two_columns_6_6
+  icon: templates/section_layouts/images/two_columns_6_6.png
+  regions:
+    content:
+      label: Content
+    sidebar:
+      label: Sidebar
 ####
 # Viewmode layouts
 ####

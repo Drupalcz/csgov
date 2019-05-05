@@ -1,0 +1,19 @@
+{#
+/**
+* Base section template for extending.
+* Not available via Drupal UI.
+*/
+#}
+{%
+  set classes = [
+  'section-layout__one-column',
+]
+%}
+
+{% if content.content|render|striptags|trim %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="section-layout__content">
+      {{ content.content }}
+    </div>
+  </section>
+{% endif %}

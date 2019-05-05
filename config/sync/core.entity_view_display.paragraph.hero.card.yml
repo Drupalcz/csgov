@@ -1,6 +1,6 @@
 uuid: 1a8b833c-5287-4fea-830b-63a9ee228f6e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.card

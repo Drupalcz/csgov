@@ -1,6 +1,6 @@
 uuid: 82fda216-2633-4202-968a-408fdddcc974
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.teaser
