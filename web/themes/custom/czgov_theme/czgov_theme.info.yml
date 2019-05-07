@@ -2,7 +2,7 @@ name: CZGov Theme
 type: theme
 description: 'Starter theme for CZGov Distribution.'
 core: 8.x
-base theme: bartik
+base theme: classy
 
 libraries:
   - czgov_theme/global-styling

@@ -1,0 +1,15 @@
+// If selector is wider than the screensize we are calling.
+@mixin bp($screen-size) {
+  // and if our map that we named $breakpoints includes values (we called them $screen-size)
+  @if map-has-key($breakpoints, $screen-size) {
+    // then write out a nested Media Query that will target that value as our min-width
+    @media (min-width: map-get($breakpoints, $screen-size)) {
+      // write CSS within this mixin that would apply to only this breakpoint or above
+      @content;
+    }
+    // if the screen-size we are requesting doesn't exist, then tell me when it is compiled
+  } @else {
+    // Debugging
+    @warn ''#{$screen-size}' has not been declared as a breakpoint.';
+  }
+}

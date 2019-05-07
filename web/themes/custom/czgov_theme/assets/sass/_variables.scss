@@ -1,0 +1,81 @@
+// Colors
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+// Grays – made as solid colors.
+$gray-05: lighten($black, 95%);
+$gray-1: lighten($black, 90%);;
+$gray-2: lighten($black, 80%);;
+$gray-3: lighten($black, 70%);
+$gray-4: lighten($black, 60%);
+$gray-5: lighten($black, 50%);
+$gray-6: lighten($black, 40%);
+$gray-7: lighten($black, 30%);
+$gray-8: lighten($black, 20%);
+$gray-9: lighten($black, 10%);
+$gray-10: $black;
+
+// Whites – made as transparent colors.
+$white-05: rgba(255, 255, 255, .05);
+$white-1: rgba(255, 255, 255, .1);
+$white-2: rgba(255, 255, 255, .2);
+$white-3: rgba(255, 255, 255, .3);
+$white-4: rgba(255, 255, 255, .4);
+$white-5: rgba(255, 255, 255, .5);
+$white-6: rgba(255, 255, 255, .6);
+$white-7: rgba(255, 255, 255, .7);
+$white-8: rgba(255, 255, 255, .8);
+$white-9: rgba(255, 255, 255, .9);
+$white-10: $white;
+
+// Project colors
+$color-primary:         #CC0000;
+$color-secondary:       #969696;
+$color-dark:            #1F1F1F;
+$color-light:           #333333;
+$text-color:            $color-dark;
+
+// Standard colors
+$color-success:         #5cb85c;
+$color-info:            #5bc0de;
+$color-warning:         #f0ad4e;
+$color-danger:          #d9534f;
+
+// Text color
+$color-text-dark: $gray-9;
+$color-text-light: $color-primary;
+$text-shadow:  rgba(0,0,0,0.2);
+
+// Link color
+$link-color:     $color-primary;
+
+// Layout dimensions.
+//
+// Small screen side padding
+$site-padding: 2rem;
+// Max width for large monitor.
+$max-width: 120rem;
+$content-layout-padding: 4rem;
+
+// Fonts
+//
+// Font sizes
+$base-font-size: 1.8rem;
+$font-size-large: $base-font-size * 1.35;
+$font-size-section: $base-font-size * 3;
+$font-size-small: $base-font-size * .8;
+
+// Font family
+$font-family-base: sans-serif;
+$font-family-heading: sans-serif;
+$font-awesome: 'Font Awesome 5 Free';
+
+// Media Queries
+// Used in mixin/_breakpoints.scss
+// 1. Name and define our breakpoints. Name the map something sensical
+// 2. Write a comma separated list of key: value, pairs that we will use later
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  large: 1200px,
+);

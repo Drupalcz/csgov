@@ -1,0 +1,10 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/czgov_theme.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

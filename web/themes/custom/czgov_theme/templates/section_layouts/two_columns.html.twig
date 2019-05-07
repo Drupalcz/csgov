@@ -6,8 +6,10 @@
 #}
 {%
   set classes = [
+  'section-layout',
   'section-layout__two-columns',
   content.sidebar|render|striptags|trim ? 'has-sidebar',
+  'container'
 ]
 %}
 
