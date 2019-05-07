@@ -18,7 +18,7 @@ settings:
       value: list-layout--equal
       label: 'Equal (dynamic up to 6 item)'
     -
-      value: list-layout--halves6
+      value: list-layout--halves
       label: Halves
     -
       value: list-layout--thirds
