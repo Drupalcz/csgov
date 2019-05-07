@@ -8,8 +8,8 @@ _core:
   default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
 id: czgov_theme_local_tasks
 theme: czgov_theme
-region: content
-weight: -2
+region: content_top
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:

@@ -10,7 +10,7 @@ _core:
   default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
 id: czgov_theme_page_title
 theme: czgov_theme
-region: content
+region: layoutless
 weight: -1
 provider: null
 plugin: page_title_block

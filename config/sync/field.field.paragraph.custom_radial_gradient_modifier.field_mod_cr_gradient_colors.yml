@@ -20,5 +20,5 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  opacity: true
+  opacity: 1
 field_type: color_field_type

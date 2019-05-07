@@ -30,6 +30,7 @@ content:
     type: string
     region: content
 hidden:
+  field_attachment: true
   field_body: true
   field_color_classes: true
   field_heading: true

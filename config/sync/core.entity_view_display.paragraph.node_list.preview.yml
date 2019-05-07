@@ -34,5 +34,7 @@ hidden:
   field_body: true
   field_color_classes: true
   field_heading: true
+  field_layout_classes: true
   field_nodes: true
   field_read_more: true
+  field_view_mode: true

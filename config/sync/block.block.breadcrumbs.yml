@@ -8,8 +8,8 @@ dependencies:
     - czgov_theme
 id: breadcrumbs
 theme: czgov_theme
-region: breadcrumb
-weight: 0
+region: layoutless
+weight: -2
 provider: null
 plugin: system_breadcrumb_block
 settings:

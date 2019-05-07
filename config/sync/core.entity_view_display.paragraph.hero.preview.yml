@@ -33,4 +33,5 @@ hidden:
   field_body: true
   field_color_classes: true
   field_heading: true
+  field_modifiers: true
   field_read_more: true

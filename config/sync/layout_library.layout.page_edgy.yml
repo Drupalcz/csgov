@@ -8,7 +8,7 @@ targetEntityType: node
 targetBundle: page
 layout:
   -
-    layout_id: one_column_edgy
+    layout_id: section_layout_one_column_edgy
     layout_settings: {  }
     components:
       fb87bf32-ee09-46a0-99b6-adac081de12b:
@@ -31,7 +31,7 @@ layout:
         weight: 0
     third_party_settings: {  }
   -
-    layout_id: one_column_edgy
+    layout_id: section_layout_one_column_edgy
     layout_settings: {  }
     components:
       4751a41f-17b1-4119-b062-a91deb77dc21:
