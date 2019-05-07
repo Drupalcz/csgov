@@ -14,16 +14,11 @@ dependencies:
     - node.type.page
   module:
     - field_group
-    - field_layout
-    - layout_discovery
     - media_library
     - paragraphs
     - path
     - text
 third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
   field_group:
     group_teaser:
       children:

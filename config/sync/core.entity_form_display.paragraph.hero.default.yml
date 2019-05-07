@@ -6,20 +6,48 @@ dependencies:
     - field.field.paragraph.hero.field_body
     - field.field.paragraph.hero.field_color_classes
     - field.field.paragraph.hero.field_heading
-    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_modifiers
     - field.field.paragraph.hero.field_read_more
     - field.field.paragraph.hero.field_title
     - paragraphs.paragraphs_type.hero
   module:
-    - field_layout
-    - layout_discovery
+    - field_group
     - link
-    - media_library
+    - paragraphs
     - text
 third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+  field_group:
+    group_content:
+      children:
+        - field_heading
+        - field_body
+        - field_read_more
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Content
+      region: content
+    group_presentation:
+      children:
+        - field_color_classes
+        - field_modifiers
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Presentation
+      region: content
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -34,24 +62,36 @@ content:
     type: text_textarea
     region: content
   field_color_classes:
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_heading:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_hero_image:
-    type: media_library_widget
-    weight: 2
+  field_modifiers:
+    type: paragraphs
+    weight: 4
     settings:
-      media_types: {  }
+      title: Modifier
+      title_plural: Modifiers
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: '0'
+        collapse_edit_all: '0'
+        add_above: '0'
     third_party_settings: {  }
     region: content
   field_read_more:

@@ -5,14 +5,8 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_tags
     - media.type.file
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: media.file.media_library
 targetEntityType: media
 bundle: file
@@ -29,6 +23,7 @@ content:
 hidden:
   created: true
   field_media_file: true
+  field_tags: true
   path: true
   status: true
   uid: true

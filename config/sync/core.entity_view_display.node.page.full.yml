@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.layout_selection
     - node.type.page
     - system.menu.main
@@ -25,7 +26,7 @@ dependencies:
     - czgov_theme
 third_party_settings:
   layout_builder:
-    allow_custom: true
+    allow_custom: false
     enabled: true
     sections:
       -
@@ -197,4 +198,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  layout_builder__layout: true
   layout_selection: true

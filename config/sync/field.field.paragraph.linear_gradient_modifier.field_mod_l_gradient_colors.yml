@@ -1,0 +1,30 @@
+uuid: f3fe23fe-64c9-46b6-8491-0215a8d2fac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_l_gradient_colors
+    - paragraphs.paragraphs_type.linear_gradient_modifier
+    - taxonomy.vocabulary.modifiers_color
+_core:
+  default_config_hash: FTLSdy_ulf5WwiFB2_TXcgOO249wMs5H5DEq49aFJlI
+id: paragraph.linear_gradient_modifier.field_mod_l_gradient_colors
+field_name: field_mod_l_gradient_colors
+entity_type: paragraph
+bundle: linear_gradient_modifier
+label: 'Linear Gradient Colors'
+description: 'For gradient use at least two colors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modifiers_color: modifiers_color
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -42,7 +42,6 @@ module:
   facets: 0
   field: 0
   field_group: 0
-  field_layout: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -68,6 +67,25 @@ module:
   metatag_twitter_cards: 0
   metatag_verification: 0
   metatag_views: 0
+  modifiers: 0
+  modifiers_absolute_height: 0
+  modifiers_bg_image: 0
+  modifiers_bg_parallax: 0
+  modifiers_bg_video: 0
+  modifiers_colors: 0
+  modifiers_corners: 0
+  modifiers_custom_colors: 0
+  modifiers_custom_linear_gradient: 0
+  modifiers_custom_radial_gradient: 0
+  modifiers_fonts: 0
+  modifiers_hide: 0
+  modifiers_html_font_size: 0
+  modifiers_image_fx: 0
+  modifiers_linear_gradient: 0
+  modifiers_padding: 0
+  modifiers_radial_gradient: 0
+  modifiers_relative_height: 0
+  modifiers_shadow: 0
   module_filter: 0
   node: 0
   options: 0

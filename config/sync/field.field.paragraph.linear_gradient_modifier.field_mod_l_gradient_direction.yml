@@ -1,0 +1,27 @@
+uuid: e3cd5c7a-d806-45ea-ae1a-d26a334999f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_l_gradient_direction
+    - paragraphs.paragraphs_type.linear_gradient_modifier
+_core:
+  default_config_hash: OmzXgcyoygxkkU1xmIZ81l6TR5pIiHum63NqSq1du9w
+id: paragraph.linear_gradient_modifier.field_mod_l_gradient_direction
+field_name: field_mod_l_gradient_direction
+entity_type: paragraph
+bundle: linear_gradient_modifier
+label: 'Linear Gradient Direction'
+description: 'Set the direction of the gradient. Default is from top to bottom (180°).'
+required: true
+translatable: false
+default_value:
+  -
+    value: !!float 180
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: °
+field_type: decimal
