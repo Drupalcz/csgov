@@ -131,6 +131,12 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
+        "patches": {
+            "drupal/paragraphs": {
+                "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+            }
+        },
+        "enable-patching": true,
         "drupal-scaffold": {
             "initial": {
                 ".editorconfig": "../.editorconfig",
