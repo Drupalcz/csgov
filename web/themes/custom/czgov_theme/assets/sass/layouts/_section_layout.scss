@@ -2,6 +2,13 @@
 .container {
   margin: 0 auto;
   max-width: $max-width;
+
+  @include bp(small) {
+    padding: 0 $site-padding;
+  }
+}
+
+div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
   padding: 0 $site-padding;
 }
 

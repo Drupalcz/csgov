@@ -337,7 +337,12 @@ header {
 
 .container {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 120rem; }
+  @media (min-width: 29.25rem) {
+    .container {
+      padding: 0 2rem; } }
+
+div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
   padding: 0 2rem; }
 
 @media (min-width: 29.25rem) {
@@ -566,10 +571,12 @@ header {
   background: #1a1a1a;
   color: white; }
 
+.color--standard, .color--primary, .color--secondary, .color--light, .color--dark {
+  padding: 2rem; }
+
 .color--primary {
   background: #e9f8ff;
-  color: #02182b;
-  padding: 2rem; }
+  color: #02182b; }
   .color--primary a {
     color: #d7263d; }
     .color--primary a:hover {
@@ -597,8 +604,7 @@ header {
 
 .color--secondary {
   background: #e4d6a7;
-  color: #1c110a;
-  padding: 2rem; }
+  color: #1c110a; }
   .color--secondary a {
     color: #ad1d27; }
     .color--secondary a:hover {
@@ -626,8 +632,7 @@ header {
 
 .color--light {
   background: #e6e6e6;
-  color: #4d4d4d;
-  padding: 2rem; }
+  color: #4d4d4d; }
   .color--light a {
     color: #1a1a1a; }
     .color--light a:hover {
@@ -655,8 +660,7 @@ header {
 
 .color--dark {
   background: #1a1a1a;
-  color: white;
-  padding: 2rem; }
+  color: white; }
   .color--dark a {
     color: rgba(255, 255, 255, 0.7); }
     .color--dark a:hover {
