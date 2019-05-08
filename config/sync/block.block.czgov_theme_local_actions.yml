@@ -8,7 +8,7 @@ _core:
   default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
 id: czgov_theme_local_actions
 theme: czgov_theme
-region: content
+region: admin_area
 weight: -2
 provider: null
 plugin: local_actions_block

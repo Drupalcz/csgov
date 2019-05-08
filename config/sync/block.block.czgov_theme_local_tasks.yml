@@ -9,7 +9,7 @@ _core:
 id: czgov_theme_local_tasks
 theme: czgov_theme
 region: content_top
-weight: -1
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

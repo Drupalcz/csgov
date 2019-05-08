@@ -57,7 +57,7 @@ third_party_settings:
                 label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: square
+                  view_mode: landscape
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
