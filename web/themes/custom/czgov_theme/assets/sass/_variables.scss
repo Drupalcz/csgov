@@ -28,26 +28,44 @@ $white-8: rgba(255, 255, 255, .8);
 $white-9: rgba(255, 255, 255, .9);
 $white-10: $white;
 
-// Project colors
-$color-primary:         #CC0000;
-$color-secondary:       #969696;
-$color-dark:            #1F1F1F;
-$color-light:           #333333;
-$text-color:            $color-dark;
+//
+// Color sections
+//
+// Standard colors
+$color-standard-foreground: $gray-9;
+$color-standard-background: $white;
+$color-standard-action: rgb(27, 89, 215);
+$color-standard-focus: rgb(0, 94, 116);
+
+// Color primary
+$color-primary-foreground: rgba(2, 24, 43, 1);
+$color-primary-background: rgb(233, 248, 255);
+$color-primary-action: rgba(215, 38, 61, 1);
+$color-primary-focus: rgba(68, 143, 163, 1);
+
+// Color secondary
+$color-secondary-foreground: rgba(28, 17, 10, 1);
+$color-secondary-background: rgba(228, 214, 167, 1);
+$color-secondary-action: rgba(173, 29, 39, 1);
+$color-secondary-focus: rgba(80, 162, 167, 1);
+
+// Color light
+$color-light-foreground: $gray-7;
+$color-light-background: $gray-1;
+$color-light-action: $gray-9;
+$color-light-focus: $gray-5;
+
+// Color dark
+$color-dark-foreground: $white;
+$color-dark-background: $gray-9;
+$color-dark-action: $white-7;
+$color-dark-focus: $gray-9;
 
 // Standard colors
 $color-success:         #5cb85c;
 $color-info:            #5bc0de;
 $color-warning:         #f0ad4e;
 $color-danger:          #d9534f;
-
-// Text color
-$color-text-dark: $gray-9;
-$color-text-light: $color-primary;
-$text-shadow:  rgba(0,0,0,0.2);
-
-// Link color
-$link-color:     $color-primary;
 
 // Layout dimensions.
 //
@@ -57,25 +75,64 @@ $site-padding: 2rem;
 $max-width: 120rem;
 $content-layout-padding: 4rem;
 
+// Media Queries
+// Used in mixin/_breakpoints.scss
+// 1. Name and define our breakpoints. Name the map something sensical
+// 2. Write a comma separated list of key: value, pairs that we will use later
+$bp-small: 46.8rem;
+$bp-medium: 76.8rem;
+$bp-large: 120rem;
+
+$breakpoints: (
+  small: $bp-small / 1.6,
+  medium: $bp-medium / 1.6,
+  large: $bp-large / 1.6,
+);
+
 // Fonts
 //
 // Font sizes
 $base-font-size: 1.8rem;
-$font-size-large: $base-font-size * 1.35;
-$font-size-section: $base-font-size * 3;
-$font-size-small: $base-font-size * .8;
+$font-size-large: $base-font-size * 1.5;
+$font-size-section: $base-font-size * 4;
+$font-size-small: $base-font-size * .85;
+
+// Headings
+$heading-xxl: 5.5rem;
+$heading-xl: 3.6rem;
+$heading-l: 3rem;
+$heading-m: 2.5rem;
+$heading-sm: 1.8rem;
+$heading-xs: 1.6rem;
+
+$heading-xxl-weight: 100;
+$heading-xl-weight: 100;
+$heading-l-weight: 300;
+$heading-m-weight: 100;
+$heading-sm-weight: 300;
+$heading-xs-weight: 500;
 
 // Font family
 $font-family-base: sans-serif;
 $font-family-heading: sans-serif;
 $font-awesome: 'Font Awesome 5 Free';
 
-// Media Queries
-// Used in mixin/_breakpoints.scss
-// 1. Name and define our breakpoints. Name the map something sensical
-// 2. Write a comma separated list of key: value, pairs that we will use later
-$breakpoints: (
-  small: 480px,
-  medium: 768px,
-  large: 1200px,
-);
+
+
+// Page regions
+$header-background: $gray-05;
+
+$admin-background: transparent;
+
+$main-navigation-action: $gray-8;
+$main-navigation-background: $gray-2;
+$main-navigation-action-hover: $black;
+$main-navigation-accent: $gray-3;
+$main-navigation-accent-hover: $color-standard-action;
+
+$calendar-item__date-width: 10rem;
+$calendar-item__date-number-size: $calendar-item__date-width /2;
+$calendar-item-background-past: $gray-1;
+$calendar-item-foreground-past: $gray-5;
+$calendar-item-background-current: $color-primary-background;
+$calendar-item-border: 2px;

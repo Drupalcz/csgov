@@ -1,0 +1,62 @@
+.calendar-item {
+  display: flex;
+  justify-content: stretch;
+
+  .calendar-item__date {
+    padding: 0.5em;
+    width: $calendar-item__date-width;
+    align-items: center;
+    display: flex;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    .field,
+    .block {
+      width: 100%;
+    }
+  }
+
+  .calendar-item__title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .calendar-date {
+    margin: 0 auto;
+
+    span {
+      font-size: $calendar-item__date-number-size;
+      color: $color-standard-action;
+      display: block;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  .calendar-item__content {
+    padding: 0.5em;
+    border-left: $calendar-item-border solid $color-standard-background;
+    width: calc(100% - #{$calendar-item__date-width});
+
+    // All regions has one third unit gap between them.
+    *[class^='calendar-item__'] + *[class^='calendar-item__'] {
+      margin-top: 0.3em;
+    }
+  }
+
+  &.calendar-item--current {
+    background: $calendar-item-background-current;
+  }
+
+  &.calendar-item--past {
+    background: $calendar-item-background-past;
+    color: $calendar-item-foreground-past;
+
+    .calendar-date,
+    span,
+    a {
+      color: $calendar-item-foreground-past;
+    }
+  }
+}

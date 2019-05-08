@@ -43,12 +43,6 @@
  */
 #}
 
-{%
-  set classes = [
-  has_page_layout ? 'has-page-layout' : 'not-page-layout',
-]
-%}
-
 <div class="top-bar">
   <div class="container">
     {{ page.top_bar }}
@@ -70,14 +64,12 @@
 </div>
 
 {% if page.admin_area %}
-  <div class="container">
-    {{ page.admin_area }}
-  </div>
+  {{ page.admin_area }}
 {% endif %}
 
 <main role="main">
-
-  {% if not has_page_layout %}
+  {# Display region only if page is not using layout builder layout.#}
+  {% if not has_page_layout == 1 %}
     {% if page.layoutless %}
       {{ page.layoutless }}
     {% endif %}

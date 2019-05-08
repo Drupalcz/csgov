@@ -1,0 +1,41 @@
+// Styling for summary view mode.
+.summary{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 300ms ease-in-out;
+
+  @include bp( medium ) {
+    flex-direction: row;
+  }
+}
+
+.summary__content {
+  order: 2;
+  transition: all 300ms ease-in-out;
+  width: 100%;
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary__title {
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 0;
+
+  a {
+    display: block;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+.summary__tags {
+  font-size: $font-size-small;
+  text-align: right;
+}
+
+.summary:hover {
+  transition: all 300ms ease-in-out;
+}

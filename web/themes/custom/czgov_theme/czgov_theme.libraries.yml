@@ -2,6 +2,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/font-awesome.css: {}
   js:
     js/czgov_theme.js: {}
   dependencies:

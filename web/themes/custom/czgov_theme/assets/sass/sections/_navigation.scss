@@ -8,17 +8,4 @@
     width: 100%;
     z-index: 299;
   }
-
-  .menu {
-    display: none;
-
-    @include bp( medium ) {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    @include bp( large ) {
-      justify-content: center;
-    }
-  }
 }

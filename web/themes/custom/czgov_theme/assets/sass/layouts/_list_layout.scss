@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     margin-left: -$content-layout-padding/2;
     margin-right: -$content-layout-padding/2;
+    list-style: none;
+    padding: 0;
 
     > .list__item {
       padding: 0 $content-layout-padding/2 $content-layout-padding;
@@ -23,7 +25,7 @@
     &.list-layout--full-width {
       
       .list {
-        width: 100%;
+        //width: 100%;
       }
     }
 
@@ -250,4 +252,9 @@
       }
     }
   }
+}
+
+// Calendar item view mode in list.
+.list.erd-list--calendar-item .list__item {
+  padding: 0 $content-layout-padding/2 $calendar-item-border;
 }

@@ -5,7 +5,6 @@
  */
 
 
-
 /**
  * Implements hook_preprocess_page().
  */
@@ -25,4 +24,16 @@ function czgov_theme_preprocess_layout(&$variables) {
   if (substr($layout->id(), 0, 8) === 'section_') {
     drupal_static('has_page_layout', TRUE);
   }
+}
+
+/**
++ * Implements hook_theme_suggestions_HOOK_alter().
++ */
+function czgov_theme_theme_suggestions_field_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  if (isset($element['#third_party_settings']['layout_builder']['view_mode'])) {
+    // See system_theme_suggestions_field().
+    $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#field_name'] . '__' . $element['#third_party_settings']['layout_builder']['view_mode'];
+  }
+  return $suggestions;
 }

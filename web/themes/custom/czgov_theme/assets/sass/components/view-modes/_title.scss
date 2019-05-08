@@ -1,0 +1,50 @@
+// Styling for title view mode.
+.title {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.title__content {
+  background: $gray-1;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+}
+
+.title__title {
+  font-size: 2rem;
+  height: 100%;
+  margin: 0;
+
+  .field--name-node-title {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  a {
+    display: block;
+    font-weight: 400;
+    margin: auto;
+    padding: 1.5em 1em;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+.title:hover {
+  transition: all 300ms ease-in-out;
+
+  .title__content {
+    background: $color-primary-background;
+    transition: all 300ms ease-in-out;
+
+    a {
+      color: $white;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}

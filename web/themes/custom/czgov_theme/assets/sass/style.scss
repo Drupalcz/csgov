@@ -4,7 +4,7 @@
 @import 'mixins/*';
 
 // Base imports
-//@import 'base/*';
+@import 'base/*';
 
 // Page sections
 @import 'sections/*';
@@ -13,7 +13,7 @@
 @import 'layouts/*';
 
 // Components
-//@import 'components/**/*';
+@import 'components/**/*';
 
 // Content types
 //@import "content_types/*";

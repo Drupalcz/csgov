@@ -1,0 +1,8 @@
+// Styling for teaser small view mode.
+.teaser--small {
+  .teaser__image {
+    @include bp(medium) {
+      max-width: 150px;
+    }
+  }
+}

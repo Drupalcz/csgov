@@ -1,9 +1,14 @@
 // Layout
 .region-admin-area {
-  padding: 0;
+  padding: 0 $site-padding;
+
+  > * {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
 }
 
 // Style
 .region-admin-area {
-  background: transparent;
+  background: $admin-background;
 }
