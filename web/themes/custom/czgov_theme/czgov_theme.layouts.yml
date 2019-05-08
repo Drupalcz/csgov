@@ -17,6 +17,14 @@ section_layout_one_column_edgy:
   regions:
     content:
       label: Content
+section_layout_one_column_hero:
+  label: One Column Edgy – Hero
+  category: "CZGov: Sections – One Column"
+  template: templates/section_layouts/section_layout_one_column_hero
+  icon: templates/section_layouts/images/one_column_edgy.png
+  regions:
+    content:
+      label: Content
 section_layout_two_columns_4_8:
   label: Two Columns 48
   category: "CZGov: Sections – Two Columns"

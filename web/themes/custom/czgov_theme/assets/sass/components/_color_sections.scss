@@ -1,11 +1,15 @@
 .color--standard {
   padding: $site-padding;
+
+  @include bp(medium) {
+    padding: $site-padding 0;
+  }
 }
 
 .color--primary {
-  @extend .color--standard;
   background: $color-primary-background;
   color: $color-primary-foreground;
+  padding: $site-padding;
 
   a {
     color: $color-primary-action;
@@ -47,9 +51,9 @@
 }
 
 .color--secondary {
-  @extend .color--standard;
   background: $color-secondary-background;
   color: $color-secondary-foreground;
+  padding: $site-padding;
 
   a {
     color: $color-secondary-action;
@@ -91,9 +95,9 @@
 }
 
 .color--light {
-  @extend .color--standard;
   background: $color-light-background;
   color: $color-light-foreground;
+  padding: $site-padding;
 
   a {
     color: $color-light-action;
@@ -136,9 +140,9 @@
 
 // Color dark
 .color--dark {
-  @extend .color--standard;
   background: $color-dark-background;
   color: $color-dark-foreground;
+  padding: $site-padding;
 
   a {
     color: $color-dark-action;

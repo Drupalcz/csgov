@@ -28,7 +28,7 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: section_layout_one_column_edgy
+        layout_id: section_layout_one_column_hero
         layout_settings: {  }
         components:
           5598ce40-c442-4747-9b61-78dde3320892:

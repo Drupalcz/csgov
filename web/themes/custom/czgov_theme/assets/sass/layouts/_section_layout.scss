@@ -3,13 +3,18 @@
   margin: 0 auto;
   max-width: $max-width;
 
-  @include bp(small) {
+  @include bp(medium) {
     padding: 0 $site-padding;
   }
 }
 
+// Some Layout builder blocks needs its own padding to be in line.
 div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
   padding: 0 $site-padding;
+
+  @include bp(medium) {
+    padding: 0;
+  }
 }
 
 //
@@ -17,7 +22,7 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 //
 // Default section layout for section with column.
 .section-layout:not(.section-layout__one-column) {
-  @include bp(small) {
+  @include bp(medium) {
     display: grid;
     gap: 0 3%;
   }
@@ -40,24 +45,33 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
   }
 }
 
+// Special options for Hero.
+.section-layout--hero {
+  margin-bottom: 2em;
+}
+
+.node__content .section-layout:first-child:not(.section-layout--hero) {
+  margin-top: 2em;
+}
+
 ////
 // Layouts specific styling.
 ////
 
 // Layout 3 9
 .section-layout--39 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 22% 75%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
@@ -66,18 +80,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 4 8
 .section-layout--48 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 27% 70%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
@@ -86,18 +100,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 5 7
 .section-layout--57 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 39% 58%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
@@ -106,18 +120,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 6 6
 .section-layout--66 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 48.5% 48.5%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
@@ -126,18 +140,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 7 5
 .section-layout--75 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 58% 39%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
@@ -146,18 +160,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 8 4
 .section-layout--84 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 70% 27%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
@@ -166,18 +180,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 // Layout 9 3
 .section-layout--93 {
-  @include bp(small) {
+  @include bp(medium) {
     grid-template-columns: 75% 22%;
   }
   .section-layout__content {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 1/2;
       grid-row: 2;
     }
   }
 
   .section-layout__sidebar {
-    @include bp(small) {
+    @include bp(medium) {
       grid-column: 2/3;
       grid-row: 2;
     }
