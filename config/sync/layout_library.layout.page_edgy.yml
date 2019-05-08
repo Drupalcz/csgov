@@ -1,0 +1,90 @@
+uuid: 66c5c333-b2c8-41e0-b6b1-ca2bcdee2dcc
+langcode: en
+status: true
+dependencies: {  }
+id: page_edgy
+label: 'Page edgy'
+targetEntityType: node
+targetBundle: page
+layout:
+  -
+    layout_id: section_layout_one_column_hero
+    layout_settings: {  }
+    components:
+      772b9553-4e7e-433e-8bab-10b9c08b1dbc:
+        uuid: 772b9553-4e7e-433e-8bab-10b9c08b1dbc
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_hero_components'
+          label: 'Hero components'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_revisions_entity_view
+            settings:
+              view_mode: default
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
+    layout_id: section_layout_one_column_edgy
+    layout_settings: {  }
+    components:
+      898dc5fc-7336-4502-8f6b-b90f87bd6e67:
+        uuid: 898dc5fc-7336-4502-8f6b-b90f87bd6e67
+        region: content
+        configuration:
+          id: 'field_block:node:page:title'
+          label: Title
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: string
+            settings:
+              link_to_entity: false
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+      7aa3d540-e887-45f5-9a63-e68e659f4b57:
+        uuid: 7aa3d540-e887-45f5-9a63-e68e659f4b57
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_body'
+          label: Body
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: text_default
+            settings: {  }
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 1
+      9f8c26ba-ecff-4006-81ab-8b74db2eb5f7:
+        uuid: 9f8c26ba-ecff-4006-81ab-8b74db2eb5f7
+        region: content
+        configuration:
+          id: 'field_block:node:page:field_components'
+          label: Components
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_reference_revisions_entity_view
+            settings:
+              view_mode: default
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 2
+    third_party_settings: {  }

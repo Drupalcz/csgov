@@ -82,17 +82,8 @@
   {% endif %}
 
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-  {# Prepare page layout attributes. #}
-  {% set page_layout_attributes = create_attribute() %}
-
-  {% set page_layout_classes = [
-    'layout-content',
-    chosen_page_layout ? chosen_page_layout,
-  ]
-  %}
-
-  <div {{ page_layout_attributes.addClass(page_layout_classes) }}>
+  
+  <div class="layout-content">
     {{ page.content }}
   </div>{# /.layout-content #}
 

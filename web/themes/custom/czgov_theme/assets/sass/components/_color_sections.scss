@@ -1,9 +1,5 @@
 .color--standard {
-  padding: $site-padding;
-
-  @include bp(medium) {
-    padding: $site-padding 0;
-  }
+  padding: $site-padding 0;
 }
 
 .color--primary {

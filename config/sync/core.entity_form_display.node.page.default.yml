@@ -7,10 +7,10 @@ dependencies:
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
     - field.field.node.page.field_keywords
-    - field.field.node.page.field_page_layout
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
+    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - field_group
@@ -100,12 +100,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_page_layout:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_search_exclude:
     weight: 27
     settings:
@@ -128,6 +122,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
+  layout_selection:
+    type: options_select
+    region: content
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 9
@@ -177,5 +177,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  layout_selection: true
+hidden: {  }

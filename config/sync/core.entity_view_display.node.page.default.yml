@@ -7,14 +7,13 @@ dependencies:
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
     - field.field.node.page.field_keywords
-    - field.field.node.page.field_page_layout
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
+    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - entity_reference_revisions
-    - options
     - text
     - user
 id: node.page.default
@@ -55,13 +54,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_page_layout:
-    weight: 108
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_search_exclude:
     weight: 107
     label: above
@@ -93,4 +85,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_selection: true

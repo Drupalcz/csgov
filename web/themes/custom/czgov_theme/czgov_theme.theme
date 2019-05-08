@@ -11,19 +11,6 @@
 function czgov_theme_preprocess_page(&$variables) {
   // Set flag saying if current page is using any page layout.
   $variables['has_page_layout'] = drupal_static('has_page_layout', FALSE);
-
-  $route_match = \Drupal::routeMatch();
-  $parameters = $route_match->getParameters();
-
-  /** @var \Drupal\node\Entity\Node $node */
-  $node = $parameters->get('node');
-
-  // Only on node entity and if the field exists.
-  if (is_object($node) && $node->hasField('field_page_layout')) {
-    // Attach all field values as classes.
-    $class = $node->get('field_page_layout')->value;
-    $variables['chosen_page_layout'] = $class;
-  }
 }
 
 

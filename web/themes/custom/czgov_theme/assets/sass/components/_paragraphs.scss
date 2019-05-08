@@ -38,11 +38,12 @@
     }
   }
   // No need for horizontal padding on paragraph content if the paragraph has background color.
-  .modifiers-has-background > .paragraph-content {
+  .modifiers-has-background > .paragraph-content ,
+  .paragraph[class^='color-']:not(.color--standard) > .paragraph-content {
     padding-left: 0;
     padding-right: 0;
 
-    @include bp(small) {
+    @include bp(large) {
       padding-left: $content-layout-padding / 2;
       padding-right: $content-layout-padding / 2;
     }
