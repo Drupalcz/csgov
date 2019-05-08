@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: color--standard
+      label: Standard
+    -
       value: color--primary
       label: Primary
     -
