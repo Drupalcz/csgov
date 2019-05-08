@@ -1,0 +1,27 @@
+uuid: 29b355b8-d202-47d3-b9c8-1ecf37fb55ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_page_layout
+field_name: field_page_layout
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: page-layout-edgy
+      label: 'Edge to edge'
+    -
+      value: page-layout-sidebar-right
+      label: 'Sidebar right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

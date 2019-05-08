@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_components
     - field.field.node.page.field_hero_components
     - field.field.node.page.field_keywords
+    - field.field.node.page.field_page_layout
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
@@ -98,6 +99,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_page_layout:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_search_exclude:
     weight: 27
