@@ -66,7 +66,6 @@
         "drupal/google_analytics": "3.0",
         "drupal/honeypot": "1.29",
         "drupal/inline_entity_form": "1.0-rc1",
-        "drupal/layout_library": "^1.0@alpha",
         "drupal/linked_field": "1.1.0",
         "drupal/linkit": "5.0-beta8",
         "drupal/login_security": "1.5",
@@ -152,10 +151,7 @@
                 "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             },
             "drupal/core": {
-                "Add suggestions for layout builder view modes.": "https://www.drupal.org/files/issues/2019-04-16/3001313-suggestions-19.patch"
-            },
-            "drupal/core": {
-                "^^ Interdiff for add suggestions for layout builder view modes.": "https://www.drupal.org/files/issues/2019-04-17/interdiff.3001313.17-21.txt"
+                "Add suggestions for layout builder view modes. And apply the interdiff: https://www.drupal.org/files/issues/2019-04-17/interdiff.3001313.17-21.patch": "https://www.drupal.org/files/issues/2019-04-16/3001313-suggestions-19.patch"
             }
         },
         "enable-patching": true,
