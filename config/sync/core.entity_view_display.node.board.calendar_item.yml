@@ -36,44 +36,8 @@ third_party_settings:
         layout_id: calendar_item
         layout_settings: {  }
         components:
-          5989e51a-7f80-4ea4-a817-8ca8a811ddbb:
-            uuid: 5989e51a-7f80-4ea4-a817-8ca8a811ddbb
-            region: title
-            configuration:
-              id: 'field_block:node:board:title'
-              label: Title
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          9d5c5d1e-659d-4daa-b9b4-87b7d7e386b1:
-            uuid: 9d5c5d1e-659d-4daa-b9b4-87b7d7e386b1
-            region: summary
-            configuration:
-              id: 'field_block:node:board:field_teaser'
-              label: Teaser
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_trimmed
-                settings:
-                  trim_length: 250
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          876b555e-51d8-4339-94ae-933d9c53ec36:
-            uuid: 876b555e-51d8-4339-94ae-933d9c53ec36
+          891b3e42-8001-4712-ac62-ba78f5187850:
+            uuid: 891b3e42-8001-4712-ac62-ba78f5187850
             region: date
             configuration:
               id: 'field_block:node:board:field_published_date'
@@ -89,27 +53,26 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          05b06890-924b-46a6-8f46-ad4de1bb3675:
-            uuid: 05b06890-924b-46a6-8f46-ad4de1bb3675
-            region: info
+          0e07f5c5-289e-42e4-9f21-5d718d5a81ce:
+            uuid: 0e07f5c5-289e-42e4-9f21-5d718d5a81ce
+            region: title
             configuration:
-              id: 'field_block:node:board:field_published_date'
-              label: 'Published date'
+              id: 'field_block:node:board:title'
+              label: Title
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: datetime_default
+                type: string
                 settings:
-                  timezone_override: ''
-                  format_type: date_cz
+                  link_to_entity: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
-          20e72e08-a4bb-47cc-b830-64fc3fcd79c5:
-            uuid: 20e72e08-a4bb-47cc-b830-64fc3fcd79c5
+            weight: 1
+          929db202-0dfe-4194-8b60-34a8ccca2290:
+            uuid: 929db202-0dfe-4194-8b60-34a8ccca2290
             region: info
             configuration:
               id: 'field_block:node:board:field_removed_date'
@@ -126,20 +89,38 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-          55fd86bd-948b-4ba7-9a49-2b1376e9d7c2:
-            uuid: 55fd86bd-948b-4ba7-9a49-2b1376e9d7c2
-            region: tags
+            weight: -9
+          ffc53219-c631-4fa9-9ab8-af05a9a4ae4a:
+            uuid: ffc53219-c631-4fa9-9ab8-af05a9a4ae4a
+            region: info
             configuration:
-              id: 'field_block:node:board:field_board_type'
-              label: 'Board type'
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: entity_reference_label
+                type: datetime_default
                 settings:
-                  link: true
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -10
+          007e190e-be4f-4cce-8d4b-56c0ace201ba:
+            uuid: 007e190e-be4f-4cce-8d4b-56c0ace201ba
+            region: summary
+            configuration:
+              id: 'field_block:node:board:field_teaser'
+              label: Teaser
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity

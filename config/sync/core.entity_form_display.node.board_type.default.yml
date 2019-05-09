@@ -14,6 +14,8 @@ dependencies:
     - node.type.board_type
   module:
     - field_group
+    - field_layout
+    - layout_discovery
     - media_library
     - paragraphs
     - path
@@ -35,6 +37,9 @@ third_party_settings:
         required_fields: true
       label: Teaser
       region: content
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.board_type.default
 targetEntityType: node
 bundle: board_type

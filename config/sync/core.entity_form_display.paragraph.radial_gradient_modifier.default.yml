@@ -9,6 +9,13 @@ dependencies:
     - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_shape
     - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_size
     - paragraphs.paragraphs_type.radial_gradient_modifier
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: SPI0E8FdOpFhZFPpRxhkmEYx6JyvtGS0vAu8mJTirVk
 id: paragraph.radial_gradient_modifier.default

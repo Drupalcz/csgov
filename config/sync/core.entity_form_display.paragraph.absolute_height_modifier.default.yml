@@ -8,6 +8,13 @@ dependencies:
     - field.field.paragraph.absolute_height_modifier.field_mod_media_query
     - field.field.paragraph.absolute_height_modifier.field_mod_vertical_align
     - paragraphs.paragraphs_type.absolute_height_modifier
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: danGhDEKUGS-7h24PjxNksv21ynw_zXlvbcLldw8hok
 id: paragraph.absolute_height_modifier.default

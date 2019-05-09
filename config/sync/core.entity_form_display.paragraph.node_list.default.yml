@@ -13,8 +13,14 @@ dependencies:
     - field.field.paragraph.node_list.field_view_mode
     - paragraphs.paragraphs_type.node_list
   module:
+    - field_layout
+    - layout_discovery
     - link
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.node_list.default
 targetEntityType: paragraph
 bundle: node_list

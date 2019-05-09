@@ -21,6 +21,8 @@ dependencies:
   module:
     - datetime
     - field_group
+    - field_layout
+    - layout_discovery
     - media_library
     - paragraphs
     - path
@@ -60,6 +62,9 @@ third_party_settings:
         classes: ''
       label: Meta
       region: content
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.board.default
 targetEntityType: node
 bundle: board

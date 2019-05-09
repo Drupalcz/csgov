@@ -11,6 +11,12 @@ dependencies:
     - paragraphs.paragraphs_type.custom_radial_gradient_modifier
   module:
     - color_field
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: RvxdOGehODw-Ya4KihZ8XRQIgBgllONH4ClD_XuN4FI
 id: paragraph.custom_radial_gradient_modifier.default

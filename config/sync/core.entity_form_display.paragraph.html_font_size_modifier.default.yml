@@ -6,6 +6,13 @@ dependencies:
     - field.field.paragraph.html_font_size_modifier.field_mod_fonts_base_size
     - field.field.paragraph.html_font_size_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.html_font_size_modifier
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: cD-21nw6TmLN3SM7HOh8z7NgVSFnDXG-JXAwYxhKyJw
 id: paragraph.html_font_size_modifier.default

@@ -13,6 +13,13 @@ dependencies:
     - field.field.paragraph.padding_modifier.field_mod_padding_t_size
     - field.field.paragraph.padding_modifier.field_mod_padding_t_units
     - paragraphs.paragraphs_type.padding_modifier
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: fNcS1fiWndWyQto6J4pfsX_7CyJnJ0Rr9PHl7ZzS8L0
 id: paragraph.padding_modifier.default

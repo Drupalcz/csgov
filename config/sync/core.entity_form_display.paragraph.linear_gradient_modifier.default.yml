@@ -7,6 +7,13 @@ dependencies:
     - field.field.paragraph.linear_gradient_modifier.field_mod_l_gradient_direction
     - field.field.paragraph.linear_gradient_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.linear_gradient_modifier
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: yUnxHH3syPMYyrHGM3zgykv5vlJmOuZpTf79LeSOtYs
 id: paragraph.linear_gradient_modifier.default
