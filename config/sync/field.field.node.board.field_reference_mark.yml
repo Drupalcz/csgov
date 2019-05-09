@@ -1,0 +1,19 @@
+uuid: d800701e-8542-45a6-95e8-b449bbb1fb85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_mark
+    - node.type.board
+id: node.board.field_reference_mark
+field_name: field_reference_mark
+entity_type: node
+bundle: board
+label: 'Reference mark'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

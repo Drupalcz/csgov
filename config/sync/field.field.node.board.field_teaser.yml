@@ -1,0 +1,21 @@
+uuid: 8ef81bec-73cc-4e1d-86aa-8afc985c3b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.board
+  module:
+    - text
+id: node.board.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: board
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

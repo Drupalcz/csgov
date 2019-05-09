@@ -1,0 +1,21 @@
+uuid: cdc4be35-a901-49ee-ac90-9b4380bc82c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.board
+  module:
+    - text
+id: node.board.field_body
+field_name: field_body
+entity_type: node
+bundle: board
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

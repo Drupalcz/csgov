@@ -1,0 +1,23 @@
+uuid: 7f3701e4-917c-4350-8492-dab297a556c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_exclude
+    - node.type.board
+id: node.board.field_search_exclude
+field_name: field_search_exclude
+entity_type: node
+bundle: board
+label: 'Search exclude'
+description: 'Exclude this content from search index.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

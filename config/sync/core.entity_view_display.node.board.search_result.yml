@@ -1,17 +1,17 @@
-uuid: 35d4111b-4d06-4deb-af0a-375d4af60bd1
+uuid: 8de70b3a-4728-40c0-ba72-d3d96a88c61e
 langcode: en
 status: false
 dependencies:
   config:
     - core.entity_view_mode.node.search_result
-    - field.field.node.page.field_body
-    - field.field.node.page.field_components
-    - field.field.node.page.field_hero_components
-    - field.field.node.page.field_keywords
-    - field.field.node.page.field_search_exclude
-    - field.field.node.page.field_teaser
-    - field.field.node.page.field_thumbnail
-    - node.type.page
+    - field.field.node.board.field_body
+    - field.field.node.board.field_components
+    - field.field.node.board.field_hero_components
+    - field.field.node.board.field_keywords
+    - field.field.node.board.field_search_exclude
+    - field.field.node.board.field_teaser
+    - field.field.node.board.field_thumbnail
+    - node.type.board
   module:
     - entity_reference_revisions
     - layout_builder
@@ -35,7 +35,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:page:links'
+              id: 'extra_field_block:node:board:links'
             additional: {  }
             weight: 0
           e1a1c1fe-ffd5-4ca9-9253-b5a9f9e38926:
@@ -45,7 +45,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_body'
+              id: 'field_block:node:board:field_body'
               formatter:
                 label: above
                 settings: {  }
@@ -60,7 +60,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_teaser'
+              id: 'field_block:node:board:field_teaser'
               formatter:
                 label: above
                 settings: {  }
@@ -75,7 +75,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_thumbnail'
+              id: 'field_block:node:board:field_thumbnail'
               formatter:
                 type: entity_reference_entity_view
                 label: above
@@ -92,7 +92,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_components'
+              id: 'field_block:node:board:field_components'
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: above
@@ -109,7 +109,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_hero_components'
+              id: 'field_block:node:board:field_hero_components'
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: above
@@ -126,7 +126,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_keywords'
+              id: 'field_block:node:board:field_keywords'
               formatter:
                 label: above
                 settings:
@@ -142,7 +142,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:field_search_exclude'
+              id: 'field_block:node:board:field_search_exclude'
               formatter:
                 label: above
                 settings:
@@ -156,9 +156,9 @@ third_party_settings:
         third_party_settings: {  }
   layout_library:
     enable: false
-id: node.page.search_result
+id: node.board.search_result
 targetEntityType: node
-bundle: page
+bundle: board
 mode: search_result
 content:
   field_body:

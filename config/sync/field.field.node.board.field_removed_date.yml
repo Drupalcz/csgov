@@ -1,0 +1,21 @@
+uuid: 05b2403f-482d-46cb-b2eb-87f4edc03a8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_removed_date
+    - node.type.board
+  module:
+    - datetime
+id: node.board.field_removed_date
+field_name: field_removed_date
+entity_type: node
+bundle: board
+label: 'Removed date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
