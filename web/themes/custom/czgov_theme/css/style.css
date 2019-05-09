@@ -705,10 +705,12 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 
 .block-field-blocknodepagefield-body .field--name-field-body {
   max-width: 120rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-right: auto;
   margin-left: auto; }
+
+.section-layout--edgy .block-field-blocknodepagefield-body .field--name-field-body {
+  padding-left: 2rem;
+  padding-right: 2rem; }
 
 .field--label-inline > .field__label {
   display: inline-block;
@@ -769,10 +771,11 @@ img {
 h1.page-title {
   margin-top: 0;
   max-width: 120rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-right: auto;
   margin-left: auto; }
+  .section-layout--edgy h1.page-title {
+    padding-left: 2rem;
+    padding-right: 2rem; }
 
 .paragraph .paragraph-content {
   padding-bottom: 2rem;
