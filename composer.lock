@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c66882872fc6264890ba1078f460526",
+    "content-hash": "0bfb40464d69e14c3dfef5bfd6dc53f5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5929,6 +5929,18 @@
                 "php"
             ],
             "time": "2019-02-16T20:54:15+00:00"
+        },
+        {
+            "name": "nk-o/jarallax",
+            "version": "1.10.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/nk-o/jarallax/archive/v1.10.7.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "oomphinc/composer-installers-extender",
