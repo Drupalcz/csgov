@@ -17,12 +17,10 @@ dependencies:
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
-    - field.field.node.board.layout_selection
     - node.type.board
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - text
     - user
   theme:
@@ -127,8 +125,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.board.calendar_item
 targetEntityType: node
 bundle: board
@@ -205,4 +201,3 @@ hidden:
   field_published_date: true
   field_reference_mark: true
   field_removed_date: true
-  layout_selection: true

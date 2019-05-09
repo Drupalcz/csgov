@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.item
   module:
     - layout_builder
-    - layout_library
     - link
     - text
   theme:
@@ -80,8 +79,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: paragraph.item.teaser
 targetEntityType: paragraph
 bundle: item

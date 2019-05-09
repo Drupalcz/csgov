@@ -14,7 +14,6 @@ dependencies:
     - node.type.page
   module:
     - layout_builder
-    - layout_library
     - user
   theme:
     - czgov_theme
@@ -82,8 +81,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.page.teaser
 targetEntityType: node
 bundle: page

@@ -15,7 +15,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - text
     - user
   theme:
@@ -83,8 +82,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.person.calendar_item
 targetEntityType: node
 bundle: person

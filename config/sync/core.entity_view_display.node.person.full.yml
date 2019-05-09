@@ -11,13 +11,11 @@ dependencies:
     - field.field.node.person.field_search_exclude
     - field.field.node.person.field_teaser
     - field.field.node.person.field_thumbnail
-    - field.field.node.person.layout_selection
     - node.type.person
     - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - menu_block
     - text
     - user
@@ -125,8 +123,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: true
 id: node.person.full
 targetEntityType: node
 bundle: person
@@ -196,5 +192,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  layout_selection: true
+hidden: {  }

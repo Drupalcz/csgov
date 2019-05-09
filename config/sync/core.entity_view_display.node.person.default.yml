@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.person.field_search_exclude
     - field.field.node.person.field_teaser
     - field.field.node.person.field_thumbnail
-    - field.field.node.person.layout_selection
     - node.type.person
   module:
     - entity_reference_revisions
@@ -85,5 +84,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  layout_selection: true
+hidden: {  }

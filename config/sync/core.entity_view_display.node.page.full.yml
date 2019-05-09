@@ -11,13 +11,11 @@ dependencies:
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
-    - field.field.node.page.layout_selection
     - node.type.page
     - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - menu_block
     - text
     - user
@@ -125,8 +123,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: true
 id: node.page.full
 targetEntityType: node
 bundle: page
@@ -196,5 +192,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  layout_selection: true
+hidden: {  }

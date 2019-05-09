@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.board_type.field_search_exclude
     - field.field.node.board_type.field_teaser
     - field.field.node.board_type.field_thumbnail
-    - field.field.node.board_type.layout_selection
     - node.type.board_type
   module:
     - entity_reference_revisions
@@ -85,5 +84,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  layout_selection: true
+hidden: {  }

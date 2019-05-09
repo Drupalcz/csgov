@@ -4,10 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_responsible
+    - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
     - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
+    - field.field.node.board.field_published_date
+    - field.field.node.board.field_reference_mark
+    - field.field.node.board.field_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
@@ -15,7 +21,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - text
     - user
   theme:
@@ -66,8 +71,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.board.card
 targetEntityType: node
 bundle: board
@@ -138,4 +141,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_attachments: true
+  field_board_responsible: true
+  field_board_type: true
+  field_published_date: true
+  field_reference_mark: true
+  field_removed_date: true
   layout_selection: true

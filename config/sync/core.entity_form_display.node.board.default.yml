@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
-    - field.field.node.board.layout_selection
     - node.type.board
   module:
     - datetime
@@ -197,12 +196,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  layout_selection:
-    type: options_select
-    region: content
-    weight: 21
-    settings: {  }
-    third_party_settings: {  }
   path:
     type: path
     weight: 16
@@ -252,4 +245,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_selection: true

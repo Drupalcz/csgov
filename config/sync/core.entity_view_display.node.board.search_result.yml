@@ -4,10 +4,16 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.search_result
+    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_responsible
+    - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
     - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
+    - field.field.node.board.field_published_date
+    - field.field.node.board.field_reference_mark
+    - field.field.node.board.field_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
@@ -16,7 +22,6 @@ dependencies:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
-    - layout_library
     - text
     - user
 third_party_settings:
@@ -154,8 +159,6 @@ third_party_settings:
             additional: {  }
             weight: 7
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.board.search_result
 targetEntityType: node
 bundle: board
@@ -226,4 +229,10 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_attachments: true
+  field_board_responsible: true
+  field_board_type: true
+  field_published_date: true
+  field_reference_mark: true
+  field_removed_date: true
   layout_selection: true
