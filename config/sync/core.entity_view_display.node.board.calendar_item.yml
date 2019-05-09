@@ -4,13 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.calendar_item
+    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_responsible
+    - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
     - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
+    - field.field.node.board.field_published_date
+    - field.field.node.board.field_reference_mark
+    - field.field.node.board.field_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
+    - field.field.node.board.layout_selection
     - node.type.board
   module:
     - entity_reference_revisions
@@ -29,23 +36,6 @@ third_party_settings:
         layout_id: calendar_item
         layout_settings: {  }
         components:
-          8536e888-a439-4e99-a2e4-bc5c54e1a7cd:
-            uuid: 8536e888-a439-4e99-a2e4-bc5c54e1a7cd
-            region: date
-            configuration:
-              id: 'field_block:node:board:created'
-              label: 'Authored on'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: calendar_item_date_formatter
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
           5989e51a-7f80-4ea4-a817-8ca8a811ddbb:
             uuid: 5989e51a-7f80-4ea4-a817-8ca8a811ddbb
             region: title
@@ -77,6 +67,79 @@ third_party_settings:
                 type: text_trimmed
                 settings:
                   trim_length: 250
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          876b555e-51d8-4339-94ae-933d9c53ec36:
+            uuid: 876b555e-51d8-4339-94ae-933d9c53ec36
+            region: date
+            configuration:
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: calendar_item_date_formatter
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          05b06890-924b-46a6-8f46-ad4de1bb3675:
+            uuid: 05b06890-924b-46a6-8f46-ad4de1bb3675
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          20e72e08-a4bb-47cc-b830-64fc3fcd79c5:
+            uuid: 20e72e08-a4bb-47cc-b830-64fc3fcd79c5
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_removed_date'
+              label: 'Removed date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          55fd86bd-948b-4ba7-9a49-2b1376e9d7c2:
+            uuid: 55fd86bd-948b-4ba7-9a49-2b1376e9d7c2
+            region: tags
+            configuration:
+              id: 'field_block:node:board:field_board_type'
+              label: 'Board type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -155,4 +218,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_attachments: true
+  field_board_responsible: true
+  field_board_type: true
+  field_published_date: true
+  field_reference_mark: true
+  field_removed_date: true
   layout_selection: true

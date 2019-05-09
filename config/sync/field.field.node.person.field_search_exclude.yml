@@ -1,0 +1,23 @@
+uuid: ccc1738c-992d-4310-98ef-6f4f0eddacea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_exclude
+    - node.type.person
+id: node.person.field_search_exclude
+field_name: field_search_exclude
+entity_type: node
+bundle: person
+label: 'Search exclude'
+description: 'Exclude this content from search index.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

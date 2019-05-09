@@ -1,0 +1,21 @@
+uuid: 7b0e4060-3222-4862-aa41-44f439ee128d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.person
+  module:
+    - text
+id: node.person.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: person
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

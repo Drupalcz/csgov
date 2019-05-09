@@ -52,24 +52,6 @@ layout:
             entity: layout_builder.entity
         additional: {  }
         weight: 0
-      347eb940-d04d-4e0d-bc5c-d845ae9eb7b6:
-        uuid: 347eb940-d04d-4e0d-bc5c-d845ae9eb7b6
-        region: sidebar
-        configuration:
-          id: 'field_block:node:board:uid'
-          label: 'Authored by'
-          provider: layout_builder
-          label_display: '0'
-          formatter:
-            label: above
-            type: entity_reference_label
-            settings:
-              link: false
-            third_party_settings: {  }
-          context_mapping:
-            entity: layout_builder.entity
-        additional: {  }
-        weight: 0
       d052641c-87e7-470f-9ff0-2332f4e207a7:
         uuid: d052641c-87e7-470f-9ff0-2332f4e207a7
         region: content
@@ -100,6 +82,62 @@ layout:
             type: entity_reference_revisions_entity_view
             settings:
               view_mode: default
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 2
+      21fe006b-fb00-44e3-af3d-ec91c802dd78:
+        uuid: 21fe006b-fb00-44e3-af3d-ec91c802dd78
+        region: sidebar
+        configuration:
+          id: 'field_block:node:board:field_published_date'
+          label: 'Published date'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: above
+            type: datetime_default
+            settings:
+              timezone_override: ''
+              format_type: date_cz
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+      389388ed-5c89-498f-a107-beccc4e99233:
+        uuid: 389388ed-5c89-498f-a107-beccc4e99233
+        region: sidebar
+        configuration:
+          id: 'field_block:node:board:field_removed_date'
+          label: 'Removed date'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: above
+            type: datetime_default
+            settings:
+              timezone_override: ''
+              format_type: date_cz
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 1
+      ef2a001b-dc1c-4e47-be92-83de80ca7594:
+        uuid: ef2a001b-dc1c-4e47-be92-83de80ca7594
+        region: sidebar
+        configuration:
+          id: 'field_block:node:board:field_board_responsible'
+          label: 'Board responsible'
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: above
+            type: entity_reference_label
+            settings:
+              link: true
             third_party_settings: {  }
           context_mapping:
             entity: layout_builder.entity

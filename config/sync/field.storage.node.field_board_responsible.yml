@@ -1,0 +1,19 @@
+uuid: 34d40ac0-05b4-4420-ae79-f93692e1406e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_board_responsible
+field_name: field_board_responsible
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
