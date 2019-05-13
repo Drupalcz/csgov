@@ -151,7 +151,8 @@
                 "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             },
             "drupal/core": {
-                "Add suggestions for layout builder view modes. And apply the interdiff: https://www.drupal.org/files/issues/2019-04-17/interdiff.3001313.17-21.patch": "https://www.drupal.org/files/issues/2019-04-16/3001313-suggestions-19.patch"
+                "Add suggestions for layout builder view modes. And apply the interdiff: https://www.drupal.org/files/issues/2019-04-17/interdiff.3001313.17-21.patch": "https://www.drupal.org/files/issues/2019-04-16/3001313-suggestions-19.patch",
+                "Ckeditor_stylesheets cache busting – https://www.drupal.org/project/drupal/issues/2888723": "https://www.drupal.org/files/issues/2019-05-10/cache-busting_to_ckeditor_stylesheets-2888723-15.patch"
             }
         },
         "enable-patching": true,
