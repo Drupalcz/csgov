@@ -1,0 +1,23 @@
+uuid: 2126d1d2-6fc9-4216-a512-88abb542c947
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: boards
+label: 'Board and Board type'
+type: 'canonical_entities:node'
+pattern: 'boards/[node:title]'
+selection_criteria:
+  4c33229a-2603-447c-af8a-8e6881538e7c:
+    id: node_type
+    bundles:
+      board: board
+      board_type: board_type
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4c33229a-2603-447c-af8a-8e6881538e7c
+selection_logic: and
+weight: -5
+relationships: {  }
