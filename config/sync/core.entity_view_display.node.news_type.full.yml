@@ -13,12 +13,14 @@ dependencies:
     - field.field.node.news_type.field_thumbnail
     - node.type.news_type
     - system.menu.main
+    - views.view.news_type_content
   module:
     - entity_reference_revisions
     - layout_builder
     - menu_block
     - text
     - user
+    - views
   theme:
     - czgov_theme
 third_party_settings:
@@ -122,6 +124,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          9cfd24e3-7626-49a7-8648-456abf7f0348:
+            uuid: 9cfd24e3-7626-49a7-8648-456abf7f0348
+            region: content
+            configuration:
+              id: 'views_block:news_type_content-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 3
         third_party_settings: {  }
 id: node.news_type.full
 targetEntityType: node
