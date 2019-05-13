@@ -16,7 +16,6 @@ dependencies:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
-    - layout_library
     - text
     - user
 third_party_settings:
@@ -154,8 +153,6 @@ third_party_settings:
             additional: {  }
             weight: 7
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.event.search_result
 targetEntityType: node
 bundle: event

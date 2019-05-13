@@ -17,7 +17,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_library
     - text
     - user
   theme:
@@ -124,8 +123,6 @@ third_party_settings:
             additional: {  }
             weight: 1
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.event.card_detail
 targetEntityType: node
 bundle: event

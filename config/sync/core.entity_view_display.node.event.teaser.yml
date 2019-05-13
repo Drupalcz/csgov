@@ -16,7 +16,6 @@ dependencies:
     - node.type.event
   module:
     - layout_builder
-    - layout_library
     - user
   theme:
     - czgov_theme
@@ -122,8 +121,6 @@ third_party_settings:
             additional: {  }
             weight: 1
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.event.teaser
 targetEntityType: node
 bundle: event

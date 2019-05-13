@@ -776,6 +776,18 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
     border-color: white;
     color: white; }
 
+.field--name-field-event-date .datetime:first-child {
+  font-weight: bold; }
+
+.field--name-field-event-date .datetime:last-child {
+  color: #666666; }
+
+.event-date--view-mode-full {
+  font-size: 2.7rem; }
+
+.event-location--view-mode-full {
+  font-size: 2.7rem; }
+
 .facets-widget-checkbox h3 {
   margin-top: 0; }
 
