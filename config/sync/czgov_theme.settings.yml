@@ -4,7 +4,7 @@ features:
   comment_user_verification: 1
   favicon: 1
 logo:
-  use_default: 0
+  use_default: 1
   path: 'public://logo-velky-luh.png'
 favicon:
   use_default: 1
