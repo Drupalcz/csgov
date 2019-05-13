@@ -124,6 +124,24 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          2b9449fd-6317-4b65-82f5-646cc30a85c9:
+            uuid: 2b9449fd-6317-4b65-82f5-646cc30a85c9
+            region: tags
+            configuration:
+              id: 'field_block:node:board:field_board_type'
+              label: 'Board type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.board.calendar_item
 targetEntityType: node

@@ -14,12 +14,6 @@ dependencies:
     - paragraphs.paragraphs_type.custom_colors_modifier
   module:
     - color_field
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: nC6PX69Np4xRXTY1EXV4KLawPIWb8V37klGcsj71XmQ
 id: paragraph.custom_colors_modifier.default

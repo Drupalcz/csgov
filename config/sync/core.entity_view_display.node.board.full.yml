@@ -112,6 +112,80 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
+          27888b51-8e03-4fdd-82a6-8b2192b08dde:
+            uuid: 27888b51-8e03-4fdd-82a6-8b2192b08dde
+            region: sidebar
+            configuration:
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -9
+          c6e82a69-c18f-4417-b8d1-32d2a6d80026:
+            uuid: c6e82a69-c18f-4417-b8d1-32d2a6d80026
+            region: sidebar
+            configuration:
+              id: 'field_block:node:board:field_removed_date'
+              label: 'Removed date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -8
+          149b6e86-ed37-46c1-95f0-c081648e4989:
+            uuid: 149b6e86-ed37-46c1-95f0-c081648e4989
+            region: sidebar
+            configuration:
+              id: 'field_block:node:board:field_board_responsible'
+              label: 'Board responsible'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -7
+          4e2f6f01-fc0f-41c5-8876-617463a4bc85:
+            uuid: 4e2f6f01-fc0f-41c5-8876-617463a4bc85
+            region: sidebar
+            configuration:
+              id: 'field_block:node:board:field_reference_mark'
+              label: 'Reference mark'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -10
           45ac4c37-16ee-472e-8549-7491f2716415:
             uuid: 45ac4c37-16ee-472e-8549-7491f2716415
             region: sidebar
@@ -127,7 +201,43 @@ third_party_settings:
               suggestion: main
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: -5
+          479fdf63-ca80-49f1-a555-771411156a32:
+            uuid: 479fdf63-ca80-49f1-a555-771411156a32
+            region: content
+            configuration:
+              id: 'field_block:node:board:field_attachments'
+              label: Attachments
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          04846fde-f87d-4a8a-aece-b7221edb9936:
+            uuid: 04846fde-f87d-4a8a-aece-b7221edb9936
+            region: sidebar
+            configuration:
+              id: 'field_block:node:board:field_board_type'
+              label: 'Board type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -6
         third_party_settings: {  }
 id: node.board.full
 targetEntityType: node

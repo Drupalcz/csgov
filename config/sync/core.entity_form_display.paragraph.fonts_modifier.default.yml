@@ -22,13 +22,7 @@ dependencies:
     - field.field.paragraph.fonts_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.fonts_modifier
   module:
-    - field_layout
-    - layout_discovery
     - link
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: N3X3vxg0D5fgmCVFDVVl1NiPCqXOTZujiaGCfzdLXKk
 id: paragraph.fonts_modifier.default

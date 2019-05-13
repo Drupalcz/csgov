@@ -12,13 +12,6 @@ dependencies:
     - field.field.paragraph.colors_modifier.field_mod_text_color
     - field.field.paragraph.colors_modifier.field_mod_transition_duration
     - paragraphs.paragraphs_type.colors_modifier
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: UHnvUAIWbSEloROw7og-9pAkhaItbUCpT55szWlHXHs
 id: paragraph.colors_modifier.default

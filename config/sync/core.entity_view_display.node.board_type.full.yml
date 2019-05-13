@@ -13,12 +13,14 @@ dependencies:
     - field.field.node.board_type.field_thumbnail
     - node.type.board_type
     - system.menu.main
+    - views.view.board_type_content
   module:
     - entity_reference_revisions
     - layout_builder
     - menu_block
     - text
     - user
+    - views
   theme:
     - czgov_theme
 third_party_settings:
@@ -122,6 +124,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          81a455fc-f1a4-46a5-bc11-367b4826ff36:
+            uuid: 81a455fc-f1a4-46a5-bc11-367b4826ff36
+            region: content
+            configuration:
+              id: 'views_block:board_type_content-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 3
         third_party_settings: {  }
 id: node.board_type.full
 targetEntityType: node

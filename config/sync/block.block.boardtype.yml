@@ -1,0 +1,29 @@
+uuid: 68ee54f4-0720-46dd-b6f2-23ff6c64d57d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.board_type
+  module:
+    - facets
+    - system
+  theme:
+    - czgov_theme
+id: boardtype
+theme: czgov_theme
+region: content_view
+weight: -5
+provider: null
+plugin: 'facet_block:board_type'
+settings:
+  id: 'facet_block:board_type'
+  label: 'Board type'
+  provider: facets
+  label_display: '0'
+  block_id: boardtype
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/8
+    negate: false
+    context_mapping: {  }

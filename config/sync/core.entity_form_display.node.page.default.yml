@@ -13,8 +13,6 @@ dependencies:
     - node.type.page
   module:
     - field_group
-    - field_layout
-    - layout_discovery
     - media_library
     - paragraphs
     - path
@@ -36,9 +34,6 @@ third_party_settings:
         required_fields: true
       label: Teaser
       region: content
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.page.default
 targetEntityType: node
 bundle: page

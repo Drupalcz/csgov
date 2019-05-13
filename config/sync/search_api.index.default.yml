@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_board_type
     - field.storage.node.field_keywords
+    - field.storage.node.field_published_date
+    - field.storage.node.field_removed_date
     - field.storage.node.field_search_exclude
     - field.storage.node.field_teaser
     - search_api.server.default
@@ -16,6 +19,14 @@ name: Default
 description: ''
 read_only: false
 field_settings:
+  field_board_type:
+    label: 'Board type'
+    datasource_id: 'entity:node'
+    property_path: field_board_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_board_type
   field_keywords:
     label: Keywords
     datasource_id: 'entity:node'
@@ -25,6 +36,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_keywords
+  field_published_date:
+    label: 'Published date'
+    datasource_id: 'entity:node'
+    property_path: field_published_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_published_date
+  field_removed_date:
+    label: 'Removed date'
+    datasource_id: 'entity:node'
+    property_path: field_removed_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_removed_date
   field_search_exclude:
     label: 'Search exclude'
     datasource_id: 'entity:node'

@@ -18,12 +18,6 @@ dependencies:
     - paragraphs.paragraphs_type.shadow_modifier
   module:
     - color_field
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 88GEWCvCpsoJP8nrSm3yTdOvmr3_vDg-53Zh2Tmb3K0
 id: paragraph.shadow_modifier.default

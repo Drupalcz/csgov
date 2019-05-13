@@ -7,14 +7,8 @@ dependencies:
     - field.field.user.user.field_password_expiration
   module:
     - datetime
-    - field_layout
-    - layout_discovery
     - path
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user

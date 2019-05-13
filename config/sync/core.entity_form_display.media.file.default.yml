@@ -7,14 +7,8 @@ dependencies:
     - field.field.media.file.field_tags
     - media.type.file
   module:
-    - field_layout
     - file
-    - layout_discovery
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: media.file.default
 targetEntityType: media
 bundle: file

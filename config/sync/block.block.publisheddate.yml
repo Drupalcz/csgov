@@ -1,0 +1,29 @@
+uuid: ed67a6f0-e470-4427-a446-c9f00da0e06a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date
+  module:
+    - facets
+    - system
+  theme:
+    - czgov_theme
+id: publisheddate
+theme: czgov_theme
+region: content_view
+weight: -4
+provider: null
+plugin: 'facet_block:published_date'
+settings:
+  id: 'facet_block:published_date'
+  label: 'Published date'
+  provider: facets
+  label_display: '0'
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/8
+    negate: false
+    context_mapping: {  }

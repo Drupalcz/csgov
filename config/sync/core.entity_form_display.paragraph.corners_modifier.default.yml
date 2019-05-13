@@ -13,13 +13,6 @@ dependencies:
     - field.field.paragraph.corners_modifier.field_mod_corners_tr_units
     - field.field.paragraph.corners_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.corners_modifier
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 3Xx9LrhHb1iDD-DwXuE-x4R3yRj3Mz4KrregW8v8lvc
 id: paragraph.corners_modifier.default

@@ -9,12 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.custom_linear_gradient_modifier
   module:
     - color_field
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 2UJ9irdn0aHMxRery3Tl4HE-CrN5wQRAUeEehpgNKR0
 id: paragraph.custom_linear_gradient_modifier.default

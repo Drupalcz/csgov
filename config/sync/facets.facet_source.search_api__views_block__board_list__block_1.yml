@@ -1,0 +1,12 @@
+uuid: b06062be-6524-4144-9716-121162601329
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__board_list__block_1
+name: 'search_api:views_block__board_list__block_1'
+filter_key: board-type
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

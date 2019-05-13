@@ -11,12 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_bg_modifier
   module:
     - color_field
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 88teei5HDNpfpYVbHOdZW5jxWruWqei6Kf7Y_JbBmVA
 id: paragraph.image_bg_modifier.default

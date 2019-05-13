@@ -26,13 +26,6 @@ dependencies:
     - field.field.paragraph.image_fx_modifier.field_mod_image_fx_sepia
     - field.field.paragraph.image_fx_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.image_fx_modifier
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: KBf4bUeeNtOfJ0IozGows6Xo8QH-HCT600x-BzYNnXw
 id: paragraph.image_fx_modifier.default

@@ -1,0 +1,30 @@
+uuid: f9d07825-5b86-44bf-89bf-71efe566a858
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.board_list
+  module:
+    - system
+    - views
+  theme:
+    - czgov_theme
+id: views_block__board_list_block_1
+theme: czgov_theme
+region: content_view
+weight: -3
+provider: null
+plugin: 'views_block:board_list-block_1'
+settings:
+  id: 'views_block:board_list-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/8
+    negate: false
+    context_mapping: {  }

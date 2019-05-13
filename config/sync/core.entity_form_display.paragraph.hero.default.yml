@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - field_group
-    - field_layout
-    - layout_discovery
     - link
     - paragraphs
     - text
@@ -50,9 +48,6 @@ third_party_settings:
         required_fields: true
       label: Presentation
       region: content
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
