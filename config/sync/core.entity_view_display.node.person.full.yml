@@ -121,7 +121,25 @@ third_party_settings:
               suggestion: main
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: -9
+          8e85763f-0982-4aa7-9b63-4b6a67d3a3e1:
+            uuid: 8e85763f-0982-4aa7-9b63-4b6a67d3a3e1
+            region: sidebar
+            configuration:
+              id: 'field_block:node:person:field_thumbnail'
+              label: Thumbnail
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: square
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -10
         third_party_settings: {  }
 id: node.person.full
 targetEntityType: node
