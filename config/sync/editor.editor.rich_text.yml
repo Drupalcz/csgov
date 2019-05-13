@@ -64,7 +64,7 @@ settings:
             - Maximize
   plugins:
     stylescombo:
-      styles: "p.lead|Úvodník\r\na.btn|Tlačítko\r\na.btn.btn-primary|Tlačítko hlavní\r\na.btn.btn-secondary|Tlačítko vedlejší\r\na.btn.btn-light|Tlačítko světlé\r\na.btn.btn-dark|Tlačítko tmavé\r\nspan.text-primary|Text hlavní\r\nspan.text-secondary|Text vedlejší\r\nspan.text-light|Text světlý\r\nspan.text-dark|Text tmavý"
+      styles: "p.lead|Úvodník\r\na.cta-link|Click to action\r\na.btn|Tlačítko\r\na.btn.btn-primary|Tlačítko hlavní\r\na.btn.btn-secondary|Tlačítko vedlejší\r\na.btn.btn-light|Tlačítko světlé\r\na.btn.btn-dark|Tlačítko tmavé\r\nspan.text-primary|Text hlavní\r\nspan.text-secondary|Text vedlejší\r\nspan.text-light|Text světlý\r\nspan.text-dark|Text tmavý"
     drupallink:
       linkit_enabled: true
       linkit_profile: default

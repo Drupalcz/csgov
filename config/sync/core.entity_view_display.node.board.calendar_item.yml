@@ -78,7 +78,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: hidden
+                label: inline
                 type: datetime_default
                 settings:
                   timezone_override: ''
@@ -97,7 +97,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: hidden
+                label: inline
                 type: datetime_default
                 settings:
                   timezone_override: ''
@@ -142,6 +142,24 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          dda862fd-a2e9-4d21-b0d8-60423bc42d9a:
+            uuid: dda862fd-a2e9-4d21-b0d8-60423bc42d9a
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_board_responsible'
+              label: 'Board responsible'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -8
         third_party_settings: {  }
 id: node.board.calendar_item
 targetEntityType: node
