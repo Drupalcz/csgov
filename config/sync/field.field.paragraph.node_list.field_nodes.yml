@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_nodes
     - node.type.board
     - node.type.board_type
+    - node.type.event
     - node.type.page
     - node.type.person
     - paragraphs.paragraphs_type.node_list
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       board: board
       board_type: board_type
+      event: event
       page: page
       person: person
     sort:
