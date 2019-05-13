@@ -30,11 +30,11 @@
     }
 
     @include bp(medium) {
-      max-width: ($bp-large);
+      max-width: ($max-width);
     }
 
     @include bp(large) {
-      max-width: ($bp-large);
+      max-width: ($max-width);
     }
   }
   // No need for horizontal padding on paragraph content if the paragraph has background color.

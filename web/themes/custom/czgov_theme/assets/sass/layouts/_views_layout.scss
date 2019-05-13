@@ -12,7 +12,7 @@
 }
 
 .views-layout--tiny-gap .view-content {
-  .views-row {
+  .views-row:not(:first-child) {
     margin-top: 2px;
   }
 }

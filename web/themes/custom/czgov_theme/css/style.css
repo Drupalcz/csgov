@@ -105,20 +105,20 @@ strong {
   padding: 0 2rem; }
   .region-admin-area > * {
     margin: 0 auto;
-    max-width: 120rem; }
+    max-width: 140rem; }
 
 .region-admin-area {
   background: transparent; }
 
 .block-local-tasks-block {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 2rem;
   position: relative; }
 
 .region-content-view {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 2rem;
   position: relative; }
 
@@ -130,7 +130,7 @@ header {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr auto;
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 2rem;
   position: relative;
   z-index: 300; }
@@ -182,7 +182,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 0 auto;
-  max-width: 120rem; }
+  max-width: 140rem; }
   .region-top-bar .menu {
     margin: .3em 0 .3em 2em; }
     .region-top-bar .menu li {
@@ -375,7 +375,7 @@ header {
 
 .container {
   margin: 0 auto;
-  max-width: 120rem; }
+  max-width: 140rem; }
   @media (min-width: 48rem) {
     .container {
       padding: 0 2rem; } }
@@ -522,7 +522,7 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
 .views-layout .view-content .views-row {
   margin-top: 3rem; }
 
-.views-layout--tiny-gap .view-content .views-row {
+.views-layout--tiny-gap .view-content .views-row:not(:first-child) {
   margin-top: 2px; }
 
 .views-layout--full-width .view-content .views-row {
@@ -796,7 +796,7 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
   padding-left: 0; }
 
 .block-field-blocknodepagefield-body .field--name-field-body {
-  max-width: 120rem;
+  max-width: 140rem;
   margin-right: auto;
   margin-left: auto; }
 
@@ -862,7 +862,7 @@ img {
 
 h1.page-title {
   margin-top: 0;
-  max-width: 120rem;
+  max-width: 140rem;
   margin-right: auto;
   margin-left: auto; }
   .section-layout--edgy h1.page-title {
@@ -885,7 +885,7 @@ h1.page-title {
           box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
-  max-width: 120rem;
+  max-width: 140rem;
   padding-left: 2rem;
   padding-right: 2rem;
   width: 100%; }
@@ -894,10 +894,10 @@ h1.page-title {
       max-width: 76.8rem; } }
   @media (min-width: 48rem) {
     .section-layout--edgy .paragraph-content {
-      max-width: 120rem; } }
+      max-width: 140rem; } }
   @media (min-width: 75rem) {
     .section-layout--edgy .paragraph-content {
-      max-width: 120rem; } }
+      max-width: 140rem; } }
 
 .section-layout--edgy .modifiers-has-background > .paragraph-content,
 .section-layout--edgy .paragraph[class^='color-']:not(.color--standard) > .paragraph-content {
