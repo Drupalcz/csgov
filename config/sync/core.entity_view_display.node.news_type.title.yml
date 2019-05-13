@@ -1,17 +1,17 @@
-uuid: 8395ac59-4aff-474d-8570-695274b3fa67
+uuid: 65f6cadd-e426-4559-9fbd-e57115e4d7a7
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search
-    - field.field.node.event.field_body
-    - field.field.node.event.field_components
-    - field.field.node.event.field_hero_components
-    - field.field.node.event.field_keywords
-    - field.field.node.event.field_search_exclude
-    - field.field.node.event.field_teaser
-    - field.field.node.event.field_thumbnail
-    - node.type.event
+    - core.entity_view_mode.node.title
+    - field.field.node.news_type.field_body
+    - field.field.node.news_type.field_components
+    - field.field.node.news_type.field_hero_components
+    - field.field.node.news_type.field_keywords
+    - field.field.node.news_type.field_search_exclude
+    - field.field.node.news_type.field_teaser
+    - field.field.node.news_type.field_thumbnail
+    - node.type.news_type
   module:
     - entity_reference_revisions
     - layout_builder
@@ -25,14 +25,14 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: search
+        layout_id: title
         layout_settings: {  }
         components:
-          38053dd9-cb54-4397-9791-303764484c76:
-            uuid: 38053dd9-cb54-4397-9791-303764484c76
+          9c463c55-c170-4fd2-98bc-de7c70d9476a:
+            uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
             region: title
             configuration:
-              id: 'field_block:node:event:title'
+              id: 'field_block:node:news_type:title'
               label: Title
               provider: layout_builder
               label_display: '0'
@@ -46,29 +46,11 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          10f05384-c118-4584-bd48-41830b4d82e0:
-            uuid: 10f05384-c118-4584-bd48-41830b4d82e0
-            region: summary
-            configuration:
-              id: 'field_block:node:event:field_teaser'
-              label: Teaser
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_trimmed
-                settings:
-                  trim_length: 250
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
         third_party_settings: {  }
-id: node.event.search
+id: node.news_type.title
 targetEntityType: node
-bundle: event
-mode: search
+bundle: news_type
+mode: title
 content:
   field_body:
     weight: 101
@@ -131,10 +113,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
-  field_event_date: true
-  field_event_location: true
   layout_selection: true

@@ -135,4 +135,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_event_date: true
+  field_event_location: true
   layout_selection: true

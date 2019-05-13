@@ -1,0 +1,19 @@
+uuid: 4ee7edcb-c502-4ba3-948d-566d8af401d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.news
+id: node.news.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: news
+label: Keywords
+description: 'Enhance search results.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

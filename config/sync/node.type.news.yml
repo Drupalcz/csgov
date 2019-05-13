@@ -1,4 +1,4 @@
-uuid: 797baa97-6eea-496a-a55e-b91d2f5aa785
+uuid: 94694e16-410c-407e-bab2-01a511953c73
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Board_type
-type: board_type
+name: News
+type: news
 description: ''
 help: ''
 new_revision: true

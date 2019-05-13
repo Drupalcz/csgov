@@ -1,17 +1,17 @@
-uuid: 8395ac59-4aff-474d-8570-695274b3fa67
+uuid: 67543175-cd30-48fa-8c64-5536f86d7f50
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search
-    - field.field.node.event.field_body
-    - field.field.node.event.field_components
-    - field.field.node.event.field_hero_components
-    - field.field.node.event.field_keywords
-    - field.field.node.event.field_search_exclude
-    - field.field.node.event.field_teaser
-    - field.field.node.event.field_thumbnail
-    - node.type.event
+    - field.field.node.news_type.field_body
+    - field.field.node.news_type.field_components
+    - field.field.node.news_type.field_hero_components
+    - field.field.node.news_type.field_keywords
+    - field.field.node.news_type.field_search_exclude
+    - field.field.node.news_type.field_teaser
+    - field.field.node.news_type.field_thumbnail
+    - node.type.news_type
   module:
     - entity_reference_revisions
     - layout_builder
@@ -32,7 +32,7 @@ third_party_settings:
             uuid: 38053dd9-cb54-4397-9791-303764484c76
             region: title
             configuration:
-              id: 'field_block:node:event:title'
+              id: 'field_block:node:news_type:title'
               label: Title
               provider: layout_builder
               label_display: '0'
@@ -50,7 +50,7 @@ third_party_settings:
             uuid: 10f05384-c118-4584-bd48-41830b4d82e0
             region: summary
             configuration:
-              id: 'field_block:node:event:field_teaser'
+              id: 'field_block:node:news_type:field_teaser'
               label: Teaser
               provider: layout_builder
               label_display: '0'
@@ -65,9 +65,9 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-id: node.event.search
+id: node.news_type.search
 targetEntityType: node
-bundle: event
+bundle: news_type
 mode: search
 content:
   field_body:
@@ -135,6 +135,4 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_event_date: true
-  field_event_location: true
   layout_selection: true

@@ -7,6 +7,8 @@ dependencies:
     - node.type.board
     - node.type.board_type
     - node.type.event
+    - node.type.news
+    - node.type.news_type
     - node.type.page
     - node.type.person
     - paragraphs.paragraphs_type.node_list
@@ -27,6 +29,8 @@ settings:
       board: board
       board_type: board_type
       event: event
+      news: news
+      news_type: news_type
       page: page
       person: person
     sort:

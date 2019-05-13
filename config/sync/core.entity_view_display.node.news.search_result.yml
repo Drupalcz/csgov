@@ -1,17 +1,17 @@
-uuid: b6c07c11-6fd1-4e76-9dd2-1efb802b5764
+uuid: e785e537-23d9-43c8-8a6f-1515e90caf63
 langcode: en
 status: false
 dependencies:
   config:
     - core.entity_view_mode.node.search_result
-    - field.field.node.event.field_body
-    - field.field.node.event.field_components
-    - field.field.node.event.field_hero_components
-    - field.field.node.event.field_keywords
-    - field.field.node.event.field_search_exclude
-    - field.field.node.event.field_teaser
-    - field.field.node.event.field_thumbnail
-    - node.type.event
+    - field.field.node.news.field_body
+    - field.field.node.news.field_components
+    - field.field.node.news.field_hero_components
+    - field.field.node.news.field_keywords
+    - field.field.node.news.field_search_exclude
+    - field.field.node.news.field_teaser
+    - field.field.node.news.field_thumbnail
+    - node.type.news
   module:
     - entity_reference_revisions
     - layout_builder
@@ -34,7 +34,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:event:links'
+              id: 'extra_field_block:node:news:links'
             additional: {  }
             weight: 0
           e1a1c1fe-ffd5-4ca9-9253-b5a9f9e38926:
@@ -44,7 +44,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_body'
+              id: 'field_block:node:news:field_body'
               formatter:
                 label: above
                 settings: {  }
@@ -59,7 +59,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_teaser'
+              id: 'field_block:node:news:field_teaser'
               formatter:
                 label: above
                 settings: {  }
@@ -74,7 +74,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_thumbnail'
+              id: 'field_block:node:news:field_thumbnail'
               formatter:
                 type: entity_reference_entity_view
                 label: above
@@ -91,7 +91,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_components'
+              id: 'field_block:node:news:field_components'
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: above
@@ -108,7 +108,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_hero_components'
+              id: 'field_block:node:news:field_hero_components'
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: above
@@ -125,7 +125,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_keywords'
+              id: 'field_block:node:news:field_keywords'
               formatter:
                 label: above
                 settings:
@@ -141,7 +141,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_search_exclude'
+              id: 'field_block:node:news:field_search_exclude'
               formatter:
                 label: above
                 settings:
@@ -153,9 +153,9 @@ third_party_settings:
             additional: {  }
             weight: 7
         third_party_settings: {  }
-id: node.event.search_result
+id: node.news.search_result
 targetEntityType: node
-bundle: event
+bundle: news
 mode: search_result
 content:
   field_body:
@@ -222,6 +222,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_event_date: true
-  field_event_location: true
+hidden: {  }

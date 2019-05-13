@@ -1,0 +1,23 @@
+uuid: 6fa365ad-da07-4eba-a502-64e98b46373f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_exclude
+    - node.type.news
+id: node.news.field_search_exclude
+field_name: field_search_exclude
+entity_type: node
+bundle: news
+label: 'Search exclude'
+description: 'Exclude this content from search index.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,56 +1,24 @@
-uuid: 5f297d1b-a955-454e-928c-f6dabeac7b50
+uuid: 291ba547-07cf-4259-aedd-a7c118207cc7
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.title
-    - field.field.node.event.field_body
-    - field.field.node.event.field_components
-    - field.field.node.event.field_hero_components
-    - field.field.node.event.field_keywords
-    - field.field.node.event.field_search_exclude
-    - field.field.node.event.field_teaser
-    - field.field.node.event.field_thumbnail
-    - node.type.event
+    - field.field.node.news_type.field_body
+    - field.field.node.news_type.field_components
+    - field.field.node.news_type.field_hero_components
+    - field.field.node.news_type.field_keywords
+    - field.field.node.news_type.field_search_exclude
+    - field.field.node.news_type.field_teaser
+    - field.field.node.news_type.field_thumbnail
+    - node.type.news_type
   module:
     - entity_reference_revisions
-    - layout_builder
     - text
     - user
-  theme:
-    - czgov_theme
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: title
-        layout_settings: {  }
-        components:
-          9c463c55-c170-4fd2-98bc-de7c70d9476a:
-            uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
-            region: title
-            configuration:
-              id: 'field_block:node:event:title'
-              label: Title
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-id: node.event.title
+id: node.news_type.default
 targetEntityType: node
-bundle: event
-mode: title
+bundle: news_type
+mode: default
 content:
   field_body:
     weight: 101
@@ -117,6 +85,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_event_date: true
-  field_event_location: true
   layout_selection: true
