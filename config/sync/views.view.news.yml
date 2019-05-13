@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_small
     - node.type.news
   module:
     - node
@@ -80,7 +81,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: teaser_small
       fields:
         title:
           id: title
@@ -212,7 +213,7 @@ display:
         link_display: false
         link_url: false
       link_display: custom_url
-      link_url: /news
+      link_url: news
     cache_metadata:
       max-age: -1
       contexts:
@@ -239,12 +240,26 @@ display:
         use_more_text: false
         link_display: false
         link_url: false
+        style: false
+        row: false
       block_hide_empty: true
       use_more: false
       use_more_always: true
       use_more_text: 'View all news'
       link_display: '0'
       link_url: /news
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:

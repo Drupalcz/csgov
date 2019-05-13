@@ -1,16 +1,16 @@
-uuid: 947b93ba-61d1-44ad-a9bb-04a9c1fa6265
+uuid: ba44bdda-e16f-4077-b034-1685990a1171
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.calendar_item
-    - node.type.event
+    - node.type.board
   module:
     - datetime
     - node
     - user
-id: events
-label: Events
+id: homepage_board_list
+label: 'Homepage board list'
 module: views
 description: ''
 tag: ''
@@ -50,26 +50,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: some
         options:
-          items_per_page: 15
+          items_per_page: 10
           offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
       style:
         type: default
         options:
@@ -147,15 +131,58 @@ display:
           table: node_field_data
           field: type
           value:
-            event: event
+            board: board
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_removed_date_value:
+          id: field_removed_date_value
+          table: node__field_removed_date
+          field: field_removed_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
       sorts:
-        field_event_date_value:
-          id: field_event_date_value
-          table: node__field_event_date
-          field: field_event_date_value
+        field_published_date_value:
+          id: field_published_date_value
+          table: node__field_published_date
+          field: field_published_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -167,85 +194,54 @@ display:
           plugin_id: datetime
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No current boards available.'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders:
         metatag_display_extender: {  }
         simple_sitemap_display_extender: {  }
-      css_class: 'views-layout views-layout--full-width views-layout--tiny-gap'
-      title: 'Current events'
-      use_ajax: true
       use_more: true
       use_more_always: true
-      use_more_text: 'View all events'
-      link_url: events
+      use_more_text: 'View whole board'
+      link_url: board
       link_display: custom_url
+      css_class: 'views-layout views-layout--full-width views-layout--tiny-gap'
+      title: 'Latest board'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Homepage event list '
+    display_title: 'Homepage board list'
     position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
         simple_sitemap_display_extender: {  }
-      display_description: ''
       block_hide_empty: true
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
-      defaults:
-        pager: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: 'All events list'
-    position: 2
-    display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-        simple_sitemap_display_extender: {  }
-      title: Events
-      defaults:
-        title: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-        link_display: false
-        link_url: false
-      display_description: ''
-      block_hide_empty: true
-      use_more: false
-      use_more_always: true
-      use_more_text: 'View all events'
-      link_display: '0'
-      link_url: /events
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
