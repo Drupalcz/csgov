@@ -1,15 +1,24 @@
 .calendar-item {
+  background: $calendar-item-future-background;
   display: flex;
+  flex-direction: column;
   justify-content: stretch;
+
+  @include bp(small) {
+    flex-direction: row;
+  }
 
   .calendar-item__date {
     padding: 0.5em;
-    width: $calendar-item__date-width;
     align-items: center;
     display: flex;
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
+
+    @include bp(small) {
+      width: $calendar-item__date-width;
+    }
 
     .field,
     .block {
@@ -36,8 +45,15 @@
 
   .calendar-item__content {
     padding: 0.5em;
-    border-left: $calendar-item-border solid $color-standard-background;
-    width: calc(100% - #{$calendar-item__date-width});
+    border-top: $calendar-item-border solid $color-standard-background;
+
+
+    @include bp(small) {
+      border-left: $calendar-item-border solid $color-standard-background;
+      border-top: none;
+      width: calc(100% - #{$calendar-item__date-width});
+    }
+
 
     // All regions has one third unit gap between them.
     *[class^='calendar-item__'] + *[class^='calendar-item__'] {
@@ -57,6 +73,18 @@
     span,
     a {
       color: $calendar-item-foreground-past;
+    }
+  }
+
+  .node--type-board & {
+    .calendar-item__info,
+    .calendar-item__tags {
+      @include bp(small) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.5em;
+        row-gap: 0.5em;
+      }
     }
   }
 }

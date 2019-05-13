@@ -107,7 +107,7 @@ $heading-xs: 1.6rem;
 
 $heading-xxl-weight: 100;
 $heading-xl-weight: 100;
-$heading-l-weight: 300;
+$heading-l-weight: 700;
 $heading-m-weight: 100;
 $heading-sm-weight: 300;
 $heading-xs-weight: 500;
@@ -132,7 +132,8 @@ $main-navigation-accent-hover: $color-standard-action;
 
 $calendar-item__date-width: 10rem;
 $calendar-item__date-number-size: $calendar-item__date-width /2;
-$calendar-item-background-past: $gray-1;
-$calendar-item-foreground-past: $gray-5;
 $calendar-item-background-current: $color-primary-background;
+$calendar-item-background-past: $gray-05;
+$calendar-item-foreground-past: $gray-5;
+$calendar-item-future-background: $gray-05;
 $calendar-item-border: 2px;

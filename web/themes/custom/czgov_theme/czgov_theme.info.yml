@@ -17,6 +17,7 @@ regions:
   layoutless: 'Layoutless pages'
   content_top: 'Content top'
   content: 'Content'
+  content_view: 'Content view'
   content_bottom: 'Content bottom'
   footer: 'Footer'
   page_top: 'Page top' # Needed by Drupal Core

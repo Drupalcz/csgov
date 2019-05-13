@@ -1,0 +1,10 @@
+.field--name-field-attachments {
+  background: $gray-05;
+  padding: 0.5em;
+
+  .field__item + .field__item {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 1px dotted $gray-3;
+  }
+}

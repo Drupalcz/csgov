@@ -1,0 +1,26 @@
+// Arrow marker for CTA link.
+%cta-link-marker {
+  &:after {
+    content: "\f054";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    margin-left: 7px;
+  }
+
+  &:hover:after {
+    animation: arrow-animate 1.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-animate {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(15px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,33 @@
+.region-content-view {
+  display: grid;
+  gap: 0 3%;
+
+  @include bp(medium) {
+    grid-template-columns: 70% 27%;
+  }
+
+  .block-views-blockboard-list-block-1 {
+    @include bp(medium) {
+      grid-column: 1/2;
+      grid-row: 2;
+    }
+  }
+
+  .block-facet-blockboard-type {
+    @include bp(medium) {
+      grid-column: 1/3;
+      grid-row: 1;
+
+      .item-list__checkbox {
+        display: flex;
+        gap: 1em;
+      }
+    }
+  }
+  .block-facet-blockpublished-date {
+    @include bp(medium) {
+      grid-column: 2/3;
+      grid-row: 2;
+    }
+  }
+}

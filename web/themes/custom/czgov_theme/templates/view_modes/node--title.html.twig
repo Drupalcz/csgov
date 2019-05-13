@@ -70,11 +70,6 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
-  'node--type-' ~ node.bundle|clean_class,
-]
-%}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes }}>
   {{ content }}
 </article>
