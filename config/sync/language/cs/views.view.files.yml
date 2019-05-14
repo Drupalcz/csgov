@@ -1,0 +1,83 @@
+label: Soubory
+description: 'Vyhledat a spravovat soubory.'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        fid:
+          label: Fid
+        filename:
+          label: Jméno
+          separator: ', '
+        filemime:
+          label: 'Typ MIME'
+        filesize:
+          label: Velikost
+        status:
+          label: Stav
+          settings:
+            format_custom_false: Dočasný
+            format_custom_true: Trvalý
+        created:
+          label: 'Datum nahrání'
+        changed:
+          label: 'Datum změny'
+        count:
+          label: 'Použito v'
+      filters:
+        filename:
+          expose:
+            label: 'Název souboru'
+        filemime:
+          expose:
+            label: 'Typ MIME'
+        status:
+          expose:
+            label: Stav
+      title: Soubory
+      empty:
+        area_text_custom:
+          content: 'Žádné soubory nejsou k dispozici.'
+  page_1:
+    display_title: 'Přehled souborů'
+    display_options:
+      menu:
+        title: Soubory
+  page_2:
+    display_options:
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        entity_label:
+          label: Entity
+        type:
+          label: 'Typ entity'
+        module:
+          label: 'Probíhá registrace modulu'
+      arguments:
+        fid:
+          exception:
+            title: Vše
+          title: 'Informace o použití souboru pro {{arguments.fid}}'

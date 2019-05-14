@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.item.field_body
     - field.field.paragraph.item.field_heading
+    - field.field.paragraph.item.field_image
     - field.field.paragraph.item.field_read_more
     - field.field.paragraph.item.field_title
     - paragraphs.paragraphs_type.item

@@ -32,6 +32,7 @@ content:
 hidden:
   created: true
   field_tags: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

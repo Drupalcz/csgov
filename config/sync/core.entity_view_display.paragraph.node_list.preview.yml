@@ -7,9 +7,11 @@ dependencies:
     - field.field.paragraph.node_list.field_body
     - field.field.paragraph.node_list.field_color_classes
     - field.field.paragraph.node_list.field_heading
+    - field.field.paragraph.node_list.field_layout_classes
     - field.field.paragraph.node_list.field_nodes
     - field.field.paragraph.node_list.field_read_more
     - field.field.paragraph.node_list.field_title
+    - field.field.paragraph.node_list.field_view_mode
     - paragraphs.paragraphs_type.node_list
   module:
     - layout_builder

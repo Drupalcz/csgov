@@ -1,0 +1,101 @@
+label: Komentáře
+description: 'Hledat a spravovat komentáře.'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Použít
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            previous: '‹ předchozí'
+            next: 'následující ›'
+            first: '« první'
+            last: 'poslední »'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        comment_bulk_form:
+          action_title: Akce
+        subject:
+          label: Předmět
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          label: Příspěvek
+          separator: ', '
+        changed:
+          label: Aktualizováno
+          separator: ', '
+        operations:
+          label: Operace
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Předmět
+        combine:
+          expose:
+            label: 'Jméno autora'
+        langcode:
+          expose:
+            label: Jazyk
+      title: Komentáře
+      empty:
+        area_text_custom:
+          content: 'Bez komentářů.'
+      use_more_text: více
+  page_published:
+    display_title: 'Zveřejněné komentáře'
+    display_options:
+      menu:
+        title: Komentáře
+  page_unapproved:
+    display_title: 'Neschválené komentáře'
+    display_options:
+      menu:
+        title: 'Neschválené komentáře'
+      filters:
+        subject:
+          expose:
+            label: Předmět
+        combine:
+          expose:
+            label: 'Jméno autora'
+        langcode:
+          expose:
+            label: Jazyk
+      fields:
+        comment_bulk_form:
+          action_title: Akce
+        subject:
+          label: Předmět
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          label: Příspěvek
+          separator: ', '
+        changed:
+          label: Aktualizováno
+          separator: ', '
+        operations:
+          label: Operace
+        name_1:
+          separator: ', '

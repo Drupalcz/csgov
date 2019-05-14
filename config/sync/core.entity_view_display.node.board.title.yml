@@ -129,4 +129,5 @@ hidden:
   field_published_date: true
   field_reference_mark: true
   field_removed_date: true
+  langcode: true
   layout_selection: true

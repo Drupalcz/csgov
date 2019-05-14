@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_group.field_accordions
-    - field.field.paragraph.accordion_group.field_color_classes
     - field.field.paragraph.accordion_group.field_body
+    - field.field.paragraph.accordion_group.field_color_classes
     - field.field.paragraph.accordion_group.field_heading
     - field.field.paragraph.accordion_group.field_show_close_all
     - field.field.paragraph.accordion_group.field_show_open_all

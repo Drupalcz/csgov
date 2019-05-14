@@ -1,0 +1,54 @@
+label: Watchdog
+description: 'Poslední zprávy v logu'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        nothing:
+          admin_label: Ikona
+        wid:
+          label: WID
+        severity:
+          label: Vážnost
+        type:
+          label: Typ
+        timestamp:
+          label: Datum
+        message:
+          label: Zpráva
+        name:
+          label: Uživatel
+          separator: ', '
+        link:
+          label: Operace
+      filters:
+        type:
+          expose:
+            label: Typ
+        severity:
+          expose:
+            label: Vážnost
+      title: 'Poslední zprávy v logu'
+      empty:
+        area:
+          admin_label: 'Nejsou k dispozici žádné zprávy v logu.'
+          content: 'Nejsou k dispozici žádné zprávy v logu.'
+  page:
+    display_title: Stránka

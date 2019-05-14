@@ -1,0 +1,20 @@
+settings:
+  default_submit_button_label: Odeslat
+  default_reset_button_label: Reset
+  default_wizard_prev_button_label: '< Předchozí strana'
+  default_wizard_next_button_label: 'Další strana >'
+  default_wizard_start_label: Začátek
+  default_wizard_confirmation_label: Dokončit
+  default_preview_next_button_label: Náhled
+  default_preview_label: Náhled
+  default_draft_button_label: 'Uložit koncept'
+  default_draft_saved_message: 'Odeslání uloženo. K tomuto formuláři se můžete vrátit později, což vám obnoví aktuální hodnoty.'
+  dialog_options:
+    narrow:
+      title: Úzký
+    normal:
+      title: Normální
+    wide:
+      title: Široký
+element:
+  default_more_title: Více

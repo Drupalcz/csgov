@@ -1,0 +1,152 @@
+label: 'Odeslané webové formuláře'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Použít
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« První'
+            last: 'Poslední »'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Koncept
+          separator: ', '
+        created:
+          label: Vytvořeno
+          separator: ', '
+        remote_addr:
+          label: 'IP adresa'
+          separator: ', '
+        view_webform_submission:
+          label: Operace
+          text: zobrazit
+      arguments:
+        in_draft:
+          exception:
+            title: Vše
+      title: 'Odeslané webové formuláře'
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Akce
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Koncept
+          separator: ', '
+        sticky:
+          label: Přilepení
+          separator: ', '
+        locked:
+          label: Uzamčeno
+          separator: ', '
+        created:
+          label: Vytvořeno
+          separator: ', '
+        completed:
+          label: Dokončené
+          separator: ', '
+        remote_addr:
+          label: 'IP adresa'
+          separator: ', '
+        operations:
+          label: Operace
+      filters:
+        sticky:
+          expose:
+            label: Přilepení
+        locked:
+          expose:
+            label: Uzamčeno
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Akce
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Koncept
+          separator: ', '
+        sticky:
+          label: Přilepení
+          separator: ', '
+        locked:
+          label: Uzamčeno
+          separator: ', '
+        created:
+          label: Vytvořeno
+          separator: ', '
+        completed:
+          label: Dokončené
+          separator: ', '
+        remote_addr:
+          label: 'IP adresa'
+          separator: ', '
+        view_webform_submission:
+          label: Operace
+          text: zobrazit
+        edit_webform_submission:
+          label: Operace
+          text: upravit
+      filters:
+        sticky:
+          expose:
+            label: Přilepení
+        locked:
+          expose:
+            label: Uzamčeno
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Koncept
+          separator: ', '
+        sticky:
+          label: Přilepení
+          separator: ', '
+        locked:
+          label: Uzamčeno
+          separator: ', '
+        created:
+          label: Vytvořeno
+          separator: ', '
+        completed:
+          label: Dokončené
+          separator: ', '
+        remote_addr:
+          label: 'IP adresa'
+          separator: ', '
+        view_webform_submission:
+          label: Operace
+          text: zobrazit
+      filters:
+        sticky:
+          expose:
+            label: Přilepení
+        locked:
+          expose:
+            label: Uzamčeno

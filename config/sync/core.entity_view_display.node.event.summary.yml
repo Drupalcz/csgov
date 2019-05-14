@@ -177,4 +177,5 @@ content:
 hidden:
   field_event_date: true
   field_event_location: true
+  langcode: true
   layout_selection: true

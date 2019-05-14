@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_tags
     - image.style.medium
     - media.type.file
   module:
@@ -26,5 +27,7 @@ content:
 hidden:
   created: true
   field_media_file: true
+  field_tags: true
+  langcode: true
   name: true
   uid: true

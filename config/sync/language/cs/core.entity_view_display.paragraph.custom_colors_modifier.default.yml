@@ -1,0 +1,19 @@
+content:
+  field_mod_background_color_val:
+    settings:
+      opacity: '1'
+  field_mod_h_background_color_val:
+    settings:
+      opacity: '1'
+  field_mod_h_link_color_val:
+    settings:
+      opacity: '1'
+  field_mod_h_text_color_val:
+    settings:
+      opacity: '1'
+  field_mod_link_color_val:
+    settings:
+      opacity: '1'
+  field_mod_text_color_val:
+    settings:
+      opacity: '1'

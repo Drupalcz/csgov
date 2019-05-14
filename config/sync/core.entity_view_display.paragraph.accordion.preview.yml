@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.accordion.field_body
     - field.field.paragraph.accordion.field_accordion_orientation
     - field.field.paragraph.accordion.field_accordion_speed
+    - field.field.paragraph.accordion.field_body
     - field.field.paragraph.accordion.field_heading
     - field.field.paragraph.accordion.field_title
     - paragraphs.paragraphs_type.accordion

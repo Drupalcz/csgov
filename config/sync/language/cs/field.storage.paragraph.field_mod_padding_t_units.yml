@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    1:
+      label: bez
+    8:
+      label: '%'
+    11:
+      label: v

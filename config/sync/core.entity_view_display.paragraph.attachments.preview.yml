@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.attachments.field_attachment
     - field.field.paragraph.attachments.field_body
     - field.field.paragraph.attachments.field_color_classes
     - field.field.paragraph.attachments.field_heading

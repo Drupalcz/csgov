@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
+    - field.field.node.page.layout_builder__layout
     - node.type.page
     - system.menu.main
   module:
@@ -192,4 +193,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  langcode: true
+  layout_builder__layout: true

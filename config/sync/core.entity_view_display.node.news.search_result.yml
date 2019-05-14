@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_components
     - field.field.node.news.field_hero_components
     - field.field.node.news.field_keywords
+    - field.field.node.news.field_news_type
     - field.field.node.news.field_search_exclude
     - field.field.node.news.field_teaser
     - field.field.node.news.field_thumbnail
@@ -222,4 +223,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_news_type: true
+  langcode: true

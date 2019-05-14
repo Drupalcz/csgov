@@ -1,0 +1,75 @@
+label: Uživatelé
+description: 'Hledat a administrovat uživatele webu.'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        user_bulk_form:
+          label: 'Hromadná aktualizace'
+        name:
+          label: 'Uživatelské jméno'
+        status:
+          label: Stav
+          settings:
+            format_custom_true: Aktivní
+            format_custom_false: Zablokován
+        roles_target_id:
+          label: Role
+        created:
+          label: 'Účet existuje již'
+        access:
+          label: 'Poslední přístup'
+        operations:
+          label: Operace
+        mail:
+          separator: ', '
+      filters:
+        combine:
+          expose:
+            label: 'Jméno nebo email obsahuje'
+        status:
+          group_info:
+            label: Stav
+            group_items:
+              1:
+                title: Aktivní
+              2:
+                title: Zablokován
+        roles_target_id:
+          expose:
+            label: Role
+        permission:
+          expose:
+            label: Oprávnění
+      title: Uživatelé
+      empty:
+        area_text_custom:
+          content: 'Žádní lidé nejsou k dispozici.'
+      use_more_text: více
+  page_1:
+    display_title: Stránka
+    display_options:
+      menu:
+        title: Seznam
+        description: 'Hledat a administrovat uživatele webu.'
+      tab_options:
+        title: Uživatelé
+        description: 'Spravovat uživatelské účty, role a oprávnění.'

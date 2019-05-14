@@ -59,4 +59,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   name: true

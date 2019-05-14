@@ -1,0 +1,56 @@
+uuid: 5ffcbe12-a260-429e-aec1-0558f77d7afd
+langcode: cs
+status: true
+dependencies:
+  config:
+    - block_content.type.components
+    - field.field.block_content.components.field_components
+  module:
+    - entity_reference_revisions
+    - layout_builder
+  theme:
+    - czgov_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: section_layout_one_column_edgy
+        layout_settings: {  }
+        components:
+          e6978a93-3fac-4bda-93f3-c46590161192:
+            uuid: e6978a93-3fac-4bda-93f3-c46590161192
+            region: content
+            configuration:
+              id: 'field_block:block_content:components:field_components'
+              label: Components
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: block_content.components.default
+targetEntityType: block_content
+bundle: components
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

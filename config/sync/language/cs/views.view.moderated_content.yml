@@ -1,0 +1,52 @@
+label: 'Moderovaný obsah'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        title:
+          label: Nadpis
+          separator: ', '
+        type:
+          label: 'Typ obsahu'
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        moderation_state:
+          separator: ', '
+        changed:
+          label: Aktualizováno
+          separator: ', '
+        operations:
+          label: Operace
+      filters:
+        title:
+          expose:
+            label: Nadpis
+        type:
+          expose:
+            label: 'Typ obsahu'
+        langcode:
+          expose:
+            label: Jazyk
+      title: 'Moderovaný obsah'
+  moderated_content:
+    display_title: 'Moderovaný obsah'

@@ -135,4 +135,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  langcode: true
   layout_selection: true

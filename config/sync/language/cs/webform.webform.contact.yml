@@ -1,0 +1,6 @@
+title: Kontakt
+settings:
+  confirmation_message: 'Vaše zpráva byla odeslána.'
+handlers:
+  email_notification:
+    label: 'Připomenutí e-mailem'

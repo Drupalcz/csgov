@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
     - field.field.node.page.field_thumbnail
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - field_group
@@ -121,6 +122,13 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 9
@@ -171,4 +179,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   layout_selection: true

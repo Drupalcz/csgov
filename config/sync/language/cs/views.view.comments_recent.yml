@@ -1,0 +1,14 @@
+label: 'Poslední komentáře'
+description: 'Nejnovější komentáře.'
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      title: 'Poslední komentáře'
+      empty:
+        area_text_custom:
+          content: 'Bez komentářů.'
+  block_1:
+    display_title: Blok
+    display_options:
+      block_description: 'Poslední komentáře'

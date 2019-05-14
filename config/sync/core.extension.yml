@@ -19,6 +19,7 @@ module:
   config_filter: 0
   config_ignore: 0
   config_split: 0
+  config_translation: 0
   content_moderation: 0
   context: 0
   context_ui: 0
@@ -51,10 +52,12 @@ module:
   honeypot: 0
   image: 0
   inline_form_errors: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
   linkit: 0
+  locale: 0
   media: 0
   media_library: 0
   menu_block: 0

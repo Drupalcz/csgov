@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.tile
     - field.field.node.event.field_body
     - field.field.node.event.field_components
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
     - field.field.node.event.field_hero_components
     - field.field.node.event.field_keywords
     - field.field.node.event.field_search_exclude
@@ -137,4 +139,5 @@ content:
 hidden:
   field_event_date: true
   field_event_location: true
+  langcode: true
   layout_selection: true

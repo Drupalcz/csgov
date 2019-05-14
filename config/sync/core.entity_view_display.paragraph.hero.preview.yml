@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.hero.field_body
     - field.field.paragraph.hero.field_color_classes
     - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_modifiers
     - field.field.paragraph.hero.field_read_more
     - field.field.paragraph.hero.field_title
     - paragraphs.paragraphs_type.hero

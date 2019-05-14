@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    0:
+      label: Nahoru
+    2:
+      label: Dole

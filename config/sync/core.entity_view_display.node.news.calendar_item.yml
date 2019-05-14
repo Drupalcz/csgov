@@ -172,4 +172,5 @@ content:
     region: content
 hidden:
   field_news_type: true
+  langcode: true
   layout_selection: true

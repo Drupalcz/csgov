@@ -1,0 +1,29 @@
+label: 'Titulní strana'
+display:
+  default:
+    display_options:
+      empty:
+        title:
+          title: 'Vítejte na webu [site:name]'
+      exposed_form:
+        options:
+          submit_button: Použít
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+          tags:
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
+    display_title: Nadřízené
+  feed_1:
+    display_title: Zdroj
+  page_1:
+    display_title: Stránka

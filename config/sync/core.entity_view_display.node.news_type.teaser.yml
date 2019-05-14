@@ -99,4 +99,5 @@ hidden:
   field_search_exclude: true
   field_teaser: true
   field_thumbnail: true
+  langcode: true
   layout_selection: true

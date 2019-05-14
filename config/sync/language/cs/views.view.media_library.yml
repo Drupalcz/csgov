@@ -1,0 +1,86 @@
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        media_bulk_form:
+          action_title: Akce
+      filters:
+        status:
+          expose:
+            label: 'Stav vydání'
+          group_info:
+            label: Vydáno
+            group_items:
+              1:
+                title: Vydáno
+              2:
+                title: Nevydáno
+        name:
+          expose:
+            label: Jméno
+      sorts:
+        created:
+          expose:
+            label: 'Nejnovější první'
+      title: Média
+  page:
+    display_title: Stránka
+    display_options:
+      menu:
+        title: Média
+  widget:
+    display_title: Widget
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Jméno
+      arguments:
+        bundle:
+          exception:
+            title: Vše
+      header:
+        display_link_grid:
+          label: Mřížka
+        display_link_table:
+          label: Tabulka
+  widget_table:
+    display_options:
+      fields:
+        thumbnail__target_id:
+          label: Náhled
+        name:
+          label: Jméno
+        uid:
+          label: Autor
+        changed:
+          label: Aktualizováno
+      filters:
+        name:
+          expose:
+            label: Jméno
+      arguments:
+        bundle:
+          exception:
+            title: Vše
+      header:
+        display_link_grid:
+          label: Mřížka
+        display_link_table:
+          label: Tabulka

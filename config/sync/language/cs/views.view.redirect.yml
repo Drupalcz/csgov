@@ -1,0 +1,59 @@
+label: Redirect
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            previous: '‹ předchozí'
+            next: 'následující ›'
+            first: '« první'
+            last: 'poslední »'
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        redirect_source__path:
+          label: Od
+          separator: ', '
+        created:
+          label: Vytvořeno
+      filters:
+        redirect_source__path:
+          expose:
+            label: Od
+        redirect_redirect__uri:
+          expose:
+            label: Komu
+        status_code:
+          group_info:
+            group_items:
+              1:
+                title: '300 Multiple Choices'
+              2:
+                title: '301 Moved Permanently'
+              3:
+                title: '302 Found'
+              4:
+                title: '303 See Other'
+              5:
+                title: '304 Not Modified'
+              6:
+                title: '305 Use Proxy'
+              7:
+                title: '307 Temporary Redirect'
+        language:
+          expose:
+            label: 'Původní jazyk'
+      title: Redirect
+  page_1:
+    display_title: Stránka
