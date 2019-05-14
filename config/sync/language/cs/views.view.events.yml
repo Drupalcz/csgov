@@ -1,0 +1,13 @@
+label: Akce
+display:
+  default:
+    display_options:
+      title: Akce
+      use_more_text: 'Všechny akce'
+  block_1:
+    display_title: 'Akce na titulní straně'
+  block_2:
+    display_title: 'Všechny akce'
+    display_options:
+      title: Akce
+      use_more_text: 'Zobrazit všechny akce'

@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'Celá úřední deska'
+      title: 'Úřední deska'
+      empty:
+        area_text_custom:
+          content: 'Nejsou k dispozici žádné aktuální záznamy.'
+  block_1:
+    display_title: 'Úřední deska na titulní straně'
+label: 'Úřední deska na titulní straně'

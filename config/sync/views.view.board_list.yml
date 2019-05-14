@@ -324,22 +324,10 @@ display:
           reduce_duplicates: false
           plugin_id: search_api_options
       sorts:
-        search_api_relevance:
-          id: search_api_relevance
+        field_published_date:
+          id: field_published_date
           table: search_api_index_default
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-        status:
-          id: status
-          table: search_api_index_default
-          field: status
+          field: field_published_date
           relationship: none
           group_type: group
           admin_label: ''

@@ -179,7 +179,7 @@ display:
       use_more: true
       use_more_always: true
       use_more_text: 'View all events'
-      link_url: events
+      link_url: akce
       link_display: custom_url
     cache_metadata:
       max-age: -1

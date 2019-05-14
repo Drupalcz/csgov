@@ -1,0 +1,13 @@
+label: Aktuality
+display:
+  block_1:
+    display_title: 'Aktuality na titulní stranu'
+  block_2:
+    display_title: 'Všechny aktuality'
+    display_options:
+      title: Aktuality
+      use_more_text: 'Všechny aktuality'
+  default:
+    display_options:
+      title: Aktuality
+      use_more_text: 'Všechny aktuality'

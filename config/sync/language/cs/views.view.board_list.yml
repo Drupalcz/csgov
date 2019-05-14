@@ -1,0 +1,15 @@
+label: 'Úřední deska'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Hledat
+          exposed_sorts_label: 'Třídit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'

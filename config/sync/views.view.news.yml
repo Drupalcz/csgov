@@ -213,7 +213,7 @@ display:
         link_display: false
         link_url: false
       link_display: custom_url
-      link_url: news
+      link_url: aktuality
     cache_metadata:
       max-age: -1
       contexts:

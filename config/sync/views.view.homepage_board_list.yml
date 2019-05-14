@@ -214,7 +214,7 @@ display:
       use_more: true
       use_more_always: true
       use_more_text: 'View whole board'
-      link_url: board
+      link_url: uredni-deska
       link_display: custom_url
       css_class: 'views-layout views-layout--full-width views-layout--tiny-gap'
       title: 'Latest board'
