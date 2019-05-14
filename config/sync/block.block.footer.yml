@@ -1,0 +1,25 @@
+uuid: 2eddc29e-cdbf-45cc-b7d2-929194cb0192
+langcode: cs
+status: true
+dependencies:
+  content:
+    - 'block_content:components:86f05937-daa0-434f-870b-c27c15e2fd99'
+  module:
+    - block_content
+  theme:
+    - czgov_theme
+id: footer
+theme: czgov_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:86f05937-daa0-434f-870b-c27c15e2fd99'
+settings:
+  id: 'block_content:86f05937-daa0-434f-870b-c27c15e2fd99'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
