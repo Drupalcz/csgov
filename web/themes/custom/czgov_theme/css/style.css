@@ -375,15 +375,16 @@ header {
 
 .container {
   margin: 0 auto;
-  max-width: 140rem; }
+  max-width: 140rem;
+  padding: 0 2rem; }
   @media (min-width: 48rem) {
     .container {
       padding: 0 2rem; } }
 
-div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
+div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components):not(.block-field-blockblock-contentcomponentsfield-components) {
   padding: 0 2rem; }
   @media (min-width: 48rem) {
-    div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
+    div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components):not(.block-field-blockblock-contentcomponentsfield-components) {
       padding: 0; } }
 
 @media (min-width: 48rem) {

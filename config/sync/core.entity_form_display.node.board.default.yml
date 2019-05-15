@@ -19,46 +19,10 @@ dependencies:
     - node.type.board
   module:
     - datetime
-    - field_group
     - media_library
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_group:
-    group_teaser:
-      children:
-        - field_thumbnail
-        - field_teaser
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: true
-        required_fields: true
-      label: Teaser
-      region: content
-    group_meta_information:
-      children:
-        - field_board_type
-        - field_reference_mark
-        - field_published_date
-        - field_removed_date
-        - field_board_responsible
-      parent_name: ''
-      weight: 3
-      format_type: details
-      format_settings:
-        description: ''
-        open: true
-        required_fields: true
-        id: ''
-        classes: ''
-      label: Meta
-      region: content
 id: node.board.default
 targetEntityType: node
 bundle: board

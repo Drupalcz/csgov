@@ -2,6 +2,7 @@
 .container {
   margin: 0 auto;
   max-width: $max-width;
+  padding: 0 $site-padding;
 
   @include bp(medium) {
     padding: 0 $site-padding;
@@ -9,7 +10,7 @@
 }
 
 // Some Layout builder blocks needs its own padding to be in line.
-div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components) {
+div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-blocknodepagefield-components):not(.block-field-blocknodepagefield-hero-components):not(.block-field-blockblock-contentcomponentsfield-components) {
   padding: 0 $site-padding;
 
   @include bp(medium) {

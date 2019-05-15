@@ -12,28 +12,10 @@ dependencies:
     - field.field.node.board_type.field_thumbnail
     - node.type.board_type
   module:
-    - field_group
     - media_library
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_group:
-    group_teaser:
-      children:
-        - field_thumbnail
-        - field_teaser
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: true
-        required_fields: true
-      label: Teaser
-      region: content
 id: node.board_type.default
 targetEntityType: node
 bundle: board_type

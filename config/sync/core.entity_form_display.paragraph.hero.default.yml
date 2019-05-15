@@ -11,43 +11,9 @@ dependencies:
     - field.field.paragraph.hero.field_title
     - paragraphs.paragraphs_type.hero
   module:
-    - field_group
     - link
     - paragraphs
     - text
-third_party_settings:
-  field_group:
-    group_content:
-      children:
-        - field_heading
-        - field_body
-        - field_read_more
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        description: ''
-        open: true
-        required_fields: true
-        id: ''
-        classes: ''
-      label: Content
-      region: content
-    group_presentation:
-      children:
-        - field_color_classes
-        - field_modifiers
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-      label: Presentation
-      region: content
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero

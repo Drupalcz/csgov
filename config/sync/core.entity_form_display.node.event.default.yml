@@ -15,28 +15,10 @@ dependencies:
     - node.type.event
   module:
     - datetime_range
-    - field_group
     - media_library
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_group:
-    group_teaser:
-      children:
-        - field_thumbnail
-        - field_teaser
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: true
-        required_fields: true
-      label: Teaser
-      region: content
 id: node.event.default
 targetEntityType: node
 bundle: event

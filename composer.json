@@ -61,7 +61,6 @@
         "drupal/entity_reference_revisions": "1.6",
         "drupal/environment_indicator": "3.6",
         "drupal/facets": "^1.4",
-        "drupal/field_group": "3.x-dev",
         "drupal/focal_point": "1.0",
         "drupal/google_analytics": "3.0",
         "drupal/honeypot": "1.29",
