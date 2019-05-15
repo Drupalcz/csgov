@@ -1,6 +1,6 @@
 uuid: f9d07825-5b86-44bf-89bf-71efe566a858
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.board_list
