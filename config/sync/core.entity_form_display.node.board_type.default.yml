@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.board_type.field_components
     - field.field.node.board_type.field_hero_components
     - field.field.node.board_type.field_keywords
+    - field.field.node.board_type.field_meta_tags
     - field.field.node.board_type.field_search_exclude
     - field.field.node.board_type.field_teaser
     - field.field.node.board_type.field_thumbnail
     - node.type.board_type
   module:
     - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -80,6 +82,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_meta_tags:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_search_exclude:
     weight: 27

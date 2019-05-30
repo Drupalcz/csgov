@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.board.field_components
     - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
+    - field.field.node.board.field_meta_tags
     - field.field.node.board.field_published_date
     - field.field.node.board.field_reference_mark
     - field.field.node.board.field_removed_date
@@ -20,6 +21,7 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - metatag
     - text
     - user
 id: node.board.default
@@ -84,6 +86,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_meta_tags:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_published_date:
     weight: 110
