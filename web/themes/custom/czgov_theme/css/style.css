@@ -1,3 +1,11 @@
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+
+/* Now, let's apply it on an element */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -41,8 +49,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.8rem;
-  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-family: system;
   font-weight: 300;
   line-height: 1.45; }
 
@@ -55,8 +63,8 @@ h6, .h6 {
   margin: 1.25em 0 .5em; }
 
 h1 {
-  font-size: 5.5rem;
-  font-family: sans-serif;
+  font-size: 4.5rem;
+  font-family: system;
   font-weight: 100;
   margin: 0.8em 0 0.35em; }
 
@@ -98,7 +106,7 @@ strong {
   font-weight: 500; }
 
 .lead {
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   font-style: italic; }
 
 .region-admin-area {
@@ -784,10 +792,10 @@ div[class^='section-layout'] > .block.block-layout-builder:not(.block-field-bloc
   color: #666666; }
 
 .event-date--view-mode-full {
-  font-size: 2.7rem; }
+  font-size: 2.4rem; }
 
 .event-location--view-mode-full {
-  font-size: 2.7rem; }
+  font-size: 2.4rem; }
 
 .facets-widget-checkbox h3 {
   margin-top: 0; }
@@ -1134,7 +1142,7 @@ ul.tabs {
     transition: all 300ms ease-in-out; }
 
 .summary__tags {
-  font-size: 1.53rem;
+  font-size: 1.36rem;
   text-align: right; }
 
 .summary:hover {
@@ -1203,7 +1211,7 @@ ul.tabs {
         padding: 0; } }
 
 .teaser__tags {
-  font-size: 1.53rem; }
+  font-size: 1.36rem; }
 
 .teaser:hover {
   -webkit-transition: all 300ms ease-in-out;

@@ -1,3 +1,6 @@
+//
+// Default colors
+//
 // Colors
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
@@ -67,6 +70,7 @@ $color-info:            #5bc0de;
 $color-warning:         #f0ad4e;
 $color-danger:          #d9534f;
 
+//
 // Layout dimensions.
 //
 // Small screen side padding
@@ -77,7 +81,7 @@ $content-layout-padding: 4rem;
 
 // Media Queries
 // Used in mixin/_breakpoints.scss
-// 1. Name and define our breakpoints. Name the map something sensical
+// 1. Name and define our breakpoints. Name the map something sensible
 // 2. Write a comma separated list of key: value, pairs that we will use later
 $bp-small: 46.8rem;
 $bp-medium: 76.8rem;
@@ -89,22 +93,24 @@ $breakpoints: (
   large: $bp-large / 1.6,
 );
 
+//
 // Fonts
 //
 // Font sizes
-$base-font-size: 1.8rem;
+$base-font-size: 1.6rem;
 $font-size-large: $base-font-size * 1.5;
 $font-size-section: $base-font-size * 4;
 $font-size-small: $base-font-size * .85;
 
-// Headings
-$heading-xxl: 5.5rem;
+// Headings sizes
+$heading-xxl: 4.5rem;
 $heading-xl: 3.6rem;
 $heading-l: 3rem;
 $heading-m: 2.5rem;
 $heading-sm: 1.8rem;
 $heading-xs: 1.6rem;
 
+// Heading weights
 $heading-xxl-weight: 100;
 $heading-xl-weight: 100;
 $heading-l-weight: 700;
@@ -112,24 +118,40 @@ $heading-m-weight: 100;
 $heading-sm-weight: 300;
 $heading-xs-weight: 500;
 
-// Font family
-$font-family-base: sans-serif;
-$font-family-heading: sans-serif;
+/* Define the "system" font family */
+// https://css-tricks.com/snippets/css/system-font-stack/
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+/* Now, let's apply it on an element */
+$font-family-base: system;
+$font-family-heading: system;
 $font-awesome: 'Font Awesome 5 Free';
 
-
-
+//
 // Page regions
+//
+// Header
 $header-background: $gray-05;
 
+// Admin area
 $admin-background: transparent;
 
+// Main navigation
 $main-navigation-action: $gray-8;
 $main-navigation-background: $gray-2;
 $main-navigation-action-hover: $black;
 $main-navigation-accent: $gray-3;
 $main-navigation-accent-hover: $color-standard-action;
 
+//
+// View modes
+//
+// Calendar item
 $calendar-item__date-width: 10rem;
 $calendar-item__date-number-size: $calendar-item__date-width /2;
 $calendar-item-background-current: $color-primary-background;
