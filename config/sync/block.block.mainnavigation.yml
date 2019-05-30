@@ -7,9 +7,9 @@ dependencies:
   module:
     - menu_block
   theme:
-    - czgov_theme
+    - csgov_theme
 id: mainnavigation
-theme: czgov_theme
+theme: csgov_theme
 region: navigation
 weight: 0
 provider: null

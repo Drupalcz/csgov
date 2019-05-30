@@ -5,11 +5,11 @@ dependencies:
   module:
     - system
   theme:
-    - czgov_theme
+    - csgov_theme
 _core:
   default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
-id: czgov_theme_branding
-theme: czgov_theme
+id: csgov_theme_branding
+theme: csgov_theme
 region: logo
 weight: -2
 provider: null

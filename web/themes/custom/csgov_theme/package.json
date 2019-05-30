@@ -1,0 +1,31 @@
+{
+  "name": "csgov_theme",
+  "description": "CS Gov theme.",
+  "private": true,
+  "scripts": {
+    "gulp": "gulp",
+    "gulp-dev": "gulp dev",
+    "setup": "npm install"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.10.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1"
+  }
+}

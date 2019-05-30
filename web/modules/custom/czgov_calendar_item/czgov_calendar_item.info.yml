@@ -1,5 +1,0 @@
-name: CZGov Calendar Item
-type: module
-description: Provides custom calendar item formatter.
-package: CZGov
-core: 8.x

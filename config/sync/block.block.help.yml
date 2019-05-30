@@ -5,9 +5,9 @@ dependencies:
   module:
     - help
   theme:
-    - czgov_theme
+    - csgov_theme
 id: help
-theme: czgov_theme
+theme: csgov_theme
 region: admin_area
 weight: 0
 provider: null

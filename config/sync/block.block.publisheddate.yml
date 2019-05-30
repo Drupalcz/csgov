@@ -8,9 +8,9 @@ dependencies:
     - facets
     - system
   theme:
-    - czgov_theme
+    - csgov_theme
 id: publisheddate
-theme: czgov_theme
+theme: csgov_theme
 region: content_view
 weight: -4
 provider: null

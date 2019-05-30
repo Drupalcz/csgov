@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - czgov_theme
+    - csgov_theme
 id: views_block__board_list_block_1
-theme: czgov_theme
+theme: csgov_theme
 region: content_view
 weight: -3
 provider: null

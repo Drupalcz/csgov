@@ -7,9 +7,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - czgov_theme
+    - csgov_theme
 id: footer
-theme: czgov_theme
+theme: csgov_theme
 region: footer
 weight: 0
 provider: null

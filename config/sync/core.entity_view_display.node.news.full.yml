@@ -21,7 +21,7 @@ dependencies:
     - text
     - user
   theme:
-    - czgov_theme
+    - csgov_theme
 third_party_settings:
   layout_builder:
     allow_custom: false

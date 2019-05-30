@@ -1,0 +1,30 @@
+{
+  "name": "csgov_theme",
+  "description": "Csgov theme.",
+  "css": {
+    "file" : "style.scss",
+    "src": [
+      "assets/sass/**/*.scss"
+    ],
+    "dest": "css"
+  },
+  "js": {
+    "file" : "csgov_theme.js",
+    "src": [
+      "assets/javascript/**/*.js"
+    ],
+    "dest": "js"
+  },
+  "fontawesome": {
+    "src": [
+      "node_modules/@fortawesome/fontawesome-free/webfonts/*"
+    ],
+    "dest": "webfonts"
+  },
+  "images": {
+    "src": [
+      "images/**/*"
+    ],
+    "dest": "images/"
+  }
+}

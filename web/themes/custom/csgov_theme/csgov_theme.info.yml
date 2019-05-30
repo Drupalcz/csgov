@@ -1,0 +1,27 @@
+name: "CS Gov Theme"
+description: 'Starter theme for CS Gov Distribution.'
+
+type: theme
+core: 8.x
+base theme: classy
+
+libraries:
+  - csgov_theme/global-styling
+
+regions:
+  top_bar: 'Top Bar'
+  logo: 'Logo'
+  search: 'Search'
+  navigation: 'Navigation'
+  admin_area: 'Admin area'
+  layoutless: 'Layoutless pages'
+  content_top: 'Content top'
+  content: 'Content'
+  content_view: 'Content view'
+  content_bottom: 'Content bottom'
+  footer: 'Footer'
+  page_top: 'Page top' # Needed by Drupal Core
+  page_bottom: 'Page bottom' # Needed by Drupal Core
+
+ckeditor_stylesheets:
+  - css/style.css
