@@ -77,7 +77,13 @@ display:
         options:
           view_modes:
             'entity:node':
+              board: search
+              board_type: search
+              event: search
+              news: search
+              news_type: search
               page: search
+              person: search
       fields:
         field_keywords:
           table: search_api_index_default
@@ -217,7 +223,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
