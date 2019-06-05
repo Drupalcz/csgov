@@ -1,9 +1,0 @@
-uuid: d980b3e5-67ea-4cf2-95eb-deea28c9140c
-langcode: en
-status: true
-dependencies: {  }
-id: content
-label: Obsah
-icon_uuid: null
-description: 'Simple content component.'
-behavior_plugins: {  }

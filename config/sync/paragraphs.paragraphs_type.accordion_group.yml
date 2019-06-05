@@ -1,9 +1,0 @@
-uuid: 26734ee3-daf8-4ac2-ac1b-1a695dff3886
-langcode: en
-status: true
-dependencies: {  }
-id: accordion_group
-label: 'Accordion Group'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

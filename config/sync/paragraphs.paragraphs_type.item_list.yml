@@ -1,9 +1,0 @@
-uuid: 23bc87b6-e27e-4609-8708-2d25a5e34035
-langcode: en
-status: true
-dependencies: {  }
-id: item_list
-label: 'Item list'
-icon_uuid: null
-description: 'Place multiple items in a layout.'
-behavior_plugins: {  }

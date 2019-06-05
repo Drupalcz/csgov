@@ -1,9 +1,0 @@
-uuid: 41972200-fcad-4ff8-a973-42125c9b5fb2
-langcode: en
-status: true
-dependencies: {  }
-id: attachments
-label: Attachments
-icon_uuid: null
-description: 'attachments component.'
-behavior_plugins: {  }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44fc71a6eca17a065f310913b4adced6",
+    "content-hash": "82408fdf7618d190595b69a66b6521e9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -133,7 +133,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/harvesthq/chosen-package/zipball/ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
-                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d"
+                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
+                "shasum": null
             },
             "type": "bower-asset",
             "license": [
@@ -151,7 +152,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/enyo/dropzone/zipball/08b9e0a763b54a685404dea523a9c54242fbe1b9",
-                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9"
+                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9",
+                "shasum": null
             },
             "type": "bower-asset"
         },
@@ -5040,7 +5042,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+                    "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch",
+                    "Fix Media library in Paragraphs.": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5077,21 +5080,15 @@
         },
         {
             "name": "drupal/password_policy",
-            "version": "3.0.0-alpha4",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/password_policy.git",
-                "reference": "8.x-3.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/password_policy-8.x-3.0-alpha4.zip",
-                "reference": "8.x-3.0-alpha4",
-                "shasum": "79997599fbce390e79eda0aba10f403324c48b99"
+                "reference": "f7d7e9182364fdf41e3bd3583a0dd75e3505a035"
             },
             "require": {
-                "drupal/core": "*",
-                "drupal/ctools": "*"
+                "drupal/core": "^8.5.0",
+                "drupal/ctools": "^3.1"
             },
             "type": "drupal-module",
             "extra": {
@@ -5099,12 +5096,15 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha4",
-                    "datestamp": "1506649448",
+                    "version": "8.x-3.0-alpha4+18-dev",
+                    "datestamp": "1558621088",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "\"Field field_last_password_reset is unknown\" while importing configuration on site without password_policy activated": "https://www.drupal.org/files/issues/2019-05-20/password_policy-config_import_field_error-2771129-81.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5137,7 +5137,8 @@
             "homepage": "https://www.drupal.org/project/password_policy",
             "support": {
                 "source": "https://git.drupalcode.org/project/password_policy"
-            }
+            },
+            "time": "2019-06-04T20:31:42+00:00"
         },
         {
             "name": "drupal/pathauto",
@@ -6067,6 +6068,31 @@
             }
         },
         {
+            "name": "drupalcz/csgov_theme",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Drupalcz/csgov-theme.git",
+                "reference": "62b5e6b096fa78ee251e77a3b06e913f900815db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Drupalcz/csgov-theme/zipball/62b5e6b096fa78ee251e77a3b06e913f900815db",
+                "reference": "62b5e6b096fa78ee251e77a3b06e913f900815db",
+                "shasum": ""
+            },
+            "type": "drupal-theme",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A CSGov  base theme.",
+            "support": {
+                "source": "https://github.com/Drupalcz/csgov-theme/tree/8.x-1.x",
+                "issues": "https://github.com/Drupalcz/csgov-theme/issues"
+            },
+            "time": "2019-06-05T20:13:34+00:00"
+        },
+        {
             "name": "drush/drush",
             "version": "9.6.2",
             "source": {
@@ -6935,7 +6961,9 @@
             "version": "1.10.7",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/nk-o/jarallax/archive/v1.10.7.zip"
+                "url": "https://github.com/nk-o/jarallax/archive/v1.10.7.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -12182,7 +12210,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/password_policy": 20,
+        "drupalcz/csgov_theme": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

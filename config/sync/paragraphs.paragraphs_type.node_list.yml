@@ -1,9 +1,0 @@
-uuid: 29867778-9097-42ed-ad85-8e730df3efaa
-langcode: en
-status: true
-dependencies: {  }
-id: node_list
-label: 'Node list'
-icon_uuid: null
-description: 'Component referencing other content.'
-behavior_plugins: {  }

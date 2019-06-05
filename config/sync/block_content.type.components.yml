@@ -1,8 +1,0 @@
-uuid: 15b05729-672f-41f9-97ea-fedb2d93a928
-langcode: cs
-status: true
-dependencies: {  }
-id: components
-label: Components
-revision: 1
-description: 'Components block allows to place multiple different components.'

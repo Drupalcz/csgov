@@ -1,9 +1,0 @@
-uuid: de5e145f-105b-4e31-9dce-fab6fdb4674d
-langcode: en
-status: true
-dependencies: {  }
-id: hero
-label: Hero
-icon_uuid: null
-description: 'Hero component.'
-behavior_plugins: {  }

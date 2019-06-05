@@ -1,6 +1,0 @@
-{
-  "name": "csgov_theme",
-  "description": "CS Gov theme.",
-  "browserSyncHost" : "mysite.local",
-  "browserSyncProxy" : "http://mysite.localhost"
-}

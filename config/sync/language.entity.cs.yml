@@ -1,9 +1,0 @@
-uuid: fa4ae49d-99ea-49c3-a904-f8cdfbc96b72
-langcode: en
-status: true
-dependencies: {  }
-id: cs
-label: Czech
-direction: ltr
-weight: 1
-locked: false

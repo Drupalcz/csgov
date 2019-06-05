@@ -1,9 +1,0 @@
-uuid: 40e5ed80-4d4b-4c50-93de-28ed4815e40d
-langcode: en
-status: true
-dependencies: {  }
-id: item
-label: Item
-icon_uuid: null
-description: 'Item component.'
-behavior_plugins: {  }

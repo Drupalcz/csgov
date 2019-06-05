@@ -18,13 +18,6 @@ Basic Drupal distribution created to support needs of Czech and Slovak governmen
 * Clone this repository.
 * Run `composer install`
 * Install the site as usual
-
-## Frontend changes
-
-* Theme is using Gulp workflow
-* Go to the theme folder
-* Run `npm run setup` to install the necessary node modules
-* Run `npm run gulp dev` – produce development output with sourcemaps and uncompressed CSS, watches for changes
-* Run `npm run gulp` – produce compressed output, delete temporary helper files.
+* Change to web/themes/contrib/csgov_theme and follow instructions from its README file.
 
 ***Happy codding!***
