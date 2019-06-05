@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_detail
+label: 'Card detail'
+targetEntityType: node
+cache: true

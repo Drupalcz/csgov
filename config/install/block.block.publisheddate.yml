@@ -1,0 +1,28 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.published_date
+  module:
+    - facets
+    - system
+  theme:
+    - csgov_theme
+id: publisheddate
+theme: csgov_theme
+region: content_view
+weight: -4
+provider: null
+plugin: 'facet_block:published_date'
+settings:
+  id: 'facet_block:published_date'
+  label: 'Published date'
+  provider: facets
+  label_display: '0'
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/8
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_min
+label: 'Square min'
+effects:
+  5e91a63d-5ad6-4a9f-8d55-a55592fa9b55:
+    uuid: 5e91a63d-5ad6-4a9f-8d55-a55592fa9b55
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      crop_type: focal_point

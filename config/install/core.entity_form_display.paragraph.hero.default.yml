@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_body
+    - field.field.paragraph.hero.field_color_classes
+    - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_modifiers
+    - field.field.paragraph.hero.field_read_more
+    - field.field.paragraph.hero.field_title
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+    - paragraphs
+    - text
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_body:
+    weight: 3
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_color_classes:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_heading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_modifiers:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Modifier
+      title_plural: Modifiers
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: '0'
+        collapse_edit_all: '0'
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_read_more:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

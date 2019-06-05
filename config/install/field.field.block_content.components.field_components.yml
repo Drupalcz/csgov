@@ -1,0 +1,109 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - block_content.type.components
+    - field.storage.block_content.field_components
+    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.item_list
+    - paragraphs.paragraphs_type.node_list
+  module:
+    - entity_reference_revisions
+id: block_content.components.field_components
+field_name: field_components
+entity_type: block_content
+bundle: components
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content: content
+      item_list: item_list
+      node_list: node_list
+    target_bundles_drag_drop:
+      absolute_height_modifier:
+        weight: 27
+        enabled: false
+      accordion:
+        weight: 28
+        enabled: false
+      accordion_group:
+        weight: 29
+        enabled: false
+      attachments:
+        weight: 30
+        enabled: false
+      colors_modifier:
+        weight: 31
+        enabled: false
+      content:
+        enabled: true
+        weight: 32
+      corners_modifier:
+        weight: 33
+        enabled: false
+      custom_colors_modifier:
+        weight: 34
+        enabled: false
+      custom_linear_gradient_modifier:
+        weight: 35
+        enabled: false
+      custom_radial_gradient_modifier:
+        weight: 36
+        enabled: false
+      fonts_modifier:
+        weight: 37
+        enabled: false
+      hero:
+        weight: 38
+        enabled: false
+      hide_modifier:
+        weight: 39
+        enabled: false
+      html_font_size_modifier:
+        weight: 40
+        enabled: false
+      image_bg_modifier:
+        weight: 41
+        enabled: false
+      image_fx_modifier:
+        weight: 42
+        enabled: false
+      item:
+        weight: 43
+        enabled: false
+      item_list:
+        enabled: true
+        weight: 44
+      linear_gradient_modifier:
+        weight: 45
+        enabled: false
+      node_list:
+        enabled: true
+        weight: 46
+      padding_modifier:
+        weight: 47
+        enabled: false
+      parallax_bg_modifier:
+        weight: 48
+        enabled: false
+      radial_gradient_modifier:
+        weight: 49
+        enabled: false
+      relative_height_modifier:
+        weight: 50
+        enabled: false
+      shadow_modifier:
+        weight: 51
+        enabled: false
+      video_bg_modifier:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

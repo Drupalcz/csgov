@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square
+label: Square
+effects:
+  c9337d4e-8d60-4ad8-9aa6-9d14ed751687:
+    uuid: c9337d4e-8d60-4ad8-9aa6-9d14ed751687
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      crop_type: focal_point

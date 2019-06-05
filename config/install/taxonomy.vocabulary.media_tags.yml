@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media tags'
+vid: media_tags
+description: 'Categorizes media assets'
+weight: 0

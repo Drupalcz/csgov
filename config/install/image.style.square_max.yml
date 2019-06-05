@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_max
+label: 'Square max'
+effects:
+  f9623956-7a33-4ed8-82e3-58850e4d4bbe:
+    uuid: f9623956-7a33-4ed8-82e3-58850e4d4bbe
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 1200
+      crop_type: focal_point

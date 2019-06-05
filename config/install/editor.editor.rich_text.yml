@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - ckeditor
+format: rich_text
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - Strike
+            - '-'
+            - Superscript
+            - Subscript
+            - RemoveFormat
+            - '-'
+            - Format
+            - Styles
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - Table
+            - '-'
+            - BulletedList
+            - NumberedList
+            - Indent
+            - Outdent
+        -
+          name: Media
+          items:
+            - Blockquote
+            - node
+            - SpecialChar
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+            - '-'
+            - Source
+            - '-'
+            - Maximize
+  plugins:
+    stylescombo:
+      styles: "p.lead|Úvodník\r\na.cta-link|Click to action\r\na.btn|Tlačítko\r\na.btn.btn-primary|Tlačítko hlavní\r\na.btn.btn-secondary|Tlačítko vedlejší\r\na.btn.btn-light|Tlačítko světlé\r\na.btn.btn-dark|Tlačítko tmavé\r\nspan.text-primary|Text hlavní\r\nspan.text-secondary|Text vedlejší\r\nspan.text-light|Text světlý\r\nspan.text-dark|Text tmavý"
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

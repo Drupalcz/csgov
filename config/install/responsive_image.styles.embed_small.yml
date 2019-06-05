@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.embed_small
+    - image.style.embed_small_max
+    - image.style.embed_small_min
+  theme:
+    - csgov_theme
+id: embed_small
+label: 'Embed small'
+image_style_mappings:
+  -
+    breakpoint_id: csgov_theme.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed_small_max
+  -
+    breakpoint_id: csgov_theme.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed_small_max
+  -
+    breakpoint_id: csgov_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed_small
+  -
+    breakpoint_id: csgov_theme.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed_small
+  -
+    breakpoint_id: csgov_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: embed_small_min
+  -
+    breakpoint_id: csgov_theme.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: embed_small
+breakpoint_group: csgov_theme
+fallback_image_style: embed_small_min

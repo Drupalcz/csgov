@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - csgov_theme
+id: csgov_theme_page_title
+theme: csgov_theme
+region: layoutless
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

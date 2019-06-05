@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.landscape
+    - image.style.landscape_max
+    - image.style.landscape_min
+  theme:
+    - csgov_theme
+id: landscape
+label: Landscape
+image_style_mappings:
+  -
+    breakpoint_id: csgov_theme.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: landscape_max
+  -
+    breakpoint_id: csgov_theme.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: landscape_max
+  -
+    breakpoint_id: csgov_theme.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: landscape
+  -
+    breakpoint_id: csgov_theme.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: landscape
+  -
+    breakpoint_id: csgov_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: landscape_min
+  -
+    breakpoint_id: csgov_theme.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: landscape
+breakpoint_group: csgov_theme
+fallback_image_style: landscape_min

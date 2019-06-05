@@ -1,0 +1,239 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.calendar_item
+    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_responsible
+    - field.field.node.board.field_board_type
+    - field.field.node.board.field_body
+    - field.field.node.board.field_components
+    - field.field.node.board.field_hero_components
+    - field.field.node.board.field_keywords
+    - field.field.node.board.field_published_date
+    - field.field.node.board.field_reference_mark
+    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_search_exclude
+    - field.field.node.board.field_teaser
+    - field.field.node.board.field_thumbnail
+    - node.type.board
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - text
+    - user
+  theme:
+    - csgov_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: calendar_item
+        layout_settings: {  }
+        components:
+          891b3e42-8001-4712-ac62-ba78f5187850:
+            uuid: 891b3e42-8001-4712-ac62-ba78f5187850
+            region: date
+            configuration:
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: calendar_item_date_formatter
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          0e07f5c5-289e-42e4-9f21-5d718d5a81ce:
+            uuid: 0e07f5c5-289e-42e4-9f21-5d718d5a81ce
+            region: title
+            configuration:
+              id: 'field_block:node:board:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          929db202-0dfe-4194-8b60-34a8ccca2290:
+            uuid: 929db202-0dfe-4194-8b60-34a8ccca2290
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_removed_date'
+              label: 'Removed date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -9
+          ffc53219-c631-4fa9-9ab8-af05a9a4ae4a:
+            uuid: ffc53219-c631-4fa9-9ab8-af05a9a4ae4a
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_published_date'
+              label: 'Published date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: date_cz
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -10
+          007e190e-be4f-4cce-8d4b-56c0ace201ba:
+            uuid: 007e190e-be4f-4cce-8d4b-56c0ace201ba
+            region: summary
+            configuration:
+              id: 'field_block:node:board:field_teaser'
+              label: Teaser
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          2b9449fd-6317-4b65-82f5-646cc30a85c9:
+            uuid: 2b9449fd-6317-4b65-82f5-646cc30a85c9
+            region: tags
+            configuration:
+              id: 'field_block:node:board:field_board_type'
+              label: 'Board type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          dda862fd-a2e9-4d21-b0d8-60423bc42d9a:
+            uuid: dda862fd-a2e9-4d21-b0d8-60423bc42d9a
+            region: info
+            configuration:
+              id: 'field_block:node:board:field_board_responsible'
+              label: 'Board responsible'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -8
+        third_party_settings: {  }
+id: node.board.calendar_item
+targetEntityType: node
+bundle: board
+mode: calendar_item
+content:
+  field_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_components:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_keywords:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_search_exclude:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_teaser:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_thumbnail:
+    type: entity_reference_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachments: true
+  field_board_responsible: true
+  field_board_type: true
+  field_published_date: true
+  field_reference_mark: true
+  field_removed_date: true
+  langcode: true

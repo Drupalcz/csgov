@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_mod_color
+    - taxonomy.vocabulary.modifiers_color
+  module:
+    - color_field
+id: taxonomy_term.modifiers_color.field_mod_color
+field_name: field_mod_color
+entity_type: taxonomy_term
+bundle: modifiers_color
+label: Color
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

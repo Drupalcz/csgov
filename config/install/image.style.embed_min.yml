@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: embed_min
+label: 'Embed min'
+effects:
+  420d1d2e-8898-4cb6-bae6-542c9889708f:
+    uuid: 420d1d2e-8898-4cb6-bae6-542c9889708f
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false
