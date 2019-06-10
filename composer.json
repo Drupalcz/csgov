@@ -149,11 +149,6 @@
         },
         "type": "drupal-library"
       }
-    },
-    {
-      "type": "github",
-      "url": "https://github.com/Drupalcz/csgov-theme",
-      "no-api": true
     }
   ],
   "minimum-stability": "dev",
