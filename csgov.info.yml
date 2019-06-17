@@ -1,7 +1,7 @@
-name: Lightning
+name: 'CS Gov'
 core: 8.x
 type: profile
-description: 'A feature-rich Drupal distribution for czech and slovak eGovernment sites.' 
+description: 'A feature-rich Drupal 8 distribution for Czech and Slovak eGovernment sites.' 
 install:
   - admin_toolbar
   - admin_toolbar_links_access_filter
