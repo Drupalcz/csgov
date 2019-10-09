@@ -108,7 +108,7 @@
     },
     "patches": {
       "drupal/core": {
-        "Add suggestions for layout builder view modes. And apply the interdiff: https://www.drupal.org/files/issues/2019-04-17/interdiff.3001313.17-21.patch": "https://www.drupal.org/files/issues/2019-04-16/3001313-suggestions-19.patch",
+        "3001313 - Add suggestions for layout builder view modes. Remove in 8.8.0": "https://www.drupal.org/files/issues/2019-06-17/3001313-41.patch",
         "Ckeditor_stylesheets cache busting – https://www.drupal.org/project/drupal/issues/2888723": "https://www.drupal.org/files/issues/2019-05-10/cache-busting_to_ckeditor_stylesheets-2888723-15.patch"
       },
       "drupal/password_policy": {
