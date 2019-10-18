@@ -112,7 +112,7 @@
         "Ckeditor_stylesheets cache busting – https://www.drupal.org/project/drupal/issues/2888723": "https://www.drupal.org/files/issues/2019-05-10/cache-busting_to_ckeditor_stylesheets-2888723-15.patch"
       },
       "drupal/password_policy": {
-        "\"Field field_last_password_reset is unknown\" while importing configuration on site without password_policy activated": "https://www.drupal.org/files/issues/2019-05-20/password_policy-config_import_field_error-2771129-81.patch"
+        "\"Field field_last_password_reset is unknown\" while importing configuration on site without password_policy activated": "https://www.drupal.org/files/issues/2019-07-23/password_policy-n2771129-95.patch"
       },
       "drupal/paragraphs": {
         "Fix support for field_group module in paragraphs.": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch",
