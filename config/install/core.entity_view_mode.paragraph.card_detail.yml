@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - paragraphs
-id: paragraph.card_detail
-label: 'Card detail'
-targetEntityType: paragraph
-cache: true

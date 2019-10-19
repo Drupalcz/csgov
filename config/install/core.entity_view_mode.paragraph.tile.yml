@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - paragraphs
-id: paragraph.tile
-label: Tile
-targetEntityType: paragraph
-cache: true
