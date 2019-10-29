@@ -21,7 +21,7 @@
     "drupal/config_update": "1.6",
     "drupal/console": "^1.0.2",
     "drupal/context": "4.0-beta2",
-    "drupal/core": "~8.7.1 || 8.7.x-dev",
+    "drupal/core": "~8.8.1 || 8.8.x-dev || 8.8.0-alpha1",
     "drupal/ctools": "^3.2.0",
     "drupal/dropzonejs": "2.0.0-alpha4",
     "drupal/entity_class_formatter": "1.1.0",
@@ -108,7 +108,6 @@
     },
     "patches": {
       "drupal/core": {
-        "3001313 - Add suggestions for layout builder view modes. Remove in 8.8.0": "https://www.drupal.org/files/issues/2019-06-17/3001313-41.patch",
         "Ckeditor_stylesheets cache busting – https://www.drupal.org/project/drupal/issues/2888723": "https://www.drupal.org/files/issues/2019-05-10/cache-busting_to_ckeditor_stylesheets-2888723-15.patch"
       },
       "drupal/password_policy": {
