@@ -22,6 +22,7 @@
     "drupal/entity_reference_display": "1.2.0",
     "drupal/entity_reference_revisions": "1.6",
     "drupal/environment_indicator": "3.6",
+    "drupal/eu_cookie_compliance": "^1.8",
     "drupal/facets": "^1.4",
     "drupal/focal_point": "1.0",
     "drupal/google_analytics": "3.0",

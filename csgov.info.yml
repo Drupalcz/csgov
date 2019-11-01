@@ -36,6 +36,7 @@ dependencies:
   - entity_reference_display
   - entity_reference_revisions
   - environment_indicator
+  - eu_cookie_compliance
   - facets
   - field
   - file
