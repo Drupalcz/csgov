@@ -6,7 +6,6 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
-  - adminimal_admin_toolbar
   - automated_cron
   - big_pipe
   - block
@@ -17,7 +16,6 @@ dependencies:
   - chosen_lib
   - ckeditor
   - color
-  - color_field
   - comment
   - config
   - config_filter
@@ -25,7 +23,6 @@ dependencies:
   - config_split
   - config_translation
   - content_moderation
-  - context
   - contextual
   - crop
   - ctools
@@ -35,7 +32,6 @@ dependencies:
   - dblog
   - dynamic_page_cache
   - editor
-  - embed
   - entity_class_formatter
   - entity_reference_display
   - entity_reference_revisions
@@ -47,7 +43,6 @@ dependencies:
   - focal_point
   - google_analytics
   - help
-  - honeypot
   - image
   - inline_form_errors
   - language
@@ -58,7 +53,6 @@ dependencies:
   - locale
   - media
   - media_library
-  - menu_block
   - menu_ui
   - metatag
   - metatag_facebook
@@ -70,7 +64,6 @@ dependencies:
   - node
   - options
   - page_cache
-  - paragraphs_type_permissions
   - password_policy
   - password_policy_character_types
   - password_policy_characters
@@ -87,7 +80,6 @@ dependencies:
   - search_api
   - search_api_db
   - seckit
-  - shield
   - simple_sitemap
   - simple_sitemap_views
   - system
