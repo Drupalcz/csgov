@@ -15,7 +15,6 @@ dependencies:
     - datetime_range
     - media_library
     - metatag
-    - paragraphs
     - path
     - text
 id: node.event.default

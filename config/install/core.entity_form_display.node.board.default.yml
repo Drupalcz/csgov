@@ -19,7 +19,6 @@ dependencies:
     - datetime
     - media_library
     - metatag
-    - paragraphs
     - path
     - text
 id: node.board.default

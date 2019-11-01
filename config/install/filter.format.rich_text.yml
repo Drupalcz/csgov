@@ -3,18 +3,11 @@ status: true
 dependencies:
   module:
     - editor
-    - entity_embed
     - linkit
 name: 'Formátovaný text'
 format: rich_text
 weight: 0
 filters:
-  entity_embed:
-    id: entity_embed
-    provider: entity_embed
-    status: true
-    weight: -47
-    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
