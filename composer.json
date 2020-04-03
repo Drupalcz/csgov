@@ -45,7 +45,7 @@
     "drupal/module_filter": "3.1",
     "drupal/paragraphs": "1.8",
     "drupal/password_policy": "dev-3.x",
-    "drupal/pathauto": "1.5",
+    "drupal/pathauto": "1.6",
     "drupal/permissions_by_term": "2.10",
     "drupal/recaptcha": "2.4",
     "drupal/redirect": "1.3",
