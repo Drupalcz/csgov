@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nodes
+    - node.type.board
+    - node.type.board_type
+    - node.type.event
+    - node.type.news
+    - node.type.news_type
+    - node.type.page
+    - node.type.person
+    - paragraphs.paragraphs_type.node_list
+id: paragraph.node_list.field_nodes
+field_name: field_nodes
+entity_type: paragraph
+bundle: node_list
+label: Nodes
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      board: board
+      board_type: board_type
+      event: event
+      news: news
+      news_type: news_type
+      page: page
+      person: person
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: board
+field_type: entity_reference

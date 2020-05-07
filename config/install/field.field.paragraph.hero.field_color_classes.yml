@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_classes
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_color_classes
+field_name: field_color_classes
+entity_type: paragraph
+bundle: hero
+label: 'Color pallete'
+description: 'Change color of the component.'
+required: true
+translatable: false
+default_value:
+  -
+    value: color--standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

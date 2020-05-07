@@ -4,6 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.title
     - field.field.node.page.field_body
+    - field.field.node.page.field_components
+    - field.field.node.page.field_hero_components
     - field.field.node.page.field_keywords
     - field.field.node.page.field_search_exclude
     - field.field.node.page.field_teaser
@@ -56,6 +58,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_components:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 106

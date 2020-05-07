@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
+    - field.field.node.board.field_components
+    - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_published_date
     - field.field.node.board.field_reference_mark
@@ -169,6 +171,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_components:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 106
