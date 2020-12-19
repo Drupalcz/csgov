@@ -1,7 +1,8 @@
 langcode: cs
 status: true
 dependencies: {  }
-id: date_cz
-label: 'Czech date'
+id: cs
+label: Czech
+direction: ltr
+weight: 1
 locked: false
-pattern: 'j. n. Y'
