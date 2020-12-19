@@ -1,0 +1,10 @@
+.tile {
+  height: 100%;
+  position: relative;
+}
+
+.tile__content {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}

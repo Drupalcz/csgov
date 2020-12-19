@@ -1,0 +1,21 @@
+{#
+/**
+* One column section template.
+*/
+#}
+{%
+  set classes = [
+    'section-layout',
+    'section-layout__one-column',
+    settings.hero ? 'section-layout__hero',
+    settings.container_type ? 'container-fluid' : 'container',
+  ]
+%}
+
+{% if content.content|render|striptags|trim %}
+  <section{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content.addClass('section-layout__content', settings.container_type ? 'container') }}>
+      {{ content.content }}
+    </div>
+  </section>
+{% endif %}

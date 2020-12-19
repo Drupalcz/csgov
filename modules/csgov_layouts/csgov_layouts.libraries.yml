@@ -1,0 +1,44 @@
+two_columns:
+  css:
+    theme:
+      layouts/section_layouts/two_columns/two-columns.css: {}
+
+calendar_item:
+  css:
+    theme:
+      layouts/viewmode_layouts/calendar-item/calendar-item.css: {}
+
+card:
+  css:
+    theme:
+      layouts/viewmode_layouts/card/card.css: {}
+
+card_detail:
+  css:
+    theme:
+      layouts/viewmode_layouts/card-detail/card-detail.css: {}
+
+search:
+  css:
+    theme:
+      layouts/viewmode_layouts/search/search.css: {}
+
+summary:
+  css:
+    theme:
+      layouts/viewmode_layouts/summary/summary.css: {}
+
+teaser:
+  css:
+    theme:
+      layouts/viewmode_layouts/teaser/teaser.css: {}
+
+tile:
+  css:
+    theme:
+      layouts/viewmode_layouts/tile/tile.css: {}
+
+title:
+  css:
+    theme:
+      layouts/viewmode_layouts/title/title.css: {}
