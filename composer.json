@@ -56,7 +56,7 @@
     "drupal/token": "1.8",
     "drupal/username_enumeration_prevention": "1.1",
     "drupal/webform": "6.0.0-beta2",
-    "drupalcz/csgov_theme": "dev-8.x-1.x",
+    "drupalcz/csgov_theme": "2.x-dev",
     "drush/drush": "^10.0.0",
     "nk-o/jarallax": "^1.0",
     "oomphinc/composer-installers-extender": "^2.0",
