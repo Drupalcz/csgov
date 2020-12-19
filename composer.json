@@ -59,7 +59,7 @@
     "drupal/video_embed_field": "2.4",
     "drupal/webform": "5.11",
     "drupalcz/csgov_theme": "dev-8.x-1.x",
-    "drush/drush": "^9.0.0",
+    "drush/drush": "^10.0.0",
     "nk-o/jarallax": "^1.0",
     "oomphinc/composer-installers-extender": "^2.0",
     "vlucas/phpdotenv": "^2.4",
@@ -112,7 +112,7 @@
         "drupal/core"
       ],
       "locations": {
-        "web-root": "./web"
+        "web-root": "web/"
       }
     }
   },
