@@ -1,12 +1,11 @@
 name: 'CS Gov'
-core: 8.x
+core_version_requirement: ^8 || ^9
 type: profile
 description: 'A feature-rich Drupal 8 distribution for Czech and Slovak eGovernment sites.'
 dependencies:
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
-  - adminimal_admin_toolbar
   - automated_cron
   - big_pipe
   - block
@@ -47,7 +46,6 @@ dependencies:
   - file
   - filter
   - focal_point
-  - google_analytics
   - help
   - honeypot
   - image
