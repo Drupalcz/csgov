@@ -106,9 +106,6 @@
       "drupal/core": "-p2"
     },
     "patches": {
-      "drupal/password_policy": {
-        "\"Do not set User fields on install.": "https://www.drupal.org/files/issues/2020-03-23/Do_not_set_user_fields_on_install-2983448-17.patch"
-      }
     },
     "drupal-scaffold": {
       "initial": {
