@@ -29,6 +29,7 @@ dependencies:
   - crop
   - ctools
   - csgov_calendar_item
+  - csgov_layouts
   - datetime
   - datetime_range
   - dblog
