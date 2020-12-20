@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

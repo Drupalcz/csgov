@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: 'Hero component.'
+behavior_plugins: {  }
