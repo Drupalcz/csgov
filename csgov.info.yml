@@ -18,7 +18,6 @@ dependencies:
   - ckeditor
   - color
   - color_field
-  - comment
   - config
   - config_filter
   - config_ignore
