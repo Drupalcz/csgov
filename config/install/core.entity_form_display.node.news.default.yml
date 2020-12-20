@@ -4,20 +4,103 @@ dependencies:
   config:
     - field.field.node.news.field_body
     - field.field.node.news.field_components
-    - field.field.node.news.field_hero_components
     - field.field.node.news.field_keywords
     - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_date
     - field.field.node.news.field_news_type
     - field.field.node.news.field_search_exclude
     - field.field.node.news.field_teaser
     - field.field.node.news.field_thumbnail
     - node.type.news
   module:
+    - datetime
+    - field_group
     - media_library
     - metatag
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_teaser
+        - group_basic
+        - group_components
+        - group_extra
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Content
+    group_basic:
+      children:
+        - field_news_date
+        - field_news_type
+        - field_body
+      parent_name: group_content
+      weight: 11
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Basic
+    group_components:
+      children:
+        - field_components
+      parent_name: group_content
+      weight: 12
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Components
+    group_extra:
+      children:
+        - field_keywords
+        - field_search_exclude
+        - field_meta_tags
+      parent_name: group_content
+      weight: 13
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Extra
+    group_teaser:
+      children:
+        - title
+        - field_teaser
+        - field_thumbnail
+      parent_name: group_content
+      weight: 10
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Teaser
+_core:
+  default_config_hash: '-CsiCJz4s7qqYtKpjJfqHk2bjBYz1JF2obVirpqDRwM'
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -25,7 +108,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -39,7 +122,7 @@ content:
     region: content
   field_components:
     type: paragraphs
-    weight: 5
+    weight: 7
     settings:
       title: Component
       title_plural: Components
@@ -51,32 +134,13 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: add_above
-    third_party_settings: {  }
-    region: content
-  field_hero_components:
-    type: paragraphs
-    weight: 2
-    settings:
-      title: Component
-      title_plural: Components
-      edit_mode: closed
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: hero
-      features:
-        duplicate: '0'
-        collapse_edit_all: '0'
-        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_keywords:
-    weight: 13
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -84,10 +148,17 @@ content:
     type: string_textfield
     region: content
   field_meta_tags:
-    weight: 26
-    settings: {  }
+    weight: 9
+    settings:
+      sidebar: false
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_news_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_news_type:
     weight: 3
@@ -95,18 +166,19 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     region: content
   field_search_exclude:
-    weight: 14
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_teaser:
-    weight: 3
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -115,21 +187,21 @@ content:
     region: content
   field_thumbnail:
     type: media_library_widget
-    weight: 2
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -137,26 +209,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -164,15 +236,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 11
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

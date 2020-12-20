@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_board_type
     - field.storage.node.field_keywords
-    - field.storage.node.field_published_date
-    - field.storage.node.field_removed_date
+    - field.storage.node.field_board_published_date
+    - field.storage.node.field_board_removed_date
     - field.storage.node.field_search_exclude
     - field.storage.node.field_teaser
     - search_api.server.default
@@ -35,22 +35,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_keywords
-  field_published_date:
+  field_board_published_date:
     label: 'Published date'
     datasource_id: 'entity:node'
-    property_path: field_published_date
+    property_path: field_board_published_date
     type: date
     dependencies:
       config:
-        - field.storage.node.field_published_date
-  field_removed_date:
+        - field.storage.node.field_board_published_date
+  field_board_removed_date:
     label: 'Removed date'
     datasource_id: 'entity:node'
-    property_path: field_removed_date
+    property_path: field_board_removed_date
     type: date
     dependencies:
       config:
-        - field.storage.node.field_removed_date
+        - field.storage.node.field_board_removed_date
   field_search_exclude:
     label: 'Search exclude'
     datasource_id: 'entity:node'

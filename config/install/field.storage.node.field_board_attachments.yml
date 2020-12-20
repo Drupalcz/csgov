@@ -2,14 +2,14 @@ langcode: cs
 status: true
 dependencies:
   module:
+    - media
     - node
-    - taxonomy
-id: node.field_board_type
-field_name: field_board_type
+id: node.field_board_attachments
+field_name: field_board_attachments
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: media
 module: core
 locked: false
 cardinality: -1

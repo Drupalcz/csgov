@@ -2,17 +2,17 @@ langcode: cs
 status: true
 dependencies:
   module:
+    - datetime
     - node
-    - taxonomy
-id: node.field_board_type
-field_name: field_board_type
+id: node.field_board_removed_date
+field_name: field_board_removed_date
 entity_type: node
-type: entity_reference
+type: datetime
 settings:
-  target_type: taxonomy_term
-module: core
+  datetime_type: date
+module: datetime
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -3,19 +3,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.calendar_item
-    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_attachments
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
-    - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
-    - field.field.node.board.field_published_date
-    - field.field.node.board.field_reference_mark
-    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_meta_tags
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
-    - field.field.node.board.field_thumbnail
     - node.type.board
   module:
     - entity_reference_revisions
@@ -31,25 +30,9 @@ third_party_settings:
     sections:
       -
         layout_id: calendar_item
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
-          891b3e42-8001-4712-ac62-ba78f5187850:
-            uuid: 891b3e42-8001-4712-ac62-ba78f5187850
-            region: date
-            configuration:
-              id: 'field_block:node:board:field_published_date'
-              label: 'Published date'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: calendar_item_date_formatter
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
           0e07f5c5-289e-42e4-9f21-5d718d5a81ce:
             uuid: 0e07f5c5-289e-42e4-9f21-5d718d5a81ce
             region: title
@@ -68,44 +51,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          929db202-0dfe-4194-8b60-34a8ccca2290:
-            uuid: 929db202-0dfe-4194-8b60-34a8ccca2290
-            region: info
-            configuration:
-              id: 'field_block:node:board:field_removed_date'
-              label: 'Removed date'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: datetime_default
-                settings:
-                  timezone_override: ''
-                  format_type: date_cz
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: -9
-          ffc53219-c631-4fa9-9ab8-af05a9a4ae4a:
-            uuid: ffc53219-c631-4fa9-9ab8-af05a9a4ae4a
-            region: info
-            configuration:
-              id: 'field_block:node:board:field_published_date'
-              label: 'Published date'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: datetime_default
-                settings:
-                  timezone_override: ''
-                  format_type: date_cz
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: -10
           007e190e-be4f-4cce-8d4b-56c0ace201ba:
             uuid: 007e190e-be4f-4cce-8d4b-56c0ace201ba
             region: summary
@@ -181,15 +126,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_hero_components:
-    type: entity_reference_revisions_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   field_keywords:
     weight: 106
     label: above
@@ -215,25 +151,18 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_thumbnail:
-    type: entity_reference_entity_view
-    weight: 103
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  field_attachments: true
+  field_board_attachments: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   field_board_responsible: true
   field_board_type: true
-  field_published_date: true
-  field_reference_mark: true
-  field_removed_date: true
+  field_meta_tags: true
   langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,7 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: 'News type'
+vid: news_type
+description: ''
+weight: 0

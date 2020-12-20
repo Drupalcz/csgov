@@ -2,7 +2,7 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.teaser
     - field.field.node.news.field_body
     - field.field.node.news.field_components
     - field.field.node.news.field_keywords
@@ -14,42 +14,42 @@ dependencies:
     - field.field.node.news.field_thumbnail
     - node.type.news
   module:
-    - entity_reference_revisions
+    - csgov_layouts
+    - datetime
     - layout_builder
-    - text
     - user
-  theme:
-    - csgov_theme
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: card
+        layout_id: teaser
         layout_settings:
           label: ''
         components:
-          49694033-89d4-4677-9c4e-0ef779f600d4:
-            uuid: 49694033-89d4-4677-9c4e-0ef779f600d4
-            region: image
+          bd391b72-b427-4cb3-a8f2-2ea5c34afb8a:
+            uuid: bd391b72-b427-4cb3-a8f2-2ea5c34afb8a
+            region: info
             configuration:
-              id: 'field_block:node:news:field_thumbnail'
-              label: Thumbnail
+              id: 'field_block:node:news:field_news_date'
+              label: 'Published date'
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: entity_reference_entity_view
+                type: datetime_default
                 settings:
-                  view_mode: landscape
+                  timezone_override: ''
+                  format_type: date_cz
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 0
-          873cd925-df83-4df6-8bbd-b24b71944645:
-            uuid: 873cd925-df83-4df6-8bbd-b24b71944645
+            weight: 1
+          183c6db1-b822-46c3-bca5-b5a71374b66d:
+            uuid: 183c6db1-b822-46c3-bca5-b5a71374b66d
             region: title
             configuration:
               id: 'field_block:node:news:title'
@@ -64,10 +64,48 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          417876e5-afc0-480c-8762-974fdb010fd2:
+            uuid: 417876e5-afc0-480c-8762-974fdb010fd2
+            region: image
+            configuration:
+              id: 'field_block:node:news:field_thumbnail'
+              label: Thumbnail
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: square
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
-          fe8460f9-474e-47f4-8b39-cd7845e5ee8d:
-            uuid: fe8460f9-474e-47f4-8b39-cd7845e5ee8d
+          598ffe5f-3de7-47f9-9ceb-ce564a7ee60d:
+            uuid: 598ffe5f-3de7-47f9-9ceb-ce564a7ee60d
+            region: summary
+            configuration:
+              id: 'field_block:node:news:field_teaser'
+              label: Teaser
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          85ed0ff4-a777-43e6-beac-01e52f1b1cab:
+            uuid: 85ed0ff4-a777-43e6-beac-01e52f1b1cab
             region: tags
             configuration:
               id: 'field_block:node:news:field_news_type'
@@ -82,63 +120,23 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }
-id: node.news.card
+id: node.news.teaser
 targetEntityType: node
 bundle: news
-mode: card
+mode: teaser
 content:
-  field_body:
+  field_news_date:
     weight: 101
     label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_components:
-    type: entity_reference_revisions_entity_view
-    weight: 104
-    label: above
     settings:
-      view_mode: default
-      link: ''
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    region: content
-  field_keywords:
-    weight: 106
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_search_exclude:
-    weight: 107
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_teaser:
-    weight: 102
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_thumbnail:
-    type: entity_reference_entity_view
-    weight: 103
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100
@@ -146,9 +144,13 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_body: true
+  field_components: true
+  field_keywords: true
   field_meta_tags: true
-  field_news_date: true
   field_news_type: true
+  field_search_exclude: true
+  field_teaser: true
+  field_thumbnail: true
   langcode: true
-  layout_selection: true
   search_api_excerpt: true
