@@ -1,12 +1,13 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.title
     - field.field.node.news.field_body
     - field.field.node.news.field_components
-    - field.field.node.news.field_hero_components
     - field.field.node.news.field_keywords
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_date
     - field.field.node.news.field_news_type
     - field.field.node.news.field_search_exclude
     - field.field.node.news.field_teaser
@@ -26,7 +27,8 @@ third_party_settings:
     sections:
       -
         layout_id: title
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           9c463c55-c170-4fd2-98bc-de7c70d9476a:
             uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
@@ -62,15 +64,6 @@ content:
   field_components:
     type: entity_reference_revisions_entity_view
     weight: 104
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_hero_components:
-    type: entity_reference_revisions_entity_view
-    weight: 105
     label: above
     settings:
       view_mode: default
@@ -117,6 +110,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_meta_tags: true
+  field_news_date: true
   field_news_type: true
   langcode: true
   layout_selection: true
+  search_api_excerpt: true

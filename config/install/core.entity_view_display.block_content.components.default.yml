@@ -15,8 +15,11 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: section_layout_one_column_edgy
-        layout_settings: {  }
+        layout_id: section_layout_one_column
+        layout_settings:
+          label: ''
+          container_type: 1
+          hero: 0
         components:
           e6978a93-3fac-4bda-93f3-c46590161192:
             uuid: e6978a93-3fac-4bda-93f3-c46590161192
@@ -41,15 +44,7 @@ id: block_content.components.default
 targetEntityType: block_content
 bundle: components
 mode: default
-content:
-  field_components:
-    type: entity_reference_revisions_entity_view
-    weight: 1
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
   langcode: true
+  field_components: true

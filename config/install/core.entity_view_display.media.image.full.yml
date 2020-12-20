@@ -1,4 +1,4 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -19,8 +19,13 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: section_layout_two_columns_8_4
-        layout_settings: {  }
+        layout_id: section_layout_two_columns
+        layout_settings:
+          label: Content
+          container_type: 0
+          sidebar_position: 0
+          section_ratio: section-ratio--48
+          layout_options: section-layout--48
         components:
           8f94219a-edcf-4273-9150-7bb4800c4d26:
             uuid: 8f94219a-edcf-4273-9150-7bb4800c4d26

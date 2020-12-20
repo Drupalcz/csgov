@@ -1,0 +1,76 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.board.field_board_attachments
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
+    - field.field.node.board.field_board_responsible
+    - field.field.node.board.field_board_type
+    - field.field.node.board.field_body
+    - field.field.node.board.field_components
+    - field.field.node.board.field_keywords
+    - field.field.node.board.field_meta_tags
+    - field.field.node.board.field_search_exclude
+    - field.field.node.board.field_teaser
+    - node.type.board
+  module:
+    - datetime
+    - user
+id: node.board.default
+targetEntityType: node
+bundle: board
+mode: default
+content:
+  field_board_attachments:
+    type: entity_reference_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_board_published_date:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_board_reference_mark:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_board_removed_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_board_responsible: true
+  field_board_type: true
+  field_body: true
+  field_components: true
+  field_keywords: true
+  field_meta_tags: true
+  field_search_exclude: true
+  field_teaser: true
+  langcode: true
+  search_api_excerpt: true

@@ -2,6 +2,7 @@ name: 'CS Gov'
 core_version_requirement: ^8 || ^9
 type: profile
 description: 'A feature-rich Drupal 8 distribution for Czech and Slovak eGovernment sites.'
+langcode: cs
 dependencies:
   - admin_toolbar
   - admin_toolbar_links_access_filter
@@ -17,7 +18,6 @@ dependencies:
   - ckeditor
   - color
   - color_field
-  - comment
   - config
   - config_filter
   - config_ignore
@@ -29,6 +29,7 @@ dependencies:
   - crop
   - ctools
   - csgov_calendar_item
+  - csgov_layouts
   - datetime
   - datetime_range
   - dblog
@@ -43,6 +44,7 @@ dependencies:
   - environment_indicator
   - facets
   - field
+  - field_group
   - file
   - filter
   - focal_point
@@ -128,3 +130,4 @@ dependencies:
 
 themes:
   - csgov_theme
+  - claro

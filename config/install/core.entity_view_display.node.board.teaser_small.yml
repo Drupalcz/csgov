@@ -1,21 +1,20 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser_small
-    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_attachments
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
-    - field.field.node.board.field_hero_components
     - field.field.node.board.field_keywords
-    - field.field.node.board.field_published_date
-    - field.field.node.board.field_reference_mark
-    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_meta_tags
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
-    - field.field.node.board.field_thumbnail
     - node.type.board
   module:
     - entity_reference_revisions
@@ -31,7 +30,8 @@ third_party_settings:
     sections:
       -
         layout_id: teaser_small
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           b9133a8a-8446-4a9b-a7ba-f0edbe415766:
             uuid: b9133a8a-8446-4a9b-a7ba-f0edbe415766
@@ -46,24 +46,6 @@ third_party_settings:
                 type: string
                 settings:
                   link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          60d023bf-dfb4-4dd4-af2a-92020a679f58:
-            uuid: 60d023bf-dfb4-4dd4-af2a-92020a679f58
-            region: image
-            configuration:
-              id: 'field_block:node:board:field_thumbnail'
-              label: Thumbnail
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: square
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -109,15 +91,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_hero_components:
-    type: entity_reference_revisions_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   field_keywords:
     weight: 106
     label: above
@@ -143,26 +116,19 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_thumbnail:
-    type: entity_reference_entity_view
-    weight: 103
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  field_attachments: true
+  field_board_attachments: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   field_board_responsible: true
   field_board_type: true
-  field_published_date: true
-  field_reference_mark: true
-  field_removed_date: true
+  field_meta_tags: true
   langcode: true
   layout_selection: true
+  search_api_excerpt: true

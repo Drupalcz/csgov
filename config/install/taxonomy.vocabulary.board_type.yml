@@ -1,0 +1,7 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: 'Board type'
+vid: board_type
+description: ''
+weight: 0

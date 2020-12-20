@@ -1,14 +1,15 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
     - node
+    - taxonomy
 id: node.field_board_type
 field_name: field_board_type
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

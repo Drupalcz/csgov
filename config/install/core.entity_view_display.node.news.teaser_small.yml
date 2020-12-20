@@ -1,24 +1,24 @@
-langcode: en
-status: true
+langcode: cs
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser_small
     - field.field.node.news.field_body
     - field.field.node.news.field_components
-    - field.field.node.news.field_hero_components
     - field.field.node.news.field_keywords
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_date
     - field.field.node.news.field_news_type
     - field.field.node.news.field_search_exclude
     - field.field.node.news.field_teaser
     - field.field.node.news.field_thumbnail
     - node.type.news
   module:
+    - csgov_layouts
     - entity_reference_revisions
     - layout_builder
     - text
     - user
-  theme:
-    - csgov_theme
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -26,7 +26,8 @@ third_party_settings:
     sections:
       -
         layout_id: teaser_small
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           b9133a8a-8446-4a9b-a7ba-f0edbe415766:
             uuid: b9133a8a-8446-4a9b-a7ba-f0edbe415766
@@ -122,15 +123,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_hero_components:
-    type: entity_reference_revisions_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   field_keywords:
     weight: 106
     label: above
@@ -171,6 +163,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_meta_tags: true
+  field_news_date: true
   field_news_type: true
   langcode: true
   layout_selection: true
+  search_api_excerpt: true

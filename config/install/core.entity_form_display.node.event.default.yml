@@ -1,4 +1,4 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.event.field_components
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
-    - field.field.node.event.field_hero_components
     - field.field.node.event.field_keywords
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_search_exclude
@@ -15,11 +14,93 @@ dependencies:
     - node.type.event
   module:
     - datetime_range
+    - field_group
     - media_library
     - metatag
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_teaser
+        - group_basic
+        - group_components
+        - group_extra
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Content
+    group_basic:
+      children:
+        - field_event_date
+        - field_event_location
+        - field_body
+      parent_name: group_content
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Basic
+    group_components:
+      children:
+        - field_components
+      parent_name: group_content
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Components
+    group_extra:
+      children:
+        - field_keywords
+        - field_search_exclude
+        - field_meta_tags
+      parent_name: group_content
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Extra
+    group_teaser:
+      children:
+        - title
+        - field_teaser
+        - field_thumbnail
+      parent_name: group_content
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Teaser
+_core:
+  default_config_hash: xckQTYQDI7f_0bY2ns4GrgMxC-fH9stS5_ptGXuEmwc
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -27,7 +108,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -41,7 +122,7 @@ content:
     region: content
   field_components:
     type: paragraphs
-    weight: 6
+    weight: 8
     settings:
       title: Component
       title_plural: Components
@@ -53,9 +134,9 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_event_date:
@@ -72,27 +153,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_hero_components:
-    type: paragraphs
-    weight: 2
-    settings:
-      title: Component
-      title_plural: Components
-      edit_mode: closed
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: hero
-      features:
-        duplicate: '0'
-        collapse_edit_all: '0'
-        add_above: '0'
-    third_party_settings: {  }
-    region: content
   field_keywords:
-    weight: 14
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -100,20 +162,21 @@ content:
     type: string_textfield
     region: content
   field_meta_tags:
-    weight: 26
-    settings: {  }
+    weight: 9
+    settings:
+      sidebar: false
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_search_exclude:
-    weight: 15
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_teaser:
-    weight: 3
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -122,7 +185,7 @@ content:
     region: content
   field_thumbnail:
     type: media_library_widget
-    weight: 2
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -136,7 +199,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -144,26 +207,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -171,15 +234,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
