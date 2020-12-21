@@ -54,6 +54,7 @@ dependencies:
   - inline_form_errors
   - language
   - layout_builder
+  - layout_builder_modal
   - layout_discovery
   - link
   - linkit
