@@ -49,7 +49,7 @@ third_party_settings:
         id: ''
         classes: ''
         description: ''
-        formatter: open
+        formatter: closed
         required_fields: true
         open: false
       label: Basic
@@ -98,7 +98,7 @@ third_party_settings:
         id: ''
         classes: ''
         description: ''
-        formatter: closed
+        formatter: open
         required_fields: true
       label: Teaser
 _core:

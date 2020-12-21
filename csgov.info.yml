@@ -2,7 +2,12 @@ name: 'CS Gov'
 core_version_requirement: ^8 || ^9
 type: profile
 description: 'A feature-rich Drupal 8 distribution for Czech and Slovak eGovernment sites.'
-langcode: cs
+
+distribution:
+  name: CS Gov
+  langcode: cs
+  install:
+    theme: csgov_install
 dependencies:
   - admin_toolbar
   - admin_toolbar_links_access_filter
