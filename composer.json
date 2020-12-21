@@ -102,7 +102,17 @@
     "patchLevel": {
       "drupal/core": "-p2"
     },
-    "patches": {},
+    "patches": {
+      "drupal/core": {
+        "Plugin blocks cannot set their own attributes when put in the layout": "https://www.drupal.org/files/issues/2019-11-24/plugin-block-attributes-fix-3077734-6.patch"
+      },
+      "drupal/paragraphs": {
+        "Use paragraphs in Layout Builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
+      },
+      "drupal/facets": {
+        "Facets with AJAX not working in most of situations": "https://www.drupal.org/files/issues/2019-09-06/facets-3052574-ajax-40.patch"
+      }
+    },
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
