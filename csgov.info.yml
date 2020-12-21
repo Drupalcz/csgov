@@ -30,6 +30,7 @@ dependencies:
   - ctools
   - csgov_calendar_item
   - csgov_layouts
+  - csgov_media
   - datetime
   - datetime_range
   - dblog
