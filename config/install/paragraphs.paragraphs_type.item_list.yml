@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: item_list
-label: 'Item list'
-icon_uuid: null
-icon_default: null
-description: 'Place multiple items in a layout.'
-behavior_plugins: {  }

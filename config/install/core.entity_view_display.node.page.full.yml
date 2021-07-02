@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.page.field_body
-    - field.field.node.page.field_components
     - field.field.node.page.field_keywords
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_search_exclude
@@ -91,25 +90,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          68269241-9c76-4080-b7ae-f911ee04600d:
-            uuid: 68269241-9c76-4080-b7ae-f911ee04600d
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_components'
-              label: Components
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_revisions_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
           9ea867a0-e9eb-49b1-84a4-4b682051a5db:
             uuid: 9ea867a0-e9eb-49b1-84a4-4b682051a5db
             region: sidebar
@@ -139,7 +119,6 @@ content:
     region: content
 hidden:
   field_body: true
-  field_components: true
   field_keywords: true
   field_meta_tags: true
   field_search_exclude: true
