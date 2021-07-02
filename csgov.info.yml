@@ -54,13 +54,18 @@ dependencies:
   - file
   - filter
   - focal_point
+  - gin_lb
+  - gin_toolbar
   - help
   - honeypot
   - image
   - inline_form_errors
   - language
   - layout_builder
+  - layout_builder_lock
   - layout_builder_modal
+  - layout_builder_restrictions
+  - layout_builder_styles
   - layout_discovery
   - link
   - linkit
@@ -76,25 +81,6 @@ dependencies:
   - metatag_twitter_cards
   - metatag_verification
   - metatag_views
-  - modifiers
-  - modifiers_absolute_height
-  - modifiers_bg_image
-  - modifiers_bg_parallax
-  - modifiers_bg_video
-  - modifiers_colors
-  - modifiers_corners
-  - modifiers_custom_colors
-  - modifiers_custom_linear_gradient
-  - modifiers_custom_radial_gradient
-  - modifiers_fonts
-  - modifiers_hide
-  - modifiers_html_font_size
-  - modifiers_image_fx
-  - modifiers_linear_gradient
-  - modifiers_padding
-  - modifiers_radial_gradient
-  - modifiers_relative_height
-  - modifiers_shadow
   - module_filter
   - node
   - options
@@ -137,4 +123,4 @@ dependencies:
 
 themes:
   - csgov_theme
-  - claro
+  - gin

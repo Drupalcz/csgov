@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
-    - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
     - field.field.node.board.field_search_exclude
@@ -67,7 +66,6 @@ hidden:
   field_board_responsible: true
   field_board_type: true
   field_body: true
-  field_components: true
   field_keywords: true
   field_meta_tags: true
   field_search_exclude: true

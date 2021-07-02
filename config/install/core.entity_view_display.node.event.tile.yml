@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.tile
     - field.field.node.event.field_body
-    - field.field.node.event.field_components
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_keywords
@@ -78,15 +77,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_components:
-    type: entity_reference_revisions_entity_view
-    weight: 104
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 106

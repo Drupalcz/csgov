@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: hero
-label: Hero
-revision: 0
-description: 'Block used to add a nice header to a content.'
