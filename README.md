@@ -9,7 +9,7 @@ complying with Drupal 9 requirements. You also need to have composer (composer 2
 
 - Create project using composer:
 ```
-$ composer create-project drupalcz/csgov-project:"2.x-dev" MY_PROJECT
+$ composer create-project drupalcz/csgov-project:"3.x-dev" MY_PROJECT
 ```
 
 - Start lando:
@@ -34,7 +34,7 @@ Previous commands gave you URL and credentials. Go to the URL/user, fill in the 
 
 ## Requirements
 
-* PHP 7.3+
+* PHP 7.4+
 * MySQL, MariaDB or Percona Server
 * Apache 2
 * For detailed list of requirements see https://www.drupal.org/docs/8/system-requirements

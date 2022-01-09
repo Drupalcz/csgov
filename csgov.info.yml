@@ -1,7 +1,7 @@
 name: 'CS Gov'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9
 type: profile
-description: 'A feature-rich Drupal 8 distribution for Czech and Slovak eGovernment sites.'
+description: 'A feature-rich Drupal 9 distribution for Czech and Slovak eGovernment sites.'
 
 distribution:
   name: CS Gov
@@ -119,7 +119,6 @@ dependencies:
   - menu_link_content
   - pathauto
   - views
-  - paragraphs
 
 themes:
   - csgov_theme
