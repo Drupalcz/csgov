@@ -33,6 +33,7 @@
     "drupal/focal_point": "^1.5",
     "drupal/gin": "^3.0@alpha",
     "drupal/gin_lb": "^1.0@beta",
+    "drupal/gin_login": "^1.2",
     "drupal/gin_toolbar": "^1.0@beta",
     "drupal/honeypot": "^2.0.1",
     "drupal/inline_entity_form": "1.0-rc12",
