@@ -116,6 +116,7 @@ dependencies:
   - user
   - username_enumeration_prevention
   - webform
+  - webp
   - workflows
   - menu_link_content
   - pathauto
