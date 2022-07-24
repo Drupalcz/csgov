@@ -39,3 +39,4 @@ hidden:
   field_layout_classes: true
   field_read_more: true
   field_view_mode: true
+  search_api_excerpt: true

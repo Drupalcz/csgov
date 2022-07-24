@@ -10,11 +10,10 @@ dependencies:
     - field.field.paragraph.item.field_title
     - paragraphs.paragraphs_type.item
   module:
+    - csgov_layouts
     - layout_builder
     - link
     - text
-  theme:
-    - csgov_theme
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -22,7 +21,8 @@ third_party_settings:
     sections:
       -
         layout_id: summary
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           7360982c-b08e-4df1-a19f-e70a079a2352:
             uuid: 7360982c-b08e-4df1-a19f-e70a079a2352
@@ -40,8 +40,8 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
           d8fba012-c9e0-412b-b000-aa63952e6adf:
             uuid: d8fba012-c9e0-412b-b000-aa63952e6adf
             region: summary
@@ -57,8 +57,8 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: paragraph.item.summary
 targetEntityType: paragraph
@@ -103,3 +103,4 @@ content:
     region: content
 hidden:
   field_title: true
+  search_api_excerpt: true
