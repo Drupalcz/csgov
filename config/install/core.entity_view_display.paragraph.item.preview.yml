@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.item.field_body
+    - field.field.paragraph.item.field_heading
+    - field.field.paragraph.item.field_image
+    - field.field.paragraph.item.field_read_more
+    - field.field.paragraph.item.field_title
+    - paragraphs.paragraphs_type.item
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.item.preview
+targetEntityType: paragraph
+bundle: item
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_body: true
+  field_heading: true
+  field_image: true
+  field_read_more: true

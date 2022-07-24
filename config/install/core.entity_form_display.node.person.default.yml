@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.person.field_body
+    - field.field.node.person.field_components
     - field.field.node.person.field_keywords
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_search_exclude
@@ -22,6 +23,7 @@ third_party_settings:
       children:
         - group_teaser
         - group_basic
+        - group_components
         - group_extra
       parent_name: ''
       weight: 0
@@ -46,6 +48,20 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Basic
+    group_components:
+      children:
+        - field_components
+      parent_name: group_content
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Components
     group_extra:
       children:
         - field_keywords
@@ -98,6 +114,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_components:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 14

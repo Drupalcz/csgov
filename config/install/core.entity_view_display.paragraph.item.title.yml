@@ -1,0 +1,88 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.title
+    - field.field.paragraph.item.field_body
+    - field.field.paragraph.item.field_heading
+    - field.field.paragraph.item.field_image
+    - field.field.paragraph.item.field_read_more
+    - field.field.paragraph.item.field_title
+    - paragraphs.paragraphs_type.item
+  module:
+    - layout_builder
+    - link
+    - text
+  theme:
+    - csgov_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: title
+        layout_settings: {  }
+        components:
+          3ee6a525-449a-4cc6-a950-793d11e4019f:
+            uuid: 3ee6a525-449a-4cc6-a950-793d11e4019f
+            region: title
+            configuration:
+              id: 'field_block:paragraph:item:field_heading'
+              label: Nadpis
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: paragraph.item.title
+targetEntityType: paragraph
+bundle: item
+mode: title
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_read_more:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_title: true

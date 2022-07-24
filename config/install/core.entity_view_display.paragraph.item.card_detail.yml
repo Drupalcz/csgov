@@ -1,0 +1,123 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card_detail
+    - field.field.paragraph.item.field_body
+    - field.field.paragraph.item.field_heading
+    - field.field.paragraph.item.field_image
+    - field.field.paragraph.item.field_read_more
+    - field.field.paragraph.item.field_title
+    - paragraphs.paragraphs_type.item
+  module:
+    - layout_builder
+    - link
+    - text
+  theme:
+    - csgov_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: card_detail
+        layout_settings: {  }
+        components:
+          ebebd82d-4ef7-41a1-a57f-10a191da6897:
+            uuid: ebebd82d-4ef7-41a1-a57f-10a191da6897
+            region: image
+            configuration:
+              id: 'field_block:paragraph:item:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: landscape
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          8107519e-0d5b-452c-98b4-44af1db1d377:
+            uuid: 8107519e-0d5b-452c-98b4-44af1db1d377
+            region: title
+            configuration:
+              id: 'field_block:paragraph:item:field_heading'
+              label: Nadpis
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          968f733d-84d1-40ce-9a01-c55deff6fa0f:
+            uuid: 968f733d-84d1-40ce-9a01-c55deff6fa0f
+            region: summary
+            configuration:
+              id: 'field_block:paragraph:item:field_body'
+              label: Text
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: paragraph.item.card_detail
+targetEntityType: paragraph
+bundle: item
+mode: card_detail
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_read_more:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_title: true

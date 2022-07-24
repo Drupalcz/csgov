@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.calendar_item
     - field.field.node.news.field_body
+    - field.field.node.news.field_components
     - field.field.node.news.field_keywords
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_date
@@ -112,6 +113,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 106
