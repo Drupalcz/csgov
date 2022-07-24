@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  generator: 'Drupal 9 (www.drupal.org) + CSGov (www.csgov.cz)'
+  robots: 'index, follow'
+  title: '[current-page:title] | [site:name]'
