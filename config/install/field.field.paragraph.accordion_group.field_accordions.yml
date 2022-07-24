@@ -12,7 +12,7 @@ field_name: field_accordions
 entity_type: paragraph
 bundle: accordion_group
 label: Accordions
-description: ''
+description: 'Individual accordion items.'
 required: true
 translatable: false
 default_value: {  }
@@ -20,11 +20,29 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       accordion: accordion
+    negate: 0
     target_bundles_drag_drop:
       accordion:
-        enabled: true
         weight: 13
+        enabled: true
+      accordion_group:
+        weight: 9
+        enabled: false
+      attachments:
+        weight: 10
+        enabled: false
+      content:
+        weight: 11
+        enabled: false
+      item:
+        weight: 12
+        enabled: false
+      item_list:
+        weight: 13
+        enabled: false
+      node_list:
+        weight: 14
+        enabled: false
 field_type: entity_reference_revisions

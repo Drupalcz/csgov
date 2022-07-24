@@ -9,7 +9,7 @@ field_name: field_show_toggle_all
 entity_type: paragraph
 bundle: accordion_group
 label: 'Show "Toggle All"'
-description: ''
+description: 'Enable the Toggle all switch above the accordions.'
 required: false
 translatable: false
 default_value:

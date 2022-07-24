@@ -11,7 +11,7 @@ field_name: field_layout_classes
 entity_type: paragraph
 bundle: item_list
 label: Layout
-description: ''
+description: 'Choose the layout of items.'
 required: true
 translatable: true
 default_value: {  }

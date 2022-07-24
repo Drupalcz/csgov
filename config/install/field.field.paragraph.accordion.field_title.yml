@@ -8,8 +8,8 @@ id: paragraph.accordion.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: accordion
-label: Title
-description: ''
+label: 'Administrative title'
+description: 'Serve for component description on edit forms.'
 required: false
 translatable: true
 default_value: {  }

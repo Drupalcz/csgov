@@ -5,5 +5,5 @@ id: accordion
 label: Accordion
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'One collapsible item, belongs to Accordion Group.'
 behavior_plugins: {  }

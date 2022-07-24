@@ -5,5 +5,5 @@ id: item
 label: Item
 icon_uuid: null
 icon_default: null
-description: 'Item component.'
+description: 'Item component, belongs to Item list.'
 behavior_plugins: {  }

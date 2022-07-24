@@ -10,8 +10,8 @@ id: paragraph.accordion.field_body
 field_name: field_body
 entity_type: paragraph
 bundle: accordion
-label: Content
-description: ''
+label: Text
+description: 'Component content'
 required: false
 translatable: false
 default_value: {  }

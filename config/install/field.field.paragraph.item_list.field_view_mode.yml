@@ -11,8 +11,8 @@ field_name: field_view_mode
 entity_type: paragraph
 bundle: item_list
 label: 'View mode'
-description: ''
-required: false
+description: 'Choose how the items should be rendered.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

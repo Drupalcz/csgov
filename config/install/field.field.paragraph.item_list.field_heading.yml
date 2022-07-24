@@ -8,7 +8,7 @@ id: paragraph.item_list.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: item_list
-label: Nadpis
+label: Heading
 description: 'Optional heading for the component.'
 required: false
 translatable: false

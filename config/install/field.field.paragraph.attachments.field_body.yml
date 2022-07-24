@@ -11,7 +11,7 @@ field_name: field_body
 entity_type: paragraph
 bundle: attachments
 label: Text
-description: 'Component content'
+description: 'Optional text to appear above the main content.'
 required: false
 translatable: false
 default_value: {  }

@@ -9,7 +9,7 @@ field_name: field_show_close_all
 entity_type: paragraph
 bundle: accordion_group
 label: 'Show "Close All"'
-description: ''
+description: 'Enable the Close all switch above the accordions.'
 required: false
 translatable: false
 default_value:
