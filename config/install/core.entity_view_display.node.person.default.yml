@@ -2,7 +2,6 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.title
     - field.field.node.person.field_banner_image
     - field.field.node.person.field_banner_intro
     - field.field.node.person.field_banner_title
@@ -16,46 +15,37 @@ dependencies:
     - node.type.person
   module:
     - entity_reference_revisions
-    - layout_builder
+    - metatag
     - text
     - user
-  theme:
-    - csgov_theme
-third_party_settings:
-  layout_builder:
-    enabled: true
-    allow_custom: false
-    sections:
-      -
-        layout_id: title
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-        components:
-          9c463c55-c170-4fd2-98bc-de7c70d9476a:
-            uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
-            region: title
-            configuration:
-              id: 'field_block:node:person:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-id: node.person.title
+id: node.person.default
 targetEntityType: node
 bundle: person
-mode: title
+mode: default
 content:
+  field_banner_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_banner_intro:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_banner_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 111
+    region: content
   field_body:
     type: text_default
     label: above
@@ -79,6 +69,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
     region: content
   field_search_exclude:
     type: boolean
@@ -112,10 +109,5 @@ content:
     weight: 100
     region: content
 hidden:
-  field_banner_image: true
-  field_banner_intro: true
-  field_banner_title: true
-  field_meta_tags: true
   langcode: true
-  layout_selection: true
   search_api_excerpt: true
