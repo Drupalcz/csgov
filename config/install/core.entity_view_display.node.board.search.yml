@@ -2,7 +2,7 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.search
     - field.field.node.board.field_attachments
     - field.field.node.board.field_banner_image
     - field.field.node.board.field_banner_intro
@@ -33,31 +33,13 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: card
+        layout_id: search
         layout_settings:
           label: ''
           context_mapping: {  }
         components:
-          49694033-89d4-4677-9c4e-0ef779f600d4:
-            uuid: 49694033-89d4-4677-9c4e-0ef779f600d4
-            region: image
-            configuration:
-              id: 'field_block:node:board:field_thumbnail'
-              label: Thumbnail
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: landscape
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          873cd925-df83-4df6-8bbd-b24b71944645:
-            uuid: 873cd925-df83-4df6-8bbd-b24b71944645
+          38053dd9-cb54-4397-9791-303764484c76:
+            uuid: 38053dd9-cb54-4397-9791-303764484c76
             region: title
             configuration:
               id: 'field_block:node:board:title'
@@ -74,11 +56,29 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          10f05384-c118-4584-bd48-41830b4d82e0:
+            uuid: 10f05384-c118-4584-bd48-41830b4d82e0
+            region: summary
+            configuration:
+              id: 'field_block:node:board:field_teaser'
+              label: Teaser
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 250
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
-id: node.board.card
+id: node.board.search
 targetEntityType: node
 bundle: board
-mode: card
+mode: search
 content:
   field_body:
     type: text_default

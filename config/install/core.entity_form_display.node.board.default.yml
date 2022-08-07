@@ -2,18 +2,22 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - field.field.node.board.field_board_attachments
-    - field.field.node.board.field_board_published_date
-    - field.field.node.board.field_board_reference_mark
-    - field.field.node.board.field_board_removed_date
+    - field.field.node.board.field_attachments
+    - field.field.node.board.field_banner_image
+    - field.field.node.board.field_banner_intro
+    - field.field.node.board.field_banner_title
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
     - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
+    - field.field.node.board.field_published_date
+    - field.field.node.board.field_reference_mark
+    - field.field.node.board.field_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
+    - field.field.node.board.field_thumbnail
     - node.type.board
   module:
     - datetime
@@ -28,99 +32,123 @@ third_party_settings:
     group_content:
       children:
         - group_teaser
-        - group_basic
-        - group_attachments
-        - group_components
+        - group_filtering
+        - group_basic_content
+        - group_structured_content
+        - group_hero
         - group_extra
+      label: Content
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        show_empty_fields: false
+        id: ''
         direction: vertical
-      label: Content
-    group_basic:
+        width_breakpoint: 640
+    group_teaser:
       children:
-        - field_board_type
-        - field_board_reference_mark
-        - field_board_published_date
-        - field_board_removed_date
-        - field_board_responsible
+        - title
+        - field_thumbnail
+        - field_teaser
+      label: Úvodník
+      region: content
+      parent_name: group_content
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_basic_content:
+      children:
         - field_body
-      parent_name: group_content
-      weight: 2
-      format_type: tab
+        - field_attachments
+      label: Obsah
       region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Basic
-    group_components:
-      children:
-        - field_components
       parent_name: group_content
-      weight: 5
+      weight: 22
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        show_empty_fields: false
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Components
     group_extra:
       children:
         - field_keywords
         - field_search_exclude
         - field_meta_tags
-      parent_name: group_content
-      weight: 6
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
       label: Extra
-    group_attachments:
-      children:
-        - field_board_attachments
-      parent_name: group_content
-      weight: 4
-      format_type: tab
       region: content
+      parent_name: group_content
+      weight: 25
+      format_type: tab
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        show_empty_fields: false
+        id: ''
         formatter: closed
-        required_fields: true
-      label: Attachments
-    group_teaser:
-      children:
-        - title
-        - field_teaser
-      parent_name: group_content
-      weight: 1
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
         description: ''
-        formatter: open
         required_fields: true
-      label: Teaser
-_core:
-  default_config_hash: l-ntZ1mRM_Hx6vsHghRgwJXa4OsveUMcEwyTg-3VNdw
+    group_hero:
+      children:
+        - field_banner_title
+        - field_banner_intro
+        - field_banner_image
+      label: Hlavička
+      region: content
+      parent_name: group_content
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_structured_content:
+      children:
+        - field_components
+      label: 'Strukturovaný obsah'
+      region: content
+      parent_name: group_content
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_filtering:
+      children:
+        - field_board_type
+        - field_board_responsible
+        - field_reference_mark
+        - field_published_date
+        - field_removed_date
+      label: Zařazení
+      region: content
+      parent_name: group_content
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.board.default
 targetEntityType: node
 bundle: board
@@ -128,64 +156,64 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_board_attachments:
+  field_attachments:
     type: media_library_widget
-    weight: 3
+    weight: 12
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
-  field_board_published_date:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_board_reference_mark:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_board_removed_date:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_board_responsible:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_board_type:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
-  field_body:
+  field_banner_image:
+    type: media_library_widget
     weight: 7
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_banner_intro:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_banner_title:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_board_responsible:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_board_type:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea
+    weight: 11
+    region: content
     settings:
       rows: 15
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_components:
     type: paragraphs
-    weight: 8
+    weight: 13
+    region: content
     settings:
       title: Component
       title_plural: Components
@@ -201,70 +229,102 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_keywords:
-    weight: 9
+    type: string_textfield
+    weight: 22
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_meta_tags:
-    weight: 11
+    type: metatag_firehose
+    weight: 24
+    region: content
     settings:
       sidebar: false
+      use_details: true
     third_party_settings: {  }
-    type: metatag_firehose
+  field_published_date:
+    type: datetime_default
+    weight: 9
     region: content
-  field_search_exclude:
+    settings: {  }
+    third_party_settings: {  }
+  field_reference_mark:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_removed_date:
+    type: datetime_default
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_search_exclude:
+    type: boolean_checkbox
+    weight: 23
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_teaser:
-    weight: 2
+    type: text_textarea
+    weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+  field_thumbnail:
+    type: media_library_widget
+    weight: 2
     region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 8
+    region: content
     settings:
       display_label: true
-    weight: 5
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 2
     region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 12
+    region: content
     settings:
       display_label: true
-    weight: 9
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 6
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -276,16 +336,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
