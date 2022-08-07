@@ -115,6 +115,7 @@ dependencies:
   - update
   - user
   - username_enumeration_prevention
+  - twig_tweak
   - webform
   - webp
   - workflows
