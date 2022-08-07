@@ -2,7 +2,7 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser_small
+    - core.entity_view_mode.node.teaser
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_banner_intro
     - field.field.node.page.field_banner_title
@@ -16,9 +16,7 @@ dependencies:
     - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
-    - entity_reference_revisions
     - layout_builder
-    - text
     - user
   theme:
     - csgov_theme
@@ -28,13 +26,13 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: teaser_small
+        layout_id: teaser
         layout_settings:
           label: ''
           context_mapping: {  }
         components:
-          b9133a8a-8446-4a9b-a7ba-f0edbe415766:
-            uuid: b9133a8a-8446-4a9b-a7ba-f0edbe415766
+          29df2456-1107-4ace-8637-94799a42d189:
+            uuid: 29df2456-1107-4ace-8637-94799a42d189
             region: title
             configuration:
               id: 'field_block:node:page:title'
@@ -51,8 +49,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          60d023bf-dfb4-4dd4-af2a-92020a679f58:
-            uuid: 60d023bf-dfb4-4dd4-af2a-92020a679f58
+          5a16f364-fae0-4855-bd95-bd51d561881a:
+            uuid: 5a16f364-fae0-4855-bd95-bd51d561881a
             region: image
             configuration:
               id: 'field_block:node:page:field_thumbnail'
@@ -69,8 +67,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          4de3addd-43ea-400f-aaad-f80301a1468d:
-            uuid: 4de3addd-43ea-400f-aaad-f80301a1468d
+          ce606e96-e974-4bde-9a66-a4a1305b2c4a:
+            uuid: ce606e96-e974-4bde-9a66-a4a1305b2c4a
             region: summary
             configuration:
               id: 'field_block:node:page:field_teaser'
@@ -83,66 +81,16 @@ third_party_settings:
                 type: text_trimmed
                 label: hidden
                 settings:
-                  trim_length: 160
+                  trim_length: 250
                 third_party_settings: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }
-id: node.page.teaser_small
+id: node.page.teaser
 targetEntityType: node
 bundle: page
-mode: teaser_small
+mode: teaser
 content:
-  field_body:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  field_components:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  field_keywords:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 106
-    region: content
-  field_search_exclude:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 107
-    region: content
-  field_teaser:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_thumbnail:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 103
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -152,7 +100,13 @@ hidden:
   field_banner_image: true
   field_banner_intro: true
   field_banner_title: true
+  field_body: true
+  field_components: true
+  field_keywords: true
   field_meta_tags: true
+  field_search_exclude: true
+  field_teaser: true
+  field_thumbnail: true
   langcode: true
   layout_builder__layout: true
   layout_selection: true
