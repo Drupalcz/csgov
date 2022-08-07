@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.title
-    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_attachments
     - field.field.node.board.field_banner_image
     - field.field.node.board.field_banner_intro
     - field.field.node.board.field_banner_title
@@ -13,9 +13,9 @@ dependencies:
     - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
-    - field.field.node.board.field_published_date
-    - field.field.node.board.field_reference_mark
-    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
@@ -118,16 +118,16 @@ content:
     weight: 100
     region: content
 hidden:
-  field_attachments: true
+  field_board_attachments: true
   field_banner_image: true
   field_banner_intro: true
   field_banner_title: true
   field_board_responsible: true
   field_board_type: true
   field_meta_tags: true
-  field_published_date: true
-  field_reference_mark: true
-  field_removed_date: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   langcode: true
   layout_selection: true
   search_api_excerpt: true

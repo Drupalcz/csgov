@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_attachments
     - field.field.node.board.field_banner_image
     - field.field.node.board.field_banner_intro
     - field.field.node.board.field_banner_title
@@ -13,15 +13,16 @@ dependencies:
     - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
-    - field.field.node.board.field_published_date
-    - field.field.node.board.field_reference_mark
-    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
     - node.type.board
     - system.menu.main
   module:
+    - csgov_layouts
     - entity_reference_revisions
     - layout_builder
     - menu_block
@@ -35,36 +36,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: section_layout_one_column_hero
+        layout_id: section_layout_two_columns
         layout_settings:
           label: ''
           context_mapping: {  }
-        components: {  }
-        third_party_settings: {  }
-      -
-        layout_id: section_layout_two_columns_8_4
-        layout_settings:
-          label: ''
-          context_mapping: {  }
+          container_type: 0
+          sidebar_position: 0
+          section_ratio: section-ratio--48
         components:
-          d4765275-b4ab-4fbf-942d-672ddadd5f3d:
-            uuid: d4765275-b4ab-4fbf-942d-672ddadd5f3d
-            region: content
-            configuration:
-              id: 'field_block:node:board:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           4287f5c4-2c84-4624-89d5-53dfebcf580d:
             uuid: 4287f5c4-2c84-4624-89d5-53dfebcf580d
             region: content
@@ -104,7 +83,7 @@ third_party_settings:
             uuid: 27888b51-8e03-4fdd-82a6-8b2192b08dde
             region: sidebar
             configuration:
-              id: 'field_block:node:board:field_published_date'
+              id: 'field_block:node:board:field_board_published_date'
               label: 'Published date'
               label_display: '0'
               provider: layout_builder
@@ -123,7 +102,7 @@ third_party_settings:
             uuid: c6e82a69-c18f-4417-b8d1-32d2a6d80026
             region: sidebar
             configuration:
-              id: 'field_block:node:board:field_removed_date'
+              id: 'field_block:node:board:field_board_removed_date'
               label: 'Removed date'
               label_display: '0'
               provider: layout_builder
@@ -160,7 +139,7 @@ third_party_settings:
             uuid: 4e2f6f01-fc0f-41c5-8876-617463a4bc85
             region: sidebar
             configuration:
-              id: 'field_block:node:board:field_reference_mark'
+              id: 'field_block:node:board:field_board_reference_mark'
               label: 'Reference mark'
               label_display: '0'
               provider: layout_builder
@@ -194,7 +173,7 @@ third_party_settings:
             uuid: 479fdf63-ca80-49f1-a555-771411156a32
             region: content
             configuration:
-              id: 'field_block:node:board:field_attachments'
+              id: 'field_block:node:board:field_board_attachments'
               label: Attachments
               label_display: '0'
               provider: layout_builder
@@ -288,15 +267,15 @@ content:
     weight: 100
     region: content
 hidden:
-  field_attachments: true
+  field_board_attachments: true
   field_banner_image: true
   field_banner_intro: true
   field_banner_title: true
   field_board_responsible: true
   field_board_type: true
   field_meta_tags: true
-  field_published_date: true
-  field_reference_mark: true
-  field_removed_date: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   langcode: true
   search_api_excerpt: true

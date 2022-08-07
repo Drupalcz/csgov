@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.calendar_item
-    - field.field.node.board.field_attachments
+    - field.field.node.board.field_board_attachments
     - field.field.node.board.field_banner_image
     - field.field.node.board.field_banner_intro
     - field.field.node.board.field_banner_title
@@ -13,9 +13,9 @@ dependencies:
     - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
-    - field.field.node.board.field_published_date
-    - field.field.node.board.field_reference_mark
-    - field.field.node.board.field_removed_date
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
     - field.field.node.board.field_thumbnail
@@ -42,7 +42,7 @@ third_party_settings:
             uuid: 891b3e42-8001-4712-ac62-ba78f5187850
             region: date
             configuration:
-              id: 'field_block:node:board:field_published_date'
+              id: 'field_block:node:board:field_board_published_date'
               label: 'Published date'
               label_display: '0'
               provider: layout_builder
@@ -77,7 +77,7 @@ third_party_settings:
             uuid: 929db202-0dfe-4194-8b60-34a8ccca2290
             region: info
             configuration:
-              id: 'field_block:node:board:field_removed_date'
+              id: 'field_block:node:board:field_board_removed_date'
               label: 'Removed date'
               label_display: '0'
               provider: layout_builder
@@ -96,7 +96,7 @@ third_party_settings:
             uuid: ffc53219-c631-4fa9-9ab8-af05a9a4ae4a
             region: info
             configuration:
-              id: 'field_block:node:board:field_published_date'
+              id: 'field_block:node:board:field_board_published_date'
               label: 'Published date'
               label_display: '0'
               provider: layout_builder
@@ -226,15 +226,15 @@ content:
     weight: 100
     region: content
 hidden:
-  field_attachments: true
+  field_board_attachments: true
   field_banner_image: true
   field_banner_intro: true
   field_banner_title: true
   field_board_responsible: true
   field_board_type: true
   field_meta_tags: true
-  field_published_date: true
-  field_reference_mark: true
-  field_removed_date: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   langcode: true
   search_api_excerpt: true

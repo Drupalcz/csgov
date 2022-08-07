@@ -12,7 +12,7 @@ url_alias: published_date
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_published_date
+field_identifier: field_board_published_date
 facet_source_id: 'search_api:views_block__board_list__block_1'
 widget:
   type: checkbox

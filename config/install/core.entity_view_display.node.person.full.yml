@@ -16,6 +16,7 @@ dependencies:
     - node.type.person
     - system.menu.main
   module:
+    - csgov_layouts
     - entity_reference_revisions
     - layout_builder
     - menu_block
@@ -29,36 +30,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: section_layout_one_column_hero
+        layout_id: section_layout_two_columns
         layout_settings:
           label: ''
           context_mapping: {  }
-        components: {  }
-        third_party_settings: {  }
-      -
-        layout_id: section_layout_two_columns_8_4
-        layout_settings:
-          label: ''
-          context_mapping: {  }
+          container_type: 0
+          sidebar_position: 0
+          section_ratio: section-ratio--48
         components:
-          d4765275-b4ab-4fbf-942d-672ddadd5f3d:
-            uuid: d4765275-b4ab-4fbf-942d-672ddadd5f3d
-            region: content
-            configuration:
-              id: 'field_block:node:person:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           4287f5c4-2c84-4624-89d5-53dfebcf580d:
             uuid: 4287f5c4-2c84-4624-89d5-53dfebcf580d
             region: content

@@ -120,8 +120,6 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-_core:
-  default_config_hash: '-CsiCJz4s7qqYtKpjJfqHk2bjBYz1JF2obVirpqDRwM'
 id: node.news.default
 targetEntityType: node
 bundle: news
