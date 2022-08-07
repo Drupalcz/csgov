@@ -2,7 +2,7 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.search
     - field.field.node.event.field_banner_image
     - field.field.node.event.field_banner_intro
     - field.field.node.event.field_banner_title
@@ -29,31 +29,13 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: card
+        layout_id: search
         layout_settings:
           label: ''
           context_mapping: {  }
         components:
-          49694033-89d4-4677-9c4e-0ef779f600d4:
-            uuid: 49694033-89d4-4677-9c4e-0ef779f600d4
-            region: image
-            configuration:
-              id: 'field_block:node:event:field_thumbnail'
-              label: Thumbnail
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: landscape
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          873cd925-df83-4df6-8bbd-b24b71944645:
-            uuid: 873cd925-df83-4df6-8bbd-b24b71944645
+          38053dd9-cb54-4397-9791-303764484c76:
+            uuid: 38053dd9-cb54-4397-9791-303764484c76
             region: title
             configuration:
               id: 'field_block:node:event:title'
@@ -70,49 +52,29 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          10e0d603-a04f-4bd0-b9e5-8c8d110c6c87:
-            uuid: 10e0d603-a04f-4bd0-b9e5-8c8d110c6c87
-            region: info
+          10f05384-c118-4584-bd48-41830b4d82e0:
+            uuid: 10f05384-c118-4584-bd48-41830b4d82e0
+            region: summary
             configuration:
-              id: 'field_block:node:event:field_event_date'
-              label: 'Event date'
+              id: 'field_block:node:event:field_teaser'
+              label: Teaser
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                type: daterange_default
+                type: text_trimmed
                 label: hidden
                 settings:
-                  timezone_override: ''
-                  format_type: date_time_cz
-                  separator: –
+                  trim_length: 250
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          77679bdf-6cea-4014-8e48-e5fb7b69bbb6:
-            uuid: 77679bdf-6cea-4014-8e48-e5fb7b69bbb6
-            region: info
-            configuration:
-              id: 'field_block:node:event:field_event_location'
-              label: 'Event location'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
         third_party_settings: {  }
-id: node.event.card
+id: node.event.search
 targetEntityType: node
 bundle: event
-mode: card
+mode: search
 content:
   field_body:
     type: text_default
