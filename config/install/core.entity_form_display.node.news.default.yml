@@ -2,6 +2,9 @@ langcode: cs
 status: true
 dependencies:
   config:
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_banner_intro
+    - field.field.node.news.field_banner_title
     - field.field.node.news.field_body
     - field.field.node.news.field_components
     - field.field.node.news.field_keywords
@@ -27,78 +30,96 @@ third_party_settings:
         - group_teaser
         - group_basic
         - group_components
+        - group_hero
         - group_extra
+      label: Content
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: vertical
-      label: Content
     group_basic:
       children:
         - field_news_date
         - field_news_type
         - field_body
+      label: Basic
+      region: content
       parent_name: group_content
       weight: 11
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Basic
     group_components:
       children:
         - field_components
+      label: Components
+      region: content
       parent_name: group_content
       weight: 12
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Components
     group_extra:
       children:
         - field_keywords
         - field_search_exclude
         - field_meta_tags
-      parent_name: group_content
-      weight: 13
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
       label: Extra
+      region: content
+      parent_name: group_content
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
     group_teaser:
       children:
         - title
         - field_teaser
         - field_thumbnail
+      label: Teaser
+      region: content
       parent_name: group_content
       weight: 10
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: open
+        description: ''
         required_fields: true
-      label: Teaser
+    group_hero:
+      children:
+        - field_banner_title
+        - field_banner_intro
+        - field_banner_image
+      label: Hlavička
+      region: content
+      parent_name: group_content
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: '-CsiCJz4s7qqYtKpjJfqHk2bjBYz1JF2obVirpqDRwM'
 id: node.news.default
@@ -112,17 +133,41 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_banner_image:
+    type: media_library_widget
+    weight: 30
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_banner_intro:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_banner_title:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_body:
+    type: text_textarea
     weight: 4
+    region: content
     settings:
       rows: 15
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_components:
     type: paragraphs
     weight: 7
+    region: content
     settings:
       title: Component
       title_plural: Components
@@ -138,60 +183,60 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_keywords:
+    type: string_textfield
     weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 9
+    region: content
     settings:
       sidebar: false
+      use_details: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_news_date:
+    type: datetime_default
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_news_type:
+    type: entity_reference_autocomplete_tags
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   field_search_exclude:
+    type: boolean_checkbox
     weight: 8
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_teaser:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_thumbnail:
     type: media_library_widget
     weight: 3
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -207,24 +252,29 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -237,12 +287,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 7
