@@ -1,0 +1,42 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.node_list.field_body
+    - field.field.paragraph.node_list.field_color_classes
+    - field.field.paragraph.node_list.field_heading
+    - field.field.paragraph.node_list.field_layout_classes
+    - field.field.paragraph.node_list.field_nodes
+    - field.field.paragraph.node_list.field_read_more
+    - field.field.paragraph.node_list.field_title
+    - field.field.paragraph.node_list.field_view_mode
+    - paragraphs.paragraphs_type.node_list
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.node_list.preview
+targetEntityType: paragraph
+bundle: node_list
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_body: true
+  field_color_classes: true
+  field_heading: true
+  field_layout_classes: true
+  field_nodes: true
+  field_read_more: true
+  field_view_mode: true
+  search_api_excerpt: true

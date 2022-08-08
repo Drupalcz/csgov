@@ -323,10 +323,10 @@ display:
           reduce_duplicates: false
           plugin_id: search_api_options
       sorts:
-        field_published_date:
-          id: field_published_date
+        field_board_published_date:
+          id: field_board_published_date
           table: search_api_index_default
-          field: field_published_date
+          field: field_board_published_date
           relationship: none
           group_type: group
           admin_label: ''

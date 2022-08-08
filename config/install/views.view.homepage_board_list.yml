@@ -134,10 +134,10 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_removed_date_value:
-          id: field_removed_date_value
-          table: node__field_removed_date
-          field: field_removed_date_value
+        field_board_removed_date_value:
+          id: field_board_removed_date_value
+          table: node__field_board_removed_date
+          field: field_board_removed_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -178,10 +178,10 @@ display:
             group_items: {  }
           plugin_id: datetime
       sorts:
-        field_published_date_value:
-          id: field_published_date_value
-          table: node__field_published_date
-          field: field_published_date_value
+        field_board_published_date_value:
+          id: field_board_published_date_value
+          table: node__field_board_published_date
+          field: field_board_published_date_value
           relationship: none
           group_type: group
           admin_label: ''

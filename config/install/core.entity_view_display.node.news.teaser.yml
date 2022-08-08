@@ -3,7 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_banner_intro
+    - field.field.node.news.field_banner_title
     - field.field.node.news.field_body
+    - field.field.node.news.field_components
     - field.field.node.news.field_keywords
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_date
@@ -13,142 +17,117 @@ dependencies:
     - field.field.node.news.field_thumbnail
     - node.type.news
   module:
-    - csgov_layouts
-    - datetime
     - layout_builder
     - user
+  theme:
+    - csgov_theme
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: teaser
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
-          bd391b72-b427-4cb3-a8f2-2ea5c34afb8a:
-            uuid: bd391b72-b427-4cb3-a8f2-2ea5c34afb8a
-            region: info
-            configuration:
-              id: 'field_block:node:news:field_news_date'
-              label: 'Published date'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: datetime_default
-                settings:
-                  timezone_override: ''
-                  format_type: date_cz
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
-          183c6db1-b822-46c3-bca5-b5a71374b66d:
-            uuid: 183c6db1-b822-46c3-bca5-b5a71374b66d
+          29df2456-1107-4ace-8637-94799a42d189:
+            uuid: 29df2456-1107-4ace-8637-94799a42d189
             region: title
             configuration:
               id: 'field_block:node:news:title'
               label: Title
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: string
+                label: hidden
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
+            weight: 0
             additional: {  }
-            weight: 1
-          417876e5-afc0-480c-8762-974fdb010fd2:
-            uuid: 417876e5-afc0-480c-8762-974fdb010fd2
+          5a16f364-fae0-4855-bd95-bd51d561881a:
+            uuid: 5a16f364-fae0-4855-bd95-bd51d561881a
             region: image
             configuration:
               id: 'field_block:node:news:field_thumbnail'
               label: Thumbnail
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: entity_reference_entity_view
+                label: hidden
                 settings:
                   view_mode: square
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
-          598ffe5f-3de7-47f9-9ceb-ce564a7ee60d:
-            uuid: 598ffe5f-3de7-47f9-9ceb-ce564a7ee60d
+            additional: {  }
+          ce606e96-e974-4bde-9a66-a4a1305b2c4a:
+            uuid: ce606e96-e974-4bde-9a66-a4a1305b2c4a
             region: summary
             configuration:
               id: 'field_block:node:news:field_teaser'
               label: Teaser
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 250
+                third_party_settings: {  }
             weight: 0
-          85ed0ff4-a777-43e6-beac-01e52f1b1cab:
-            uuid: 85ed0ff4-a777-43e6-beac-01e52f1b1cab
+            additional: {  }
+          8eff133b-ac2a-411b-8626-c1a3a7153a7e:
+            uuid: 8eff133b-ac2a-411b-8626-c1a3a7153a7e
             region: tags
             configuration:
               id: 'field_block:node:news:field_news_type'
               label: 'News type'
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: entity_reference_label
+                label: hidden
                 settings:
                   link: true
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
 content:
-  field_news_date:
-    weight: 101
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
+  field_banner_image: true
+  field_banner_intro: true
+  field_banner_title: true
   field_body: true
+  field_components: true
   field_keywords: true
   field_meta_tags: true
+  field_news_date: true
   field_news_type: true
   field_search_exclude: true
   field_teaser: true
   field_thumbnail: true
   langcode: true
+  layout_selection: true
   search_api_excerpt: true

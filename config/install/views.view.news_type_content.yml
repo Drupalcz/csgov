@@ -140,10 +140,10 @@ display:
             operator: ''
           group: 1
       sorts:
-        field_published_date_value:
-          id: field_published_date_value
-          table: node__field_published_date
-          field: field_published_date_value
+        field_board_published_date_value:
+          id: field_board_published_date_value
+          table: node__field_board_published_date
+          field: field_board_published_date_value
           relationship: none
           group_type: group
           admin_label: ''

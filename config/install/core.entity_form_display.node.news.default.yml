@@ -2,7 +2,11 @@ langcode: cs
 status: true
 dependencies:
   config:
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_banner_intro
+    - field.field.node.news.field_banner_title
     - field.field.node.news.field_body
+    - field.field.node.news.field_components
     - field.field.node.news.field_keywords
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_date
@@ -25,66 +29,97 @@ third_party_settings:
       children:
         - group_teaser
         - group_basic
+        - group_components
+        - group_hero
         - group_extra
+      label: Content
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: vertical
-      label: Content
     group_basic:
       children:
         - field_news_date
         - field_news_type
         - field_body
+      label: Basic
+      region: content
       parent_name: group_content
       weight: 11
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Basic
+    group_components:
+      children:
+        - field_components
+      label: Components
+      region: content
+      parent_name: group_content
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
     group_extra:
       children:
         - field_keywords
         - field_search_exclude
         - field_meta_tags
-      parent_name: group_content
-      weight: 13
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
       label: Extra
+      region: content
+      parent_name: group_content
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
     group_teaser:
       children:
         - title
         - field_teaser
         - field_thumbnail
+      label: Teaser
+      region: content
       parent_name: group_content
       weight: 10
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: open
+        description: ''
         required_fields: true
-      label: Teaser
-_core:
-  default_config_hash: '-CsiCJz4s7qqYtKpjJfqHk2bjBYz1JF2obVirpqDRwM'
+    group_hero:
+      children:
+        - field_banner_title
+        - field_banner_intro
+        - field_banner_image
+      label: Hlavička
+      region: content
+      parent_name: group_content
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -96,67 +131,110 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_body:
-    weight: 4
+  field_banner_image:
+    type: media_library_widget
+    weight: 30
+    region: content
     settings:
-      rows: 15
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
+  field_banner_intro:
     type: text_textarea
+    weight: 29
     region: content
-  field_keywords:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_meta_tags:
-    weight: 9
-    settings:
-      sidebar: false
-    third_party_settings: {  }
-    type: metatag_firehose
-    region: content
-  field_news_date:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_news_type:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
-  field_search_exclude:
-    weight: 8
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_teaser:
-    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+  field_banner_title:
+    type: string_textfield
+    weight: 28
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 15
+      placeholder: ''
+    third_party_settings: {  }
+  field_components:
+    type: paragraphs
+    weight: 7
+    region: content
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_keywords:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 9
+    region: content
+    settings:
+      sidebar: false
+      use_details: true
+    third_party_settings: {  }
+  field_news_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_news_type:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_search_exclude:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_teaser:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_thumbnail:
     type: media_library_widget
     weight: 3
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -172,24 +250,29 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -202,12 +285,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 7

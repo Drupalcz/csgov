@@ -5,7 +5,7 @@ Basic Drupal distribution created to support needs of Czech and Slovak governmen
 ## How to create new project in a minute.
 
 We recommend to use Lando for local environment. If you don't want to use it, you should be good with any LAMP stack
-complying with Drupal 9 requirements. You also need to have composer (composer 2 supported) and PHP 7.3+ on your local machine.
+complying with Drupal 9 requirements. You also need to have composer (composer 2 supported) and PHP 7.4+ on your local machine.
 
 - Create project using composer:
 ```

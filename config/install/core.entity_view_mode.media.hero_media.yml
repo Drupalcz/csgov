@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_media
+label: 'Hero media'
+targetEntityType: media
+cache: true

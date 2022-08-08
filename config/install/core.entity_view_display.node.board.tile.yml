@@ -4,16 +4,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.tile
     - field.field.node.board.field_board_attachments
-    - field.field.node.board.field_board_published_date
-    - field.field.node.board.field_board_reference_mark
-    - field.field.node.board.field_board_removed_date
+    - field.field.node.board.field_banner_image
+    - field.field.node.board.field_banner_intro
+    - field.field.node.board.field_banner_title
     - field.field.node.board.field_board_responsible
     - field.field.node.board.field_board_type
     - field.field.node.board.field_body
+    - field.field.node.board.field_components
     - field.field.node.board.field_keywords
     - field.field.node.board.field_meta_tags
+    - field.field.node.board.field_board_published_date
+    - field.field.node.board.field_board_reference_mark
+    - field.field.node.board.field_board_removed_date
     - field.field.node.board.field_search_exclude
     - field.field.node.board.field_teaser
+    - field.field.node.board.field_thumbnail
     - node.type.board
   module:
     - entity_reference_revisions
@@ -24,32 +29,51 @@ dependencies:
     - csgov_theme
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: tile
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
+          5806dd88-2ab0-4ad6-9327-d2035c2e9567:
+            uuid: 5806dd88-2ab0-4ad6-9327-d2035c2e9567
+            region: image
+            configuration:
+              id: 'field_block:node:board:field_thumbnail'
+              label: Thumbnail
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: landscape
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
           4a4f193b-7919-4341-8968-de08950ddc5e:
             uuid: 4a4f193b-7919-4341-8968-de08950ddc5e
             region: title
             configuration:
               id: 'field_block:node:board:title'
               label: Title
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: string
+                label: hidden
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.board.tile
 targetEntityType: node
@@ -57,50 +81,71 @@ bundle: board
 mode: tile
 content:
   field_body:
-    weight: 101
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 101
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_keywords:
-    weight: 106
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 106
     region: content
   field_search_exclude:
-    weight: 107
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 107
     region: content
   field_teaser:
-    weight: 102
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 102
+    region: content
+  field_thumbnail:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   field_board_attachments: true
-  field_board_published_date: true
-  field_board_reference_mark: true
-  field_board_removed_date: true
+  field_banner_image: true
+  field_banner_intro: true
+  field_banner_title: true
   field_board_responsible: true
   field_board_type: true
   field_meta_tags: true
+  field_board_published_date: true
+  field_board_reference_mark: true
+  field_board_removed_date: true
   langcode: true
   layout_selection: true
   search_api_excerpt: true

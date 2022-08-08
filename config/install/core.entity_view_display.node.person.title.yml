@@ -3,7 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.title
+    - field.field.node.person.field_banner_image
+    - field.field.node.person.field_banner_intro
+    - field.field.node.person.field_banner_title
     - field.field.node.person.field_body
+    - field.field.node.person.field_components
     - field.field.node.person.field_keywords
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_search_exclude
@@ -19,13 +23,14 @@ dependencies:
     - csgov_theme
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: title
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           9c463c55-c170-4fd2-98bc-de7c70d9476a:
             uuid: 9c463c55-c170-4fd2-98bc-de7c70d9476a
@@ -33,18 +38,18 @@ third_party_settings:
             configuration:
               id: 'field_block:node:person:title'
               label: Title
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: string
+                label: hidden
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.person.title
 targetEntityType: node
@@ -52,52 +57,64 @@ bundle: person
 mode: title
 content:
   field_body:
-    weight: 101
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 101
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_keywords:
-    weight: 106
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 106
     region: content
   field_search_exclude:
-    weight: 107
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 107
     region: content
   field_teaser:
-    weight: 102
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 102
     region: content
   field_thumbnail:
     type: entity_reference_entity_view
-    weight: 103
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 103
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
+  field_banner_image: true
+  field_banner_intro: true
+  field_banner_title: true
   field_meta_tags: true
   langcode: true
   layout_selection: true

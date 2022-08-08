@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: attachments
+label: Attachments
+icon_uuid: null
+icon_default: null
+description: 'Allow upload of one or multiple attachments.'
+behavior_plugins: {  }

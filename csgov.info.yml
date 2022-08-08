@@ -21,15 +21,13 @@ dependencies:
   - chosen
   - chosen_lib
   - ckeditor
-  - color
-  - color_field
+  - components
   - config
   - config_filter
   - config_ignore
   - config_split
   - config_translation
   - content_moderation
-  - context
   - contextual
   - crop
   - ctools
@@ -55,6 +53,7 @@ dependencies:
   - filter
   - focal_point
   - gin_lb
+  - gin_login
   - gin_toolbar
   - help
   - honeypot
@@ -70,9 +69,11 @@ dependencies:
   - link
   - linkit
   - locale
+  - login_security
   - media
   - media_library
   - menu_block
+  - menu_trail_by_path
   - menu_ui
   - metatag
   - metatag_facebook
@@ -114,7 +115,9 @@ dependencies:
   - update
   - user
   - username_enumeration_prevention
+  - twig_tweak
   - webform
+  - webp
   - workflows
   - menu_link_content
   - pathauto
