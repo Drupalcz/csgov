@@ -69,7 +69,6 @@
     "drupal/webp": "^1.0@beta",
     "drupalcz/csgov_theme": "2.x-dev",
     "drush/drush": "^10.0.0",
-    "nk-o/jarallax": "^1.0",
     "oomphinc/composer-installers-extender": "^2.0",
     "vlucas/phpdotenv": "^2.4",
     "webflo/drupal-finder": "^1.0.0",
@@ -114,13 +113,18 @@
     },
     "patches": {
       "drupal/core": {
-        "Plugin blocks cannot set their own attributes when put in the layout": "https://git.drupalcode.org/project/drupal/-/merge_requests/1426.patch"
+        "Plugin blocks cannot set their own attributes when put in the layout": "https://git.drupalcode.org/project/drupal/-/merge_requests/1426.patch",
+        "Order image mappings by breakpoint ID and numeric multiplier":"https://www.drupal.org/files/issues/2022-05-19/3267870-9.5.x-47.patch",
+        "Add Width and Height attribute to Responsive images.":"https://www.drupal.org/files/issues/2022-05-10/3192234-190.patch"
       },
       "drupal/paragraphs": {
         "Use paragraphs in Layout Builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
       },
       "drupal/facets": {
         "Facets with AJAX not working in most of situations": "https://www.drupal.org/files/issues/2022-07-12/facets-ajax_not_working-3052574-151.patch"
+      },
+      "drupal/webp": {
+        "Recreate webp derivatives if crop is changed." : "https://git.drupalcode.org/project/webp/-/merge_requests/16.patch"
       }
     },
     "drupal-scaffold": {
@@ -137,21 +141,6 @@
     {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "nk-o/jarallax",
-        "version": "1.10.7",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/nk-o/jarallax/archive/v1.10.7.zip"
-        },
-        "require": {
-          "composer/installers": "~1.0"
-        },
-        "type": "drupal-library"
-      }
     }
   ],
   "minimum-stability": "dev",
