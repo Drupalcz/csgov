@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_install_page().
  */
-function csgov_install_preprocess_install_page(&$variables) {
+function csgov_install_preprocess_install_page(array &$variables) : void {
   // Seven has custom styling for the install page.
   $variables['#attached']['library'][] = 'csgov_install/install-page';
 }
@@ -16,7 +16,7 @@ function csgov_install_preprocess_install_page(&$variables) {
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function csgov_install_preprocess_maintenance_page(&$variables) {
+function csgov_install_preprocess_maintenance_page(array &$variables) : void {
   // Seven has custom styling for the maintenance page.
   $variables['#attached']['library'][] = 'csgov_install/maintenance-page';
 }
