@@ -46,7 +46,7 @@ third_party_settings:
         - field_news_date
         - field_news_type
         - field_body
-      label: Basic
+      label: Obsah
       region: content
       parent_name: group_content
       weight: 11

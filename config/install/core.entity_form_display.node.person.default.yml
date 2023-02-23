@@ -41,7 +41,7 @@ third_party_settings:
     group_basic_content:
       children:
         - field_body
-      label: Basic
+      label: Obsah
       region: content
       parent_name: group_content
       weight: 2
