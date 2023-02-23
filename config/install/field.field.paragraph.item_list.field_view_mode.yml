@@ -10,8 +10,8 @@ id: paragraph.item_list.field_view_mode
 field_name: field_view_mode
 entity_type: paragraph
 bundle: item_list
-label: 'View mode'
-description: 'Choose how the items should be rendered.'
+label: 'Typ zobrazení'
+description: 'Vyberte jak budou položky zobrazeny.'
 required: true
 translatable: true
 default_value: {  }

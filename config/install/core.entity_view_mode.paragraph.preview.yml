@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.preview
-label: Preview
+label: Náhled
 targetEntityType: paragraph
 cache: true

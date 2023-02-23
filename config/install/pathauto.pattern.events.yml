@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
 id: events
-label: Events
+label: Akce
 type: 'canonical_entities:node'
-pattern: 'events/[node:title]'
+pattern: 'akce/[node:title]'
 selection_criteria:
   e1a59d17-ff9d-44e2-97fb-b16508081b16:
     id: node_type

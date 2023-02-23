@@ -10,7 +10,7 @@ id: node.news.field_news_date
 field_name: field_news_date
 entity_type: node
 bundle: news
-label: 'Published date'
+label: 'Datum publikování'
 description: 'Datum publikování článku.'
 required: true
 translatable: false

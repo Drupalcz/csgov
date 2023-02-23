@@ -61,7 +61,7 @@ third_party_settings:
             region: image
             configuration:
               id: 'field_block:node:board:field_thumbnail'
-              label: Thumbnail
+              label: 'Úvodní obrázek'
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -79,7 +79,7 @@ third_party_settings:
             region: summary
             configuration:
               id: 'field_block:node:board:field_teaser'
-              label: Teaser
+              label: Úvodník
               label_display: '0'
               provider: layout_builder
               context_mapping:

@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.tile
-label: Tile
+label: Dlaždice
 targetEntityType: paragraph
 cache: true

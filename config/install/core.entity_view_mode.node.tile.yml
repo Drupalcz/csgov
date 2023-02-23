@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.tile
-label: Tile
+label: Dlaždice
 targetEntityType: node
 cache: true

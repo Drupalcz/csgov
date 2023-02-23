@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: content
-label: Content
+label: Obsah
 icon_uuid: null
 icon_default: null
-description: 'Simple content component.'
+description: 'Jednoduchý textový obsah.'
 behavior_plugins: {  }

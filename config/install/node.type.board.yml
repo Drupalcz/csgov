@@ -7,7 +7,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Board
+name: 'Úřední deska'
 type: board
 description: ''
 help: ''

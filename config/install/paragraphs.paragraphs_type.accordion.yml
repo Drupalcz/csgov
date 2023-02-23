@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: accordion
-label: Accordion
+label: 'Akordion'
 icon_uuid: null
 icon_default: null
-description: 'One collapsible item, belongs to Accordion Group.'
+description: 'Jedna zbalitelná položka, patřící do Skupiny akordionů.'
 behavior_plugins: {  }

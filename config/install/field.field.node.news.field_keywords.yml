@@ -8,8 +8,8 @@ id: node.news.field_keywords
 field_name: field_keywords
 entity_type: node
 bundle: news
-label: Keywords
-description: 'Enhance search results.'
+label: 'Klíčová slova'
+description: 'Vylepšují interní vyhledávání.'
 required: false
 translatable: false
 default_value: {  }

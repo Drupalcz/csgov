@@ -15,7 +15,7 @@ id: node.page.field_components
 field_name: field_components
 entity_type: node
 bundle: page
-label: Components
+label: Komponenty
 description: ''
 required: false
 translatable: false

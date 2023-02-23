@@ -10,7 +10,7 @@ id: node.news.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
 bundle: news
-label: 'Meta tags'
+label: 'Meta tagy'
 description: ''
 required: false
 translatable: true

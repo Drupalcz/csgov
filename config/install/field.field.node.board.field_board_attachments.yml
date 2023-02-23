@@ -9,7 +9,7 @@ id: node.board.field_board_attachments
 field_name: field_board_attachments
 entity_type: node
 bundle: board
-label: Attachments
+label: Přílohy
 description: ''
 required: false
 translatable: false

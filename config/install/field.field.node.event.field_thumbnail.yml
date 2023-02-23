@@ -9,7 +9,7 @@ id: node.event.field_thumbnail
 field_name: field_thumbnail
 entity_type: node
 bundle: event
-label: Thumbnail
+label: 'Úvodní obrázek'
 description: ''
 required: false
 translatable: false

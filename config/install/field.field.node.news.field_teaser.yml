@@ -10,7 +10,7 @@ id: node.news.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: news
-label: Teaser
+label: Úvodník
 description: ''
 required: false
 translatable: false

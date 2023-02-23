@@ -8,8 +8,8 @@ id: paragraph.item.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: item
-label: 'Administrative title'
-description: 'Serve for component description on edit forms.'
+label: 'Administrativní nadpis'
+description: 'Slouží pro popis komponenty v editačním formuláři.'
 required: true
 translatable: false
 default_value: {  }

@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: item_list
-label: 'Item list'
+label: 'Seznam položek'
 icon_uuid: null
 icon_default: null
-description: 'Place multiple items in a layout.'
+description: 'Umístí zvolené položky do vybraného rozložení.'
 behavior_plugins: {  }

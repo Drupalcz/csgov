@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.card
-label: Card
+label: Karta
 targetEntityType: paragraph
 cache: true

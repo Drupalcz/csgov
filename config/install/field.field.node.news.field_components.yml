@@ -15,7 +15,7 @@ id: node.news.field_components
 field_name: field_components
 entity_type: node
 bundle: news
-label: Components
+label: Komponenty
 description: ''
 required: false
 translatable: false

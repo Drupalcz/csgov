@@ -8,8 +8,8 @@ id: paragraph.accordion_group.field_show_open_all
 field_name: field_show_open_all
 entity_type: paragraph
 bundle: accordion_group
-label: 'Show "Open All"'
-description: 'Enable the Open all switch above the accordions.'
+label: 'Zobrazit "Otevřít vše"'
+description: 'Zapne přepínač Otevřít vše nad akordiony.'
 required: false
 translatable: false
 default_value:

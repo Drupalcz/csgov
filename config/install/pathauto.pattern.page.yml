@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
 id: page
-label: Page
+label: Stránka
 type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:

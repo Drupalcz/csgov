@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.summary
-label: Summary
+label: Souhrn
 targetEntityType: paragraph
 cache: true

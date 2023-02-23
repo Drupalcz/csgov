@@ -1,7 +1,7 @@
 langcode: cs
 status: true
 dependencies: {  }
-name: 'News type'
+name: 'Typ novinky'
 vid: news_type
 description: ''
 weight: 0

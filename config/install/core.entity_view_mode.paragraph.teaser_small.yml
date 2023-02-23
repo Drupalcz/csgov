@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.teaser_small
-label: 'Teaser small'
+label: 'Úvodník malý'
 targetEntityType: paragraph
 cache: true

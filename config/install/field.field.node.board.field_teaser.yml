@@ -10,7 +10,7 @@ id: node.board.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: board
-label: Teaser
+label: Úvodník
 description: ''
 required: false
 translatable: false

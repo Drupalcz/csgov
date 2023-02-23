@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: accordion_group
-label: 'Accordion Group'
+label: 'Skupina akordionů'
 icon_uuid: null
 icon_default: null
-description: 'List of collapsible Accordion Items.'
+description: 'Skupina položek akordionu.'
 behavior_plugins: {  }

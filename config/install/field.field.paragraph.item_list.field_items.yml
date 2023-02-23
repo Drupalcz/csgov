@@ -11,7 +11,7 @@ id: paragraph.item_list.field_items
 field_name: field_items
 entity_type: paragraph
 bundle: item_list
-label: Items
+label: Položky
 description: ''
 required: true
 translatable: false

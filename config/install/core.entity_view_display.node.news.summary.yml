@@ -57,7 +57,7 @@ third_party_settings:
             region: summary
             configuration:
               id: 'field_block:node:news:field_teaser'
-              label: Teaser
+              label: Úvodník
               label_display: '0'
               provider: layout_builder
               context_mapping:

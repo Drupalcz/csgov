@@ -28,11 +28,11 @@ third_party_settings:
     group_content:
       children:
         - group_teaser
-        - group_basic
-        - group_components
+        - group_basic_content
+        - group_structured_content
         - group_hero
         - group_extra
-      label: Content
+      label: Obsah
       region: content
       parent_name: ''
       weight: 0
@@ -41,7 +41,7 @@ third_party_settings:
         classes: ''
         id: ''
         direction: vertical
-    group_basic:
+    group_basic_content:
       children:
         - field_news_date
         - field_news_type
@@ -57,10 +57,10 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-    group_components:
+    group_structured_content:
       children:
         - field_components
-      label: Components
+      label: 'Strukturovaný obsah'
       region: content
       parent_name: group_content
       weight: 12
@@ -92,7 +92,7 @@ third_party_settings:
         - title
         - field_teaser
         - field_thumbnail
-      label: Teaser
+      label: Úvodník
       region: content
       parent_name: group_content
       weight: 10
@@ -167,8 +167,8 @@ content:
     weight: 7
     region: content
     settings:
-      title: Component
-      title_plural: Components
+      title: Komponenta
+      title_plural: Komponenty
       edit_mode: closed
       closed_mode: preview
       autocollapse: none

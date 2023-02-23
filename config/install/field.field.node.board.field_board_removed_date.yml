@@ -10,7 +10,7 @@ id: node.board.field_board_removed_date
 field_name: field_board_removed_date
 entity_type: node
 bundle: board
-label: 'Removed date'
+label: 'Datum sejmutí'
 description: ''
 required: false
 translatable: false

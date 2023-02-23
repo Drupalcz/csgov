@@ -37,7 +37,7 @@ third_party_settings:
         - group_structured_content
         - group_hero
         - group_extra
-      label: Content
+      label: Obsah
       region: content
       parent_name: ''
       weight: 0
@@ -216,7 +216,7 @@ content:
     region: content
     settings:
       title: Component
-      title_plural: Components
+      title_plural: Komponenty
       edit_mode: closed
       closed_mode: preview
       autocollapse: none

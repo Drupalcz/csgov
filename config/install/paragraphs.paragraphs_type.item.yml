@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: item
-label: Item
+label: Položka
 icon_uuid: null
 icon_default: null
-description: 'Item component, belongs to Item list.'
+description: 'Položky patří do Seznamu položek.'
 behavior_plugins: {  }

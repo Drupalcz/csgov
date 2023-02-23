@@ -9,7 +9,7 @@ id: node.page.field_thumbnail
 field_name: field_thumbnail
 entity_type: node
 bundle: page
-label: Thumbnail
+label: 'Úvodní obrázek'
 description: ''
 required: false
 translatable: false

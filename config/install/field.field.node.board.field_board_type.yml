@@ -9,7 +9,7 @@ id: node.board.field_board_type
 field_name: field_board_type
 entity_type: node
 bundle: board
-label: 'Board type'
+label: 'Typ úřední desky'
 description: ''
 required: true
 translatable: false

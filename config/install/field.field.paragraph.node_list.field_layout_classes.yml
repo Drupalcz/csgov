@@ -10,8 +10,8 @@ id: paragraph.node_list.field_layout_classes
 field_name: field_layout_classes
 entity_type: paragraph
 bundle: node_list
-label: Layout
-description: 'Choose the layout of nodes.'
+label: Rozložení
+description: 'Vyberte rozložení stránek.'
 required: true
 translatable: false
 default_value: {  }

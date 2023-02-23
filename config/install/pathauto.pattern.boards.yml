@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
 id: boards
-label: 'Board and Board type'
+label: 'Úřední deska a Typy úřední desky'
 type: 'canonical_entities:node'
-pattern: 'boards/[node:title]'
+pattern: 'uredni-deska/[node:title]'
 selection_criteria:
   4c33229a-2603-447c-af8a-8e6881538e7c:
     id: node_type

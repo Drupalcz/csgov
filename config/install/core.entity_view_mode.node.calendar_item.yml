@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.calendar_item
-label: 'Calendar item'
+label: 'Položka kalendáře'
 targetEntityType: node
 cache: true

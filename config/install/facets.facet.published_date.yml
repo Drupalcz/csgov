@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: published_date
-name: 'Published date'
+name: 'Datum publikace'
 url_alias: published_date
 weight: 0
 min_count: 1
@@ -20,10 +20,10 @@ widget:
     show_numbers: true
     soft_limit: 0
     soft_limit_settings:
-      show_less_label: 'Show less'
-      show_more_label: 'Show more'
+      show_less_label: 'Ukázat méně'
+      show_more_label: 'Ukázat více'
     show_reset_link: false
-    reset_text: 'Show all'
+    reset_text: 'Ukázat vše'
     hide_reset_when_no_selection: false
 query_operator: or
 use_hierarchy: false

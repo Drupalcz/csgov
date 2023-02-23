@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: file
-label: File
-description: "Use local files for reusable media."
+label: Soubor
+description: "Použijte lokální soubory pro znovupoužitelná média."
 source: file
 queue_thumbnail_downloads: false
 new_revision: true

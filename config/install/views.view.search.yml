@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: search
-label: Search
+label: Vyhledávání
 module: views
 description: ''
 tag: ''

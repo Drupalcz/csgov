@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
 id: news
-label: 'News and News type'
+label: 'Novinky a Typy novinky'
 type: 'canonical_entities:node'
-pattern: 'news/[node:title]'
+pattern: 'novinky/[node:title]'
 selection_criteria:
   0b08eec2-be26-4ff3-a6ba-4c8380506c49:
     id: node_type

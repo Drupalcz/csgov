@@ -1,7 +1,7 @@
 langcode: cs
 status: true
 dependencies: {  }
-name: 'Board type'
+name: 'Typ úřední desky'
 vid: board_type
 description: ''
 weight: 0

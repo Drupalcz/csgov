@@ -5,7 +5,7 @@ dependencies:
     - ctools
     - taxonomy
 id: media_tag
-label: 'Media tag'
+label: 'Media tagy'
 type: 'canonical_entities:taxonomy_term'
 pattern: 'media-tag/[term:name]'
 selection_criteria:

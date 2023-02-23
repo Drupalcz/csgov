@@ -7,7 +7,7 @@ id: node.news.promote
 field_name: promote
 entity_type: node
 bundle: news
-label: 'Promoted to front page'
+label: 'Zobrazit na titulní stránce'
 description: ''
 required: false
 translatable: true
