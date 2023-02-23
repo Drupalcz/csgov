@@ -215,7 +215,7 @@ content:
     weight: 13
     region: content
     settings:
-      title: Component
+      title: Komponenta
       title_plural: Komponenty
       edit_mode: closed
       closed_mode: preview
