@@ -15,7 +15,7 @@ id: node.board.field_components
 field_name: field_components
 entity_type: node
 bundle: board
-label: Components
+label: Komponenty
 description: ''
 required: false
 translatable: false

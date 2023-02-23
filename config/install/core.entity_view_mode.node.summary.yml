@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.summary
-label: Summary
+label: Souhrn
 targetEntityType: node
 cache: true

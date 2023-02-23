@@ -44,7 +44,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:page:field_body'
-              label: Body
+              label: Obsah
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -61,7 +61,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:page:field_components'
-              label: Components
+              label: Komponenty
               label_display: '0'
               provider: layout_builder
               context_mapping:

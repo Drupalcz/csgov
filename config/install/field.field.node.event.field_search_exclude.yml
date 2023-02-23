@@ -8,8 +8,8 @@ id: node.event.field_search_exclude
 field_name: field_search_exclude
 entity_type: node
 bundle: event
-label: 'Search exclude'
-description: 'Exclude this content from search index.'
+label: 'Vyloučit z vyhledávání'
+description: 'Vyloučit tento obsah z interního vyhledávání.'
 required: false
 translatable: false
 default_value:

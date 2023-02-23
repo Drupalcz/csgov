@@ -10,8 +10,8 @@ id: node.person.field_banner_intro
 field_name: field_banner_intro
 entity_type: node
 bundle: person
-label: 'Banner intro'
-description: 'Optional text, displayed bellow title.'
+label: 'Úvodní text pro baner'
+description: 'Volitelný text, zobrazený pod nadpisem.'
 required: false
 translatable: true
 default_value: {  }

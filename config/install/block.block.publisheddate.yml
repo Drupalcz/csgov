@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:published_date'
 settings:
   id: 'facet_block:published_date'
-  label: 'Published date'
+  label: 'Datum publikování'
   provider: facets
   label_display: '0'
   block_id: publisheddate

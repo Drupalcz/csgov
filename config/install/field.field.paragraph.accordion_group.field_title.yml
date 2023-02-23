@@ -8,8 +8,8 @@ id: paragraph.accordion_group.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: accordion_group
-label: 'Administrative title'
-description: 'Serve for component description on edit forms.'
+label: 'Administrativní nadpis'
+description: 'Slouží pro popis komponenty v editačním formuláři.'
 required: true
 translatable: true
 default_value: {  }

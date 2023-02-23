@@ -1,4 +1,4 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ id: node.board.field_thumbnail
 field_name: field_thumbnail
 entity_type: node
 bundle: board
-label: Thumbnail
+label: 'Úvodní obrázek'
 description: ''
 required: false
 translatable: false

@@ -7,7 +7,7 @@ id: node.event.promote
 field_name: promote
 entity_type: node
 bundle: event
-label: 'Promoted to front page'
+label: 'Zobrazit na titulní stránce'
 description: ''
 required: false
 translatable: true

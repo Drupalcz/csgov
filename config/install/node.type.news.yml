@@ -7,7 +7,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: News
+name: Novinka
 type: news
 description: ''
 help: ''

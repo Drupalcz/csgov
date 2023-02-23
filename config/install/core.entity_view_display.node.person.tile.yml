@@ -37,7 +37,7 @@ third_party_settings:
             region: image
             configuration:
               id: 'field_block:node:person:field_thumbnail'
-              label: Thumbnail
+              label: 'Úvodní obrázek'
               label_display: '0'
               provider: layout_builder
               context_mapping:

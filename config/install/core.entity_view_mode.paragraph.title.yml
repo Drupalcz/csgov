@@ -4,6 +4,6 @@ dependencies:
   module:
     - paragraphs
 id: paragraph.title
-label: Title
+label: Nadpis
 targetEntityType: paragraph
 cache: true

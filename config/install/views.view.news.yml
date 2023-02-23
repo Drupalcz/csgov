@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: news
-label: News
+label: Novinky
 module: views
 description: ''
 tag: ''
@@ -176,11 +176,11 @@ display:
         simple_sitemap_display_extender: {  }
       use_ajax: true
       css_class: 'views-layout views--layout-full-width'
-      title: 'Latest news'
+      title: 'Poslední novinky'
       use_more: true
       use_more_always: true
-      use_more_text: 'View all news'
-      link_url: /news
+      use_more_text: 'Zobrazit všechny novinky'
+      link_url: /novinky
       link_display: custom_url
     cache_metadata:
       max-age: -1
@@ -194,7 +194,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Homepage news list'
+    display_title: 'Seznam novinek pro hlavní stránku webu.'
     position: 1
     display_options:
       display_extenders:
@@ -224,7 +224,7 @@ display:
   block_2:
     display_plugin: block
     id: block_2
-    display_title: 'All news list'
+    display_title: 'Zobrazit všechny novinky'
     position: 2
     display_options:
       display_extenders:
@@ -244,9 +244,9 @@ display:
       block_hide_empty: true
       use_more: false
       use_more_always: true
-      use_more_text: 'View all news'
+      use_more_text: 'Zobrazit všechny novinky'
       link_display: '0'
-      link_url: /news
+      link_url: /novinky
       style:
         type: default
         options:

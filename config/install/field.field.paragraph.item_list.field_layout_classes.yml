@@ -10,8 +10,8 @@ id: paragraph.item_list.field_layout_classes
 field_name: field_layout_classes
 entity_type: paragraph
 bundle: item_list
-label: Layout
-description: 'Choose the layout of items.'
+label: Rozložení
+description: 'Vyberte rozložení položek.'
 required: true
 translatable: true
 default_value: {  }

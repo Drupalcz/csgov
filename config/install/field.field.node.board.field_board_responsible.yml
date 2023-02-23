@@ -9,7 +9,7 @@ id: node.board.field_board_responsible
 field_name: field_board_responsible
 entity_type: node
 bundle: board
-label: 'Board responsible'
+label: 'Zodpovědná osoba'
 description: ''
 required: true
 translatable: false

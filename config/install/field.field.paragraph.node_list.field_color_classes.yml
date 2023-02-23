@@ -11,7 +11,7 @@ field_name: field_color_classes
 entity_type: paragraph
 bundle: node_list
 label: 'Color pallete'
-description: 'Change color of the component.'
+description: 'Změní barvu komponenty.'
 required: true
 translatable: false
 default_value:

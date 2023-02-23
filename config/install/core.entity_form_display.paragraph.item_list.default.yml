@@ -46,8 +46,8 @@ content:
     type: paragraphs
     weight: 3
     settings:
-      title: Item
-      title_plural: Items
+      title: Položka
+      title_plural: Položky
       edit_mode: open
       closed_mode: preview
       autocollapse: none

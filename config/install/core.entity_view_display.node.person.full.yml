@@ -43,7 +43,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:person:field_body'
-              label: Body
+              label: Obsah
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -60,7 +60,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:person:field_components'
-              label: Components
+              label: Komponenty
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -94,7 +94,7 @@ third_party_settings:
             region: sidebar
             configuration:
               id: 'field_block:node:person:field_thumbnail'
-              label: Thumbnail
+              label: 'Úvodní obrázek'
               label_display: '0'
               provider: layout_builder
               context_mapping:

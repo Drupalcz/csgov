@@ -13,7 +13,7 @@ id: paragraph.node_list.field_nodes
 field_name: field_nodes
 entity_type: paragraph
 bundle: node_list
-label: Nodes
+label: Stránky
 description: ''
 required: true
 translatable: false

@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.teaser_small
-label: 'Teaser small'
+label: 'Úvodník malý'
 targetEntityType: node
 cache: true

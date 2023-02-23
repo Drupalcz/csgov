@@ -8,7 +8,7 @@ id: node.event.field_event_location
 field_name: field_event_location
 entity_type: node
 bundle: event
-label: 'Event location'
+label: 'Místo'
 description: ''
 required: false
 translatable: false

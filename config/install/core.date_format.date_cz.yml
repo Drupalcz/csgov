@@ -2,6 +2,6 @@ langcode: cs
 status: true
 dependencies: {  }
 id: date_cz
-label: 'Czech date'
+label: 'České datum'
 locked: false
 pattern: 'j. n. Y'

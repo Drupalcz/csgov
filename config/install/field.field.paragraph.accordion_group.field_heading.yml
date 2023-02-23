@@ -8,8 +8,8 @@ id: paragraph.accordion_group.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: accordion_group
-label: Heading
-description: 'Optional heading for the component.'
+label: Hlavička
+description: 'Volitelný nadpis komponenty.'
 required: false
 translatable: true
 default_value: {  }

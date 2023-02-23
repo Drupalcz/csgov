@@ -9,7 +9,7 @@ id: media.file.field_tags
 field_name: field_tags
 entity_type: media
 bundle: file
-label: Tags
+label: Tagy
 description: ''
 required: false
 translatable: true

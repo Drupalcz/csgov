@@ -95,7 +95,6 @@ dependencies:
   - password_policy_length
   - password_policy_username
   - path
-  - rdf
   - recaptcha
   - redirect
   - redirect_404

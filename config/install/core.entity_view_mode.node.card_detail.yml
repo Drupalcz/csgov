@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.card_detail
-label: 'Card detail'
+label: 'Karta s detaily'
 targetEntityType: node
 cache: true

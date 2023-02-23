@@ -15,7 +15,7 @@ id: node.person.field_components
 field_name: field_components
 entity_type: node
 bundle: person
-label: Components
+label: Komponenty
 description: ''
 required: false
 translatable: false

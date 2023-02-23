@@ -1,9 +1,9 @@
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
     - node
 id: node.search
-label: Search
+label: Vyhledávání
 targetEntityType: node
 cache: true

@@ -10,7 +10,7 @@ id: node.person.field_body
 field_name: field_body
 entity_type: node
 bundle: person
-label: Body
+label: Obsah
 description: ''
 required: false
 translatable: false

@@ -7,7 +7,7 @@ id: node.person.promote
 field_name: promote
 entity_type: node
 bundle: person
-label: 'Promoted to front page'
+label: 'Zobrazit na titulní stránce'
 description: ''
 required: false
 translatable: true

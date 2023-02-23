@@ -9,8 +9,8 @@ id: node.person.field_banner_image
 field_name: field_banner_image
 entity_type: node
 bundle: person
-label: 'Banner image'
-description: 'Optional image for the background.'
+label: 'Obrázek baneru'
+description: 'Volitelný obrázek pro pozadí.'
 required: false
 translatable: true
 default_value: {  }

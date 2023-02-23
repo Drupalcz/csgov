@@ -10,8 +10,8 @@ id: paragraph.accordion.field_accordion_speed
 field_name: field_accordion_speed
 entity_type: paragraph
 bundle: accordion
-label: Speed
-description: 'The speed of the open and close, fast or slow, default=fast.'
+label: Rychlost
+description: 'Rychlost otevírání a zavírání položek akordionu, rychle nebo pomalu. Výchozí = rychle.'
 required: true
 translatable: false
 default_value:

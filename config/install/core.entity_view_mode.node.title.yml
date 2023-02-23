@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.title
-label: Title
+label: Nadpis
 targetEntityType: node
 cache: true

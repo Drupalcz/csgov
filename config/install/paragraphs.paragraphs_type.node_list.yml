@@ -2,8 +2,8 @@ langcode: cs
 status: true
 dependencies: {  }
 id: node_list
-label: 'Node list'
+label: 'Seznam stránek'
 icon_uuid: null
 icon_default: null
-description: 'Component referencing other content.'
+description: 'Umístí zvolené stránky do vybraného rozložení.'
 behavior_plugins: {  }

@@ -11,7 +11,7 @@ field_name: field_body
 entity_type: paragraph
 bundle: node_list
 label: Text
-description: 'Optional text to appear above the main content.'
+description: 'Volitelný text zobrazený dan hlavním obsahem.'
 required: false
 translatable: false
 default_value: {  }

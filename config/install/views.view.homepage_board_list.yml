@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: homepage_board_list
-label: 'Homepage board list'
+label: 'Seznam Úřední desky pro titulní stranu webu.'
 module: views
 description: ''
 tag: ''
@@ -203,7 +203,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No current boards available.'
+          content: 'Nejsou žádné poslední záznamy úřední desky.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
@@ -212,11 +212,11 @@ display:
         simple_sitemap_display_extender: {  }
       use_more: true
       use_more_always: true
-      use_more_text: 'View whole board'
+      use_more_text: 'Zobrazit celou úřední desku'
       link_url: uredni-deska
       link_display: custom_url
       css_class: 'views-layout views-layout--full-width views-layout--tiny-gap'
-      title: 'Latest board'
+      title: 'Poslední záznamy úřední desky'
     cache_metadata:
       max-age: -1
       contexts:

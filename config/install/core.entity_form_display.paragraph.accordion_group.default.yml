@@ -23,8 +23,8 @@ content:
     type: paragraphs
     weight: 7
     settings:
-      title: Accordion
-      title_plural: Accordions
+      title: Akordion
+      title_plural: Akordiony
       edit_mode: closed
       closed_mode: preview
       autocollapse: none

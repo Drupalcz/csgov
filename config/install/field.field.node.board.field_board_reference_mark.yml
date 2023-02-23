@@ -8,7 +8,7 @@ id: node.board.field_board_reference_mark
 field_name: field_board_reference_mark
 entity_type: node
 bundle: board
-label: 'Reference mark'
+label: 'Referenční značka'
 description: ''
 required: false
 translatable: false

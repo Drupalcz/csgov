@@ -9,7 +9,7 @@ id: paragraph.item.field_image
 field_name: field_image
 entity_type: paragraph
 bundle: item
-label: Image
+label: Obrázek
 description: ''
 required: false
 translatable: false

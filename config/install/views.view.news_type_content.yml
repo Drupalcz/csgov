@@ -219,7 +219,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'News type list'
+    display_title: 'Seznam Typů novinek'
     position: 1
     display_options:
       display_extenders:

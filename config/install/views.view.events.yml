@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: events
-label: Events
+label: Akce
 module: views
 description: ''
 tag: ''
@@ -173,11 +173,11 @@ display:
         metatag_display_extender: {  }
         simple_sitemap_display_extender: {  }
       css_class: 'views-layout views-layout--full-width views-layout--tiny-gap'
-      title: 'Current events'
+      title: 'Nadcházející akce'
       use_ajax: true
       use_more: true
       use_more_always: true
-      use_more_text: 'View all events'
+      use_more_text: 'Zobrazit všechny akce'
       link_url: akce
       link_display: custom_url
     cache_metadata:
@@ -218,13 +218,13 @@ display:
   block_2:
     display_plugin: block
     id: block_2
-    display_title: 'All events list'
+    display_title: 'Zobrazit všechny akce'
     position: 2
     display_options:
       display_extenders:
         metatag_display_extender: {  }
         simple_sitemap_display_extender: {  }
-      title: Events
+      title: Akce
       defaults:
         title: false
         use_more: false
@@ -236,9 +236,9 @@ display:
       block_hide_empty: true
       use_more: false
       use_more_always: true
-      use_more_text: 'View all events'
+      use_more_text: 'Zobrazit všechny akce'
       link_display: '0'
-      link_url: /events
+      link_url: /akce
     cache_metadata:
       max-age: -1
       contexts:

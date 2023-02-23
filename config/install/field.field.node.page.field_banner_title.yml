@@ -8,8 +8,8 @@ id: node.page.field_banner_title
 field_name: field_banner_title
 entity_type: node
 bundle: page
-label: 'Banner title'
-description: 'Overrides the page title.'
+label: 'Nadpis baneru'
+description: 'Přepíše nadpis stránky.'
 required: false
 translatable: false
 default_value: {  }

@@ -27,7 +27,7 @@ field_settings:
       config:
         - field.storage.node.field_board_type
   field_keywords:
-    label: Keywords
+    label: 'Klíčová slova'
     datasource_id: 'entity:node'
     property_path: field_keywords
     type: text
@@ -52,7 +52,7 @@ field_settings:
       config:
         - field.storage.node.field_board_removed_date
   field_search_exclude:
-    label: 'Search exclude'
+    label: 'Vyloučit z vyhledávání'
     datasource_id: 'entity:node'
     property_path: field_search_exclude
     type: boolean
@@ -60,7 +60,7 @@ field_settings:
       config:
         - field.storage.node.field_search_exclude
   field_teaser:
-    label: Teaser
+    label: Úvodník
     datasource_id: 'entity:node'
     property_path: field_teaser
     type: text
