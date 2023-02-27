@@ -9,7 +9,7 @@ complying with Drupal 9 requirements. You also need to have composer (composer 2
 
 - Create project using composer:
 ```
-$ composer create-project drupalcz/csgov-project:"3.x-dev" MY_PROJECT
+$ composer create-project drupalcz/csgov-project:"1.0.0" MY_PROJECT
 ```
 
 - Start lando:
