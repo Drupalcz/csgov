@@ -37,6 +37,6 @@ Previous commands gave you URL and credentials. Go to the URL/user, fill in the 
 * PHP 8.1+
 * MySQL, MariaDB or Percona Server
 * Apache 2
-* For detailed list of requirements see https://www.drupal.org/docs/8/system-requirements
+* For detailed list of requirements see https://www.drupal.org/docs/system-requirements
 
 ***Happy codding!***
