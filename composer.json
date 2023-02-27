@@ -68,7 +68,7 @@
     "drupal/webform": "^6.1.0",
     "drupal/webp": "^1.0@beta",
     "drupalcz/csgov_theme": "3.x-dev",
-    "drush/drush": "^10.0.0",
+    "drush/drush": "^11.0.0",
     "oomphinc/composer-installers-extender": "^2.0",
     "vlucas/phpdotenv": "^2.4",
     "webflo/drupal-finder": "^1.0.0",
@@ -76,7 +76,7 @@
   },
   "require-dev": {
     "drupal/devel": "^4.0",
-    "drush/drush": "^10.0"
+    "drush/drush": "^11.0"
   },
   "config": {
     "preferred-install": {
