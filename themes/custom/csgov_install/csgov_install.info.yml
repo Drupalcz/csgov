@@ -1,4 +1,4 @@
-# This theme is for govCMS distro install only
+# This theme is for CSGOV distribution install only
 name: 'CS Gov Install'
 type: theme
 base theme: seven
