@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion.field_accordion_orientation
-    - field.field.paragraph.accordion.field_accordion_speed
     - field.field.paragraph.accordion.field_body
     - field.field.paragraph.accordion.field_heading
     - field.field.paragraph.accordion.field_title
@@ -22,7 +21,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_title:
+  field_heading:
     type: string
     label: hidden
     settings:
@@ -32,6 +31,5 @@ content:
     region: content
 hidden:
   field_accordion_orientation: true
-  field_accordion_speed: true
-  field_heading: true
+  field_title: true
   search_api_excerpt: true

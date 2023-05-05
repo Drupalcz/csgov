@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion.field_accordion_orientation
-    - field.field.paragraph.accordion.field_accordion_speed
     - field.field.paragraph.accordion.field_body
     - field.field.paragraph.accordion.field_heading
     - field.field.paragraph.accordion.field_title
@@ -16,41 +15,35 @@ bundle: accordion
 mode: default
 content:
   field_accordion_orientation:
+    type: options_buttons
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_accordion_speed:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_body:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_heading:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   moderation_state: true

@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.accordion_group.field_body
     - field.field.paragraph.accordion_group.field_color_classes
     - field.field.paragraph.accordion_group.field_heading
-    - field.field.paragraph.accordion_group.field_show_close_all
-    - field.field.paragraph.accordion_group.field_show_open_all
     - field.field.paragraph.accordion_group.field_show_toggle_all
     - field.field.paragraph.accordion_group.field_title
     - paragraphs.paragraphs_type.accordion_group
@@ -22,6 +20,7 @@ content:
   field_accordions:
     type: paragraphs
     weight: 7
+    region: content
     settings:
       title: Akordion
       title_plural: Akordiony
@@ -33,19 +32,18 @@ content:
       form_display_mode: default
       default_paragraph_type: accordion
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_body:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_color_classes:
     type: options_select
     weight: 8
@@ -53,42 +51,28 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_heading:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_show_close_all:
-    weight: 5
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_show_open_all:
-    weight: 4
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_show_toggle_all:
+    type: boolean_checkbox
     weight: 6
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

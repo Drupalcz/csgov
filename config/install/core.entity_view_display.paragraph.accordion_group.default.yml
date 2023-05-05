@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.accordion_group.field_body
     - field.field.paragraph.accordion_group.field_color_classes
     - field.field.paragraph.accordion_group.field_heading
-    - field.field.paragraph.accordion_group.field_show_close_all
-    - field.field.paragraph.accordion_group.field_show_open_all
     - field.field.paragraph.accordion_group.field_show_toggle_all
     - field.field.paragraph.accordion_group.field_title
     - paragraphs.paragraphs_type.accordion_group
@@ -43,6 +41,7 @@ content:
       prefix: ''
       suffix: ''
       attr: ''
+      field: ''
     third_party_settings: {  }
     weight: 3
     region: content
@@ -55,8 +54,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_show_close_all: true
-  field_show_open_all: true
   field_show_toggle_all: true
   field_title: true
   search_api_excerpt: true
