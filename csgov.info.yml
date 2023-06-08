@@ -1,4 +1,5 @@
 name: 'CS Gov'
+version: 1.0.1
 core_version_requirement: ^9
 type: profile
 description: 'A feature-rich Drupal 9 distribution for Czech and Slovak eGovernment sites.'
