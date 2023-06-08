@@ -49,6 +49,7 @@ dependencies:
   - facets
   - field
   - field_group
+  - field_ui
   - file
   - filter
   - focal_point
@@ -111,11 +112,13 @@ dependencies:
   - text
   - token
   - toolbar
+  - twig_tweak
   - update
   - user
   - username_enumeration_prevention
-  - twig_tweak
+  - views_ui
   - webform
+  - webform_ui
   - webp
   - workflows
   - menu_link_content
