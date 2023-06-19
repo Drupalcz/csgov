@@ -1,0 +1,99 @@
+id: csgov_migrate_paragraph_node_list
+label: 'Paragraph - Node list'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+migration_dependencies:
+  optional:
+    - csgov_migrate_node_board
+    - csgov_migrate_node_event
+    - csgov_migrate_node_news
+    - csgov_migrate_node_page
+    - csgov_migrate_node_person
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_node_list.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_title
+      selector: field_title
+    - name: field_heading
+      selector: field_heading
+    - name: field_body
+      selector: field_body
+    - name: field_color_classes
+      selector: field_color_classes
+    - name: field_layout_classes
+      selector: field_layout_classes
+    - name: field_nodes
+      selector: field_nodes
+    - name: field_read_more
+      selector: field_read_more
+    - name: field_view_mode
+      selector: field_view_mode
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: node_list
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_title: field_title
+
+  field_heading: field_heading
+
+  field_body/value: field_body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_color_classes: field_color_classes
+
+  field_layout_classes: field_layout_classes
+
+  field_nodes:
+    - plugin: callback
+      source: field_nodes
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: value
+          migration:
+            - csgov_migrate_node_board
+            - csgov_migrate_node_event
+            - csgov_migrate_node_news
+            - csgov_migrate_node_page
+            - csgov_migrate_node_person
+          no_stub: true
+
+  field_read_more/uri: field_read_more
+
+  field_view_mode: field_view_mode

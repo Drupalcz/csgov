@@ -1,0 +1,150 @@
+id: csgov_migrate_node_news
+label: 'Node - News'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_node
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+    - csgov_migrate_paragraph_accordion_group
+    - csgov_migrate_paragraph_attachments
+    - csgov_migrate_paragraph_content
+    - csgov_migrate_paragraph_item_list
+    - csgov_migrate_paragraph_node_list
+    - csgov_migrate_taxonomy_news_type
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/node_news.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: title
+      selector: title
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: promote
+      selector: promote
+    - name: sticky
+      selector: sticky
+    - name: field_banner_image
+      selector: field_banner_image
+    - name: field_banner_intro
+      selector: field_banner_intro
+    - name: field_banner_title
+      selector: field_banner_title
+    - name: field_body
+      selector: field_body
+    - name: field_components
+      selector: field_components
+    - name: field_teaser
+      selector: field_teaser
+    - name: field_thumbnail
+      selector: field_thumbnail
+    - name: field_news_date
+      selector: field_news_date
+    - name: field_news_type
+      selector: field_news_type
+
+destination:
+  plugin: entity:node
+  default_bundle: news
+
+process:
+  uuid: uuid
+  nid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: node
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  title: title
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+
+  field_banner_image:
+    - plugin: default_value
+      source: field_banner_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_banner_intro/value: field_banner_intro
+  field_banner_intro/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_banner_title: field_banner_title
+
+  field_body/value: field_body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_components:
+    - plugin: callback
+      source: field_components
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration:
+            - csgov_migrate_paragraph_accordion_group
+            - csgov_migrate_paragraph_attachments
+            - csgov_migrate_paragraph_content
+            - csgov_migrate_paragraph_item_list
+            - csgov_migrate_paragraph_node_list
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_teaser/value: field_teaser
+  field_teaser/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_thumbnail:
+    - plugin: default_value
+      source: field_thumbnail
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_news_date:
+    plugin: csgov_migrate_date_override
+    source: field_news_date
+    override: true
+
+  field_news_type:
+    plugin: migration_lookup
+    source: field_news_type
+    migration: csgov_migrate_taxonomy_news_type
+    no_stub: true

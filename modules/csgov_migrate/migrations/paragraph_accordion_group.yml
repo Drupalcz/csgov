@@ -1,0 +1,83 @@
+id: csgov_migrate_paragraph_accordion_group
+label: 'Paragraph - Accordion group'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+migration_dependencies:
+  required:
+    - csgov_migrate_paragraph_accordion
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_accordion_group.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_title
+      selector: field_title
+    - name: field_heading
+      selector: field_heading
+    - name: field_body
+      selector: field_body
+    - name: field_accordions
+      selector: field_accordions
+    - name: field_color_classes
+      selector: field_color_classes
+    - name: field_show_toggle_all
+      selector: field_show_toggle_all
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: accordion_group
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_title: field_title
+
+  field_heading: field_heading
+
+  field_body/value: field_body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_accordions:
+    - plugin: callback
+      source: field_accordions
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration: csgov_migrate_paragraph_accordion
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_color_classes: field_color_classes
+
+  field_show_toggle_all: field_show_toggle_all
