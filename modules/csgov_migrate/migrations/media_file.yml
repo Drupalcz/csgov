@@ -1,0 +1,77 @@
+id: csgov_migrate_media_file
+label: 'Media - File'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_media
+migration_dependencies:
+  required:
+    - csgov_migrate_file
+    - csgov_migrate_taxonomy_media_tags
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/media_file.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: name
+      selector: name
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: field_media_file
+      selector: field_media_file
+    - name: field_tags
+      selector: field_tags
+
+destination:
+  plugin: entity:media
+  default_bundle: file
+
+process:
+  uuid: uuid
+  mid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: media
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  name: name
+  created: created
+  changed: changed
+
+  field_media_file:
+    plugin: migration_lookup
+    source: field_media_file
+    migration: csgov_migrate_file
+    no_stub: true
+
+  field_tags:
+    - plugin: callback
+      source: field_tags
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: value
+          migration: csgov_migrate_taxonomy_media_tags
+          no_stub: true

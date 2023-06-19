@@ -1,0 +1,76 @@
+id: csgov_migrate_paragraph_item
+label: 'Paragraph - Item'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_item.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_title
+      selector: field_title
+    - name: field_heading
+      selector: field_heading
+    - name: field_body
+      selector: field_body
+    - name: field_image
+      selector: field_image
+    - name: field_read_more
+      selector: field_read_more
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: item
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_title: field_title
+
+  field_heading: field_heading
+
+  field_body/value: field_body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_image:
+    - plugin: default_value
+      source: field_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_read_more/uri: field_read_more

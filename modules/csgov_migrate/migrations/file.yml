@@ -1,0 +1,72 @@
+id: csgov_migrate_file
+label: 'File'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_file
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/file.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: filename
+      selector: filename
+    - name: filemime
+      selector: filemime
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: uri
+      selector: uri
+
+  constants:
+    files_path: 'profiles/contrib/csgov/modules/csgov_migrate/files/'
+
+destination:
+  plugin: entity:file
+
+process:
+  uuid: uuid
+  fid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: file
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  filename: filename
+  filemime: filemime
+  created: created
+  changed: changed
+
+  _source_path:
+    - plugin: substr
+      source: uri
+      start: 9
+    - plugin: concat
+      source:
+        - constants/files_path
+        -
+  uri:
+    plugin: file_copy
+    source:
+      - '@_source_path'
+      - uri

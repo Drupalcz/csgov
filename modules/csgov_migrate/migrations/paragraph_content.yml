@@ -1,0 +1,65 @@
+id: csgov_migrate_paragraph_content
+label: 'Paragraph - Content'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_content.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_title
+      selector: field_title
+    - name: field_heading
+      selector: field_heading
+    - name: field_body
+      selector: field_body
+    - name: field_color_classes
+      selector: field_color_classes
+    - name: field_read_more
+      selector: field_read_more
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: content
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_title: field_title
+
+  field_heading: field_heading
+
+  field_body/value: field_body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+
+  field_color_classes: field_color_classes
+
+  field_read_more/uri: field_read_more
