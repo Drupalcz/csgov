@@ -3,6 +3,7 @@ type: module
 description: Provides custom migration support.
 package: CS Gov
 core_version_requirement: ^9 || ^10
+configure: csgov_migrate.settings
 dependencies:
   - drupal:migrate
   - drupal:rest

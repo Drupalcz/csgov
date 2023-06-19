@@ -1,0 +1,5 @@
+csgov_migrate.settings:
+  title: 'CS Gov Migrate'
+  description: 'Configure CS Gov Migrate settings.'
+  route_name: csgov_migrate.settings
+  parent: csgov.admin_config_csgov
