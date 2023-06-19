@@ -47,6 +47,7 @@
     "drupal/menu_block": "^1.x-dev@dev",
     "drupal/menu_trail_by_path": "^2.0",
     "drupal/metatag": "^1.16",
+    "drupal/migrate_plus": "^6.0",
     "drupal/modifiers": "^1.2",
     "drupal/modifiers_pack": "^2.0",
     "drupal/module_filter": "dev-3.x",
@@ -89,6 +90,7 @@
       "drupal/core": {
         "Plugin blocks cannot set their own attributes when put in the layout": "https://git.drupalcode.org/project/drupal/-/merge_requests/1426.patch",
         "Order image mappings by breakpoint ID and numeric multiplier": "https://www.drupal.org/files/issues/2022-05-19/3267870-9.5.x-47.patch",
+        "Add menu_link_content support into views": "https://www.drupal.org/files/issues/2022-11-21/drupal-2777749-menu_link_content-views-support-23.patch",
         "Add Width and Height attribute to Responsive images.": "https://www.drupal.org/files/issues/2022-09-30/3192234-228-9.5.x.patch"
       },
       "drupal/paragraphs": {
