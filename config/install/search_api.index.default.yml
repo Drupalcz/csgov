@@ -76,7 +76,11 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
+          board: full
+          event: full
+          news: full
           page: full
+          person: full
   status:
     label: Published
     datasource_id: 'entity:node'
