@@ -83,6 +83,7 @@ permissions:
   - 'update paragraph content item'
   - 'update paragraph content item_list'
   - 'update paragraph content node_list'
+  - 'use text format rich_text'
   - 'view all revisions'
   - 'view any webform submission'
   - 'view own unpublished content'
