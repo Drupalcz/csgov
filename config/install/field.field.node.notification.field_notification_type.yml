@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification_type
+    - node.type.notification
+  module:
+    - options
+id: node.notification.field_notification_type
+field_name: field_notification_type
+entity_type: node
+bundle: notification
+label: 'Typ notifikace'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: basic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,31 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.notification.field_body
+    - field.field.node.notification.field_notification_display_all
+    - field.field.node.notification.field_notification_display_on
+    - field.field.node.notification.field_notification_type
+    - node.type.notification
+  module:
+    - text
+    - user
+id: node.notification.default
+targetEntityType: node
+bundle: notification
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_notification_display_all: true
+  field_notification_display_on: true
+  field_notification_type: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

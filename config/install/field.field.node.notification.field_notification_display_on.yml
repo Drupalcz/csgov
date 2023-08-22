@@ -1,0 +1,36 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification_display_on
+    - node.type.board
+    - node.type.event
+    - node.type.news
+    - node.type.notification
+    - node.type.page
+    - node.type.person
+id: node.notification.field_notification_display_on
+field_name: field_notification_display_on
+entity_type: node
+bundle: notification
+label: 'Zobrazit na'
+description: 'Zadejte jednu nebo více stránek na kterých se má notifikace zobrazovat.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+      news: news
+      person: person
+      page: page
+      board: board
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: event
+field_type: entity_reference

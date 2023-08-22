@@ -1,0 +1,24 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - views.view.notifications
+  module:
+    - views
+  theme:
+    - csgov_theme
+id: notifications_per_page
+theme: csgov_theme
+region: content_top
+weight: -4
+provider: null
+plugin: 'views_block:notifications-per_page'
+settings:
+  id: 'views_block:notifications-per_page'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

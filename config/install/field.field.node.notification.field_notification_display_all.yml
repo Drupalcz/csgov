@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification_display_all
+    - node.type.notification
+id: node.notification.field_notification_display_all
+field_name: field_notification_display_all
+entity_type: node
+bundle: notification
+label: 'Zobrazit všude'
+description: 'Zatržením tohoto pole zajístíte, že se notifikace zobrazí na všech stránkách webu, bez ohledu jestli jste vybrali nějakou konkrétní stránku v poli "Zobrazit na".'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Zapnuto
+  off_label: Vypnuto
+field_type: boolean
