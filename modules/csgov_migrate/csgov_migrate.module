@@ -43,6 +43,7 @@ function _csgov_migrate_get_migrations() {
       'board',
       'event',
       'news',
+      'notification',
     ],
   ];
 }
