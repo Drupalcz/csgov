@@ -2,5 +2,4 @@ calendar_item:
   js:
     js/calendar_item.js: {}
   dependencies:
-    - core/jquery
-    - core/jquery.once
+    - core/once
