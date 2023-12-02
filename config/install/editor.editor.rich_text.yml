@@ -1,74 +1,115 @@
-langcode: cs
+langcode: en
 status: true
 dependencies:
   config:
     - filter.format.rich_text
   module:
-    - ckeditor
+    - ckeditor5
 format: rich_text
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Underline
-            - Strike
-            - '-'
-            - Superscript
-            - Subscript
-            - RemoveFormat
-            - '-'
-            - Format
-            - Styles
-        -
-          name: Alignment
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - Table
-            - '-'
-            - BulletedList
-            - NumberedList
-            - Indent
-            - Outdent
-        -
-          name: Media
-          items:
-            - Blockquote
-            - node
-            - SpecialChar
-        -
-          name: Tools
-          items:
-            - Undo
-            - Redo
-            - '-'
-            - Source
-            - '-'
-            - Maximize
+    items:
+      - bold
+      - italic
+      - underline
+      - strikethrough
+      - superscript
+      - subscript
+      - removeFormat
+      - heading
+      - style
+      - '|'
+      - alignment
+      - '|'
+      - link
+      - '|'
+      - insertTable
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - blockQuote
+      - node
+      - specialCharacters
+      - '|'
+      - undo
+      - redo
+      - sourceEditing
+      - '|'
   plugins:
-    stylescombo:
-      styles: "p.lead|Úvodník\r\na.cta-link|Click to action\r\na.btn|Tlačítko\r\na.btn.btn-primary|Tlačítko hlavní\r\na.btn.btn-secondary|Tlačítko vedlejší\r\na.btn.btn-light|Tlačítko světlé\r\na.btn.btn-dark|Tlačítko tmavé\r\nspan.text-primary|Text hlavní\r\nspan.text-secondary|Text vedlejší\r\nspan.text-light|Text světlý\r\nspan.text-dark|Text tmavý"
-    drupallink:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: Úvodník
+          element: '<p class="lead">'
+        -
+          label: 'Click to action'
+          element: '<a class="cta-link">'
+        -
+          label: Tlačítko
+          element: '<a class="button">'
+        -
+          label: 'Tlačítko hlavní'
+          element: '<a class="button button-primary">'
+        -
+          label: 'Tlačítko vedlejší'
+          element: '<a class="button button-secondary">'
+        -
+          label: 'Tlačítko světlé'
+          element: '<a class="button button-light">'
+        -
+          label: 'Tlačítko tmavé'
+          element: '<a class="button button-dark">'
+        -
+          label: 'Text hlavní'
+          element: '<span class="text-primary">'
+        -
+          label: 'Text vedlejší'
+          element: '<span class="text-secondary">'
+        -
+          label: 'Text světlý'
+          element: '<span class="text-light">'
+        -
+          label: 'Text tmavý'
+          element: '<span class="text-dark">'
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<span>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+        - '<a hreflang title>'
+        - '<drupal-entity data-entity-type data-embed-button>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+        - justify
+    linkit_extension:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
 image_upload:
   status: false
   scheme: public
