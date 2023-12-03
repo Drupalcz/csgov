@@ -2,4 +2,4 @@ name: CS Gov Layouts
 type: module
 description: Provides custom layout functionality.
 package: CS Gov
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10

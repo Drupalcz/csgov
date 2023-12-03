@@ -2,4 +2,4 @@ name: CS Gov Media
 type: module
 description: Provides default media entities.
 package: CS Gov
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
