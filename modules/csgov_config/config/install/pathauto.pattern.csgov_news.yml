@@ -1,0 +1,21 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: csgov_news
+label: Aktuality
+type: 'canonical_entities:node'
+pattern: '/aktuality/[node:title]'
+selection_criteria:
+  967d60df-4e0d-48d6-8910-cc9bae49f13a:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 967d60df-4e0d-48d6-8910-cc9bae49f13a
+    context_mapping:
+      node: node
+    bundles:
+      csgov_news: csgov_news
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_infopanel_type
+    - paragraphs.paragraphs_type.csgov_infopanel
+  module:
+    - options
+id: paragraph.csgov_infopanel.field_csgov_p_infopanel_type
+field_name: field_csgov_p_infopanel_type
+entity_type: paragraph
+bundle: csgov_infopanel
+label: 'Typ panelu'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

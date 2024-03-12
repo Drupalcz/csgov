@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the CS Gov installation profile.
+ * Install, update and uninstall functions for the CSGov installation profile.
  */
 
 use Drupal\user\Entity\User;
@@ -19,4 +19,22 @@ function csgov_install() {
   $user = User::load(1);
   $user->addRole('administrator');
   $user->save();
+
+  // Set the default theme.
+  \Drupal::configFactory()->getEditable('system.theme')
+    ->set('default', 'csgov_theme')
+    ->save();
+
+  // Enable additional themes, including the admin theme if not already enabled.
+  \Drupal::service('theme_installer')->install(['csgov_admin'], TRUE);
+
+  // Set the 'csgov_admin' theme as the default administration theme.
+  \Drupal::configFactory()->getEditable('system.theme')
+    ->set('admin', 'csgov_admin')
+    ->save();
+
+  // Use the admin theme for content creation and editing.
+  \Drupal::configFactory()->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save();
 }

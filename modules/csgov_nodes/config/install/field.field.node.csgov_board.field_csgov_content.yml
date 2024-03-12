@@ -1,0 +1,23 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_content
+    - filter.format.basic_html
+    - node.type.csgov_board
+  module:
+    - text
+id: node.csgov_board.field_csgov_content
+field_name: field_csgov_content
+entity_type: node
+bundle: csgov_board
+label: Obsah
+description: 'Popište o čem je záznam na úřední desce. Pokud to snadno jde, zkopírujte obsah přílohy a vložte je přímo do tohoto pole.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,3 @@
+langcode: cs
+enabled_entity_types:
+  - node

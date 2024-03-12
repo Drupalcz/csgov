@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: date_only
+label: 'Date Only'
+date_format: 'D, j. F Y'
+time_format: ''
+time_hour_format: ''
+allday_label: ''
+separator: –
+join: ', '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

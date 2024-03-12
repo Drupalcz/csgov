@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-name: 'Media tagy'
-vid: media_tags
-description: 'Categorizes media assets'
-weight: 0

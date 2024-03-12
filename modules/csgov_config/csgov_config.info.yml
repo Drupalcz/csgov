@@ -1,0 +1,23 @@
+name: 'CSGOV basic config'
+type: module
+description: 'Adds various config for the platform'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - drupal:webform
+  - drupal:menu_block
+  - drupal:linkit
+  - drupal:metatag
+  - drupal:password_policy_blacklist
+  - drupal:password_policy_character_types
+  - drupal:password_policy_consecutive
+  - drupal:password_policy_length
+  - drupal:password_policy_pwned
+  - drupal:password_policy_username
+  - drupal:password_policy
+  - drupal:pathauto
+  - drupal:rabbit_hole
+  - drupal:smart_date
+  - drupal:menu_trail_by_path
+  - drupal:antibot
+  - drupal:honeypot

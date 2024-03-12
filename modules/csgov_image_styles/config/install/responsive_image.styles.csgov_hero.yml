@@ -1,0 +1,93 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - image.style.hero_3_1_2xl
+    - image.style.hero_3_1_2xl_2x
+    - image.style.hero_3_1_l
+    - image.style.hero_3_1_l_2x
+    - image.style.hero_3_1_m
+    - image.style.hero_3_1_m_2x
+    - image.style.hero_3_1_s
+    - image.style.hero_3_1_s_2x
+    - image.style.hero_3_1_xl
+    - image.style.hero_3_1_xl_2x
+    - image.style.hero_3_1_xs
+    - image.style.hero_3_1_xs_2x
+    - image.style.landscape_3_2_2xs
+    - image.style.landscape_3_2_2xs_2x
+id: csgov_hero
+label: Hero
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_2xl
+    breakpoint_id: csgov_breakpoints.2xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_2xl_2x
+    breakpoint_id: csgov_breakpoints.2xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_xl
+    breakpoint_id: csgov_breakpoints.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_xl_2x
+    breakpoint_id: csgov_breakpoints.xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_l
+    breakpoint_id: csgov_breakpoints.l
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_l_2x
+    breakpoint_id: csgov_breakpoints.l
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_m
+    breakpoint_id: csgov_breakpoints.m
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_m_2x
+    breakpoint_id: csgov_breakpoints.m
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_s
+    breakpoint_id: csgov_breakpoints.s
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_s_2x
+    breakpoint_id: csgov_breakpoints.s
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_xs
+    breakpoint_id: csgov_breakpoints.xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_2xs
+    breakpoint_id: csgov_breakpoints.2xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_3_1_xs_2x
+    breakpoint_id: csgov_breakpoints.xs
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_2xs_2x
+    breakpoint_id: csgov_breakpoints.2xs
+    multiplier: 2x
+breakpoint_group: csgov_theme
+fallback_image_style: landscape_3_2_2xs

@@ -1,0 +1,13 @@
+csgov_admin_improvements.csgov:
+  title: 'CSGOV'
+  description: 'Platform configuration.'
+  parent: system.admin
+  route_name: csgov_admin_improvements.csgov
+  weight: -9
+
+csgov_admin_improvements.basic_settings_form:
+  title: 'CSGOV Basic Settings'
+  description: 'A custom form to manage specific settings.'
+  parent: csgov_admin_improvements.csgov
+  route_name: csgov_admin_improvements.basic_settings_form
+  weight: 100

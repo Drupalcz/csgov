@@ -1,0 +1,34 @@
+langcode: cs
+entity_type_groups:
+  node:
+    csgov_board:
+      basic: basic
+    csgov_directory_person:
+      basic: basic
+    csgov_directory_place:
+      basic: basic
+    csgov_event:
+      basic: basic
+    csgov_homepage:
+      basic: basic
+    csgov_landing_page:
+      basic: basic
+    csgov_news:
+      basic: basic
+    csgov_notification:
+      basic: basic
+    csgov_page:
+      basic: basic
+separator: ','
+tag_trim_method: beforeValue
+use_maxlength: true
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: 160
+  metatag_maxlength_abstract: null
+  metatag_maxlength_og_site_name: null
+  metatag_maxlength_og_title: null
+  metatag_maxlength_og_description: 160
+  metatag_maxlength_twitter_cards_description: 160
+  metatag_maxlength_twitter_cards_title: null
+tag_scroll_max_height: ''

@@ -1,0 +1,26 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - image.style.address_book
+    - image.style.address_book_large
+id: csgov_address_book
+label: 'Address book'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: address_book_large
+    breakpoint_id: csgov_breakpoints.l
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: address_book
+    breakpoint_id: csgov_breakpoints.2xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: address_book_large
+    breakpoint_id: csgov_breakpoints.2xs
+    multiplier: 2x
+breakpoint_group: csgov_theme
+fallback_image_style: address_book

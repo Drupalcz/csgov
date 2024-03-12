@@ -1,0 +1,23 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_content
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.csgov_embed_view
+  module:
+    - text
+id: paragraph.csgov_embed_view.field_csgov_p_content
+field_name: field_csgov_p_content
+entity_type: paragraph
+bundle: csgov_embed_view
+label: Obsah
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

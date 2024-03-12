@@ -1,7 +1,0 @@
-csgov.admin_config_csgov:
-  path: '/admin/config/csgov'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'CS Gov'
-  requirements:
-    _permission: 'administer site configuration'

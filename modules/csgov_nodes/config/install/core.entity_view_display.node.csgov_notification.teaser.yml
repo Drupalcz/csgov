@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.csgov_notification.field_csgov_icon
+    - field.field.node.csgov_notification.field_csgov_notification_dismiss
+    - field.field.node.csgov_notification.field_csgov_notification_display
+    - field.field.node.csgov_notification.field_csgov_notification_level
+    - field.field.node.csgov_notification.field_csgov_notification_link
+    - field.field.node.csgov_notification.field_csgov_notification_on
+    - field.field.node.csgov_notification.field_csgov_teaser
+    - node.type.csgov_notification
+  module:
+    - user
+id: node.csgov_notification.teaser
+targetEntityType: node
+bundle: csgov_notification
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_icon: true
+  field_csgov_notification_dismiss: true
+  field_csgov_notification_display: true
+  field_csgov_notification_level: true
+  field_csgov_notification_link: true
+  field_csgov_notification_on: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true

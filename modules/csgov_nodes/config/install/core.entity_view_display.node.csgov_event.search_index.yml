@@ -1,0 +1,98 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.csgov_event.field_csgov_address
+    - field.field.node.csgov_event.field_csgov_content_components
+    - field.field.node.csgov_event.field_csgov_event_date
+    - field.field.node.csgov_event.field_csgov_event_type
+    - field.field.node.csgov_event.field_csgov_has_hero
+    - field.field.node.csgov_event.field_csgov_hero
+    - field.field.node.csgov_event.field_csgov_main_image
+    - field.field.node.csgov_event.field_csgov_main_image_caption
+    - field.field.node.csgov_event.field_csgov_teaser
+    - node.type.csgov_event
+  module:
+    - address
+    - entity_reference_revisions
+    - layout_builder
+    - smart_date
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.csgov_event.search_index
+targetEntityType: node
+bundle: csgov_event
+mode: search_index
+content:
+  field_csgov_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csgov_event_date:
+    type: smartdate_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_csgov_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csgov_main_image_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_csgov_event_type: true
+  field_csgov_has_hero: true
+  field_csgov_main_image: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

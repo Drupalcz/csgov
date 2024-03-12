@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_1_1_xs
+label: 'Square 1:1 XS'
+effects:
+  e024273a-e43b-4a30-abf2-a7024be18284:
+    uuid: e024273a-e43b-4a30-abf2-a7024be18284
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 600
+      height: 600
+      crop_type: focal_point

@@ -1,0 +1,19 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_csgov_document_pages
+field_name: field_csgov_document_pages
+entity_type: media
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

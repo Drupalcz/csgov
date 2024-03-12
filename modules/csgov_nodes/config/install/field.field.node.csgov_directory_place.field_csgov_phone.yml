@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_phone
+    - node.type.csgov_directory_place
+  module:
+    - telephone
+id: node.csgov_directory_place.field_csgov_phone
+field_name: field_csgov_phone
+entity_type: node
+bundle: csgov_directory_place
+label: Telefon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

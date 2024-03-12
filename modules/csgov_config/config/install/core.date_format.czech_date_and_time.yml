@@ -1,0 +1,7 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: czech_date_and_time
+label: 'Czech date and time'
+locked: false
+pattern: 'j. n. Y – H:i'

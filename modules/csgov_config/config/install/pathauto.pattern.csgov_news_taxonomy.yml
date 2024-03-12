@@ -1,0 +1,21 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: csgov_news_taxonomy
+label: 'Aktuality – taxonomy'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/aktuality/[term:name]'
+selection_criteria:
+  61026fa4-4a8d-4889-ab6e-8fbaff116ddf:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 61026fa4-4a8d-4889-ab6e-8fbaff116ddf
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      csgov_news_type: csgov_news_type
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,8 +1,8 @@
 name: 'CS Gov'
-version: 1.2.2
-core_version_requirement: ^9
+version: 2.0.0
+core_version_requirement: ^10.1
 type: profile
-description: 'A feature-rich Drupal 9 distribution for Czech and Slovak eGovernment sites.'
+description: 'A feature-rich Drupal 10 distribution for Czech and Slovak eGovernment sites.'
 
 distribution:
   name: CS Gov
@@ -10,40 +10,32 @@ distribution:
   install:
     theme: csgov_install
 dependencies:
+  - address
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
+  - antibot
+  - auto_entitylabel
   - automated_cron
   - big_pipe
   - block
   - block_content
+  - book
   - breakpoint
-  - captcha
-  - chosen
-  - chosen_lib
-  - ckeditor
-  - components
+  - ckeditor5
   - config
-  - config_filter
   - config_ignore
   - config_split
   - config_translation
-  - content_moderation
   - contextual
   - crop
   - ctools
-  - csgov_calendar_item
-  - csgov_layouts
-  - csgov_media
   - datetime
-  - datetime_range
   - dblog
-  - dropzonejs
   - dynamic_page_cache
+  - easy_breadcrumb
   - editor
-  - embed
   - entity_class_formatter
-  - entity_embed
   - entity_reference_display
   - entity_reference_revisions
   - environment_indicator
@@ -54,20 +46,21 @@ dependencies:
   - file
   - filter
   - focal_point
+  - geofield
   - gin_lb
   - gin_login
   - gin_toolbar
+  - gov_cz
   - help
   - honeypot
   - image
+  - image_style_quality
   - inline_form_errors
   - language
   - layout_builder
-  - layout_builder_lock
-  - layout_builder_modal
-  - layout_builder_restrictions
-  - layout_builder_styles
   - layout_discovery
+  - leaflet
+  - leaflet_more_maps
   - link
   - linkit
   - locale
@@ -79,34 +72,46 @@ dependencies:
   - menu_ui
   - metatag
   - metatag_facebook
-  - metatag_mobile
   - metatag_open_graph
   - metatag_twitter_cards
   - metatag_verification
   - metatag_views
   - module_filter
   - node
+  - nomarkup
+  - office_hours
   - options
+  - override_node_options
   - page_cache
-  - paragraphs_type_permissions
-  - password_policy
+  - paragraphs_features
+  - password_policy_blacklist
   - password_policy_character_types
-  - password_policy_characters
   - password_policy_consecutive
-  - password_policy_history
+  - password_policy_pwned
   - password_policy_length
   - password_policy_username
   - path
-  - recaptcha
+  - quick_node_clone
+  - rabbit_hole
   - redirect
   - redirect_404
   - responsive_image
+  - scheduler
+  - schema_article
+  - schema_event
+  - schema_metatag
+  - schema_web_page
+  - schema_web_site
+  - sdc
   - search_api
   - search_api_db
-  - seckit
-  - shield
   - simple_sitemap
+  - simple_sitemap_engines
   - simple_sitemap_views
+  - shield
+  - smart_date
+  - smart_date_recur
+  - svg_image_field
   - system
   - taxonomy
   - telephone
@@ -118,14 +123,30 @@ dependencies:
   - user
   - username_enumeration_prevention
   - views_ui
+  - viewsreference
   - webform
   - webform_ui
   - webp
-  - workflows
+  - extlink
+  - content_translation
+  - password_policy
   - menu_link_content
   - pathauto
   - views
+  - paragraphs
+  - paragraphs_ee
+  - tvi
+  - csgov_admin_improvements
+  - csgov_base
+  - csgov_image_styles
+  - csgov_media
+  - csgov_paragraphs
+  - csgov_taxonomy
+  - csgov_search
+  - csgov_config
+  - csgov_nodes
 
 themes:
-  - csgov_theme
   - gin
+  - csgov_theme
+  - csgov_admin

@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_infopanel
+label: 'Informační panel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

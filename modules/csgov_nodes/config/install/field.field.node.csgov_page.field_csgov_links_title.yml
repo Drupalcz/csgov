@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_links_title
+    - node.type.csgov_page
+id: node.csgov_page.field_csgov_links_title
+field_name: field_csgov_links_title
+entity_type: node
+bundle: csgov_page
+label: Nadpis
+description: 'Umožňuje přidat nadpis pro sadu odkazů.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Další informace'
+default_value_callback: ''
+settings: {  }
+field_type: string

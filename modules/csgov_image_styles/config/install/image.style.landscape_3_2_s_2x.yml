@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: landscape_3_2_s_2x
+label: 'Landscape 3:2 S – 2X'
+effects:
+  d7facb5c-38c3-45d0-a47d-1fc0f6b8c56e:
+    uuid: d7facb5c-38c3-45d0-a47d-1fc0f6b8c56e
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 1536
+      height: 1024
+      crop_type: focal_point
+  8c72cc4d-5e93-4bd8-83d8-bc418d4246d3:
+    uuid: 8c72cc4d-5e93-4bd8-83d8-bc418d4246d3
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

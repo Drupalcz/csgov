@@ -1,0 +1,37 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.csgov_board.field_csgov_attachments
+    - field.field.node.csgov_board.field_csgov_board_type
+    - field.field.node.csgov_board.field_csgov_content
+    - field.field.node.csgov_board.field_csgov_date_archived
+    - field.field.node.csgov_board.field_csgov_date_published
+    - field.field.node.csgov_board.field_csgov_ref_person
+    - field.field.node.csgov_board.field_csgov_reference_mark
+    - field.field.node.csgov_board.field_csgov_teaser
+    - node.type.csgov_board
+  module:
+    - user
+id: node.csgov_board.teaser
+targetEntityType: node
+bundle: csgov_board
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_attachments: true
+  field_csgov_board_type: true
+  field_csgov_content: true
+  field_csgov_date_archived: true
+  field_csgov_date_published: true
+  field_csgov_ref_person: true
+  field_csgov_reference_mark: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true

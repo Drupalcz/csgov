@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_date_archived
+    - node.type.csgov_board
+  module:
+    - datetime
+id: node.csgov_board.field_csgov_date_archived
+field_name: field_csgov_date_archived
+entity_type: node
+bundle: csgov_board
+label: 'Datum sejmutí'
+description: 'Po uplynutí tohoto data je příspěvek přesunut do archivu. Neslouží k automatickému odpublikování.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

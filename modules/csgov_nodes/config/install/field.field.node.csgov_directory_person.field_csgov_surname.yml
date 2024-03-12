@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_surname
+    - node.type.csgov_directory_person
+id: node.csgov_directory_person.field_csgov_surname
+field_name: field_csgov_surname
+entity_type: node
+bundle: csgov_directory_person
+label: Příjmení
+description: 'Příjmení se používá k řazení osob v seznamech.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+name: 'CSGOV image styles'
+type: module
+description: 'Adds Image and Respponsive Image styles'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - drupal:focal_point
+  - drupal:image_style_quality

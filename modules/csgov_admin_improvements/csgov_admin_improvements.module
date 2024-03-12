@@ -1,0 +1,68 @@
+<?php
+
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function csgov_admin_improvements_form_node_form_alter(&$form, &$form_state, $form_id): void
+{
+  if (preg_match('/^node_(.+)_(form|edit_form)$/', $form_id)) {
+    // Control Hero paragraph visibility via checkbox states.
+    if (isset($form['field_csgov_hero']) && isset($form['field_csgov_has_hero'])) {
+      $form['field_csgov_hero']['#states'] = [
+        'visible' => [
+          ':input[name="field_csgov_has_hero[value]"]' => ['checked' => TRUE],
+        ]
+      ];
+    }
+
+    if (isset($form['field_csgov_notification_on']) && isset($form['field_csgov_notification_display'])) {
+      $form['field_csgov_notification_on']['#states'] = [
+        'visible' => [
+          ':input[name="field_csgov_notification_display"]' => ['value' => 'somewhere'],
+        ]
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
+ */
+function csgov_admin_improvements_field_widget_single_element_paragraphs_form_alter(&$element, $form_state, $context)
+{
+  if ($element['#paragraph_type'] == 'csgov_hero') {
+    if (isset($element['subform']['field_csgov_p_has_search_box'])) {
+      if (isset($element['subform']['field_csgov_p_search_placeholder'])) {
+        $element['subform']['field_csgov_p_search_placeholder']['#states'] = [
+          'visible' => [
+            ':input[name="field_csgov_hero[0][subform][field_csgov_p_has_search_box][value]"]' => ['checked' => TRUE],
+          ]
+        ];
+      }
+      if (isset($element['subform']['field_csgov_p_search_label'])) {
+        $element['subform']['field_csgov_p_search_label']['#states'] = [
+          'visible' => [
+            ':input[name="field_csgov_hero[0][subform][field_csgov_p_has_search_box][value]"]' => ['checked' => TRUE],
+          ]
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function csgov_admin_improvements_toolbar_alter(&$items): void {
+  foreach ($items as &$value) {
+    if (!array_key_exists('#attached', $value)) {
+      continue;
+    }
+
+    if (is_array($value['#attached']['library'])) {
+      $value['#attached']['library'][] = 'csgov_admin_improvements/menu';
+    }
+  }
+}

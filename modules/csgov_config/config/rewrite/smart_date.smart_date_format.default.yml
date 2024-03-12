@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: default
+label: výchozí
+date_format: 'D, j. F Y'
+time_format: 'G:i'
+time_hour_format: 'G:i'
+allday_label: 'All day'
+separator: –
+join: ', '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

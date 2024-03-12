@@ -1,0 +1,69 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - editor
+    - linkit
+    - media
+name: 'Základní HTML'
+format: basic_html
+weight: 0
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: 11
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: 7
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: 8
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 id class="text-align-left text-align-center text-align-right"> <h4 id class="text-align-left text-align-center text-align-right"> <a class="button" hreflang href data-entity-type data-entity-uuid data-entity-substitution> <cite> <dl> <dt> <dd> <blockquote cite> <ul type> <ol start type> <h5 id class="text-align-left text-align-center text-align-right"> <h6 id class="text-align-left text-align-center text-align-right"> <strong> <em> <sub> <sup> <li> <drupal-media data-entity-type data-entity-uuid alt>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types:
+        document: document
+        image: image

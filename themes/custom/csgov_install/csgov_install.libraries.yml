@@ -5,7 +5,7 @@ maintenance-page:
       css/theme/maintenance-page.css: {}
   dependencies:
     - system/maintenance
-    - seven/global-styling
+    - claro/global-styling
 
 install-page:
   version: VERSION
@@ -13,4 +13,4 @@ install-page:
     theme:
       css/theme/install-page.css: {}
   dependencies:
-    - seven/maintenance-page
+    - claro/maintenance-page

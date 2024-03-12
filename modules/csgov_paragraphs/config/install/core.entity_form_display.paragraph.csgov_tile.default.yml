@@ -1,0 +1,57 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_tile.field_csgov_p_icon
+    - field.field.paragraph.csgov_tile.field_csgov_p_link
+    - field.field.paragraph.csgov_tile.field_csgov_p_subtitle
+    - field.field.paragraph.csgov_tile.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_tile
+  module:
+    - link
+    - media_library
+id: paragraph.csgov_tile.default
+targetEntityType: paragraph
+bundle: csgov_tile
+mode: default
+content:
+  field_csgov_p_icon:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_csgov_p_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_csgov_p_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

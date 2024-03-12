@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: item
-label: Položka
-icon_uuid: null
-icon_default: null
-description: 'Položky patří do Seznamu položek.'
-behavior_plugins: {  }

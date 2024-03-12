@@ -1,0 +1,78 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_infopanel.field_csgov_p_content
+    - field.field.paragraph.csgov_infopanel.field_csgov_p_icon
+    - field.field.paragraph.csgov_infopanel.field_csgov_p_infopanel_type
+    - field.field.paragraph.csgov_infopanel.field_csgov_p_link
+    - field.field.paragraph.csgov_infopanel.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_infopanel
+  module:
+    - field_group
+    - link
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_csgov_p_icon
+        - field_csgov_p_infopanel_type
+      label: Nastavení
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.csgov_infopanel.default
+targetEntityType: paragraph
+bundle: csgov_infopanel
+mode: default
+content:
+  field_csgov_p_content:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_icon:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_csgov_p_infopanel_type:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csgov_p_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_csgov_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

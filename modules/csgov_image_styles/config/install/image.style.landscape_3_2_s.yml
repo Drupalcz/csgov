@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: landscape_3_2_s
+label: 'Landscape 3:2 S'
+effects:
+  d1440256-44b8-48d2-bbe0-305f8856c516:
+    uuid: d1440256-44b8-48d2-bbe0-305f8856c516
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 768
+      height: 512
+      crop_type: focal_point

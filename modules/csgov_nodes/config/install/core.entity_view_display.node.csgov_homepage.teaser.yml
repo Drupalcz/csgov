@@ -1,0 +1,31 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.csgov_homepage.field_csgov_content_components
+    - field.field.node.csgov_homepage.field_csgov_has_hero
+    - field.field.node.csgov_homepage.field_csgov_hero
+    - field.field.node.csgov_homepage.field_csgov_main_image
+    - field.field.node.csgov_homepage.field_csgov_teaser
+    - node.type.csgov_homepage
+  module:
+    - user
+id: node.csgov_homepage.teaser
+targetEntityType: node
+bundle: csgov_homepage
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_main_image: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true

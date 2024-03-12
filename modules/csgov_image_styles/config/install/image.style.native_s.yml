@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: native_s
+label: 'Native S'
+effects:
+  409c7a0a-40f8-4f01-a20d-28fce5e24ed1:
+    uuid: 409c7a0a-40f8-4f01-a20d-28fce5e24ed1
+    id: image_scale
+    weight: 1
+    data:
+      width: 768
+      height: null
+      upscale: true

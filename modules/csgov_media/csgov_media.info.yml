@@ -1,5 +1,10 @@
-name: CS Gov Media
+name: 'CSGOV media'
 type: module
-description: Provides default media entities.
-package: CS Gov
-core_version_requirement: ^8 || ^9
+description: 'Add Media entities related config.'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+    - drupal:svg_image_field
+    - drupal:nomarkup
+    - drupal:scheduler
+    - drupal:media

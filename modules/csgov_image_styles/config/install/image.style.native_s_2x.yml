@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: native_s_2x
+label: 'Native S – 2X'
+effects:
+  4a8a2af8-c602-444e-9d0d-9ae25bdc428a:
+    uuid: 4a8a2af8-c602-444e-9d0d-9ae25bdc428a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1535
+      height: null
+      upscale: true
+  9dc8ae09-bca0-4c20-81ce-3324078d1084:
+    uuid: 9dc8ae09-bca0-4c20-81ce-3324078d1084
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

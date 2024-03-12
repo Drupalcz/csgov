@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: node_list
-label: 'Seznam stránek'
-icon_uuid: null
-icon_default: null
-description: 'Umístí zvolené stránky do vybraného rozložení.'
-behavior_plugins: {  }

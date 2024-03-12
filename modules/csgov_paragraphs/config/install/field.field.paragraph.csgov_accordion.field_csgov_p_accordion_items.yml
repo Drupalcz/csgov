@@ -1,0 +1,48 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_accordion_items
+    - paragraphs.paragraphs_type.csgov_accordion
+    - paragraphs.paragraphs_type.csgov_accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.csgov_accordion.field_csgov_p_accordion_items
+field_name: field_csgov_p_accordion_items
+entity_type: paragraph
+bundle: csgov_accordion
+label: 'Položky akordionu'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csgov_accordion_item: csgov_accordion_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 8
+        enabled: false
+      csgov_accordion:
+        weight: 9
+        enabled: false
+      csgov_accordion_item:
+        weight: 10
+        enabled: true
+      csgov_content:
+        weight: 11
+        enabled: false
+      csgov_node_list:
+        weight: 12
+        enabled: false
+      tile:
+        weight: 13
+        enabled: false
+      tiles:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

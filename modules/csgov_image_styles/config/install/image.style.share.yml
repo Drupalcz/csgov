@@ -1,0 +1,23 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+    - image_style_quality
+name: share
+label: Sharing
+effects:
+  a2caecac-5746-413f-b630-e0d64cc57c64:
+    uuid: a2caecac-5746-413f-b630-e0d64cc57c64
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      crop_type: focal_point
+  62cb7165-1f50-4c03-bfd7-da47771bd82a:
+    uuid: 62cb7165-1f50-4c03-bfd7-da47771bd82a
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 85

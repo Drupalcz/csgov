@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - node
-id: node.title
-label: Nadpis
-targetEntityType: node
-cache: true

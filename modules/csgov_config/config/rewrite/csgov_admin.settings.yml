@@ -1,0 +1,21 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+enable_darkmode: auto
+preset_accent_color: custom
+accent_color: '#2362a2'
+preset_focus_color: gin
+focus_color: ''
+high_contrast_mode: 0
+classic_toolbar: horizontal
+secondary_toolbar_frontend: 1
+layout_density: small
+show_description_toggle: 1
+show_user_theme_settings: 0
+langcode: cs

@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-name: 'Typ úřední desky'
-vid: board_type
-description: ''
-weight: 0

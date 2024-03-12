@@ -1,0 +1,30 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - scheduler
+    - svg_image_field
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+id: csgov_icon
+label: Ikona
+description: ''
+source: svg
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_svg
+field_map:
+  name: name

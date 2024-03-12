@@ -1,0 +1,19 @@
+csgov_admin_improvements.csgov:
+  path: '/admin/csgov'
+  defaults:
+    _controller: '\Drupal\csgov_admin_improvements\Controller\ListController::build'
+    _title: 'CSGOV Tools'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+csgov_admin_improvements.basic_settings_form:
+  path: '/admin/csgov/csgov-basic-settings'
+  defaults:
+    _form: '\Drupal\csgov_admin_improvements\Form\CsGovBasicSettings'
+    _title: 'CSGOV Basic settings'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

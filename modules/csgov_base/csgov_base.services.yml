@@ -1,0 +1,8 @@
+services:
+  csgov_base.entity_version_matcher:
+    class: Drupal\csgov_base\EntityVersionMatcher
+    arguments: ['@entity_type.manager', '@current_route_match', '@language_manager']
+  csgov_base.twig.DrupalEntityRevision:
+    class: Drupal\csgov_base\TwigExtension\DrupalEntityRevision
+    tags:
+      - { name: twig.extension }

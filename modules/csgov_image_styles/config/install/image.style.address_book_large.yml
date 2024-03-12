@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: address_book_large
+label: 'Address book large'
+effects:
+  d9ee6d97-448b-4b70-b561-84a73cf6c60c:
+    uuid: d9ee6d97-448b-4b70-b561-84a73cf6c60c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      crop_type: focal_point

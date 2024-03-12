@@ -1,0 +1,41 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.csgov_homepage.field_csgov_content_components
+    - field.field.node.csgov_homepage.field_csgov_has_hero
+    - field.field.node.csgov_homepage.field_csgov_hero
+    - field.field.node.csgov_homepage.field_csgov_main_image
+    - field.field.node.csgov_homepage.field_csgov_teaser
+    - node.type.csgov_homepage
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - user
+id: node.csgov_homepage.full
+targetEntityType: node
+bundle: csgov_homepage
+mode: full
+content:
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_main_image: true
+  field_csgov_teaser: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

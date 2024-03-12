@@ -1,0 +1,119 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.csgov_news.field_csgov_content_components
+    - field.field.node.csgov_news.field_csgov_date_published
+    - field.field.node.csgov_news.field_csgov_has_hero
+    - field.field.node.csgov_news.field_csgov_hero
+    - field.field.node.csgov_news.field_csgov_links
+    - field.field.node.csgov_news.field_csgov_links_title
+    - field.field.node.csgov_news.field_csgov_main_image
+    - field.field.node.csgov_news.field_csgov_main_image_caption
+    - field.field.node.csgov_news.field_csgov_news_type
+    - field.field.node.csgov_news.field_csgov_ref_person
+    - field.field.node.csgov_news.field_csgov_teaser
+    - node.type.csgov_news
+  module:
+    - datetime
+    - entity_reference_revisions
+    - link
+    - user
+id: node.csgov_news.default
+targetEntityType: node
+bundle: csgov_news
+mode: default
+content:
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csgov_date_published:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_csgov_has_hero:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_csgov_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csgov_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csgov_main_image_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_csgov_news_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_csgov_ref_person:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_csgov_links_title: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

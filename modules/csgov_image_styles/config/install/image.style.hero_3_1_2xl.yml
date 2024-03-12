@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_3_1_2xl
+label: 'Hero 3:1 2XL'
+effects:
+  e7221456-519b-45e3-a126-146b7233fddd:
+    uuid: e7221456-519b-45e3-a126-146b7233fddd
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 1600
+      height: 533
+      crop_type: focal_point

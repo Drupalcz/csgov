@@ -1,0 +1,54 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_content_components
+    - node.type.csgov_news
+  module:
+    - entity_reference_revisions
+id: node.csgov_news.field_csgov_content_components
+field_name: field_csgov_content_components
+entity_type: node
+bundle: csgov_news
+label: 'Obsahové komponenty'
+description: 'Umožňuje vkládat obsah pomocí předpřipravených komponent.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csgov_content: csgov_content
+      csgov_node_list: csgov_node_list
+      csgov_tiles: csgov_tiles
+      csgov_accordion: csgov_accordion
+      csgov_infopanel: csgov_infopanel
+    negate: 0
+    target_bundles_drag_drop:
+      csgov_accordion:
+        weight: -14
+        enabled: true
+      csgov_accordion_item:
+        weight: -12
+        enabled: false
+      csgov_content:
+        weight: -17
+        enabled: true
+      csgov_hero:
+        weight: -10
+        enabled: false
+      csgov_infopanel:
+        weight: -13
+        enabled: true
+      csgov_node_list:
+        weight: -16
+        enabled: true
+      csgov_tile:
+        weight: -11
+        enabled: false
+      csgov_tiles:
+        weight: -15
+        enabled: true
+field_type: entity_reference_revisions

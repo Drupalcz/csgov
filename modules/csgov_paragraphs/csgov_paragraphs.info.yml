@@ -1,0 +1,14 @@
+name: 'CSGOV paragraphs'
+type: module
+description: 'Add paragraphs for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - drupal:field_group
+  - drupal:paragraphs
+  - drupal:paragraphs_ee
+  - drupal:paragraphs_features
+  - drupal:viewsreference
+  - drupal:entity_reference_revisions
+  - drupal:entity_class_formatter
+  - drupal:entity_reference_display

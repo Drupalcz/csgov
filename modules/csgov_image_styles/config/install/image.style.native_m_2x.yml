@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: native_m_2x
+label: 'Native M – 2X'
+effects:
+  030a8bc9-6a90-44d4-b920-691c51ace740:
+    uuid: 030a8bc9-6a90-44d4-b920-691c51ace740
+    id: image_scale
+    weight: 1
+    data:
+      width: 1886
+      height: null
+      upscale: true
+  02e23d47-dd80-431b-a22e-a9799489208e:
+    uuid: 02e23d47-dd80-431b-a22e-a9799489208e
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

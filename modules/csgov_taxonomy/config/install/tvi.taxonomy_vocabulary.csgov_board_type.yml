@@ -1,0 +1,5 @@
+enable_override: true
+view: csgov_board
+view_display: current
+inherit_settings: false
+pass_arguments: false

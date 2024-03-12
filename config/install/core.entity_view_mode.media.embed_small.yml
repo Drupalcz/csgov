@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - media
-id: media.embed_small
-label: 'Embed small'
-targetEntityType: media
-cache: true

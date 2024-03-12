@@ -1,0 +1,101 @@
+<?php
+/**
+ * @file
+ * Contains CSGOV alterations.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function csgov_base_theme() : array {
+  return [
+    'hero_block' => [
+      'variables' => [
+        'title' => NULL,
+        'paragraphs' => NULL,
+        'is_revision' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function csgov_base_block_access(Block $block, $operation, AccountInterface $account): AccessResult {
+  // Handle page title block access based on field_csgov_has_hero value.
+  if ($operation === 'view' && $block->getPluginId() === 'page_title_block') {
+    /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+    $entity = Drupal::service('csgov_base.entity_version_matcher')
+      ->getType()['entity'];
+
+    if (
+      !$entity instanceof ContentEntityInterface ||
+      !$entity->hasField('field_csgov_has_hero')
+    ) {
+      return AccessResult::neutral();
+    }
+
+    // Show title block if the "has hero" checkbox is not checked (=false).
+    if (!$entity->get('field_csgov_has_hero')->value) {
+      return AccessResult::allowed()->addCacheableDependency($block);
+    }
+
+    // Show title block if the "has hero" checkbox is checked (=true) and
+    // the Hero paragraph is not found.
+    return AccessResult::allowedIf(!$entity->get('field_csgov_hero')->entity)
+      ->addCacheableDependency($block);
+  }
+
+  // Handle hero block access based on field_csgov_has_hero value.
+  if ($operation === 'view' && $block->getPluginId() === 'hero_block') {
+    /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+    $entity = Drupal::service('csgov_base.entity_version_matcher')
+      ->getType()['entity'];
+
+    if (
+      !$entity instanceof ContentEntityInterface ||
+      !$entity->hasField('field_csgov_has_hero')
+    ) {
+      return AccessResult::neutral();
+    }
+
+    // Hide the hero block if the "has hero" checkbox is checked (=true).
+    return AccessResult::forbiddenIf(!$entity->get('field_csgov_has_hero')->value);
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Gets the current page main entity.
+ *
+ * @return \Drupal\Core\Entity\EntityInterface|null
+ *   Current page main entity.
+ */
+function csgov_base_get_page_entity(): ?EntityInterface {
+  $page_entity = &drupal_static(__FUNCTION__, NULL);
+  if (!empty($page_entity)) {
+    return $page_entity;
+  }
+  $types = array_keys(Drupal::entityTypeManager()->getDefinitions());
+  $route = Drupal::routeMatch();
+  $params = $route->getParameters()->all();
+
+  foreach ($types as $type) {
+    foreach (['revision' => $type . '_revision', 'canonical' => $type] as $route_name => $version) {
+      if (!empty($params[$version]) && $route->getRouteName() === "entity.$type.$route_name") {
+        return $params[$version];
+      }
+    }
+  }
+  return NULL;
+}

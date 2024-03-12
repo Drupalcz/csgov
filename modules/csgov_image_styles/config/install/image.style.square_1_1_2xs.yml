@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_1_1_2xs
+label: 'Square 1:1 2XS'
+effects:
+  5f3232cc-72ca-44a0-8b01-32324d0f756c:
+    uuid: 5f3232cc-72ca-44a0-8b01-32324d0f756c
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 320
+      height: 320
+      crop_type: focal_point

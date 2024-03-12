@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: date_cz
-label: 'České datum'
-locked: false
-pattern: 'j. n. Y'

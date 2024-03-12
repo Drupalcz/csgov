@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_name
+    - node.type.csgov_directory_person
+id: node.csgov_directory_person.field_csgov_name
+field_name: field_csgov_name
+entity_type: node
+bundle: csgov_directory_person
+label: Jméno
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

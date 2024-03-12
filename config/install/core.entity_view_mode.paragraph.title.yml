@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - paragraphs
-id: paragraph.title
-label: Nadpis
-targetEntityType: paragraph
-cache: true

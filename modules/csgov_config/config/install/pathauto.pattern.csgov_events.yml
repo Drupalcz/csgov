@@ -1,0 +1,21 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: csgov_events
+label: Akce
+type: 'canonical_entities:node'
+pattern: '/akce/[node:title]'
+selection_criteria:
+  4b78cf59-3126-407e-bb16-b8c25846bbc6:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4b78cf59-3126-407e-bb16-b8c25846bbc6
+    context_mapping:
+      node: node
+    bundles:
+      csgov_event: csgov_event
+selection_logic: and
+weight: -5
+relationships: {  }

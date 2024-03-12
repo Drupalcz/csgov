@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_main_image_caption
+    - node.type.csgov_event
+id: node.csgov_event.field_csgov_main_image_caption
+field_name: field_csgov_main_image_caption
+entity_type: node
+bundle: csgov_event
+label: 'Popis obrázku'
+description: 'Přidejte doprovodný text k obrázku.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,5 @@
+name: 'CSGOV admin improvements'
+type: module
+description: 'Update the admin UI.'
+package: CSGOV
+core_version_requirement: ^10

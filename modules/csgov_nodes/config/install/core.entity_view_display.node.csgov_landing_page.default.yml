@@ -1,0 +1,77 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.csgov_landing_page.field_csgov_content_components
+    - field.field.node.csgov_landing_page.field_csgov_has_hero
+    - field.field.node.csgov_landing_page.field_csgov_hero
+    - field.field.node.csgov_landing_page.field_csgov_main_image
+    - field.field.node.csgov_landing_page.field_csgov_teaser
+    - field.field.node.csgov_landing_page.layout_builder__layout
+    - node.type.csgov_landing_page
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - user
+id: node.csgov_landing_page.default
+targetEntityType: node
+bundle: csgov_landing_page
+mode: default
+content:
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_csgov_has_hero:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_csgov_hero:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_landscape
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 3
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

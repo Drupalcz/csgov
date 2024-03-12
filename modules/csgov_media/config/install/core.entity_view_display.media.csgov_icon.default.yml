@@ -1,0 +1,42 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.media.csgov_icon.field_media_svg
+    - media.type.csgov_icon
+  module:
+    - nomarkup
+    - svg_image_field
+id: media.csgov_icon.default
+targetEntityType: media
+bundle: csgov_icon
+mode: default
+content:
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: visually_hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

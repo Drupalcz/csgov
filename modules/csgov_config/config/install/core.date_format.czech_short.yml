@@ -1,0 +1,7 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: czech_short
+label: 'Czech short'
+locked: false
+pattern: 'j. n. Y'
