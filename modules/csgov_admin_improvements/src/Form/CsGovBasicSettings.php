@@ -97,20 +97,26 @@ class CsGovBasicSettings extends ConfigFormBase
     parent::submitForm($form, $form_state);
 
     $logo_fid = $form_state->getValue(['site_logo_upload', 0]);
+    $theme_config = \Drupal::config('system.theme')->get('default');
+    $file_uri = \Drupal::config("$theme_config.settings")->get('logo');
+
     if (!empty($logo_fid)) {
       $file = \Drupal\file\Entity\File::load($logo_fid);
       if ($file) {
         $file->setPermanent();
         $file->save();
 
-        $theme_name = \Drupal::config('system.theme')->get('default');
-        if ($theme_name == 'csgov_theme') {
-          \Drupal::configFactory()->getEditable('csgov_theme.settings')
-            ->set('logo.path', $file->getFileUri())
-            ->clear('logo.use_default') // Assuming there's a setting to use the default logo, clear it.
-            ->save();
-        }
+        \Drupal::configFactory()->getEditable("$theme_config.settings")
+          ->set('logo.path', $file->getFileUri())
+          ->set('logo.use_default', 0)
+          ->save();
       }
+    } elseif (!empty($file_uri) && empty($logo_fid)) {
+      // If the file is not empty, but the user has not uploaded a new file, we should remove the logo.
+      \Drupal::configFactory()->getEditable("$theme_config.settings")
+        ->clear('logo.path')
+        ->set('logo.use_default', 1)
+        ->save();
     }
 
     // Save other configurations
