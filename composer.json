@@ -129,6 +129,9 @@
       },
       "drupal/facets": {
         "Facets with AJAX not working in most of situations": "https://www.drupal.org/files/issues/2022-12-22/3052574-168.patch"
+      },
+      "drupal/token": {
+        "3427474 - Merge proxy calls recursively.": "https://git.drupalcode.org/project/token/-/merge_requests/67.patch"
       }
     },
     "drupal-scaffold": {
