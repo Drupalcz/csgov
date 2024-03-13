@@ -1,74 +1,69 @@
 /**
 * @file
 * Installation styling.
-*
-* Unfortunately we have to make our styling quite strong, to override the
-* .maintenance-page styling.
 */
-[dir="rtl"]  {
-	background-position: right top, 50% 50%;
-}
-
 /**
 * Password widget
 */
 .password-parent,
 .confirm-parent {
-	width: auto;
+  width: auto;
 }
 
 .form-item .password-suggestions {
-	float: none;
-	width: auto;
+  float: none;
+  width: auto;
 }
 
 table td {
-	word-break: break-all;
+  word-break: break-all;
 }
 
 .site-version {
-	vertical-align: super;
-	font-size: .5em;
-	color: #595959;
+  vertical-align: super;
+  font-size: 1rem;
+  color: #595959;
 }
 
 @media all and (max-width: 1010px) and (min-width: 48em) {
-	.password-strength,
-	.confirm-parent {
-		width: 100%;
-	}
+  .password-strength,
+  .confirm-parent {
+    width: 100%;
+  }
 
-	.install-configure-form .form-type-password {
-		width: 100%;
-	}
+  .install-configure-form .form-type-password {
+    width: 100%;
+  }
 
-	.password-confirm,
-	.password-field {
-		float: none;
-	}
+  .password-confirm,
+  .password-field {
+    float: none;
+  }
 
-	.password-confirm-match {
-		float: none;
-		width: auto;
-		max-width: 100%;
-	}
+  .password-confirm-match {
+    float: none;
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 /*
-CS Gov distribution page styles
+CSGov distribution page styles
 - Petr Illek, December 2020
 */
 html {
-height: 100%;
+  height: 100%;
 }
 
 .layout-container {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
-  border-radius: 4px;
+  border-radius: .25rem;
 }
+
 .page-title {
-	display: block;
-	color: rgb(2, 24, 43);
+  display: block;
+  color: #000;
+  position: relative;
 }
 
 .page-title img {
@@ -76,187 +71,183 @@ height: 100%;
 }
 
 .install-page {
-	background: linear-gradient(-25deg, rgb(0, 127, 182), rgb(171, 36, 48));
+  background: #2362a2;
 }
 
-.site-version {
-	float: right;
-	color: rgb(2, 24, 43);
-	font-size: 1em;
-	font-weight: 200;
+.install-page .site-version {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 200;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
 }
 
-.heading-a {
-	color: rgb(2, 24, 43);
-}
-
-#error {
-	color: #ff635c;
-}
-
-#warning {
-	color: #f69900;
-}
-
-#ok {
-	color: #0cac78;
-}
-
-.system-status-report:last-of-type {
-	margin-bottom: 2em;
-}
-
-main > a[href$="?rewrite=ok"] {
-	text-decoration: underline;
-}
-
-.button,
-.form-submit,
-main > a:not([href$="?rewrite=ok"]) {
-	display: inline-block;
-	padding: 6px 9px;
-	border: 1px solid rgb(2, 24, 43);
-	color: rgb(2, 24, 43);
-	background: transparent;
-	border-radius: 4px;
-	margin: 5px 0;
-	text-shadow: none;
-	transition: all 0.2s;
-	box-shadow: none;
-	font-weight: 600;
-  font-size: 1.3em;
-}
-
-.button:active,
-.button:focus,
-main > a:not([href$="?rewrite=ok"]):focus,
-main > a:not([href$="?rewrite=ok"]):active {
-	background: #61daff;
-	color: #111;
-	text-decoration: none;
-}
-
-.button:hover,
-main > a:not([href$="?rewrite=ok"]):hover {
-	background: rgb(2, 24, 43);
-	color: #fff;
-	text-decoration: none;
+.install-page .site-version {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 200;
+  position: relative;
+  display: block;
+  left: 0.7rem;
 }
 
 @media (min-width: 48em) {
-	.task-list li {
-		color: rgb(2, 24, 43);
-	}
+  .install-page .site-version {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    left: initial;
+  }
+}
 
-	.task-list .done {
-		color: #696969;
-	}
+.install-page .messages a {
+  color: #2362a2;
+}
 
-	.task-list .is-active {
-		background: rgb(2, 24, 43);
-		color: #fff;
-	}
+.install-page .messages a:hover,
+.install-page .messages a:focus {
+  color: #3b3b3b;
+}
 
-	.task-list .is-active:after {
-		border-left-color: rgb(2, 24, 43);
-		border-width: 1.3em;
-	}
+.heading-c {
+  color: #000;
+}
+
+#error {
+  color: #c52a3a;
+}
+
+#warning {
+  color: #f9c13c;
+}
+
+#ok {
+  color: #3a6217;
+}
+
+.system-status-report:last-of-type {
+  margin-bottom: 2em;
+}
+
+main>a[href$="?rewrite=ok"] {
+  text-decoration: underline;
+}
+
+@media (min-width: 48em) {
+  .task-list li {
+    color: #2362a2;
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+
+  .task-list .done {
+    color: #686868;
+  }
+
+  .task-list .is-active {
+    background: #2362a2;
+    color: #fff;
+  }
+
+  .task-list .is-active {
+    background: #2362a2;
+    color: #fff;
+  }
+
 }
 
 .progress__bar {
-	border-color: rgb(2, 24, 43);
-	background: #61daff;
-	background-image: linear-gradient(0deg, rgb(2, 24, 43) 0%, #61daff 50%, rgb(2, 24, 43) 100%);
+  border-color: #686868;
+  background: #66a1d8;
 }
 
 pre,
 .backtrace {
-	display: block;
-	padding: 9.5px;
-	margin: 1em 0 1px;
-	font-size: 13px;
-	line-height: 1.42857143;
-	color: #333;
-	word-break: break-all;
-	word-wrap: break-word;
-	background-color: #f5f5f5;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+  display: block;
+  padding: 9.5px;
+  margin: 1em 0 1px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: .25rem;
 }
 
 .placeholder,
 code {
-	padding: 2px 4px;
-	font-size: 90%;
-	color: #c7254e;
-	background-color: #f9f2f4;
-	border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: .25rem;
 }
 
 .progress__bar,
 .progress__track {
-	border-radius: 3px;
+  border-radius: .25rem;
 }
 
 .password-suggestions,
 .messages {
-	background: transparent;
-	border: 0;
-	border-radius: 1px;
-	-webkit-box-shadow: 0 0 8px #bbb;
-	box-shadow: 0 0 8px #bbb;
-	color: #333;
-	padding: 1.2em;
-	margin: 0 0 2em 0 !important;
+  background: transparent;
+  border: 0;
+  border-radius: .25rem;
+  box-shadow: 0 0 8px #bbb;
+  color: #333;
+  padding: 1.2em;
+  margin: 0 0 2em 0 !important;
 }
 
 .messages--status {
-	border-left: 0.4em solid #007554 !important;
+  border-left: 0.4em solid #007554 !important;
 }
 
 .form-item-account-pass-pass2 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .password-suggestions {
-	margin-bottom: 2em;
-	border-left: 0.4em solid #61daff;
-	color: #333 !important;
+  margin-bottom: 2em;
+  border-left: 0.4em solid #2362a2;
+  color: #333 !important;
 }
 
 .password-suggestions ul {
-	padding: 0 15px;
+  padding: 0 15px;
 }
 
 .password-strength__indicator.is-strong {
-	background-color: #61daff;
-	width: 100% !important;
+  background-color: #61daff;
+  width: 100% !important;
 }
 
 .password-strength__indicator.is-good {
-	background-color: #0cac78;
+  background-color: #3a6217;
 }
 
 .password-strength__indicator {
-	background-color: rgb(2, 24, 43);
+  background-color: #000;
 }
 
 .password-strength__indicator.is-fair {
-	background-color: #f69900;
+  background-color: #f9c13c;
 }
 
 .password-strength__indicator.is-weak {
-	background-color: #ff635c;
+  background-color: #c52a3a;
 }
 
 ul.tips,
 div.description,
 .form-item .description {
-	color: #696969;
+  color: #696969;
 }
 
 .install-configure-form .form-text,
 .install-configure-form .password-strength,
 .install-configure-form .chosen-container {
-	width: 100% !important;
+  width: 100% !important;
 }

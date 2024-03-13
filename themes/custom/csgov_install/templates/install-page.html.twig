@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Seven theme implementation to display a Drupal installation page.
+ * Claro theme implementation to display a Drupal installation page.
  *
  * All available variables are mirrored in page.html.twig.
  * Some may be blank but they are provided for consistency.
@@ -28,9 +28,9 @@
     </aside>{# /.layout-sidebar-first #}
   {% endif %}
 
-  <main role="main">
+  <main role="main" class="main-content">
     {% if title %}
-      <h2 class="heading-a">{{ title }}</h2>
+      <h2 class="heading-c">{{ title }}</h2>
     {% endif %}
     {{ page.highlighted }}
     {{ page.content }}

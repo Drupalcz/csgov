@@ -1,8 +1,8 @@
 # This theme is for CSGOV distribution install only
-name: 'CS Gov Install'
+name: 'CSGOV Install'
 type: theme
 base theme: claro
-description: 'Warning: Used for CS Gov installation only.'
+description: 'Warning: Used for CSGOV installation only.'
 core_version_requirement: ^10.1
 regions:
   header: 'Header'

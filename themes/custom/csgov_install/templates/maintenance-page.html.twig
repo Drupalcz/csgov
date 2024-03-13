@@ -1,7 +1,10 @@
 {#
 /**
  * @file
- * Seven's theme implementation to display a single Drupal page while offline.
+ * Claro's theme implementation for maintenance page.
+ *
+ * This template is used for rendering non-frontpage maintenance pages. An
+ * example of this is /update.php.
  *
  * All available variables are mirrored in page.html.twig.
  * Some may be blank but they are provided for consistency.
@@ -23,12 +26,14 @@
     </aside>{# /.layout-sidebar-first #}
   {% endif %}
 
-  <main role="main">
+  <main role="main" class="main-content">
     {% if title %}
       <h1>{{ title }}</h1>
     {% endif %}
     {{ page.highlighted }}
-    {{ page.content }}
+    <div class="content">
+      {{ page.content }}
+    </div>
   </main>
 
   {% if page.page_bottom %}
