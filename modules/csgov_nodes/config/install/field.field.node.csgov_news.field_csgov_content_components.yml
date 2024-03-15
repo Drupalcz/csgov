@@ -25,30 +25,40 @@ settings:
       csgov_tiles: csgov_tiles
       csgov_accordion: csgov_accordion
       csgov_infopanel: csgov_infopanel
+      csgov_statsbar: csgov_statsbar
     negate: 0
     target_bundles_drag_drop:
       csgov_accordion:
-        weight: -14
+        weight: -20
         enabled: true
       csgov_accordion_item:
-        weight: -12
+        weight: -17
         enabled: false
       csgov_content:
-        weight: -17
+        weight: -23
         enabled: true
+      csgov_embed_view:
+        weight: -14
+        enabled: false
       csgov_hero:
-        weight: -10
+        weight: -15
         enabled: false
       csgov_infopanel:
-        weight: -13
+        weight: -19
         enabled: true
       csgov_node_list:
-        weight: -16
+        weight: -22
         enabled: true
+      csgov_statsbar:
+        weight: -18
+        enabled: true
+      csgov_statsbar_item:
+        weight: -13
+        enabled: false
       csgov_tile:
-        weight: -11
+        weight: -16
         enabled: false
       csgov_tiles:
-        weight: -15
+        weight: -21
         enabled: true
 field_type: entity_reference_revisions
