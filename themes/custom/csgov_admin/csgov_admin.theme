@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function csgov_admin_preprocess_html(&$variables) {
+  $variables['attributes']['class'][] = 'csgov-admin';
+}
+
+/**
+ * Implements hook_preprocess_input().
+ */
+function csgov_admin_preprocess_input(&$variables) {
+  if ($variables['element']['#type'] !== 'submit') {
+    return;
+  }
+
+  if (str_contains($variables['element']['#name'], 'field_csgov_hero')) {
+    if (array_key_exists('#paragraphs_mode', $variables['element'])) {
+      $variables['#attached']['library'][] = 'csgov_admin/hero-toggle';
+      $variables['csgov_selector'] = 'field-hero-action--' . $variables['element']['#paragraphs_mode'];
+    }
+    elseif ($variables['element']['#name'] === 'field_csgov_hero_csgov_hero_add_more') {
+      $variables['#attached']['library'][] = 'csgov_admin/hero-toggle';
+      $variables['csgov_selector'] = 'field-hero-action--add';
+    }
+  }
+}

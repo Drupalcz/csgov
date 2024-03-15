@@ -1,0 +1,22 @@
+.csgov-admin .field-multiple-table thead:after {
+  background: transparent;
+}
+
+.csgov-admin .field--name-field-csgov-hero thead,
+.csgov-admin .tabledrag-toggle-weight,
+.csgov-admin .paragraphs-add-suffix {
+  display: none;
+}
+
+.csgov-admin .field-multiple-table thead .field-label {
+  padding-inline: 0;
+}
+
+.js .csgov-admin .paragraph-type-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.js .csgov-admin .paragraph-top {
+  align-items: center;
+}

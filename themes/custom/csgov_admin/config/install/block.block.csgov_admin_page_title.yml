@@ -1,0 +1,17 @@
+langcode: cs
+status: true
+dependencies:
+  theme:
+    - csgov_admin
+id: csgov_admin_page_title
+theme: csgov_admin
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Název stránky'
+  label_display: '0'
+  provider: core
+visibility: {  }
