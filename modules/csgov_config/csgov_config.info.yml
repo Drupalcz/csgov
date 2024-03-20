@@ -4,7 +4,10 @@ description: 'Adds various config for the platform'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
+  - drupal:config_rewrite
   - drupal:webform
+  - drupal:easy_breadcrumb
+  - drupal:extlink
   - drupal:menu_block
   - drupal:linkit
   - drupal:metatag

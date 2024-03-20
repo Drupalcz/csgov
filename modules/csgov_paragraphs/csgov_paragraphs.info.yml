@@ -4,6 +4,7 @@ description: 'Add paragraphs for CSGOV.'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
+  - drupal:config_rewrite
   - drupal:field_group
   - drupal:paragraphs
   - drupal:paragraphs_ee
