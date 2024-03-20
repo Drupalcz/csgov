@@ -20,3 +20,18 @@
 .js .csgov-admin .paragraph-top {
   align-items: center;
 }
+
+.csgov-admin .view .form-item--csgov-media-tags {
+  max-width: 300px;
+}
+
+.csgov-admin .smartdate--time-inline {
+  align-items: start;
+}
+
+.csgov-admin .smartdate--time-inline .form-datetime-wrapper .form-items-inline,
+.csgov-admin .smartdate--time-inline div.time-start,
+.csgov-admin .smartdate--time-inline div.time-end {
+  align-items: start;
+  gap: 1rem;
+}
