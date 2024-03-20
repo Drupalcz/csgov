@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.image.field_csgov_media_tags
     - field.field.media.image.field_media_image
     - image.style.media_library
     - media.type.image
@@ -13,6 +14,16 @@ targetEntityType: media
 bundle: image
 mode: media_library
 content:
+  field_csgov_media_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_media_image:
     type: image_focal_point
     weight: 1
@@ -23,16 +34,17 @@ content:
       preview_link: true
       offsets: '50,50'
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
+  name:
+    type: string_textfield
+    weight: 0
     region: content
     settings:
-      include_locked: true
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true
-  name: true
+  langcode: true
   path: true
   publish_on: true
   status: true

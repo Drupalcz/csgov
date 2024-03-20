@@ -9,13 +9,13 @@ field_name: field_csgov_document_pages
 entity_type: media
 bundle: document
 label: 'Počet stran'
-description: ''
+description: 'Vyplněný počet stran se zobrazí jako dodatečná informace u dokumentu ke stažení.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: 0
+  min: 1
   max: null
   prefix: ''
   suffix: ''

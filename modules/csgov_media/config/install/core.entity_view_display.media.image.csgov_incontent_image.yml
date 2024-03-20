@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.csgov_incontent_image
+    - field.field.media.image.field_csgov_media_tags
     - field.field.media.image.field_media_image
     - media.type.image
     - responsive_image.styles.in_content_image
@@ -36,6 +37,7 @@ content:
     region: content
 hidden:
   created: true
+  field_csgov_media_tags: true
   langcode: true
   name: true
   search_api_excerpt: true

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.url
+    - field.field.media.csgov_icon.field_csgov_media_tags
     - field.field.media.csgov_icon.field_media_svg
     - media.type.csgov_icon
   module:
@@ -32,6 +33,7 @@ content:
     region: content
 hidden:
   created: true
+  field_csgov_media_tags: true
   langcode: true
   name: true
   search_api_excerpt: true

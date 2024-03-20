@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.csgov_document_download
     - field.field.media.document.field_csgov_document_pages
+    - field.field.media.document.field_csgov_media_tags
     - field.field.media.document.field_media_document
     - media.type.document
   module:
@@ -52,6 +53,7 @@ content:
     region: content
 hidden:
   created: true
+  field_csgov_media_tags: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true

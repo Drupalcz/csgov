@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.csgov_icon.field_csgov_media_tags
     - field.field.media.csgov_icon.field_media_svg
     - image.style.medium
     - media.type.csgov_icon
@@ -26,6 +27,7 @@ content:
     region: content
 hidden:
   created: true
+  field_csgov_media_tags: true
   field_media_svg: true
   langcode: true
   name: true
