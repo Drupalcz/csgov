@@ -69,15 +69,16 @@ content:
     weight: 2
     region: content
   field_csgov_ref_person:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
+      view_mode: address_book
+      link: false
     third_party_settings:
       nomarkup:
         enabled: true
         separator: ''
-        referenced_entity: ''
+        referenced_entity: '0'
     weight: 4
     region: content
   field_csgov_teaser:
