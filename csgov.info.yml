@@ -145,6 +145,7 @@ dependencies:
   - csgov_search
   - csgov_config
   - csgov_nodes
+  - csgov_users
 
 themes:
   - gin

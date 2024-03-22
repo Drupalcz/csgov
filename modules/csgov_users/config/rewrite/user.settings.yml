@@ -1,0 +1,3 @@
+config_rewrite:
+  replace: ["register"]
+register: admin_only
