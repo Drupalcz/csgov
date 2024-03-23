@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Hero'
+type: module
+description: 'Add Hero paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

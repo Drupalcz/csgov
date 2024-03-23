@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Node list'
+type: module
+description: 'Add Node list paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10
