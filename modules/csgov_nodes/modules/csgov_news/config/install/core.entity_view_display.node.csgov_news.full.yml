@@ -120,7 +120,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: address_book
+      view_mode: csgov_address_book
       link: false
     third_party_settings:
       nomarkup:

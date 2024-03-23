@@ -2,7 +2,7 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.address_book
+    - core.entity_view_mode.node.csgov_address_book
     - field.field.node.csgov_directory_person.field_csgov_email
     - field.field.node.csgov_directory_person.field_csgov_main_image
     - field.field.node.csgov_directory_person.field_csgov_mobile
@@ -20,10 +20,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.csgov_directory_person.address_book
+id: node.csgov_directory_person.csgov_address_book
 targetEntityType: node
 bundle: csgov_directory_person
-mode: address_book
+mode: csgov_address_book
 content:
   field_csgov_email:
     type: email_mailto

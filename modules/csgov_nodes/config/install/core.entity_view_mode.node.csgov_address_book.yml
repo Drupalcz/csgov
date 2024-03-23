@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - node
-id: node.address_book
+id: node.csgov_address_book
 label: 'Address book'
 description: ''
 targetEntityType: node
