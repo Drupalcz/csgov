@@ -7,4 +7,3 @@ dependencies:
   - drupal:environment_indicator
   - drupal:override_node_options
   - drupal:quick_node_clone
-  - csgov_notifications
