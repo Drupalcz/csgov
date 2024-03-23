@@ -1,0 +1,84 @@
+id: csgov_migrate_paragraph_csgov_tiles
+label: 'Paragraph - Tiles'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+migration_dependencies:
+  required:
+    - csgov_migrate_paragraph_csgov_tile
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_csgov_tiles.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_subtitle
+      selector: field_csgov_p_subtitle
+    - name: field_csgov_p_columns
+      selector: field_csgov_p_columns
+    - name: field_csgov_p_tiles
+      selector: field_csgov_p_tiles
+    - name: field_csgov_p_background
+      selector: field_csgov_p_background
+    - name: field_csgov_heading_top
+      selector: field_csgov_heading_top
+    - name: field_csgov_p_no_border
+      selector: field_csgov_p_no_border
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_tiles
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_subtitle: field_csgov_p_subtitle
+
+  field_csgov_p_columns: field_csgov_p_columns
+
+  field_csgov_p_no_border: field_csgov_p_no_border
+
+  field_csgov_p_tiles:
+    - plugin: callback
+      source: field_csgov_p_tiles
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration: csgov_migrate_paragraph_csgov_tile
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_csgov_p_background: field_csgov_p_background
+
+  field_csgov_heading_top: field_csgov_heading_top

@@ -1,0 +1,72 @@
+id: csgov_migrate_paragraph_csgov_statsbar
+label: 'Paragraph - Statsbar'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+migration_dependencies:
+  required:
+    - csgov_migrate_paragraph_csgov_statsbar_item
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_csgov_statsbar.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_stats_items
+      selector: field_csgov_p_stats_items
+    - name: field_csgov_p_variant
+      selector: field_csgov_p_variant
+    - name: field_csgov_p_stats_position
+      selector: field_csgov_p_stats_position
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_statsbar
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_stats_items:
+    - plugin: callback
+      source: field_csgov_p_stats_items
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration: csgov_migrate_paragraph_csgov_statsbar_item
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_csgov_p_variant: field_csgov_p_variant
+
+  field_csgov_p_stats_position: field_csgov_p_stats_position

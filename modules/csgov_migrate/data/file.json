@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "e955d350-3e14-4c8f-87d7-2057149cf66f",
+    "langcode": "cs",
+    "status": "1",
+    "filename": "czech-landscape.jpg",
+    "filemime": "image\/jpeg",
+    "created": "1710958938",
+    "changed": "1710963639",
+    "uri": "public:\/\/czech-landscape.jpg"
+  },
+  {
+    "uuid": "72e9bb42-4893-4465-aacb-ae33b4e51046",
+    "langcode": "cs",
+    "status": "1",
+    "filename": "archive-outline.svg",
+    "filemime": "image\/svg+xml",
+    "created": "1710973178",
+    "changed": "1711001569",
+    "uri": "public:\/\/archive-outline.svg"
+  },
+  {
+    "uuid": "02a8b21e-3982-4148-9f1e-4139b29d20fb",
+    "langcode": "cs",
+    "status": "1",
+    "filename": "attachment.txt",
+    "filemime": "text\/plain",
+    "created": "1711037653",
+    "changed": "1711037666",
+    "uri": "public:\/\/attachment.txt"
+  }
+]

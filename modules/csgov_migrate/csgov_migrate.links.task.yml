@@ -1,0 +1,5 @@
+csgov_migrate.settings:
+  title: 'Settings'
+  route_name: csgov_migrate.settings
+  base_route: csgov_migrate.settings
+  weight: -10

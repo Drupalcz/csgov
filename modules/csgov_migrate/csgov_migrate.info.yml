@@ -1,0 +1,11 @@
+name: CSGOV Migrate
+type: module
+description: Provides custom migration support and default content.
+package: CSGOV
+core_version_requirement: ^10.1
+configure: csgov_migrate.settings
+dependencies:
+  - drupal:migrate
+  - drupal:rest
+  - drupal:views
+  - migrate_plus:migrate_plus
