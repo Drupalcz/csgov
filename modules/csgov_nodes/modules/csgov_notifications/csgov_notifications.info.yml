@@ -1,0 +1,16 @@
+name: 'CSGOV node: Notifications'
+type: module
+description: 'Adds config and views for Notifications content type'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - csgov_config
+  - csgov_nodes
+  - csgov_board
+  - csgov_directory_place
+  - csgov_directory_person
+  - csgov_news
+  - csgov_event
+  - csgov_page
+  - csgov_homepage
+  - csgov_landing_page

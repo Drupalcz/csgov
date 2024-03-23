@@ -8,7 +8,7 @@ dependencies:
     - datetime
     - node
     - user
-id: news
+id: csgov_news
 label: Novinky
 module: views
 description: ''

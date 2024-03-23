@@ -8,3 +8,5 @@ dependencies:
   - drupal:search_api
   - drupal:facets
   - drupal:search_api_db
+  - csgov_nodes
+  - csgov_board

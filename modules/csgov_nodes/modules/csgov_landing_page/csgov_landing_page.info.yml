@@ -1,0 +1,8 @@
+name: 'CSGOV node: Landing Page'
+type: module
+description: 'Adds config and views for Landing Page content type'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - csgov_config
+  - csgov_nodes

@@ -29,7 +29,7 @@ settings:
     addresbook_place: addresbook_place
     csgov_board: csgov_board
     csgov_event: csgov_event
-    news: news
+    csgov_news: csgov_news
   enabled_settings:
     argument: argument
     pager: pager
