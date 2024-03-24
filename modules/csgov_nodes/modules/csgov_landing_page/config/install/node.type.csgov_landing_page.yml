@@ -9,6 +9,7 @@ third_party_settings:
     available_menus:
       - main
       - footer
+      - housekeeping
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
