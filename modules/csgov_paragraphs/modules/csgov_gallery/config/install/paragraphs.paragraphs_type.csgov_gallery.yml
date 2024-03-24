@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_gallery
+label: Galerie
+icon_uuid: null
+icon_default: null
+description: 'Umožňuje přidat jednu nebo více fotografií.'
+behavior_plugins: {  }

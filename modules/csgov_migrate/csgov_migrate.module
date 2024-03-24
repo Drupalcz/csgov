@@ -40,6 +40,7 @@ function _csgov_migrate_get_migrations() {
       'csgov_infopanel',
       'csgov_statsbar_item',
       'csgov_statsbar',
+      'csgov_gallery',
       // 'csgov_embed_view',
     ],
     'menu' => [NULL],

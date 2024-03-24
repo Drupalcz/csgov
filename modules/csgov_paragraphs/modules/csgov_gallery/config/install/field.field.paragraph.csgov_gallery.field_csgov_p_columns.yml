@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_columns
+    - paragraphs.paragraphs_type.csgov_gallery
+  module:
+    - options
+id: paragraph.csgov_gallery.field_csgov_p_columns
+field_name: field_csgov_p_columns
+entity_type: paragraph
+bundle: csgov_gallery
+label: Sloupce
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

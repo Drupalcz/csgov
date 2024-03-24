@@ -12,7 +12,8 @@ function csgov_paragraphs_install() {
     'csgov_infopanel',
     'csgov_node_list',
     'csgov_statsbar',
-    'csgov_tiles'
+    'csgov_tiles',
+    'csgov_gallery'
   ];
 
   foreach ($submodules as $module) {
