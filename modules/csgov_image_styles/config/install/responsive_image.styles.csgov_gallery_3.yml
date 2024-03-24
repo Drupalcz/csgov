@@ -6,8 +6,6 @@ dependencies:
     - image.style.landscape_3_2_2xs_2x
     - image.style.landscape_3_2_s
     - image.style.landscape_3_2_s_2x
-  theme:
-    - csgov_theme
 id: csgov_gallery_3
 label: 'Galerie 3'
 image_style_mappings:
