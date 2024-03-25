@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.csgov_homepage.field_csgov_has_hero
     - field.field.node.csgov_homepage.field_csgov_hero
     - field.field.node.csgov_homepage.field_csgov_main_image
+    - field.field.node.csgov_homepage.field_csgov_metatags
     - field.field.node.csgov_homepage.field_csgov_teaser
     - node.type.csgov_homepage
   module:
@@ -33,6 +34,7 @@ hidden:
   field_csgov_has_hero: true
   field_csgov_hero: true
   field_csgov_main_image: true
+  field_csgov_metatags: true
   langcode: true
   links: true
   search_api_excerpt: true

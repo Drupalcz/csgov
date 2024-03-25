@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.csgov_homepage.field_csgov_has_hero
     - field.field.node.csgov_homepage.field_csgov_hero
     - field.field.node.csgov_homepage.field_csgov_main_image
+    - field.field.node.csgov_homepage.field_csgov_metatags
     - field.field.node.csgov_homepage.field_csgov_teaser
     - node.type.csgov_homepage
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.csgov_homepage.default
 targetEntityType: node
@@ -52,6 +54,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_csgov_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
     region: content
   field_csgov_teaser:
     type: basic_string

@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.csgov_homepage.field_csgov_has_hero
     - field.field.node.csgov_homepage.field_csgov_hero
     - field.field.node.csgov_homepage.field_csgov_main_image
+    - field.field.node.csgov_homepage.field_csgov_metatags
     - field.field.node.csgov_homepage.field_csgov_teaser
     - node.type.csgov_homepage
   module:
     - field_group
     - media_library
+    - metatag
     - paragraphs
     - paragraphs_ee
     - paragraphs_features
@@ -151,6 +153,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_csgov_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_csgov_teaser:
     type: string_textarea
