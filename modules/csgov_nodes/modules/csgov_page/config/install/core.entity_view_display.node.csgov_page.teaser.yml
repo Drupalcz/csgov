@@ -19,10 +19,12 @@ targetEntityType: node
 bundle: csgov_page
 mode: teaser
 content:
-  links:
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   field_csgov_content_components: true
@@ -32,6 +34,6 @@ hidden:
   field_csgov_links_title: true
   field_csgov_main_image: true
   field_csgov_ref_person: true
-  field_csgov_teaser: true
   langcode: true
+  links: true
   search_api_excerpt: true
