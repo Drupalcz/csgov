@@ -73,6 +73,7 @@
     "drupal/rabbit_hole": "^2.0",
     "drupal/real_aes": "^2.5",
     "drupal/redirect": "^1.9",
+    "drupal/responsive_favicons": "^2.0",
     "drupal/scheduler": "^2.0",
     "drupal/schema_metatag": "^3.0",
     "drupal/search_api": "^1.29",
