@@ -4,8 +4,9 @@ dependencies: {  }
 id: global
 label: Globální
 tags:
-  article_published_time: '[node:created]'
   canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
+  article_published_time: '[node:created]'
   description: '[node:field_csgov_teaser]'
   generator: 'Drupal 10 + CSGOV 2.0 (https://www.csgov.cz)'
   image_src: '[node:field_csgov_main_image:entity:field_media_image:share:url]'
@@ -28,7 +29,6 @@ tags:
   schema_web_site_type: WebSite
   schema_web_site_url: '[site:url]'
   shortlink: '[site:url]'
-  title: '[current-page:title] | [site:name]'
   twitter_cards_description: '[node:field_csgov_teaser]'
   twitter_cards_image: '[node:field_csgov_main_image:entity:field_media_image:share:url]'
   twitter_cards_image_alt: '[node:field_csgov_main_image:entity:field_media_image:alt]'

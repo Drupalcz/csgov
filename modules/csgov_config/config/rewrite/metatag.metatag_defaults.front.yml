@@ -5,4 +5,5 @@ id: front
 label: 'Titulní stránka'
 tags:
   canonical_url: '[site:url]'
+  shortlink: '[site:url]'
   title: '[site:name]'
