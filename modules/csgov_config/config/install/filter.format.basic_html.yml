@@ -33,7 +33,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 id class="text-align-left text-align-center text-align-right"> <h4 id class="text-align-left text-align-center text-align-right"> <a class="button" hreflang href data-entity-type data-entity-uuid data-entity-substitution> <cite> <dl> <dt> <dd> <blockquote cite> <ul type> <ol start type> <h5 id class="text-align-left text-align-center text-align-right"> <h6 id class="text-align-left text-align-center text-align-right"> <strong> <em> <sub> <sup> <li> <drupal-media data-entity-type data-entity-uuid alt>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 id class="text-align-left text-align-center text-align-right"> <h4 id class="text-align-left text-align-center text-align-right"> <a class="button" hreflang href data-entity-type data-entity-uuid data-entity-substitution> <cite> <dl> <dt> <dd> <blockquote cite> <ul type> <ol type start> <h5 id class="text-align-left text-align-center text-align-right"> <h6 id class="text-align-left text-align-center text-align-right"> <strong> <em> <sub> <sup> <li> <drupal-media data-entity-type data-entity-uuid alt data-view-mode>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -63,7 +63,11 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
+      allowed_view_modes:
+        csgov_document_download: csgov_document_download
+        csgov_incontent_image: csgov_incontent_image
+        csgov_native: csgov_native
       allowed_media_types:
+        csgov_icon: csgov_icon
         document: document
         image: image
