@@ -10,17 +10,17 @@ image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: address_book_large
-    breakpoint_id: csgov_breakpoints.l
+    breakpoint_id: csgov_image_styles.l
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: address_book
-    breakpoint_id: csgov_breakpoints.2xs
+    breakpoint_id: csgov_image_styles.2xs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: address_book_large
-    breakpoint_id: csgov_breakpoints.2xs
+    breakpoint_id: csgov_image_styles.2xs
     multiplier: 2x
 breakpoint_group: csgov_theme
 fallback_image_style: address_book
