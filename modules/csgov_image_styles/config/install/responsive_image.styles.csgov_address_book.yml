@@ -22,5 +22,5 @@ image_style_mappings:
     image_mapping: address_book_large
     breakpoint_id: csgov_image_styles.2xs
     multiplier: 2x
-breakpoint_group: csgov_theme
+breakpoint_group: csgov_image_styles
 fallback_image_style: address_book

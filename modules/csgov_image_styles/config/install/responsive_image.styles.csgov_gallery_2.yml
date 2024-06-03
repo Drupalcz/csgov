@@ -61,5 +61,5 @@ image_style_mappings:
     image_mapping: landscape_3_2_2xs_2x
     breakpoint_id: csgov_image_styles.2xs
     multiplier: 2x
-breakpoint_group: csgov_theme
+breakpoint_group: csgov_image_styles
 fallback_image_style: landscape_3_2_2xs
