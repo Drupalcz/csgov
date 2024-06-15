@@ -51,7 +51,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: csgov_landscape
+      view_mode: csgov_card
       link: false
     third_party_settings:
       nomarkup:
