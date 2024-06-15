@@ -3,11 +3,12 @@ status: true
 dependencies:
   config:
     - image.style.landscape_3_2_2xs
-    - image.style.landscape_3_2_2xs_2x
     - image.style.landscape_3_2_s
     - image.style.landscape_3_2_s_2x
-    - image.style.landscape_3_2_xs
-    - image.style.landscape_3_2_xs_2x
+    - image.style.square_1_1_2xs
+    - image.style.square_1_1_2xs_2x
+    - image.style.square_1_1_xs
+    - image.style.square_1_1_xs_2x
 id: csgov_card
 label: Card
 image_style_mappings:
@@ -23,22 +24,22 @@ image_style_mappings:
     multiplier: 2x
   -
     image_mapping_type: image_style
-    image_mapping: landscape_3_2_xs
+    image_mapping: square_1_1_xs
     breakpoint_id: csgov_image_styles.xs
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: landscape_3_2_2xs
+    image_mapping: square_1_1_2xs
     breakpoint_id: csgov_image_styles.2xs
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: landscape_3_2_xs_2x
+    image_mapping: square_1_1_xs_2x
     breakpoint_id: csgov_image_styles.xs
     multiplier: 2x
   -
     image_mapping_type: image_style
-    image_mapping: landscape_3_2_2xs_2x
+    image_mapping: square_1_1_2xs_2x
     breakpoint_id: csgov_image_styles.2xs
     multiplier: 2x
 breakpoint_group: csgov_image_styles
