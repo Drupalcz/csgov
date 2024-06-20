@@ -13,11 +13,13 @@ dependencies:
     - field.field.node.csgov_directory_place.field_csgov_office_hours
     - field.field.node.csgov_directory_place.field_csgov_persons
     - field.field.node.csgov_directory_place.field_csgov_phone
+    - field.field.node.csgov_directory_place.field_csgov_web
     - node.type.csgov_directory_place
   module:
     - address
     - entity_reference_revisions
     - geofield
+    - link
     - nomarkup
     - office_hours
     - telephone
@@ -168,6 +170,18 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 1
+    region: content
+  field_csgov_web:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 114
     region: content
 hidden:
   langcode: true

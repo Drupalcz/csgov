@@ -91,7 +91,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 1
+          items_per_page: 3
       exposed_form:
         type: basic
         options:
@@ -198,6 +198,7 @@ display:
           admin_label: 'field_csgov_persons: Obsah'
           plugin_id: standard
           required: true
+      css_class: 'views-layout views-layout--1'
       use_ajax: true
       header: {  }
       footer: {  }

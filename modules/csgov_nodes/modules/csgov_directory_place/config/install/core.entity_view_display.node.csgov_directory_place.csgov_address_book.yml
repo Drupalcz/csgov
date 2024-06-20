@@ -14,10 +14,12 @@ dependencies:
     - field.field.node.csgov_directory_place.field_csgov_office_hours
     - field.field.node.csgov_directory_place.field_csgov_persons
     - field.field.node.csgov_directory_place.field_csgov_phone
+    - field.field.node.csgov_directory_place.field_csgov_web
     - node.type.csgov_directory_place
   module:
     - address
     - layout_builder
+    - link
     - nomarkup
     - office_hours
     - telephone
@@ -60,7 +62,7 @@ content:
         enabled: true
         separator: '|'
         referenced_entity: '1'
-    weight: 5
+    weight: 6
     region: content
   field_csgov_mobile:
     type: telephone_link
@@ -82,6 +84,7 @@ content:
       time_format: G
       compress: false
       grouped: true
+      show_empty: false
       show_closed: current
       closed_format: Zavřeno
       all_day_format: 'All day open'
@@ -109,7 +112,7 @@ content:
         enabled: true
         separator: ''
         referenced_entity: ''
-    weight: 4
+    weight: 5
     region: content
   field_csgov_phone:
     type: telephone_link
@@ -122,6 +125,22 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 2
+    region: content
+  field_csgov_web:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
     region: content
 hidden:
   field_csgov_content_components: true

@@ -13,11 +13,13 @@ dependencies:
     - field.field.node.csgov_directory_place.field_csgov_office_hours
     - field.field.node.csgov_directory_place.field_csgov_persons
     - field.field.node.csgov_directory_place.field_csgov_phone
+    - field.field.node.csgov_directory_place.field_csgov_web
     - node.type.csgov_directory_place
   module:
     - address
     - field_group
     - leaflet
+    - link
     - media_library
     - office_hours
     - paragraphs
@@ -50,6 +52,7 @@ third_party_settings:
         - field_csgov_email
         - field_csgov_phone
         - field_csgov_mobile
+        - field_csgov_web
         - field_csgov_address
         - field_csgov_main_image
       label: 'Základní údaje'
@@ -308,6 +311,14 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_csgov_web:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_geofield:
     type: leaflet_widget_default
     weight: 5
@@ -375,7 +386,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true

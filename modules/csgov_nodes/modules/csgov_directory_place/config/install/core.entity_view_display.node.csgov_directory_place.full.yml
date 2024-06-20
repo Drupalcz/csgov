@@ -14,12 +14,14 @@ dependencies:
     - field.field.node.csgov_directory_place.field_csgov_office_hours
     - field.field.node.csgov_directory_place.field_csgov_persons
     - field.field.node.csgov_directory_place.field_csgov_phone
+    - field.field.node.csgov_directory_place.field_csgov_web
     - node.type.csgov_directory_place
   module:
     - address
     - entity_reference_revisions
     - layout_builder
     - leaflet
+    - link
     - nomarkup
     - office_hours
     - telephone
@@ -38,7 +40,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_csgov_content_components:
     type: entity_reference_revisions_entity_view
@@ -161,7 +163,7 @@ content:
         enabled: true
         separator: '|'
         referenced_entity: ''
-    weight: 8
+    weight: 9
     region: content
   field_csgov_main_image:
     type: entity_reference_entity_view
@@ -174,7 +176,7 @@ content:
         enabled: true
         separator: '|'
         referenced_entity: '1'
-    weight: 5
+    weight: 6
     region: content
   field_csgov_mobile:
     type: telephone_link
@@ -196,6 +198,7 @@ content:
       time_format: G
       compress: false
       grouped: true
+      show_empty: false
       show_closed: all
       closed_format: Closed
       all_day_format: 'All day open'
@@ -223,7 +226,7 @@ content:
         enabled: false
         separator: '|'
         referenced_entity: ''
-    weight: 6
+    weight: 7
     region: content
   field_csgov_persons:
     type: entity_reference_entity_view
@@ -236,7 +239,7 @@ content:
         enabled: true
         separator: ''
         referenced_entity: '0'
-    weight: 4
+    weight: 5
     region: content
   field_csgov_phone:
     type: telephone_link
@@ -249,6 +252,22 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 2
+    region: content
+  field_csgov_web:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
     region: content
 hidden:
   field_csgov_has_hero: true
