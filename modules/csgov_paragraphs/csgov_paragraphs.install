@@ -9,6 +9,7 @@ function csgov_paragraphs_install() {
     'csgov_content',
     'csgov_embed_view',
     'csgov_hero',
+    'csgov_image',
     'csgov_infopanel',
     'csgov_node_list',
     'csgov_statsbar',
