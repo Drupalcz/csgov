@@ -1,0 +1,26 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_view_mode
+    - paragraphs.paragraphs_type.csgov_image
+  module:
+    - entity_reference_display
+id: paragraph.csgov_image.field_csgov_p_view_mode
+field_name: field_csgov_p_view_mode
+entity_type: paragraph
+bundle: csgov_image
+label: 'Typ zobrazení'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: csgov_native
+default_value_callback: ''
+settings:
+  exclude:
+    csgov_hero: csgov_hero
+    csgov_native: csgov_native
+  negate: true
+field_type: entity_reference_display

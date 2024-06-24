@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_full_width
+    - paragraphs.paragraphs_type.csgov_image
+id: paragraph.csgov_image.field_csgov_p_full_width
+field_name: field_csgov_p_full_width
+entity_type: paragraph
+bundle: csgov_image
+label: 'Plná šířka'
+description: 'Roztáhne obrázek na maximální šířku webu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Zapnuto
+  off_label: Vypnuto
+field_type: boolean

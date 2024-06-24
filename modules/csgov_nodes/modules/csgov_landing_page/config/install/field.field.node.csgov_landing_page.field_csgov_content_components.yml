@@ -28,6 +28,7 @@ settings:
       csgov_embed_view: csgov_embed_view
       csgov_statsbar: csgov_statsbar
       csgov_gallery: csgov_gallery
+      csgov_image: csgov_image
     negate: 0
     target_bundles_drag_drop:
       csgov_accordion:
@@ -48,6 +49,9 @@ settings:
       csgov_hero:
         weight: -15
         enabled: false
+      csgov_image:
+        weight: -19
+        enabled: true
       csgov_infopanel:
         weight: -21
         enabled: true
