@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_image_text
+label: 'Obrázek a text'
+icon_uuid: null
+icon_default: null
+description: 'Přidá textový element s doprovodným obrázkem.'
+behavior_plugins: {  }

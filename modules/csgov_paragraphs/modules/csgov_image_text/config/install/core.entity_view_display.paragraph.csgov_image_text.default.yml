@@ -1,0 +1,84 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_image_text.field_csgov_p_background
+    - field.field.paragraph.csgov_image_text.field_csgov_p_content
+    - field.field.paragraph.csgov_image_text.field_csgov_p_iat_position
+    - field.field.paragraph.csgov_image_text.field_csgov_p_image
+    - field.field.paragraph.csgov_image_text.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_image_text
+  module:
+    - entity_class_formatter
+    - nomarkup
+    - options
+    - text
+id: paragraph.csgov_image_text.default
+targetEntityType: paragraph
+bundle: csgov_image_text
+mode: default
+content:
+  field_csgov_p_background:
+    type: entity_class_formatter
+    label: hidden
+    settings:
+      prefix: background--
+      suffix: ''
+      attr: ''
+      field: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 3
+    region: content
+  field_csgov_p_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_csgov_p_iat_position:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
+    region: content
+  field_csgov_p_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_image_text
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 2
+    region: content
+  field_csgov_p_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
