@@ -29,45 +29,49 @@ settings:
       csgov_statsbar: csgov_statsbar
       csgov_gallery: csgov_gallery
       csgov_image: csgov_image
+      csgov_image_text: csgov_image_text
     negate: 0
     target_bundles_drag_drop:
       csgov_accordion:
-        weight: -22
+        weight: -26
         enabled: true
       csgov_accordion_item:
-        weight: -17
+        weight: -19
         enabled: false
       csgov_content:
-        weight: -25
+        weight: -29
         enabled: true
       csgov_embed_view:
-        weight: -20
-        enabled: true
-      csgov_gallery:
-        weight: -18
-        enabled: true
-      csgov_hero:
-        weight: -15
-        enabled: false
-      csgov_image:
-        weight: -19
-        enabled: true
-      csgov_infopanel:
-        weight: -21
-        enabled: true
-      csgov_node_list:
         weight: -24
         enabled: true
+      csgov_gallery:
+        weight: -22
+        enabled: true
+      csgov_hero:
+        weight: -17
+        enabled: false
+      csgov_image:
+        weight: -21
+        enabled: true
+      csgov_image_text:
+        weight: -20
+        enabled: true
+      csgov_infopanel:
+        weight: -25
+        enabled: true
+      csgov_node_list:
+        weight: -28
+        enabled: true
       csgov_statsbar:
-        weight: -19
+        weight: -23
         enabled: true
       csgov_statsbar_item:
-        weight: -14
-        enabled: false
-      csgov_tile:
         weight: -16
         enabled: false
+      csgov_tile:
+        weight: -18
+        enabled: false
       csgov_tiles:
-        weight: -23
+        weight: -27
         enabled: true
 field_type: entity_reference_revisions
