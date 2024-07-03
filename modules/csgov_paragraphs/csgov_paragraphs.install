@@ -5,6 +5,7 @@
 function csgov_paragraphs_install() {
   // List of modules for installation.
   $submodules = [
+    'csgov_attachments',
     'csgov_accordion',
     'csgov_content',
     'csgov_embed_view',

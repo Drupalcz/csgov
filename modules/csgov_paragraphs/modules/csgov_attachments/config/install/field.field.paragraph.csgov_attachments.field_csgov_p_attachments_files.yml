@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_attachments_files
+    - media.type.document
+    - paragraphs.paragraphs_type.csgov_attachments
+id: paragraph.csgov_attachments.field_csgov_p_attachments_files
+field_name: field_csgov_p_attachments_files
+entity_type: paragraph
+bundle: csgov_attachments
+label: Přílohy
+description: 'Přidejte jeden nebo více souborů. Kliknutím a tažením můžete změnit jejich pořadí.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
