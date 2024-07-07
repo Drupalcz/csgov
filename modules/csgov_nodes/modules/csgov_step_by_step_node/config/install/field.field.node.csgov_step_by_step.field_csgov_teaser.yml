@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_teaser
+    - node.type.csgov_step_by_step
+id: node.csgov_step_by_step.field_csgov_teaser
+field_name: field_csgov_teaser
+entity_type: node
+bundle: csgov_step_by_step
+label: Úvodník
+description: 'Stručné shrnutí Kroku. Zobrazuje se na stránce, jako anotace na stránce Krok za krokem – přehled, v seznamech obsahu, vyhledávání a při sdílení na sociálních sítích. Doporučená délka do 320 znaků.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

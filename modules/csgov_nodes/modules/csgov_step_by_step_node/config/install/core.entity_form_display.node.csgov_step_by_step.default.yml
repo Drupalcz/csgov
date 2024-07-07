@@ -1,0 +1,272 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.csgov_step_by_step.field_csgov_content_components
+    - field.field.node.csgov_step_by_step.field_csgov_icon
+    - field.field.node.csgov_step_by_step.field_csgov_ref_person
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_annotation
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_parent
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_step_label
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_variant
+    - field.field.node.csgov_step_by_step.field_csgov_teaser
+    - node.type.csgov_step_by_step
+  module:
+    - field_group
+    - media_library
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+    - path
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_teaser
+        - group_content_components
+        - group_extra
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_teaser:
+      children:
+        - field_csgov_sbs_parent
+        - title
+        - field_csgov_sbs_step_label
+        - field_csgov_sbs_annotation
+        - field_csgov_teaser
+        - group_settings
+      label: Krok
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_content_components:
+      children:
+        - field_csgov_content_components
+      label: Obsah
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_extra:
+      children:
+        - field_csgov_ref_person
+      label: Extra
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_csgov_icon
+        - field_csgov_sbs_variant
+      label: Nastavení
+      region: content
+      parent_name: group_teaser
+      weight: 30
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: node.csgov_step_by_step.default
+targetEntityType: node
+bundle: csgov_step_by_step
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csgov_content_components:
+    type: paragraphs
+    weight: 25
+    region: content
+    settings:
+      title: Komponentu
+      title_plural: Komponenty
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: true
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  field_csgov_icon:
+    type: media_library_widget
+    weight: 29
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_csgov_ref_person:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_sbs_annotation:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_sbs_parent:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_sbs_step_label:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_sbs_variant:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csgov_teaser:
+    type: string_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

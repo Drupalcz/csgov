@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_ref_person
+    - node.type.csgov_directory_person
+    - node.type.csgov_step_by_step
+id: node.csgov_step_by_step.field_csgov_ref_person
+field_name: field_csgov_ref_person
+entity_type: node
+bundle: csgov_step_by_step
+label: 'Zodpovědná osoba'
+description: 'Přidejte k obsahu informaci o zodpovědné osobě.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_directory_person: csgov_directory_person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

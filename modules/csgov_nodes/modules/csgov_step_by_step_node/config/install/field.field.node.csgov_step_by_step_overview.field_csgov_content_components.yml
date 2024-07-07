@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_csgov_content_components
-    - node.type.csgov_directory_place
+    - node.type.csgov_step_by_step_overview
   module:
     - entity_reference_revisions
-id: node.csgov_directory_place.field_csgov_content_components
+id: node.csgov_step_by_step_overview.field_csgov_content_components
 field_name: field_csgov_content_components
 entity_type: node
-bundle: csgov_directory_place
+bundle: csgov_step_by_step_overview
 label: 'Obsahové komponenty'
 description: 'Umožňuje vkládat obsah pomocí předpřipravených komponent.'
 required: false
@@ -30,7 +30,6 @@ settings:
       csgov_gallery: csgov_gallery
       csgov_image: csgov_image
       csgov_image_text: csgov_image_text
-      csgov_attachments: csgov_attachments
       csgov_step_by_step: csgov_step_by_step
     negate: 0
     target_bundles_drag_drop:
@@ -40,9 +39,6 @@ settings:
       csgov_accordion_item:
         weight: -22
         enabled: false
-      csgov_attachments:
-        weight: -21
-        enabled: true
       csgov_content:
         weight: -33
         enabled: true

@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_sbs_parent
+    - node.type.csgov_step_by_step
+    - node.type.csgov_step_by_step_overview
+id: node.csgov_step_by_step.field_csgov_sbs_parent
+field_name: field_csgov_sbs_parent
+entity_type: node
+bundle: csgov_step_by_step
+label: 'Nadřazená stránka'
+description: "Slouží ke zpětnému provázání kroku návodu na celý přehled.\r\nNa základě hodnoty tohoto pole je vygenerována správná URL adresa."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_step_by_step_overview: csgov_step_by_step_overview
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,101 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_content
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_sbs_items
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_sbs_noprefix
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_size
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_step_by_step
+  module:
+    - field_group
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_csgov_p_size
+        - field_csgov_p_sbs_noprefix
+      label: Nastavení
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.csgov_step_by_step.default
+targetEntityType: paragraph
+bundle: csgov_step_by_step
+mode: default
+content:
+  field_csgov_p_content:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_sbs_items:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Krok
+      title_plural: Kroky
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: csgov_step_by_step_item
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  field_csgov_p_sbs_noprefix:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_csgov_p_size:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csgov_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

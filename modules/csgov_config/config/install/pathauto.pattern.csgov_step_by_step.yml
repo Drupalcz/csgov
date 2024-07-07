@@ -1,0 +1,22 @@
+uuid: 9d72447f-ded5-4606-814c-5d9dd2d27d8b
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: csgov_step_by_step
+label: 'Krok za krokem'
+type: 'canonical_entities:node'
+pattern: '[node:field_csgov_sbs_parent:entity:url:path]/[node:title]'
+selection_criteria:
+  10fcb30c-9e77-4b47-860b-6aaab1c6d79f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 10fcb30c-9e77-4b47-860b-6aaab1c6d79f
+    context_mapping:
+      node: node
+    bundles:
+      step_by_step: step_by_step
+selection_logic: and
+weight: -5
+relationships: {  }

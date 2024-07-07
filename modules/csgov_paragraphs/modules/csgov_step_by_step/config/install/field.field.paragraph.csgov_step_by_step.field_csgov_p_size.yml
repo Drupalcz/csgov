@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_size
+    - paragraphs.paragraphs_type.csgov_step_by_step
+  module:
+    - options
+id: paragraph.csgov_step_by_step.field_csgov_p_size
+field_name: field_csgov_p_size
+entity_type: paragraph
+bundle: csgov_step_by_step
+label: Velikost
+description: "Velikost položek v rámci sady akordionu.\r\nVýchozí hodnota: <b>m</b>"
+required: true
+translatable: false
+default_value:
+  -
+    value: m
+default_value_callback: ''
+settings: {  }
+field_type: list_string
