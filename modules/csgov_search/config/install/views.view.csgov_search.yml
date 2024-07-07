@@ -111,7 +111,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty:
         area_text_custom:
@@ -215,6 +215,8 @@ display:
               csgov_landing_page: search_result
               csgov_news: search_result
               csgov_page: search_result
+              csgov_step_by_step: search_result
+              csgov_step_by_step_overview: search_result
       query:
         type: search_api_query
         options:

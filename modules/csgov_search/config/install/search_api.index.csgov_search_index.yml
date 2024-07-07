@@ -29,6 +29,8 @@ field_settings:
           csgov_landing_page: search_index
           csgov_news: search_index
           csgov_page: search_index
+          csgov_step_by_step: search_index
+          csgov_step_by_step_overview: search_index
   title:
     label: Nadpis
     datasource_id: 'entity:node'
@@ -125,6 +127,8 @@ processor_settings:
           csgov_landing_page: 3.0
           csgov_news: 5.0
           csgov_page: 2.0
+          csgov_step_by_step: 3.0
+          csgov_step_by_step_overview: 2.0
 tracker_settings:
   default:
     indexing_order: fifo
