@@ -89,7 +89,7 @@
     "drupal/viewsreference": "^2.0@beta",
     "drupal/webform": "^6.2@beta",
     "drupal/webp": "^1.0@RC",
-    "drupalcz/csgov_theme": "4.x-dev",
+    "drupalcz/csgov_theme": "^4.0",
     "drush/drush": "^12.4",
     "oomphinc/composer-installers-extender": "^2.0",
     "vlucas/phpdotenv": "^2.4",
