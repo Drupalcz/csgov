@@ -1,0 +1,59 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_content
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_sbs_items
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_sbs_noprefix
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_size
+    - field.field.paragraph.csgov_step_by_step.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_step_by_step
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - text
+id: paragraph.csgov_step_by_step.default
+targetEntityType: paragraph
+bundle: csgov_step_by_step
+mode: default
+content:
+  field_csgov_p_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_csgov_p_sbs_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_p_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_p_sbs_noprefix: true
+  field_csgov_p_size: true
+  search_api_excerpt: true

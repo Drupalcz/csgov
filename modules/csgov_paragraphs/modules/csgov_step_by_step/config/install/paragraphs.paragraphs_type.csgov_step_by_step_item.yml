@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_step_by_step_item
+label: 'Krok za krokem – položka'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

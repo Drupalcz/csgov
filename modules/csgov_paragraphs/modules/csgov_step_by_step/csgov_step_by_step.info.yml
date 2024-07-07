@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Step by Step'
+type: module
+description: 'Add Step by Step paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10
