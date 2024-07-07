@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_csgov_sbs_variant
+field_name: field_csgov_sbs_variant
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primární
+    -
+      value: secondary
+      label: Sekundární
+    -
+      value: success
+      label: Úspěch
+    -
+      value: warning
+      label: Varování
+    -
+      value: error
+      label: Chyba
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
