@@ -21,6 +21,7 @@ settings:
       csgov_directory_place: csgov_directory_place
       csgov_directory_person: csgov_directory_person
       csgov_event: csgov_event
+      csgov_gallery: csgov_gallery
       csgov_homepage: csgov_homepage
       csgov_step_by_step_overview: csgov_step_by_step_overview
       csgov_news: csgov_news

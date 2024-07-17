@@ -1,0 +1,69 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.csgov_card
+    - field.field.node.csgov_gallery.field_csgov_content_components
+    - field.field.node.csgov_gallery.field_csgov_date_published
+    - field.field.node.csgov_gallery.field_csgov_gallery_attach
+    - field.field.node.csgov_gallery.field_csgov_gallery_images
+    - field.field.node.csgov_gallery.field_csgov_has_hero
+    - field.field.node.csgov_gallery.field_csgov_hero
+    - field.field.node.csgov_gallery.field_csgov_main_image
+    - field.field.node.csgov_gallery.field_csgov_teaser
+    - node.type.csgov_gallery
+  module:
+    - datetime
+    - nomarkup
+    - user
+id: node.csgov_gallery.csgov_card
+targetEntityType: node
+bundle: csgov_gallery
+mode: csgov_card
+content:
+  field_csgov_date_published:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: czech_short
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_landscape
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 0
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_gallery_attach: true
+  field_csgov_gallery_images: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

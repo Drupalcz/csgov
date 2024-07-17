@@ -1,0 +1,42 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_gallery_attach
+    - node.type.csgov_board
+    - node.type.csgov_directory_person
+    - node.type.csgov_directory_place
+    - node.type.csgov_event
+    - node.type.csgov_gallery
+    - node.type.csgov_landing_page
+    - node.type.csgov_news
+    - node.type.csgov_page
+    - node.type.csgov_step_by_step_overview
+id: node.csgov_gallery.field_csgov_gallery_attach
+field_name: field_csgov_gallery_attach
+entity_type: node
+bundle: csgov_gallery
+label: 'Připojit k obsahu'
+description: 'Galerie se přímo zobrazí na vybraném obsahu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_directory_place: csgov_directory_place
+      csgov_directory_person: csgov_directory_person
+      csgov_event: csgov_event
+      csgov_step_by_step_overview: csgov_step_by_step_overview
+      csgov_landing_page: csgov_landing_page
+      csgov_news: csgov_news
+      csgov_page: csgov_page
+      csgov_board: csgov_board
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: csgov_directory_place
+field_type: entity_reference

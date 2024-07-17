@@ -1,0 +1,23 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_date_published
+    - node.type.csgov_gallery
+  module:
+    - datetime
+id: node.csgov_gallery.field_csgov_date_published
+field_name: field_csgov_date_published
+entity_type: node
+bundle: csgov_gallery
+label: 'Datum vystavení'
+description: 'Neslouží k plánovanému publikování. Výchozí hodnota je dnes.'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
