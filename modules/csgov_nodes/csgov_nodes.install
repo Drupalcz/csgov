@@ -10,6 +10,7 @@ function csgov_nodes_install() {
     'csgov_directory_person',
     'csgov_news',
     'csgov_event',
+    'csgov_gallery_node',
     'csgov_page',
     'csgov_homepage',
     'csgov_landing_page',
