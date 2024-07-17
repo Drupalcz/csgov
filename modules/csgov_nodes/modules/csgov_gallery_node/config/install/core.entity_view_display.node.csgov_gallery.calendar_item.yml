@@ -1,0 +1,51 @@
+langcode: cs
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.calendar_item
+    - field.field.node.csgov_gallery.field_csgov_content_components
+    - field.field.node.csgov_gallery.field_csgov_date_published
+    - field.field.node.csgov_gallery.field_csgov_gallery_attach
+    - field.field.node.csgov_gallery.field_csgov_gallery_images
+    - field.field.node.csgov_gallery.field_csgov_has_hero
+    - field.field.node.csgov_gallery.field_csgov_hero
+    - field.field.node.csgov_gallery.field_csgov_main_image
+    - field.field.node.csgov_gallery.field_csgov_teaser
+    - node.type.csgov_gallery
+  module:
+    - datetime
+    - nomarkup
+    - user
+id: node.csgov_gallery.calendar_item
+targetEntityType: node
+bundle: csgov_gallery
+mode: calendar_item
+content:
+  field_csgov_date_published:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: czech_short
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_gallery_attach: true
+  field_csgov_gallery_images: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_main_image: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true
