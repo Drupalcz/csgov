@@ -4,9 +4,8 @@ description: 'Adds serach api capabilities to CSGOV.'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
+  - csgov_board:csgov_board
+  - csgov_nodes:csgov_nodes
   - drupal:views
-  - drupal:search_api
-  - drupal:facets
-  - drupal:search_api_db
-  - csgov_nodes
-  - csgov_board
+  - facets:facets
+  - search_api:search_api_db

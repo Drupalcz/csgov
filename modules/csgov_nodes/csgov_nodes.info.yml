@@ -4,17 +4,17 @@ description: 'Adds nodes for CSGOV'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-  - drupal:auto_entitylabel
-  - drupal:field_group
-  - drupal:address
-  - drupal:leaflet
-  - drupal:office_hours
-  - drupal:paragraphs
-  - drupal:paragraphs_ee
-  - drupal:paragraphs_features
-  - drupal:smart_date_recur
-  - drupal:entity_reference_revisions
-  - drupal:geofield
+  - csgov_paragraphs:csgov_paragraphs
   - drupal:taxonomy
-  - drupal:search_api
-  - drupal:search_api_db
+  - address:address
+  - auto_entitylabel:auto_entitylabel
+  - entity_reference_revisions:entity_reference_revisions
+  - field_group:field_group
+  - geofield:geofield
+  - leaflet:leaflet
+  - office_hours:office_hours
+  - paragraphs:paragraphs
+  - paragraphs_ee:paragraphs_ee
+  - paragraphs_features:paragraphs_features
+  - search_api:search_api_db
+  - smart_date:smart_date_recur
