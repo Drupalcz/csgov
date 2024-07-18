@@ -19,9 +19,9 @@ function _csgov_migrate_get_migrations() {
   return [
     'taxonomy' => [
       'csgov_board_type',
-      'csgov_tags',
-      'csgov_news_type',
       'csgov_event_type',
+      'csgov_news_type',
+      'csgov_tags',
     ],
     'file' => [NULL],
     'media' => [

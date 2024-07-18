@@ -14,7 +14,7 @@ id: csgov_migrate_export_taxonomy
 label: 'CS Gov Migrate - export taxonomy'
 module: csgov_migrate
 description: ''
-tag: ''
+tag: csgov_migrate
 base_table: taxonomy_term_field_data
 base_field: tid
 display:
