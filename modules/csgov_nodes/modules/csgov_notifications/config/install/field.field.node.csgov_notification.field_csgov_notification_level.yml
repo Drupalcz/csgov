@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_notification_level
+    - node.type.csgov_notification
+  module:
+    - options
+id: node.csgov_notification.field_csgov_notification_level
+field_name: field_csgov_notification_level
+entity_type: node
+bundle: csgov_notification
+label: Úroveň
+description: 'Nastaví vizuální úroveň notifikace.'
+required: true
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

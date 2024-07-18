@@ -1,0 +1,57 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - image.style.landscape_3_2_2xs
+    - image.style.landscape_3_2_2xs_2x
+    - image.style.landscape_3_2_m
+    - image.style.landscape_3_2_m_2x
+    - image.style.landscape_3_2_s
+    - image.style.landscape_3_2_s_2x
+    - image.style.landscape_3_2_xs
+    - image.style.landscape_3_2_xs_2x
+id: in_content_image
+label: 'InContent image'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_m
+    breakpoint_id: csgov_image_styles.m
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_m_2x
+    breakpoint_id: csgov_image_styles.m
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_s
+    breakpoint_id: csgov_image_styles.s
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_s_2x
+    breakpoint_id: csgov_image_styles.s
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_xs
+    breakpoint_id: csgov_image_styles.xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_2xs
+    breakpoint_id: csgov_image_styles.2xs
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_xs_2x
+    breakpoint_id: csgov_image_styles.xs
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_3_2_2xs_2x
+    breakpoint_id: csgov_image_styles.2xs
+    multiplier: 2x
+breakpoint_group: csgov_image_styles
+fallback_image_style: landscape_3_2_2xs

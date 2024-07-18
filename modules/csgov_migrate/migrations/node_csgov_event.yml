@@ -1,0 +1,138 @@
+id: csgov_migrate_node_csgov_event
+label: 'Node - Event'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_node
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+    - csgov_migrate_paragraph_csgov_accordion
+    - csgov_migrate_paragraph_csgov_content
+    - csgov_migrate_paragraph_csgov_node_list
+    - csgov_migrate_paragraph_csgov_tiles
+    - csgov_migrate_paragraph_csgov_infopanel
+    - csgov_migrate_paragraph_csgov_statsbar
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/node_csgov_event.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: title
+      selector: title
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: promote
+      selector: promote
+    - name: sticky
+      selector: sticky
+    - name: field_csgov_has_hero
+      selector: field_csgov_has_hero
+    - name: field_csgov_hero
+      selector: field_csgov_hero
+    - name: field_csgov_content_components
+      selector: field_csgov_content_components
+    - name: field_csgov_teaser
+      selector: field_csgov_teaser
+    - name: field_csgov_main_image
+      selector: field_csgov_main_image
+    - name: field_csgov_main_image_caption
+      selector: field_csgov_main_image_caption
+    - name: field_csgov_event_type
+      selector: field_csgov_event_type
+
+destination:
+  plugin: entity:node
+  default_bundle: csgov_event
+
+process:
+  uuid: uuid
+  nid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: node
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  title: title
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+
+  field_csgov_has_hero: field_csgov_has_hero
+
+  field_csgov_hero:
+    - plugin: callback
+      source: field_csgov_hero
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration:
+            - csgov_migrate_paragraph_csgov_hero
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_csgov_content_components:
+    - plugin: callback
+      source: field_csgov_content_components
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration:
+            - csgov_migrate_paragraph_csgov_accordion
+            - csgov_migrate_paragraph_csgov_content
+            - csgov_migrate_paragraph_csgov_node_list
+            - csgov_migrate_paragraph_csgov_tiles
+            - csgov_migrate_paragraph_csgov_infopanel
+            - csgov_migrate_paragraph_csgov_statsbar
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_csgov_teaser/value: field_csgov_teaser
+  field_csgov_teaser/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_main_image:
+    - plugin: default_value
+      source: field_csgov_main_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_csgov_main_image_caption: field_csgov_main_image_caption
+
+  field_csgov_event_type:
+    plugin: migration_lookup
+    source: field_csgov_event_type
+    migration: csgov_migrate_taxonomy_csgov_event_type
+    no_stub: true

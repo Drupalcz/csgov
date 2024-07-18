@@ -1,0 +1,96 @@
+id: csgov_migrate_node_csgov_directory_person
+label: 'Node - Directory Person'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_node
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/node_csgov_directory_person.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: title
+      selector: title
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: promote
+      selector: promote
+    - name: sticky
+      selector: sticky
+    - name: field_csgov_email
+      selector: field_csgov_email
+    - name: field_csgov_mobile
+      selector: field_csgov_mobile
+    - name: field_csgov_phone
+      selector: field_csgov_phone
+    - name: field_csgov_main_image
+      selector: field_csgov_main_image
+    - name: field_csgov_name
+      selector: field_csgov_name
+    - name: field_csgov_surname
+      selector: field_csgov_surname
+    - name: field_csgov_person_position
+      selector: field_csgov_person_position
+
+destination:
+  plugin: entity:node
+  default_bundle: csgov_directory_person
+
+process:
+  uuid: uuid
+  nid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: node
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  title: title
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+
+  field_csgov_email: field_csgov_email
+
+  field_csgov_mobile: field_csgov_mobile
+
+  field_csgov_phone: field_csgov_phone
+
+  field_csgov_main_image:
+    - plugin: default_value
+      source: field_csgov_main_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_csgov_name: field_csgov_name
+
+  field_csgov_surname: field_csgov_surname
+
+  field_csgov_person_position: field_csgov_person_position

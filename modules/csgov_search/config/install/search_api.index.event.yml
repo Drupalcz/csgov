@@ -1,0 +1,107 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - search_api.server.csgov_db
+    - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - search_api
+id: event
+name: Akce
+description: ''
+read_only: false
+field_settings:
+  field_csgov_event_date:
+    label: Datum
+    datasource_id: 'entity:node'
+    property_path: field_csgov_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_csgov_event_date
+  field_csgov_event_type:
+    label: 'Typ akce'
+    datasource_id: 'entity:node'
+    property_path: field_csgov_event_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_csgov_event_type
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          csgov_event: search_index
+  title:
+    label: Nadpis
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - csgov_event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: true
+    fields:
+      - rendered_item
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      em: 1
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      u: 1
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - rendered_item
+      - title
+  language_with_fallback: {  }
+  rendered_item: {  }
+  transliteration:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - rendered_item
+      - title
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: csgov_db

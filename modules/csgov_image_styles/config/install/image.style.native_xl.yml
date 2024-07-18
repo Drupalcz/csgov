@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: native_xl
+label: 'Native XL'
+effects:
+  414ab756-ad1e-443d-9818-065d764efefc:
+    uuid: 414ab756-ad1e-443d-9818-065d764efefc
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: true

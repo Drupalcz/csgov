@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_csgov_notification_dismiss
+field_name: field_csgov_notification_dismiss
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: forever
+      label: 'Na vždy'
+    -
+      value: '720'
+      label: 'Na 30 dnů'
+    -
+      value: '168'
+      label: 'Na 7 dnů'
+    -
+      value: '24'
+      label: 'Na den'
+    -
+      value: never
+      label: Nikdy
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

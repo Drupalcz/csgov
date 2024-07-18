@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_csgov_p_sbs_variant
+field_name: field_csgov_p_sbs_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primární
+    -
+      value: secondary
+      label: Sekundární
+    -
+      value: error
+      label: Chyba
+    -
+      value: warning
+      label: Varování
+    -
+      value: success
+      label: Úspěch
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

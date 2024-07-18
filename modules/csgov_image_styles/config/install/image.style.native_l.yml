@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: native_l
+label: 'Native L'
+effects:
+  0c465a35-1ef2-4e25-b6a9-30b461a5f89d:
+    uuid: 0c465a35-1ef2-4e25-b6a9-30b461a5f89d
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: true

@@ -1,0 +1,88 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_content_components
+    - node.type.csgov_homepage
+  module:
+    - entity_reference_revisions
+id: node.csgov_homepage.field_csgov_content_components
+field_name: field_csgov_content_components
+entity_type: node
+bundle: csgov_homepage
+label: 'Obsahové komponenty'
+description: 'Umožňuje vkládat obsah pomocí předpřipravených komponent.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csgov_content: csgov_content
+      csgov_node_list: csgov_node_list
+      csgov_tiles: csgov_tiles
+      csgov_accordion: csgov_accordion
+      csgov_infopanel: csgov_infopanel
+      csgov_embed_view: csgov_embed_view
+      csgov_statsbar: csgov_statsbar
+      csgov_gallery: csgov_gallery
+      csgov_image: csgov_image
+      csgov_image_text: csgov_image_text
+      csgov_attachments: csgov_attachments
+      csgov_step_by_step: csgov_step_by_step
+    negate: 0
+    target_bundles_drag_drop:
+      csgov_accordion:
+        weight: -30
+        enabled: true
+      csgov_accordion_item:
+        weight: -22
+        enabled: false
+      csgov_attachments:
+        weight: -21
+        enabled: true
+      csgov_content:
+        weight: -33
+        enabled: true
+      csgov_embed_view:
+        weight: -28
+        enabled: true
+      csgov_gallery:
+        weight: -26
+        enabled: true
+      csgov_hero:
+        weight: -20
+        enabled: false
+      csgov_image:
+        weight: -25
+        enabled: true
+      csgov_image_text:
+        weight: -24
+        enabled: true
+      csgov_infopanel:
+        weight: -29
+        enabled: true
+      csgov_node_list:
+        weight: -32
+        enabled: true
+      csgov_statsbar:
+        weight: -27
+        enabled: true
+      csgov_statsbar_item:
+        weight: -19
+        enabled: false
+      csgov_tile:
+        weight: -21
+        enabled: false
+      csgov_tiles:
+        weight: -31
+        enabled: true
+      csgov_step_by_step:
+        weight: -23
+        enabled: true
+      csgov_step_by_step_item:
+        weight: -18
+        enabled: false
+field_type: entity_reference_revisions

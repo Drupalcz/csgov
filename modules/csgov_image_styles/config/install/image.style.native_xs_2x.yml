@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: native_xs_2x
+label: 'Native XS – 2X'
+effects:
+  a3a2adef-0ea9-4dc0-93bc-f9e1bb2a2545:
+    uuid: a3a2adef-0ea9-4dc0-93bc-f9e1bb2a2545
+    id: image_scale
+    weight: 1
+    data:
+      width: 1152
+      height: null
+      upscale: true
+  1d56f6dd-eff0-4213-95ea-6304b0dddb20:
+    uuid: 1d56f6dd-eff0-4213-95ea-6304b0dddb20
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

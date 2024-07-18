@@ -1,8 +1,8 @@
 csgov_migrate.settings:
-  path: '/admin/config/csgov/migrate'
+  path: '/admin/csgov/migrate'
   defaults:
     _form: '\Drupal\csgov_migrate\Form\SettingsForm'
-    _title: 'CS Gov Migrate settings'
+    _title: 'CSGOV Migrate settings'
   requirements:
     _permission: 'administer site configuration'
   options:

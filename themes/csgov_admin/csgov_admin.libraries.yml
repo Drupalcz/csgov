@@ -1,0 +1,9 @@
+# Base
+base:
+  css:
+    theme:
+      css/csgov-admin-extras.css: { weight: 2000 }
+
+hero-toggle:
+  js:
+    js/hero-toggle.js: {}

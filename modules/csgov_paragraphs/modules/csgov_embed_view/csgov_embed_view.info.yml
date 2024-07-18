@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Embed view'
+type: module
+description: 'Add Embed view paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

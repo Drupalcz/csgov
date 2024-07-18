@@ -1,0 +1,78 @@
+id: csgov_migrate_paragraph_csgov_hero
+label: 'Paragraph - Hero'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_csgov_hero.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_subtitle
+      selector: field_csgov_p_subtitle
+    - name: field_csgov_p_search_label
+      selector: field_csgov_p_search_label
+    - name: field_csgov_p_search_placeholder
+      selector: field_csgov_p_search_placeholder
+    - name: field_csgov_p_image
+      selector: field_csgov_p_image
+    - name: field_csgov_p_background
+      selector: field_csgov_p_background
+    - name: field_csgov_p_has_search_box
+      selector: field_csgov_p_has_search_box
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_hero
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_subtitle: field_csgov_p_subtitle
+
+  field_csgov_p_search_label: field_csgov_p_search_label
+
+  field_csgov_p_search_placeholder: field_csgov_p_search_placeholder
+
+  field_csgov_p_image:
+    - plugin: default_value
+      source: field_csgov_p_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_csgov_p_background: field_csgov_p_background
+
+  field_csgov_p_has_search_box: field_csgov_p_has_search_box

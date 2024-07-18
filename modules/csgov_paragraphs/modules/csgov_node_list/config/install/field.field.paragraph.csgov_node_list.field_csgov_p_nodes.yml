@@ -1,0 +1,35 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_nodes
+    - paragraphs.paragraphs_type.csgov_node_list
+id: paragraph.csgov_node_list.field_csgov_p_nodes
+field_name: field_csgov_p_nodes
+entity_type: paragraph
+bundle: csgov_node_list
+label: Stránky
+description: 'Začněte psát název stránky, kterou chcete přidat.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_directory_place: csgov_directory_place
+      csgov_directory_person: csgov_directory_person
+      csgov_event: csgov_event
+      csgov_gallery: csgov_gallery
+      csgov_homepage: csgov_homepage
+      csgov_step_by_step_overview: csgov_step_by_step_overview
+      csgov_news: csgov_news
+      csgov_page: csgov_page
+      csgov_board: csgov_board
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: csgov_news
+field_type: entity_reference

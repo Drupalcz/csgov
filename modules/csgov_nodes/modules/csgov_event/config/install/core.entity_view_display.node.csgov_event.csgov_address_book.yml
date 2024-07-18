@@ -1,0 +1,59 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.csgov_address_book
+    - field.field.node.csgov_event.field_csgov_address
+    - field.field.node.csgov_event.field_csgov_content_components
+    - field.field.node.csgov_event.field_csgov_event_date
+    - field.field.node.csgov_event.field_csgov_event_type
+    - field.field.node.csgov_event.field_csgov_has_hero
+    - field.field.node.csgov_event.field_csgov_hero
+    - field.field.node.csgov_event.field_csgov_main_image
+    - field.field.node.csgov_event.field_csgov_main_image_caption
+    - field.field.node.csgov_event.field_csgov_teaser
+    - node.type.csgov_event
+  module:
+    - address
+    - nomarkup
+    - user
+id: node.csgov_event.csgov_address_book
+targetEntityType: node
+bundle: csgov_event
+mode: csgov_address_book
+content:
+  field_csgov_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_address_book
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_event_date: true
+  field_csgov_event_type: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_main_image_caption: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true

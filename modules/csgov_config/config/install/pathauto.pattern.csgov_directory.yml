@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: csgov_directory
+label: Adresář
+type: 'canonical_entities:node'
+pattern: '/adresar/[node:title]'
+selection_criteria:
+  918eb842-77dd-4b8e-ad56-2439d1bbea76:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 918eb842-77dd-4b8e-ad56-2439d1bbea76
+    context_mapping:
+      node: node
+    bundles:
+      csgov_directory_person: csgov_directory_person
+      csgov_directory_place: csgov_directory_place
+selection_logic: and
+weight: -5
+relationships: {  }

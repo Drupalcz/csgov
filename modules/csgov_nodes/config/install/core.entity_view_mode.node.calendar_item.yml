@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: node.calendar_item
+label: 'Kalendářová položka'
+description: ''
+targetEntityType: node
+cache: true

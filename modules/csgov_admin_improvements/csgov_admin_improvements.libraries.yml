@@ -1,0 +1,4 @@
+menu:
+  css:
+    theme:
+       assets/css/menu.css: {}

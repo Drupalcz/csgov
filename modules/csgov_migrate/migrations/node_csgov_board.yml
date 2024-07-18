@@ -1,0 +1,140 @@
+id: csgov_migrate_node_csgov_board
+label: 'Node - Board'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_node
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+    - csgov_migrate_paragraph_csgov_accordion
+    - csgov_migrate_paragraph_csgov_content
+    - csgov_migrate_paragraph_csgov_node_list
+    - csgov_migrate_paragraph_csgov_tiles
+    - csgov_migrate_paragraph_csgov_infopanel
+    - csgov_migrate_paragraph_csgov_statsbar
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/node_csgov_board.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: title
+      selector: title
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: promote
+      selector: promote
+    - name: sticky
+      selector: sticky
+    - name: field_csgov_teaser
+      selector: field_csgov_teaser
+    - name: field_csgov_content
+      selector: field_csgov_content
+    - name: field_csgov_attachments
+      selector: field_csgov_attachments
+    - name: field_csgov_date_published
+      selector: field_csgov_date_published
+    - name: field_csgov_date_archived
+      selector: field_csgov_date_archived
+    - name: field_csgov_board_type
+      selector: field_csgov_board_type
+    - name: field_csgov_ref_person
+      selector: field_csgov_ref_person
+    - name: field_csgov_reference_mark
+      selector: field_csgov_reference_mark
+
+destination:
+  plugin: entity:node
+  default_bundle: csgov_board
+
+process:
+  uuid: uuid
+  nid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: node
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  title: title
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+
+  field_csgov_teaser/value: field_csgov_teaser
+  field_csgov_teaser/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_content/value: field_csgov_content
+  field_csgov_content/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_date_published:
+    plugin: csgov_migrate_date_override
+    source: field_csgov_date_published
+    override: true
+
+  field_csgov_date_archived:
+    plugin: csgov_migrate_date_override
+    source: field_csgov_date_archived
+    override: true
+
+  field_csgov_reference_mark: field_csgov_reference_mark
+
+  field_csgov_board_type:
+    plugin: migration_lookup
+    source: field_csgov_board_type
+    migration: csgov_migrate_taxonomy_csgov_board_type
+    no_stub: true
+
+  field_csgov_ref_person:
+    - plugin: callback
+      source: field_csgov_ref_person
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        target_id:
+          - plugin: migration_lookup
+            source: value
+            migration:
+              - csgov_migrate_node_csgov_directory_person
+            no_stub: true
+
+  field_csgov_attachments:
+    - plugin: callback
+      source: field_csgov_attachments
+      callable: csgov_migrate_process_multiple
+    - plugin: default_value
+      default_value:
+        - value: -1
+    - plugin: sub_process
+      process:
+        target_id:
+          - plugin: migration_lookup
+            source: value
+            migration: csgov_migrate_media_document
+            no_stub: true
+          - plugin: csgov_migrate_media_override
+            override: random_file

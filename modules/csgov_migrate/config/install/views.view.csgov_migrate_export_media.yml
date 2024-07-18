@@ -2,9 +2,11 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - field.storage.media.field_media_file
+    - field.storage.media.field_csgov_document_pages
+    - field.storage.media.field_csgov_media_tags
+    - field.storage.media.field_media_document
     - field.storage.media.field_media_image
-    - field.storage.media.field_tags
+    - field.storage.media.field_media_svg
     - user.role.administrator
   module:
     - csgov_migrate
@@ -347,6 +349,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -414,6 +425,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -424,10 +444,10 @@ display:
           multi_type: separator
           separator: ','
           field_api_classes: false
-        field_media_file:
-          id: field_media_file
-          table: media__field_media_file
-          field: field_media_file
+        field_media_document:
+          id: field_media_document
+          table: media__field_media_document
+          field: field_media_document
           relationship: none
           group_type: group
           admin_label: ''
@@ -548,10 +568,10 @@ display:
           multi_type: separator
           separator: ','
           field_api_classes: false
-        field_tags:
-          id: field_tags
-          table: media__field_tags
-          field: field_tags
+        field_csgov_media_tags:
+          id: field_csgov_media_tags
+          table: media__field_csgov_media_tags
+          field: field_csgov_media_tags
           relationship: none
           group_type: group
           admin_label: ''
@@ -609,6 +629,132 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ','
+          field_api_classes: false
+        field_media_svg:
+          id: field_media_svg
+          table: media__field_media_svg
+          field: field_media_svg
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_document_pages:
+          id: field_csgov_document_pages
+          table: media__field_csgov_document_pages
+          field: field_csgov_document_pages
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
           field_api_classes: false
       pager:
         type: mini
@@ -670,7 +816,6 @@ display:
           default_argument_options:
             index: 3
             use_alias: false
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -727,9 +872,11 @@ display:
         - url.query_args
         - user.roles
       tags:
-        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_csgov_document_pages'
+        - 'config:field.storage.media.field_csgov_media_tags'
+        - 'config:field.storage.media.field_media_document'
         - 'config:field.storage.media.field_media_image'
-        - 'config:field.storage.media.field_tags'
+        - 'config:field.storage.media.field_media_svg'
   rest_export_1:
     id: rest_export_1
     display_title: 'REST export'
@@ -762,13 +909,13 @@ display:
             changed:
               alias: ''
               raw_output: true
-            field_media_file:
+            field_media_document:
               alias: ''
               raw_output: false
             field_media_image:
               alias: ''
               raw_output: false
-            field_tags:
+            field_csgov_media_tags:
               alias: ''
               raw_output: false
       display_extenders:
@@ -786,6 +933,8 @@ display:
         - url
         - user.roles
       tags:
-        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_csgov_document_pages'
+        - 'config:field.storage.media.field_csgov_media_tags'
+        - 'config:field.storage.media.field_media_document'
         - 'config:field.storage.media.field_media_image'
-        - 'config:field.storage.media.field_tags'
+        - 'config:field.storage.media.field_media_svg'

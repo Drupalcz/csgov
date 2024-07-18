@@ -2,34 +2,54 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_image
-    - field.storage.node.field_banner_intro
-    - field.storage.node.field_banner_title
-    - field.storage.node.field_board_attachments
-    - field.storage.node.field_board_published_date
-    - field.storage.node.field_board_reference_mark
-    - field.storage.node.field_board_removed_date
-    - field.storage.node.field_board_responsible
-    - field.storage.node.field_board_type
-    - field.storage.node.field_body
-    - field.storage.node.field_components
-    - field.storage.node.field_event_date
-    - field.storage.node.field_event_location
-    - field.storage.node.field_news_date
-    - field.storage.node.field_news_type
-    - field.storage.node.field_teaser
-    - field.storage.node.field_thumbnail
+    - field.storage.node.field_csgov_attachments
+    - field.storage.node.field_csgov_board_type
+    - field.storage.node.field_csgov_content
+    - field.storage.node.field_csgov_content_components
+    - field.storage.node.field_csgov_date_archived
+    - field.storage.node.field_csgov_date_published
+    - field.storage.node.field_csgov_email
+    - field.storage.node.field_csgov_event_date
+    - field.storage.node.field_csgov_event_type
+    - field.storage.node.field_csgov_geofield
+    - field.storage.node.field_csgov_has_hero
+    - field.storage.node.field_csgov_hero
+    - field.storage.node.field_csgov_icon
+    - field.storage.node.field_csgov_links
+    - field.storage.node.field_csgov_links_title
+    - field.storage.node.field_csgov_main_image
+    - field.storage.node.field_csgov_main_image_caption
+    - field.storage.node.field_csgov_mobile
+    - field.storage.node.field_csgov_name
+    - field.storage.node.field_csgov_news_type
+    - field.storage.node.field_csgov_notification_dismiss
+    - field.storage.node.field_csgov_notification_display
+    - field.storage.node.field_csgov_notification_level
+    - field.storage.node.field_csgov_notification_link
+    - field.storage.node.field_csgov_notification_on
+    - field.storage.node.field_csgov_office_hours
+    - field.storage.node.field_csgov_person_position
+    - field.storage.node.field_csgov_persons
+    - field.storage.node.field_csgov_phone
+    - field.storage.node.field_csgov_ref_person
+    - field.storage.node.field_csgov_reference_mark
+    - field.storage.node.field_csgov_surname
+    - field.storage.node.field_csgov_teaser
     - field.storage.node.layout_builder__layout
-    - user.role.administrator
   module:
+    - address
     - csgov_migrate
     - datetime
-    - datetime_range
+    - geofield
+    - link
     - node
+    - office_hours
+    - options
     - rest
     - serialization
+    - smart_date
+    - telephone
     - text
-    - user
 id: csgov_migrate_export_node
 label: 'CS Gov Migrate - export node'
 module: csgov_migrate
@@ -365,6 +385,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -432,6 +461,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -576,6 +614,766 @@ display:
           multi_type: separator
           separator: ','
           field_api_classes: false
+        field_csgov_address_additional_name:
+          id: field_csgov_address_additional_name
+          table: node__field_csgov_address
+          field: field_csgov_address_additional_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_address_line1:
+          id: field_csgov_address_address_line1
+          table: node__field_csgov_address
+          field: field_csgov_address_address_line1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_address_line2:
+          id: field_csgov_address_address_line2
+          table: node__field_csgov_address
+          field: field_csgov_address_address_line2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_address_line3:
+          id: field_csgov_address_address_line3
+          table: node__field_csgov_address
+          field: field_csgov_address_address_line3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_administrative_area:
+          id: field_csgov_address_administrative_area
+          table: node__field_csgov_address
+          field: field_csgov_address_administrative_area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: subdivision
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: false
+        field_csgov_address_country_code:
+          id: field_csgov_address_country_code
+          table: node__field_csgov_address
+          field: field_csgov_address_country_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: country
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: false
+        field_csgov_address_dependent_locality:
+          id: field_csgov_address_dependent_locality
+          table: node__field_csgov_address
+          field: field_csgov_address_dependent_locality
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: subdivision
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: false
+        field_csgov_address_family_name:
+          id: field_csgov_address_family_name
+          table: node__field_csgov_address
+          field: field_csgov_address_family_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_given_name:
+          id: field_csgov_address_given_name
+          table: node__field_csgov_address
+          field: field_csgov_address_given_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_locality:
+          id: field_csgov_address_locality
+          table: node__field_csgov_address
+          field: field_csgov_address_locality
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: subdivision
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: false
+        field_csgov_address_organization:
+          id: field_csgov_address_organization
+          table: node__field_csgov_address
+          field: field_csgov_address_organization
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_postal_code:
+          id: field_csgov_address_postal_code
+          table: node__field_csgov_address
+          field: field_csgov_address_postal_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_csgov_address_sorting_code:
+          id: field_csgov_address_sorting_code
+          table: node__field_csgov_address
+          field: field_csgov_address_sorting_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        delta:
+          id: delta
+          table: node__field_csgov_attachments
+          field: delta
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQD
+          prefix: ''
+          suffix: ''
+        field_csgov_board_type:
+          id: field_csgov_board_type
+          table: node__field_csgov_board_type
+          field: field_csgov_board_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_id
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         layout_builder__layout:
           id: layout_builder__layout
           table: node__layout_builder__layout
@@ -636,74 +1434,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_banner_image:
-          id: field_banner_image
-          table: node__field_banner_image
-          field: field_banner_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_uuid
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_banner_intro:
-          id: field_banner_intro
-          table: node__field_banner_intro
-          field: field_banner_intro
+        field_csgov_event_date:
+          id: field_csgov_event_date
+          table: node__field_csgov_event_date
+          field: field_csgov_event_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -750,71 +1486,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_banner_title:
-          id: field_banner_title
-          table: node__field_banner_title
-          field: field_banner_title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          type: smartdate_plain
           settings:
-            link_to_entity: false
+            timezone_override: ''
+            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -823,12 +1498,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_body:
-          id: field_body
-          table: node__field_body
-          field: field_body
+        field_csgov_date_published:
+          id: field_csgov_date_published
+          table: node__field_csgov_date_published
+          field: field_csgov_date_published
           relationship: none
           group_type: group
           admin_label: ''
@@ -875,7 +1550,135 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_date_archived:
+          id: field_csgov_date_archived
+          table: node__field_csgov_date_archived
+          field: field_csgov_date_archived
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_email:
+          id: field_csgov_email
+          table: node__field_csgov_email
+          field: field_csgov_email
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -885,12 +1688,76 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_components:
-          id: field_components
-          table: node__field_components
-          field: field_components
+        field_csgov_geofield:
+          id: field_csgov_geofield
+          table: node__field_csgov_geofield
+          field: field_csgov_geofield
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: geofield_default
+          settings:
+            output_format: wkt
+            output_escape: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_hero:
+          id: field_csgov_hero
+          table: node__field_csgov_hero
+          field: field_csgov_hero
           relationship: none
           group_type: group
           admin_label: ''
@@ -947,12 +1814,325 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_teaser:
-          id: field_teaser
-          table: node__field_teaser
-          field: field_teaser
+        field_csgov_main_image:
+          id: field_csgov_main_image
+          table: node__field_csgov_main_image
+          field: field_csgov_main_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_icon:
+          id: field_csgov_icon
+          table: node__field_csgov_icon
+          field: field_csgov_icon
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_reference_mark:
+          id: field_csgov_reference_mark
+          table: node__field_csgov_reference_mark
+          field: field_csgov_reference_mark
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_name:
+          id: field_csgov_name
+          table: node__field_csgov_name
+          field: field_csgov_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_mobile:
+          id: field_csgov_mobile
+          table: node__field_csgov_mobile
+          field: field_csgov_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: telephone_link
+          settings:
+            title: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_content:
+          id: field_csgov_content
+          table: node__field_csgov_content
+          field: field_csgov_content
           relationship: none
           group_type: group
           admin_label: ''
@@ -1009,12 +2189,208 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_thumbnail:
-          id: field_thumbnail
-          table: node__field_thumbnail
-          field: field_thumbnail
+        field_csgov_content_components:
+          id: field_csgov_content_components
+          table: node__field_csgov_content_components
+          field: field_csgov_content_components
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_notification_link:
+          id: field_csgov_notification_link
+          table: node__field_csgov_notification_link
+          field: field_csgov_notification_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_links:
+          id: field_csgov_links
+          table: node__field_csgov_links
+          field: field_csgov_links
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link_separate
+          settings:
+            trim_length: null
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_persons:
+          id: field_csgov_persons
+          table: node__field_csgov_persons
+          field: field_csgov_persons
           relationship: none
           group_type: group
           admin_label: ''
@@ -1071,12 +2447,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_board_attachments:
-          id: field_board_attachments
-          table: node__field_board_attachments
-          field: field_board_attachments
+        field_csgov_office_hours:
+          id: field_csgov_office_hours
+          table: node__field_csgov_office_hours
+          field: field_csgov_office_hours
           relationship: none
           group_type: group
           admin_label: ''
@@ -1122,10 +2498,37 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_uuid
-          settings: {  }
-          group_column: target_id
+          click_sort_column: day
+          type: office_hours
+          settings:
+            day_format: long
+            time_format: G
+            compress: false
+            grouped: false
+            show_empty: false
+            show_closed: all
+            closed_format: Closed
+            all_day_format: 'All day open'
+            separator:
+              days: '<br />'
+              grouped_days: ' - '
+              day_hours: ': '
+              hours_hours: '-'
+              more_hours: ', '
+            current_status:
+              position: ''
+              open_text: 'Currently open!'
+              closed_text: 'Currently closed'
+            exceptions:
+              title: 'Exception hours'
+              replace_exceptions: false
+              restrict_exceptions_to_num_days: 7
+              date_format: long
+              all_day_format: 'All day open'
+            office_hours_first_day: ''
+            schema:
+              enabled: false
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1133,12 +2536,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_board_published_date:
-          id: field_board_published_date
-          table: node__field_board_published_date
-          field: field_board_published_date
+        field_csgov_main_image_caption:
+          id: field_csgov_main_image_caption
+          table: node__field_csgov_main_image_caption
+          field: field_csgov_main_image_caption
           relationship: none
           group_type: group
           admin_label: ''
@@ -1185,9 +2588,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_plain
-          settings:
-            timezone_override: ''
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1196,12 +2598,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_board_reference_mark:
-          id: field_board_reference_mark
-          table: node__field_board_reference_mark
-          field: field_board_reference_mark
+        field_csgov_person_position:
+          id: field_csgov_person_position
+          table: node__field_csgov_person_position
+          field: field_csgov_person_position
           relationship: none
           group_type: group
           admin_label: ''
@@ -1259,12 +2661,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_board_removed_date:
-          id: field_board_removed_date
-          table: node__field_board_removed_date
-          field: field_board_removed_date
+        field_csgov_has_hero:
+          id: field_csgov_has_hero
+          table: node__field_csgov_has_hero
+          field: field_csgov_has_hero
           relationship: none
           group_type: group
           admin_label: ''
@@ -1311,9 +2713,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_plain
+          type: boolean
           settings:
-            timezone_override: ''
+            format: boolean
+            format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1322,200 +2726,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_board_type:
-          id: field_board_type
-          table: node__field_board_type
-          field: field_board_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_uuid
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_board_responsible:
-          id: field_board_responsible
-          table: node__field_board_responsible
-          field: field_board_responsible
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_uuid
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_event_date:
-          id: field_event_date
-          table: node__field_event_date
-          field: field_event_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: daterange_plain
-          settings:
-            timezone_override: ''
-            separator: '-'
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_event_location:
-          id: field_event_location
-          table: node__field_event_location
-          field: field_event_location
+        field_csgov_surname:
+          id: field_csgov_surname
+          table: node__field_csgov_surname
+          field: field_csgov_surname
           relationship: none
           group_type: group
           admin_label: ''
@@ -1573,75 +2789,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
-        field_news_date:
-          id: field_news_date
-          table: node__field_news_date
-          field: field_news_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_plain
-          settings:
-            timezone_override: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-        field_news_type:
-          id: field_news_type
-          table: node__field_news_type
-          field: field_news_type
+        field_csgov_attachments:
+          id: field_csgov_attachments
+          table: node__field_csgov_attachments
+          field: field_csgov_attachments
           relationship: none
           group_type: group
           admin_label: ''
@@ -1698,7 +2851,691 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
+          field_api_classes: false
+        field_csgov_phone:
+          id: field_csgov_phone
+          table: node__field_csgov_phone
+          field: field_csgov_phone
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: telephone_link
+          settings:
+            title: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_event_type:
+          id: field_csgov_event_type
+          table: node__field_csgov_event_type
+          field: field_csgov_event_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_news_type:
+          id: field_csgov_news_type
+          table: node__field_csgov_news_type
+          field: field_csgov_news_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_board_type_1:
+          id: field_csgov_board_type_1
+          table: node__field_csgov_board_type
+          field: field_csgov_board_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_notification_dismiss:
+          id: field_csgov_notification_dismiss
+          table: node__field_csgov_notification_dismiss
+          field: field_csgov_notification_dismiss
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_notification_display:
+          id: field_csgov_notification_display
+          table: node__field_csgov_notification_display
+          field: field_csgov_notification_display
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_notification_on:
+          id: field_csgov_notification_on
+          table: node__field_csgov_notification_on
+          field: field_csgov_notification_on
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_ref_person:
+          id: field_csgov_ref_person
+          table: node__field_csgov_ref_person
+          field: field_csgov_ref_person
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_notification_level:
+          id: field_csgov_notification_level
+          table: node__field_csgov_notification_level
+          field: field_csgov_notification_level
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_teaser:
+          id: field_csgov_teaser
+          table: node__field_csgov_teaser
+          field: field_csgov_teaser
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_links_title:
+          id: field_csgov_links_title
+          table: node__field_csgov_links_title
+          field: field_csgov_links_title
+          relationship: none
+          group_type: group
+          admin_label: 'Nadpis – odkazy'
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
           field_api_classes: false
       pager:
         type: mini
@@ -1728,11 +3565,6 @@ display:
           expose_sort_order: true
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
-      access:
-        type: role
-        options:
-          role:
-            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -1760,7 +3592,6 @@ display:
           default_argument_options:
             index: 3
             use_alias: false
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -1816,25 +3647,40 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.roles
       tags:
-        - 'config:field.storage.node.field_banner_image'
-        - 'config:field.storage.node.field_banner_intro'
-        - 'config:field.storage.node.field_banner_title'
-        - 'config:field.storage.node.field_board_attachments'
-        - 'config:field.storage.node.field_board_published_date'
-        - 'config:field.storage.node.field_board_reference_mark'
-        - 'config:field.storage.node.field_board_removed_date'
-        - 'config:field.storage.node.field_board_responsible'
-        - 'config:field.storage.node.field_board_type'
-        - 'config:field.storage.node.field_body'
-        - 'config:field.storage.node.field_components'
-        - 'config:field.storage.node.field_event_date'
-        - 'config:field.storage.node.field_event_location'
-        - 'config:field.storage.node.field_news_date'
-        - 'config:field.storage.node.field_news_type'
-        - 'config:field.storage.node.field_teaser'
-        - 'config:field.storage.node.field_thumbnail'
+        - 'config:field.storage.node.field_csgov_attachments'
+        - 'config:field.storage.node.field_csgov_board_type'
+        - 'config:field.storage.node.field_csgov_content'
+        - 'config:field.storage.node.field_csgov_content_components'
+        - 'config:field.storage.node.field_csgov_date_archived'
+        - 'config:field.storage.node.field_csgov_date_published'
+        - 'config:field.storage.node.field_csgov_email'
+        - 'config:field.storage.node.field_csgov_event_date'
+        - 'config:field.storage.node.field_csgov_event_type'
+        - 'config:field.storage.node.field_csgov_geofield'
+        - 'config:field.storage.node.field_csgov_has_hero'
+        - 'config:field.storage.node.field_csgov_hero'
+        - 'config:field.storage.node.field_csgov_icon'
+        - 'config:field.storage.node.field_csgov_links'
+        - 'config:field.storage.node.field_csgov_links_title'
+        - 'config:field.storage.node.field_csgov_main_image'
+        - 'config:field.storage.node.field_csgov_main_image_caption'
+        - 'config:field.storage.node.field_csgov_mobile'
+        - 'config:field.storage.node.field_csgov_name'
+        - 'config:field.storage.node.field_csgov_news_type'
+        - 'config:field.storage.node.field_csgov_notification_dismiss'
+        - 'config:field.storage.node.field_csgov_notification_display'
+        - 'config:field.storage.node.field_csgov_notification_level'
+        - 'config:field.storage.node.field_csgov_notification_link'
+        - 'config:field.storage.node.field_csgov_notification_on'
+        - 'config:field.storage.node.field_csgov_office_hours'
+        - 'config:field.storage.node.field_csgov_person_position'
+        - 'config:field.storage.node.field_csgov_persons'
+        - 'config:field.storage.node.field_csgov_phone'
+        - 'config:field.storage.node.field_csgov_ref_person'
+        - 'config:field.storage.node.field_csgov_reference_mark'
+        - 'config:field.storage.node.field_csgov_surname'
+        - 'config:field.storage.node.field_csgov_teaser'
         - 'config:field.storage.node.layout_builder__layout'
   rest_export_1:
     id: rest_export_1
@@ -1874,58 +3720,151 @@ display:
             sticky:
               alias: ''
               raw_output: true
+            field_csgov_address_additional_name:
+              alias: ''
+              raw_output: false
+            field_csgov_address_address_line1:
+              alias: ''
+              raw_output: false
+            field_csgov_address_address_line2:
+              alias: ''
+              raw_output: false
+            field_csgov_address_address_line3:
+              alias: ''
+              raw_output: false
+            field_csgov_address_administrative_area:
+              alias: ''
+              raw_output: false
+            field_csgov_address_country_code:
+              alias: ''
+              raw_output: false
+            field_csgov_address_dependent_locality:
+              alias: ''
+              raw_output: false
+            field_csgov_address_family_name:
+              alias: ''
+              raw_output: false
+            field_csgov_address_given_name:
+              alias: ''
+              raw_output: false
+            field_csgov_address_locality:
+              alias: ''
+              raw_output: false
+            field_csgov_address_organization:
+              alias: ''
+              raw_output: false
+            field_csgov_address_postal_code:
+              alias: ''
+              raw_output: false
+            field_csgov_address_sorting_code:
+              alias: ''
+              raw_output: false
+            delta:
+              alias: ''
+              raw_output: false
+            field_csgov_board_type:
+              alias: ''
+              raw_output: false
             layout_builder__layout:
               alias: ''
               raw_output: false
-            field_banner_image:
+            field_csgov_event_date:
               alias: ''
               raw_output: false
-            field_banner_intro:
+            field_csgov_date_published:
               alias: ''
               raw_output: true
-            field_banner_title:
+            field_csgov_date_archived:
               alias: ''
               raw_output: true
-            field_body:
+            field_csgov_email:
               alias: ''
               raw_output: true
-            field_components:
+            field_csgov_geofield:
+              alias: ''
+              raw_output: true
+            field_csgov_hero:
               alias: ''
               raw_output: false
-            field_teaser:
-              alias: ''
-              raw_output: true
-            field_thumbnail:
+            field_csgov_main_image:
               alias: ''
               raw_output: false
-            field_board_attachments:
+            field_csgov_icon:
               alias: ''
               raw_output: false
-            field_board_published_date:
-              alias: ''
-              raw_output: true
-            field_board_reference_mark:
-              alias: ''
-              raw_output: true
-            field_board_removed_date:
-              alias: ''
-              raw_output: true
-            field_board_type:
+            field_csgov_reference_mark:
               alias: ''
               raw_output: false
-            field_board_responsible:
+            field_csgov_name:
               alias: ''
               raw_output: false
-            field_event_date:
+            field_csgov_mobile:
+              alias: ''
+              raw_output: true
+            field_csgov_content:
               alias: ''
               raw_output: false
-            field_event_location:
+            field_csgov_content_components:
+              alias: ''
+              raw_output: false
+            field_csgov_notification_link:
+              alias: ''
+              raw_output: false
+            field_csgov_links:
               alias: ''
               raw_output: true
-            field_news_date:
+            field_csgov_persons:
+              alias: ''
+              raw_output: false
+            field_csgov_office_hours:
               alias: ''
               raw_output: true
-            field_news_type:
+            field_csgov_main_image_caption:
+              alias: ''
+              raw_output: false
+            field_csgov_person_position:
+              alias: ''
+              raw_output: false
+            field_csgov_has_hero:
+              alias: ''
+              raw_output: false
+            field_csgov_surname:
+              alias: ''
+              raw_output: false
+            field_csgov_attachments:
+              alias: ''
+              raw_output: false
+            field_csgov_phone:
+              alias: ''
+              raw_output: true
+            field_csgov_event_type:
+              alias: ''
+              raw_output: false
+            field_csgov_news_type:
+              alias: ''
+              raw_output: false
+            field_csgov_board_type_1:
+              alias: ''
+              raw_output: false
+            field_csgov_notification_dismiss:
+              alias: ''
+              raw_output: false
+            field_csgov_notification_display:
+              alias: ''
+              raw_output: false
+            field_csgov_notification_on:
+              alias: ''
+              raw_output: false
+            field_csgov_ref_person:
+              alias: ''
+              raw_output: false
+            field_csgov_notification_level:
+              alias: ''
+              raw_output: false
+            field_csgov_teaser:
+              alias: ''
+              raw_output: false
+            field_csgov_links_title:
               alias: ''
               raw_output: false
       display_extenders:
@@ -1942,23 +3881,38 @@ display:
         - request_format
         - url
         - 'user.node_grants:view'
-        - user.roles
       tags:
-        - 'config:field.storage.node.field_banner_image'
-        - 'config:field.storage.node.field_banner_intro'
-        - 'config:field.storage.node.field_banner_title'
-        - 'config:field.storage.node.field_board_attachments'
-        - 'config:field.storage.node.field_board_published_date'
-        - 'config:field.storage.node.field_board_reference_mark'
-        - 'config:field.storage.node.field_board_removed_date'
-        - 'config:field.storage.node.field_board_responsible'
-        - 'config:field.storage.node.field_board_type'
-        - 'config:field.storage.node.field_body'
-        - 'config:field.storage.node.field_components'
-        - 'config:field.storage.node.field_event_date'
-        - 'config:field.storage.node.field_event_location'
-        - 'config:field.storage.node.field_news_date'
-        - 'config:field.storage.node.field_news_type'
-        - 'config:field.storage.node.field_teaser'
-        - 'config:field.storage.node.field_thumbnail'
+        - 'config:field.storage.node.field_csgov_attachments'
+        - 'config:field.storage.node.field_csgov_board_type'
+        - 'config:field.storage.node.field_csgov_content'
+        - 'config:field.storage.node.field_csgov_content_components'
+        - 'config:field.storage.node.field_csgov_date_archived'
+        - 'config:field.storage.node.field_csgov_date_published'
+        - 'config:field.storage.node.field_csgov_email'
+        - 'config:field.storage.node.field_csgov_event_date'
+        - 'config:field.storage.node.field_csgov_event_type'
+        - 'config:field.storage.node.field_csgov_geofield'
+        - 'config:field.storage.node.field_csgov_has_hero'
+        - 'config:field.storage.node.field_csgov_hero'
+        - 'config:field.storage.node.field_csgov_icon'
+        - 'config:field.storage.node.field_csgov_links'
+        - 'config:field.storage.node.field_csgov_links_title'
+        - 'config:field.storage.node.field_csgov_main_image'
+        - 'config:field.storage.node.field_csgov_main_image_caption'
+        - 'config:field.storage.node.field_csgov_mobile'
+        - 'config:field.storage.node.field_csgov_name'
+        - 'config:field.storage.node.field_csgov_news_type'
+        - 'config:field.storage.node.field_csgov_notification_dismiss'
+        - 'config:field.storage.node.field_csgov_notification_display'
+        - 'config:field.storage.node.field_csgov_notification_level'
+        - 'config:field.storage.node.field_csgov_notification_link'
+        - 'config:field.storage.node.field_csgov_notification_on'
+        - 'config:field.storage.node.field_csgov_office_hours'
+        - 'config:field.storage.node.field_csgov_person_position'
+        - 'config:field.storage.node.field_csgov_persons'
+        - 'config:field.storage.node.field_csgov_phone'
+        - 'config:field.storage.node.field_csgov_ref_person'
+        - 'config:field.storage.node.field_csgov_reference_mark'
+        - 'config:field.storage.node.field_csgov_surname'
+        - 'config:field.storage.node.field_csgov_teaser'
         - 'config:field.storage.node.layout_builder__layout'

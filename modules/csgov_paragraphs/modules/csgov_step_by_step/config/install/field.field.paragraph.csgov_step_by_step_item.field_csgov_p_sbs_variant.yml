@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_sbs_variant
+    - paragraphs.paragraphs_type.csgov_step_by_step_item
+  module:
+    - options
+id: paragraph.csgov_step_by_step_item.field_csgov_p_sbs_variant
+field_name: field_csgov_p_sbs_variant
+entity_type: paragraph
+bundle: csgov_step_by_step_item
+label: Varianta
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

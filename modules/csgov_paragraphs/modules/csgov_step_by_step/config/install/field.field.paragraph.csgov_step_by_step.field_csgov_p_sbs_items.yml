@@ -1,0 +1,75 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_sbs_items
+    - paragraphs.paragraphs_type.csgov_step_by_step
+    - paragraphs.paragraphs_type.csgov_step_by_step_item
+  module:
+    - entity_reference_revisions
+id: paragraph.csgov_step_by_step.field_csgov_p_sbs_items
+field_name: field_csgov_p_sbs_items
+entity_type: paragraph
+bundle: csgov_step_by_step
+label: Kroky
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csgov_step_by_step_item: csgov_step_by_step_item
+    negate: 0
+    target_bundles_drag_drop:
+      csgov_accordion:
+        weight: 17
+        enabled: false
+      csgov_accordion_item:
+        weight: 18
+        enabled: false
+      csgov_content:
+        weight: 19
+        enabled: false
+      csgov_embed_view:
+        weight: 20
+        enabled: false
+      csgov_gallery:
+        weight: 21
+        enabled: false
+      csgov_hero:
+        weight: 22
+        enabled: false
+      csgov_image:
+        weight: 23
+        enabled: false
+      csgov_image_text:
+        weight: 24
+        enabled: false
+      csgov_infopanel:
+        weight: 25
+        enabled: false
+      csgov_node_list:
+        weight: 26
+        enabled: false
+      csgov_statsbar:
+        weight: 27
+        enabled: false
+      csgov_statsbar_item:
+        weight: 28
+        enabled: false
+      csgov_tile:
+        weight: 29
+        enabled: false
+      csgov_tiles:
+        weight: 30
+        enabled: false
+      csgov_step_by_step:
+        weight: 31
+        enabled: false
+      csgov_step_by_step_item:
+        weight: 32
+        enabled: true
+field_type: entity_reference_revisions

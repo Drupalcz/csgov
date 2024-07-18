@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: native_m
+label: 'Native M'
+effects:
+  d223a0ce-9eaa-472d-89ef-d1d82b407a66:
+    uuid: d223a0ce-9eaa-472d-89ef-d1d82b407a66
+    id: image_scale
+    weight: 1
+    data:
+      width: 943
+      height: null
+      upscale: true

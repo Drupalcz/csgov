@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_attachments
+label: Přílohy
+icon_uuid: null
+icon_default: null
+description: 'Umožňuje vložit na stránku jeden nebo více dokumentů.'
+behavior_plugins: {  }

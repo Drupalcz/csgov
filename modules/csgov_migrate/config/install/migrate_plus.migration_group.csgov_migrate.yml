@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: csgov_migrate
-label: 'CS Gov Migrate'
-description: ''
-source_type: null
-module: null
-shared_configuration: null

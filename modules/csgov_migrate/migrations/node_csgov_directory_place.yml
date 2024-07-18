@@ -1,0 +1,151 @@
+id: csgov_migrate_node_csgov_directory_place
+label: 'Node - Directory Person'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_node
+migration_dependencies:
+  required:
+    - csgov_migrate_media_image
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/node_csgov_directory_place.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: title
+      selector: title
+    - name: created
+      selector: created
+    - name: changed
+      selector: changed
+    - name: promote
+      selector: promote
+    - name: sticky
+      selector: sticky
+    - name: field_csgov_email
+      selector: field_csgov_email
+    - name: field_csgov_mobile
+      selector: field_csgov_mobile
+    - name: field_csgov_phone
+      selector: field_csgov_phone
+    - name: field_csgov_main_image
+      selector: field_csgov_main_image
+    - name: field_csgov_geofield
+      selector: field_csgov_geofield
+    - name: field_csgov_persons
+      selector: field_csgov_persons
+    - name: field_csgov_has_hero
+      selector: field_csgov_has_hero
+    - name: field_csgov_hero
+      selector: field_csgov_hero
+    - name: field_csgov_address
+      selector: field_csgov_address
+
+destination:
+  plugin: entity:node
+  default_bundle: csgov_directory_place
+
+process:
+  uuid: uuid
+  nid:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: node
+    value_key: uuid
+  langcode: langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 0
+  title: title
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+
+  field_csgov_email: field_csgov_email
+
+  field_csgov_mobile: field_csgov_mobile
+
+  field_csgov_phone: field_csgov_phone
+
+  field_csgov_main_image:
+    - plugin: default_value
+      source: field_csgov_main_image
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_image
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_csgov_has_hero: field_csgov_has_hero
+
+  field_csgov_hero:
+    - plugin: callback
+      source: field_csgov_hero
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        - plugin: migration_lookup
+          source: value
+          migration:
+            - csgov_migrate_paragraph_csgov_hero
+          no_stub: true
+    - plugin: callback
+      callable: csgov_migrate_process_reference
+
+  field_csgov_geofield: field_csgov_geofield
+
+  field_csgov_persons:
+    - plugin: callback
+      source: field_csgov_persons
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        target_id:
+          - plugin: migration_lookup
+            source: value
+            migration:
+              - csgov_migrate_node_csgov_directory_person
+            no_stub: true
+
+  field_csgov_address/family_name: field_csgov_address_family_name
+
+  field_csgov_address/given_name: field_csgov_address_given_name
+
+  field_csgov_address/additional_name: field_csgov_address_additional_name
+
+  field_csgov_address/address_line1: field_csgov_address_address_line1
+
+  field_csgov_address/address_line2: field_csgov_address_address_line2
+
+  field_csgov_address/address_line3: field_csgov_address_address_line3
+
+  field_csgov_address/administrative_area: field_csgov_address_administrative_area
+
+  field_csgov_address/country_code: field_csgov_address_country_code
+
+  field_csgov_address/dependent_locality: field_csgov_address_dependent_locality
+
+  field_csgov_address/locality: field_csgov_address_locality
+
+  field_csgov_address/organization: field_csgov_address_organization
+
+  field_csgov_address/postal_code: field_csgov_address_postal_code
+
+  field_csgov_address/sorting_code: field_csgov_address_sorting_code

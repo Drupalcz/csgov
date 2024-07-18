@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.csgov_native
+label: Native
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,23 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: profiles/contrib/csgov/themes/csgov_admin/logo.svg
+favicon:
+  use_default: 0
+  path: profiles/contrib/csgov/themes/csgov_admin/favicon.ico
+  mimetype: image/vnd.microsoft.icon
+enable_darkmode: auto
+preset_accent_color: blue
+accent_color: ''
+preset_focus_color: gin
+focus_color: ''
+high_contrast_mode: 0
+classic_toolbar: horizontal
+secondary_toolbar_frontend: 1
+layout_density: small
+show_description_toggle: 1
+show_user_theme_settings: 0

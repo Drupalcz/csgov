@@ -1,5 +1,0 @@
-name: CS Gov Calendar Item
-type: module
-description: Provides custom calendar item formatter.
-package: CS Gov
-core_version_requirement: ^8 || ^9

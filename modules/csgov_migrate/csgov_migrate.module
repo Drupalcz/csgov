@@ -2,7 +2,7 @@
 
 /**
  * @file
- * CS Gov Migrate module functions.
+ * CSGOV Migrate module functions.
  */
 
 use Drupal\Core\Access\AccessResult;
@@ -18,31 +18,42 @@ use Drupal\views\Views;
 function _csgov_migrate_get_migrations() {
   return [
     'taxonomy' => [
-      'board_type',
-      'media_tags',
-      'news_type',
+      'csgov_board_type',
+      'csgov_tags',
+      'csgov_news_type',
+      'csgov_event_type',
     ],
     'file' => [NULL],
     'media' => [
-      'file',
+      'document',
       'image',
+      'csgov_icon',
     ],
     'paragraph' => [
-      'accordion',
-      'accordion_group',
-      'attachments',
-      'content',
-      'item',
-      'item_list',
-      'node_list',
+      'csgov_hero',
+      'csgov_content',
+      'csgov_accordion_item',
+      'csgov_accordion',
+      'csgov_node_list',
+      'csgov_tile',
+      'csgov_tiles',
+      'csgov_infopanel',
+      'csgov_statsbar_item',
+      'csgov_statsbar',
+      'csgov_gallery',
+      // 'csgov_embed_view',
     ],
     'menu' => [NULL],
     'node' => [
-      'page',
-      'person',
-      'board',
-      'event',
-      'news',
+      'csgov_homepage',
+      'csgov_landing_page',
+      'csgov_directory_person',
+      'csgov_directory_place',
+      'csgov_event',
+      'csgov_board',
+      'csgov_news',
+      'csgov_page',
+      'csgov_notification',
     ],
   ];
 }
@@ -72,7 +83,7 @@ function _csgov_migrate_get_batch($direction) {
 
   // Append migrations with recursive references to run again.
   if ($direction === 'import') {
-    $operations[] = [$function, ['paragraph', 'node_list']];
+    $operations[] = [$function, ['paragraph', 'csgov_node_list']];
   }
 
   return [

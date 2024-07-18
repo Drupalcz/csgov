@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: node.csgov_event_calendar
+label: 'Kalendář akcí'
+description: ''
+targetEntityType: node
+cache: true

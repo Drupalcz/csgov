@@ -1,0 +1,95 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_hero.field_csgov_p_background
+    - field.field.paragraph.csgov_hero.field_csgov_p_has_search_box
+    - field.field.paragraph.csgov_hero.field_csgov_p_image
+    - field.field.paragraph.csgov_hero.field_csgov_p_search_label
+    - field.field.paragraph.csgov_hero.field_csgov_p_search_placeholder
+    - field.field.paragraph.csgov_hero.field_csgov_p_subtitle
+    - field.field.paragraph.csgov_hero.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_hero
+  module:
+    - field_group
+    - media_library
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_csgov_p_background
+        - field_csgov_p_has_search_box
+        - field_csgov_p_search_placeholder
+        - field_csgov_p_search_label
+      label: Nastavení
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.csgov_hero.default
+targetEntityType: paragraph
+bundle: csgov_hero
+mode: default
+content:
+  field_csgov_p_background:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csgov_p_has_search_box:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_csgov_p_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_csgov_p_search_label:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_search_placeholder:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

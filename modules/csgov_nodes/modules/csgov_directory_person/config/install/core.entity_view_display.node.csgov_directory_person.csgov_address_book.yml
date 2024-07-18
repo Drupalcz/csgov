@@ -1,0 +1,93 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.csgov_address_book
+    - field.field.node.csgov_directory_person.field_csgov_email
+    - field.field.node.csgov_directory_person.field_csgov_main_image
+    - field.field.node.csgov_directory_person.field_csgov_mobile
+    - field.field.node.csgov_directory_person.field_csgov_name
+    - field.field.node.csgov_directory_person.field_csgov_person_position
+    - field.field.node.csgov_directory_person.field_csgov_phone
+    - field.field.node.csgov_directory_person.field_csgov_surname
+    - node.type.csgov_directory_person
+  module:
+    - layout_builder
+    - nomarkup
+    - telephone
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.csgov_directory_person.csgov_address_book
+targetEntityType: node
+bundle: csgov_directory_person
+mode: csgov_address_book
+content:
+  field_csgov_email:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_address_book
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 3
+    region: content
+  field_csgov_mobile:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_person_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
+    region: content
+  field_csgov_phone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden:
+  field_csgov_name: true
+  field_csgov_surname: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_tile
+label: Dlaždice
+icon_uuid: null
+icon_default: null
+description: 'Slouží k přidávání jednotlivých Dlaždic v rámci Skupiny dlaždic.'
+behavior_plugins: {  }

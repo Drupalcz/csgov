@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_reference_mark
+    - node.type.csgov_board
+id: node.csgov_board.field_csgov_reference_mark
+field_name: field_csgov_reference_mark
+entity_type: node
+bundle: csgov_board
+label: 'Jednací číslo'
+description: 'Slouží k přidání identifikátoru dané položky, pokud takový existuje.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

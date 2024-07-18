@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_csgov_document_pages
+    - media.type.document
+id: media.document.field_csgov_document_pages
+field_name: field_csgov_document_pages
+entity_type: media
+bundle: document
+label: 'Počet stran'
+description: 'Vyplněný počet stran se zobrazí jako dodatečná informace u dokumentu ke stažení.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

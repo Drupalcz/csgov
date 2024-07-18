@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - node
-id: node.teaser_small
-label: 'Úvodník malý'
-targetEntityType: node
-cache: true

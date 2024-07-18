@@ -1,0 +1,20 @@
+name: 'CSGOV nodes'
+type: module
+description: 'Adds nodes for CSGOV'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - drupal:auto_entitylabel
+  - drupal:field_group
+  - drupal:address
+  - drupal:leaflet
+  - drupal:office_hours
+  - drupal:paragraphs
+  - drupal:paragraphs_ee
+  - drupal:paragraphs_features
+  - drupal:smart_date_recur
+  - drupal:entity_reference_revisions
+  - drupal:geofield
+  - drupal:taxonomy
+  - drupal:search_api
+  - drupal:search_api_db

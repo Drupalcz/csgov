@@ -1,0 +1,16 @@
+maintenance-page:
+  version: VERSION
+  css:
+    theme:
+      css/theme/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - claro/global-styling
+
+install-page:
+  version: VERSION
+  css:
+    theme:
+      css/theme/install-page.css: {}
+  dependencies:
+    - claro/maintenance-page

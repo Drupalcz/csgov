@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_notification_display
+    - node.type.csgov_notification
+  module:
+    - options
+id: node.csgov_notification.field_csgov_notification_display
+field_name: field_csgov_notification_display
+entity_type: node
+bundle: csgov_notification
+label: Zobrazit
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

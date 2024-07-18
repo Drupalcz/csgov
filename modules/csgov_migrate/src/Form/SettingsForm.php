@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides configuration form for CS Gov Migrate module.
+ * Provides configuration form for CSGOV Migrate module.
  */
 class SettingsForm extends ConfigFormBase {
 

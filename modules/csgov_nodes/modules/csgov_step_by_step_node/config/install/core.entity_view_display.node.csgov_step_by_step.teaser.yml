@@ -1,0 +1,37 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.csgov_step_by_step.field_csgov_content_components
+    - field.field.node.csgov_step_by_step.field_csgov_icon
+    - field.field.node.csgov_step_by_step.field_csgov_ref_person
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_annotation
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_parent
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_step_label
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_variant
+    - field.field.node.csgov_step_by_step.field_csgov_teaser
+    - node.type.csgov_step_by_step
+  module:
+    - user
+id: node.csgov_step_by_step.teaser
+targetEntityType: node
+bundle: csgov_step_by_step
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_icon: true
+  field_csgov_ref_person: true
+  field_csgov_sbs_annotation: true
+  field_csgov_sbs_parent: true
+  field_csgov_sbs_step_label: true
+  field_csgov_sbs_variant: true
+  field_csgov_teaser: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: native_2xl_2x
+label: 'Native 2XL – 2X'
+effects:
+  c96a6172-5713-4b5c-ab12-fe821d715ddb:
+    uuid: c96a6172-5713-4b5c-ab12-fe821d715ddb
+    id: image_scale
+    weight: 1
+    data:
+      width: 3200
+      height: null
+      upscale: true
+  ad88bb2e-9122-43b0-aa76-8b8a463e8a27:
+    uuid: ad88bb2e-9122-43b0-aa76-8b8a463e8a27
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

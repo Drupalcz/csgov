@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - node
-id: node.card
-label: Karta
-targetEntityType: node
-cache: true

@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Infopanel'
+type: module
+description: 'Add Infopanel paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

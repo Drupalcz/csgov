@@ -1,0 +1,104 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_tiles.field_csgov_heading_top
+    - field.field.paragraph.csgov_tiles.field_csgov_p_background
+    - field.field.paragraph.csgov_tiles.field_csgov_p_columns
+    - field.field.paragraph.csgov_tiles.field_csgov_p_no_border
+    - field.field.paragraph.csgov_tiles.field_csgov_p_subtitle
+    - field.field.paragraph.csgov_tiles.field_csgov_p_tiles
+    - field.field.paragraph.csgov_tiles.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_tiles
+  module:
+    - entity_class_formatter
+    - entity_reference_revisions
+    - nomarkup
+id: paragraph.csgov_tiles.default
+targetEntityType: paragraph
+bundle: csgov_tiles
+mode: default
+content:
+  field_csgov_heading_top:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
+    region: content
+  field_csgov_p_background:
+    type: entity_class_formatter
+    label: hidden
+    settings:
+      prefix: background--
+      suffix: ''
+      attr: ''
+      field: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 5
+    region: content
+  field_csgov_p_no_border:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 3
+    region: content
+  field_csgov_p_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_csgov_p_tiles:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_p_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_p_columns: true
+  search_api_excerpt: true

@@ -1,0 +1,105 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.csgov_card
+    - field.field.node.csgov_event.field_csgov_address
+    - field.field.node.csgov_event.field_csgov_content_components
+    - field.field.node.csgov_event.field_csgov_event_date
+    - field.field.node.csgov_event.field_csgov_event_type
+    - field.field.node.csgov_event.field_csgov_has_hero
+    - field.field.node.csgov_event.field_csgov_hero
+    - field.field.node.csgov_event.field_csgov_main_image
+    - field.field.node.csgov_event.field_csgov_main_image_caption
+    - field.field.node.csgov_event.field_csgov_teaser
+    - node.type.csgov_event
+  module:
+    - address
+    - layout_builder
+    - nomarkup
+    - smart_date_recur
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.csgov_event.csgov_card
+targetEntityType: node
+bundle: csgov_event
+mode: csgov_card
+content:
+  field_csgov_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 3
+    region: content
+  field_csgov_event_date:
+    type: smartdate_recurring
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: compact
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      past_display: 0
+      upcoming_display: 0
+      show_next: false
+      parts:
+        start: start
+        end: end
+        duration: 0
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: '2'
+        suffix: h
+      localize: 0
+      current_upcoming: 0
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_landscape
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 0
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_event_type: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_main_image_caption: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

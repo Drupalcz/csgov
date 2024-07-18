@@ -4,24 +4,16 @@ Basic Drupal distribution created to support needs of Czech and Slovak governmen
 
 ## How to create new project in a minute.
 
-We recommend to use Lando for local environment. If you don't want to use it, you should be good with any LAMP stack
-complying with Drupal 9 requirements. You also need to have composer (composer 2 supported) and PHP 8.1 on your local machine.
+You should be good with any LAMP stack complying with Drupal 10 requirements. You also need to have composer 2 and at least PHP 8.1 on your local machine.
 
 - Create project using composer:
 ```
-$ composer create-project drupalcz/csgov-project:"1.0.0" MY_PROJECT
+$ composer create-project drupalcz/csgov-project:"2.0.0" MY_PROJECT
 ```
-
-- Start lando:
-```
-$ cd MY_PROJECT
-$ lando start
-```
-In the output you find URLs for your website.
 
 - Install site:
 ```
-$ lando drush site:install csgov --db-url="mysql://drupal9:drupal9@database/drupal9" -y
+$ drush site:install csgov
 ```
 In the output you find admin login and password.
 

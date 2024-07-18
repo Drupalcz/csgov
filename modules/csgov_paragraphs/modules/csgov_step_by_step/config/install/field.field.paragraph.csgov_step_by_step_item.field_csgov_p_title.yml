@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_step_by_step_item
+id: paragraph.csgov_step_by_step_item.field_csgov_p_title
+field_name: field_csgov_p_title
+entity_type: paragraph
+bundle: csgov_step_by_step_item
+label: Nadpis
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

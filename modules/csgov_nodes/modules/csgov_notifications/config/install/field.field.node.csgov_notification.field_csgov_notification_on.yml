@@ -1,0 +1,42 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_notification_on
+    - node.type.csgov_board
+    - node.type.csgov_directory_person
+    - node.type.csgov_directory_place
+    - node.type.csgov_event
+    - node.type.csgov_homepage
+    - node.type.csgov_landing_page
+    - node.type.csgov_news
+    - node.type.csgov_notification
+    - node.type.csgov_page
+id: node.csgov_notification.field_csgov_notification_on
+field_name: field_csgov_notification_on
+entity_type: node
+bundle: csgov_notification
+label: 'Zobrazit na'
+description: 'Vyberte stránky, na kterých se má notifikace zobrazovat.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_directory_place: csgov_directory_place
+      csgov_directory_person: csgov_directory_person
+      csgov_event: csgov_event
+      csgov_homepage: csgov_homepage
+      csgov_landing_page: csgov_landing_page
+      csgov_news: csgov_news
+      csgov_page: csgov_page
+      csgov_board: csgov_board
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: csgov_page
+field_type: entity_reference

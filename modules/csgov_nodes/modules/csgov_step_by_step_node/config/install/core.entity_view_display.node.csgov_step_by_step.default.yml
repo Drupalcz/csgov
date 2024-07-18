@@ -1,0 +1,99 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.csgov_step_by_step.field_csgov_content_components
+    - field.field.node.csgov_step_by_step.field_csgov_icon
+    - field.field.node.csgov_step_by_step.field_csgov_ref_person
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_annotation
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_parent
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_step_label
+    - field.field.node.csgov_step_by_step.field_csgov_sbs_variant
+    - field.field.node.csgov_step_by_step.field_csgov_teaser
+    - node.type.csgov_step_by_step
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - options
+    - user
+id: node.csgov_step_by_step.default
+targetEntityType: node
+bundle: csgov_step_by_step
+mode: default
+content:
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_csgov_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 1
+    region: content
+  field_csgov_ref_person:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_csgov_sbs_annotation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_csgov_sbs_parent:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_csgov_sbs_step_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_csgov_sbs_variant:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

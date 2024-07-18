@@ -1,5 +1,0 @@
-csgov.admin_config_csgov:
-  title: 'CS Gov'
-  route_name: csgov.admin_config_csgov
-  parent: system.admin_config
-  weight: -50

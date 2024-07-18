@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - node
-id: node.tile
-label: Dlaždice
-targetEntityType: node
-cache: true

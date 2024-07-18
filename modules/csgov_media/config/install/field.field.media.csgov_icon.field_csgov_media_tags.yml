@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_csgov_media_tags
+    - media.type.csgov_icon
+    - taxonomy.vocabulary.csgov_tags
+id: media.csgov_icon.field_csgov_media_tags
+field_name: field_csgov_media_tags
+entity_type: media
+bundle: csgov_icon
+label: Tagy
+description: "Začněte psát název štítku (tagu), pokud již existuje systém vám jen našeptá. Pokud neexistuje, systém štítek vytvoří.\r\nVíce tagů oddělujte čárkou. Štítky slouží primárně pro organizaci v knihovně médií."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      csgov_tags: csgov_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

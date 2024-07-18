@@ -1,0 +1,9 @@
+status: 1
+pattern: '[node:field_csgov_name] [node:field_csgov_surname]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.csgov_directory_person

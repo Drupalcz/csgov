@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: compact
+label: Kompaktní
+date_format: 'j. M Y'
+time_format: 'G:i'
+time_hour_format: 'G:i'
+allday_label: ''
+separator: –
+join: ' | '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

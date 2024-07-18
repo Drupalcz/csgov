@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_accordion_item
+label: 'Položka akordionu'
+icon_uuid: null
+icon_default: null
+description: 'Slouží k přidávání rozbalitelných informací.'
+behavior_plugins: {  }

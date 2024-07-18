@@ -1,0 +1,18 @@
+.toolbar .toolbar-bar .toolbar-menu-administration .toolbar-icon.toolbar-icon-csgov-admin-improvements-csgov::before {
+  -webkit-mask-image: url(../icons/csgov.svg);
+  mask-image: url(../icons/csgov.svg);
+}
+
+[dir="ltr"] .gin--horizontal-toolbar .toolbar .toolbar-bar .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
+[dir="ltr"] .gin--horizontal-toolbar .toolbar .toolbar-bar .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon:not(.toolbar-handle) {
+  padding-right: 1em;
+}
+
+[dir="ltr"] .gin--horizontal-toolbar #toolbar-administration .toolbar-bar .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active {
+  background-color: #2362a2;
+  color: #FFFFFF;
+}
+
+[dir="ltr"] .gin--horizontal-toolbar #toolbar-administration .toolbar-bar .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active:before {
+  background-color: #FFFFFF;
+}

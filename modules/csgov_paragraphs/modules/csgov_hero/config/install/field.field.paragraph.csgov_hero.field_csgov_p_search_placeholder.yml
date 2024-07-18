@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_search_placeholder
+    - paragraphs.paragraphs_type.csgov_hero
+id: paragraph.csgov_hero.field_csgov_p_search_placeholder
+field_name: field_csgov_p_search_placeholder
+entity_type: paragraph
+bundle: csgov_hero
+label: 'Zástupný text pro vyhledávací pole'
+description: "Zástupný text se zobrazuje ve vyhledávacím poli, předtím než začne uživatel psát. Nenahrazuje popisek pole.\r\nPokud nechcete zástupný text použít, nechte pole prázdné."
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Hledat na celém webu'
+default_value_callback: ''
+settings: {  }
+field_type: string

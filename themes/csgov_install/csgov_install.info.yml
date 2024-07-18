@@ -1,0 +1,18 @@
+# This theme is for CSGOV distribution install only
+name: 'CSGOV Install'
+type: theme
+base theme: claro
+description: 'Warning: Used for CSGOV installation only.'
+core_version_requirement: ^10.1
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

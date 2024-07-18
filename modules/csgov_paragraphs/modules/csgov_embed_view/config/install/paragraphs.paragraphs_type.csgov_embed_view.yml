@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_embed_view
+label: 'Vložit seznam obsahu'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

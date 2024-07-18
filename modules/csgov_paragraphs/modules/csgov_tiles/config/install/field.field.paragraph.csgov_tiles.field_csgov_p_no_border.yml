@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_no_border
+    - paragraphs.paragraphs_type.csgov_tiles
+id: paragraph.csgov_tiles.field_csgov_p_no_border
+field_name: field_csgov_p_no_border
+entity_type: paragraph
+bundle: csgov_tiles
+label: 'Bez ohraničení'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Zapnuto
+  off_label: Vypnuto
+field_type: boolean

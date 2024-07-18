@@ -1,0 +1,28 @@
+name: CSGOV Admin Theme Extras
+type: theme
+base theme: gin
+tags: sub-theme
+version: 1.x
+
+core_version_requirement: ^10.1
+
+libraries:
+  - csgov_admin/base
+
+libraries-extend:
+  core/drupal.ajax:
+    - gov_cz/throbber
+
+# Regions
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

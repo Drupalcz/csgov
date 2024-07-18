@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_icon
+    - media.type.csgov_icon
+    - paragraphs.paragraphs_type.csgov_step_by_step_item
+id: paragraph.csgov_step_by_step_item.field_csgov_p_icon
+field_name: field_csgov_p_icon
+entity_type: paragraph
+bundle: csgov_step_by_step_item
+label: Ikona
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      csgov_icon: csgov_icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

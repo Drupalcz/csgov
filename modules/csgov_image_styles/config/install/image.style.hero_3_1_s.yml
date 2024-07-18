@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_3_1_s
+label: 'Hero 3:1 S'
+effects:
+  380f3cb2-8454-49b5-a0bb-778adf35f007:
+    uuid: 380f3cb2-8454-49b5-a0bb-778adf35f007
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 768
+      height: 256
+      crop_type: focal_point

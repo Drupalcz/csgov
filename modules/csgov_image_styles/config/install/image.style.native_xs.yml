@@ -1,0 +1,14 @@
+langcode: cs
+status: true
+dependencies: {  }
+name: native_xs
+label: 'Native XS'
+effects:
+  41feb5a7-5a5f-432f-a6f4-ef53ae096713:
+    uuid: 41feb5a7-5a5f-432f-a6f4-ef53ae096713
+    id: image_scale
+    weight: 1
+    data:
+      width: 576
+      height: null
+      upscale: true

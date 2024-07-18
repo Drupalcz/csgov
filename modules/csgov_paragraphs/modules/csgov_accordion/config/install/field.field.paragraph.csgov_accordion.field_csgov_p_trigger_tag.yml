@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_trigger_tag
+    - paragraphs.paragraphs_type.csgov_accordion
+  module:
+    - options
+id: paragraph.csgov_accordion.field_csgov_p_trigger_tag
+field_name: field_csgov_p_trigger_tag
+entity_type: paragraph
+bundle: csgov_accordion
+label: 'Značka pro tlačítko'
+description: "Umožňuje výběr vhodné HTML značky pro nadpis položky akordionu.\r\nVýchozí: H3."
+required: true
+translatable: false
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

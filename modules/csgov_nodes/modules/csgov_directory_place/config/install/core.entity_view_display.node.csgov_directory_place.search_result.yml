@@ -1,0 +1,125 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.csgov_directory_place.field_csgov_address
+    - field.field.node.csgov_directory_place.field_csgov_content_components
+    - field.field.node.csgov_directory_place.field_csgov_email
+    - field.field.node.csgov_directory_place.field_csgov_geofield
+    - field.field.node.csgov_directory_place.field_csgov_has_hero
+    - field.field.node.csgov_directory_place.field_csgov_hero
+    - field.field.node.csgov_directory_place.field_csgov_main_image
+    - field.field.node.csgov_directory_place.field_csgov_mobile
+    - field.field.node.csgov_directory_place.field_csgov_office_hours
+    - field.field.node.csgov_directory_place.field_csgov_persons
+    - field.field.node.csgov_directory_place.field_csgov_phone
+    - field.field.node.csgov_directory_place.field_csgov_web
+    - node.type.csgov_directory_place
+  module:
+    - layout_builder
+    - nomarkup
+    - office_hours
+    - telephone
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.csgov_directory_place.search_result
+targetEntityType: node
+bundle: csgov_directory_place
+mode: search_result
+content:
+  field_csgov_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: csgov_address_book
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+    weight: 3
+    region: content
+  field_csgov_mobile:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_office_hours:
+    type: office_hours
+    label: hidden
+    settings:
+      day_format: long
+      time_format: G
+      compress: false
+      grouped: true
+      show_closed: current
+      closed_format: Closed
+      all_day_format: 'All day open'
+      separator:
+        days: '<br />'
+        grouped_days: –
+        day_hours: ': '
+        hours_hours: –
+        more_hours: ', '
+      current_status:
+        position: ''
+        open_text: 'Currently open!'
+        closed_text: 'Currently closed'
+      exceptions:
+        title: 'Exception hours'
+        restrict_exceptions_to_num_days: 7
+        date_format: long
+        all_day_format: 'All day open'
+      timezone_field: ''
+      office_hours_first_day: ''
+      schema:
+        enabled: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 4
+    region: content
+  field_csgov_phone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_address: true
+  field_csgov_content_components: true
+  field_csgov_geofield: true
+  field_csgov_has_hero: true
+  field_csgov_hero: true
+  field_csgov_persons: true
+  field_csgov_web: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

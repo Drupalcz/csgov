@@ -21,7 +21,7 @@ class SettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $install_state = NULL) {
-    $form['#title'] = 'CS Gov settings';
+    $form['#title'] = 'CSGOV settings';
 
     $form['migrate'] = [
       '#type' => 'fieldgroup',

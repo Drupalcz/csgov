@@ -1,0 +1,29 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_view_mode
+    - paragraphs.paragraphs_type.csgov_node_list
+  module:
+    - entity_reference_display
+id: paragraph.csgov_node_list.field_csgov_p_view_mode
+field_name: field_csgov_p_view_mode
+entity_type: paragraph
+bundle: csgov_node_list
+label: 'Typ zobrazení'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: teaser
+default_value_callback: ''
+settings:
+  exclude:
+    csgov_card: csgov_card
+    csgov_address_book: csgov_address_book
+    csgov_event_calendar: csgov_event_calendar
+    calendar_item: calendar_item
+    teaser: teaser
+  negate: true
+field_type: entity_reference_display

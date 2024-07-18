@@ -1,0 +1,37 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_viewreference
+    - paragraphs.paragraphs_type.csgov_embed_view
+  module:
+    - viewsreference
+id: paragraph.csgov_embed_view.field_csgov_p_viewreference
+field_name: field_csgov_p_viewreference
+entity_type: paragraph
+bundle: csgov_embed_view
+label: 'Seznam obsahu'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  plugin_types:
+    embed: embed
+    block: block
+  preselect_views:
+    addresbook_person: addresbook_person
+    addresbook_place: addresbook_place
+    csgov_board: csgov_board
+    csgov_event: csgov_event
+    csgov_news: csgov_news
+  enabled_settings:
+    argument: argument
+    pager: pager
+    limit: limit
+field_type: viewsreference

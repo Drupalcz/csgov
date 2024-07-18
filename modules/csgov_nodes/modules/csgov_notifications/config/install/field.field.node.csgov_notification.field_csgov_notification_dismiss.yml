@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_notification_dismiss
+    - node.type.csgov_notification
+  module:
+    - options
+id: node.csgov_notification.field_csgov_notification_dismiss
+field_name: field_csgov_notification_dismiss
+entity_type: node
+bundle: csgov_notification
+label: 'Zavřít notifikaci'
+description: "Kontrolujte, kdy se notifikace uživateli znovu zobrazí. Zavření funguje zvlášť pro každý prohlížeč, na každém zařízení každého uživatele.\r\nNikdy – notifikaci nelze schovat, používejte jen ve výjimečných situacích."
+required: true
+translatable: false
+default_value:
+  -
+    value: forever
+default_value_callback: ''
+settings: {  }
+field_type: list_string

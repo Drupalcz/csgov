@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Statsbar'
+type: module
+description: 'Add Statsbar paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

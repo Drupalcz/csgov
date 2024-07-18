@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: date_time_cz
-label: 'České datum s časem'
-locked: false
-pattern: 'j. n. Y – H:i'

@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.csgov_landscape
+label: Landscape
+description: ''
+targetEntityType: media
+cache: true

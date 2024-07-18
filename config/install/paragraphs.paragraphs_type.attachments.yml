@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-id: attachments
-label: Přílohy
-icon_uuid: null
-icon_default: null
-description: 'Umožňuje nahrávání jedné nebo více příloh.'
-behavior_plugins: {  }

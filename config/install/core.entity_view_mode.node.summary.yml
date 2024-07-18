@@ -1,9 +1,0 @@
-langcode: cs
-status: true
-dependencies:
-  module:
-    - node
-id: node.summary
-label: Souhrn
-targetEntityType: node
-cache: true

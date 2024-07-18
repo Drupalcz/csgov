@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_3_1_xs_2x
+label: 'Hero 3:1 XS – 2X'
+effects:
+  eb1fe0fc-0e67-4ad8-a27f-5478f862a939:
+    uuid: eb1fe0fc-0e67-4ad8-a27f-5478f862a939
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 1200
+      height: 400
+      crop_type: focal_point
+  8c72cc4d-5e93-4bd8-83d8-bc418d4246d3:
+    uuid: 8c72cc4d-5e93-4bd8-83d8-bc418d4246d3
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

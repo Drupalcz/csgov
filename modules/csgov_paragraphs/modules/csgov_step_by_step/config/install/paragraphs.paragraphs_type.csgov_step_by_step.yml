@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_step_by_step
+label: 'Krok za krokem'
+icon_uuid: null
+icon_default: null
+description: 'Umožňuje přidat návody s jednotlivými kroky.'
+behavior_plugins: {  }

@@ -1,0 +1,102 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.csgov_page.field_csgov_content_components
+    - field.field.node.csgov_page.field_csgov_has_hero
+    - field.field.node.csgov_page.field_csgov_hero
+    - field.field.node.csgov_page.field_csgov_links
+    - field.field.node.csgov_page.field_csgov_links_title
+    - field.field.node.csgov_page.field_csgov_main_image
+    - field.field.node.csgov_page.field_csgov_ref_person
+    - field.field.node.csgov_page.field_csgov_teaser
+    - node.type.csgov_page
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+id: node.csgov_page.default
+targetEntityType: node
+bundle: csgov_page
+mode: default
+content:
+  field_csgov_content_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_csgov_has_hero:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_csgov_hero:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_csgov_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_csgov_links_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_csgov_main_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_csgov_ref_person:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_csgov_teaser:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

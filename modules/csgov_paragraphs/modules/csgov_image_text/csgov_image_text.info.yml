@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Image and Text'
+type: module
+description: 'Add Image and Text paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

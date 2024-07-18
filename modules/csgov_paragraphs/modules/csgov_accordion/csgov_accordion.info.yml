@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Accordion'
+type: module
+description: 'Add Accordion paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

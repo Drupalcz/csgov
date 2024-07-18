@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_sbs_noprefix
+    - node.type.csgov_step_by_step_overview
+id: node.csgov_step_by_step_overview.field_csgov_sbs_noprefix
+field_name: field_csgov_sbs_noprefix
+entity_type: node
+bundle: csgov_step_by_step_overview
+label: 'Nezobrazovat ikonu ani číslo'
+description: 'Zaškrtnutím tohoto pole se pro danou skupinu kroků nebudou zobrazovat ani pořadvá čísla, ani případně nahrané ikony.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Zapnuto
+  off_label: Vypnuto
+field_type: boolean

@@ -1,7 +1,0 @@
-langcode: cs
-status: true
-dependencies: {  }
-name: 'Typ novinky'
-vid: news_type
-description: ''
-weight: 0

@@ -1,0 +1,9 @@
+name: 'CSGOV users'
+type: module
+description: 'Add settings and user roles permissions'
+package: CSGOV
+core_version_requirement: ^10.1
+dependencies:
+  - drupal:environment_indicator
+  - drupal:override_node_options
+  - drupal:quick_node_clone

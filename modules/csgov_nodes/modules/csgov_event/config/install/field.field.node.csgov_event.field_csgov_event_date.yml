@@ -1,0 +1,32 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_event_date
+    - node.type.csgov_event
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: true
+    month_limit: 12
+id: node.csgov_event.field_csgov_event_date
+field_name: field_csgov_event_date
+entity_type: node
+bundle: csgov_event
+label: Datum
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hodina\r\n90\r\n120|2 hodiny\r\ncustom"
+    default_date_type: now
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

@@ -17,6 +17,7 @@ use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
  *     "entity_reference_revisions",
  *     "file",
  *     "image",
+ *     "svg_image_field",
  *   }
  * )
  */

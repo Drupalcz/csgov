@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: native_l_2x
+label: 'Native L – 2X'
+effects:
+  0249bded-7547-49ab-b241-4d6f8b6973f6:
+    uuid: 0249bded-7547-49ab-b241-4d6f8b6973f6
+    id: image_scale
+    weight: 1
+    data:
+      width: 2400
+      height: null
+      upscale: true
+  b80b3bcc-ae09-4126-8c1d-af47b9390cf8:
+    uuid: b80b3bcc-ae09-4126-8c1d-af47b9390cf8
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 65

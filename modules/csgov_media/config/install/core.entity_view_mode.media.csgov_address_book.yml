@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.csgov_address_book
+label: 'Address book'
+description: ''
+targetEntityType: media
+cache: true

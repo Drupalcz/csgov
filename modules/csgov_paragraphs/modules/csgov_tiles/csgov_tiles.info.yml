@@ -1,0 +1,5 @@
+name: 'CSGOV paragraph: Tiles'
+type: module
+description: 'Add Tiles paragraph for CSGOV.'
+package: CSGOV
+core_version_requirement: ^10

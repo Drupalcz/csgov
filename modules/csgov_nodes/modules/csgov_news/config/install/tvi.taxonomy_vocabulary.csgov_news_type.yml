@@ -1,0 +1,5 @@
+enable_override: true
+view: csgov_news
+view_display: block_1
+inherit_settings: true
+pass_arguments: false

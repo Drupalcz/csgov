@@ -1,0 +1,29 @@
+<?php
+/**
+ * Implements hook_install().
+ */
+function csgov_paragraphs_install() {
+  // List of modules for installation.
+  $submodules = [
+    'csgov_attachments',
+    'csgov_accordion',
+    'csgov_content',
+    'csgov_embed_view',
+    'csgov_hero',
+    'csgov_image',
+    'csgov_image_text',
+    'csgov_infopanel',
+    'csgov_node_list',
+    'csgov_statsbar',
+    'csgov_tiles',
+    'csgov_gallery'
+  ];
+
+  foreach ($submodules as $module) {
+    // Check if module is already installed.
+    if (!\Drupal::moduleHandler()->moduleExists($module)) {
+      // Install the module.
+      \Drupal::service('module_installer')->install([$module], TRUE);
+    }
+  }
+}

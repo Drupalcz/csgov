@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_iat_position
+    - paragraphs.paragraphs_type.csgov_image_text
+  module:
+    - options
+id: paragraph.csgov_image_text.field_csgov_p_iat_position
+field_name: field_csgov_p_iat_position
+entity_type: paragraph
+bundle: csgov_image_text
+label: 'Pozice obrázku'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image_left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

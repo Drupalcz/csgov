@@ -1,0 +1,16 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_3_1_2xs
+label: 'Hero 3:1 2XS'
+effects:
+  b20ee18b-8425-4aa6-8451-00ec4f521232:
+    uuid: b20ee18b-8425-4aa6-8451-00ec4f521232
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      width: 320
+      height: 107
+      crop_type: focal_point

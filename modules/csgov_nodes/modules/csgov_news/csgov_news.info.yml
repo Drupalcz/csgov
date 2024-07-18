@@ -1,0 +1,9 @@
+name: 'CSGOV node: News'
+type: module
+description: 'Adds config and views for News content type'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - csgov_config
+  - csgov_nodes
+  - csgov_directory_person

@@ -1,0 +1,8 @@
+name: 'CSGOV node: Homepage'
+type: module
+description: 'Adds config and views for Homepage content type'
+package: CSGOV
+core_version_requirement: ^10
+dependencies:
+  - csgov_config
+  - csgov_nodes

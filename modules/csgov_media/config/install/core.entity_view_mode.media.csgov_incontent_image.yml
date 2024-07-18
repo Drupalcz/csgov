@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.csgov_incontent_image
+label: 'InContent image'
+description: ''
+targetEntityType: media
+cache: true

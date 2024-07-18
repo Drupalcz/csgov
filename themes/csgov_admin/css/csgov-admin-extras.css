@@ -1,0 +1,37 @@
+.csgov-admin .field-multiple-table thead:after {
+  background: transparent;
+}
+
+.csgov-admin .field--name-field-csgov-hero thead,
+.csgov-admin .tabledrag-toggle-weight,
+.csgov-admin .paragraphs-add-suffix {
+  display: none;
+}
+
+.csgov-admin .field-multiple-table thead .field-label {
+  padding-inline: 0;
+}
+
+.js .csgov-admin .paragraph-type-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.js .csgov-admin .paragraph-top {
+  align-items: center;
+}
+
+.csgov-admin .view .form-item--csgov-media-tags {
+  max-width: 300px;
+}
+
+.csgov-admin .smartdate--time-inline {
+  align-items: start;
+}
+
+.csgov-admin .smartdate--time-inline .form-datetime-wrapper .form-items-inline,
+.csgov-admin .smartdate--time-inline div.time-start,
+.csgov-admin .smartdate--time-inline div.time-end {
+  align-items: start;
+  gap: 1rem;
+}

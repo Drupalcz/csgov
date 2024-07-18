@@ -1,0 +1,23 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: csgov_structure_pages
+label: 'Strukturální stránky'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  44a02f31-6238-4830-a1d4-100bf2e84f60:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 44a02f31-6238-4830-a1d4-100bf2e84f60
+    context_mapping:
+      node: node
+    bundles:
+      csgov_landing_page: csgov_landing_page
+      csgov_page: csgov_page
+      csgov_step_by_step_overview: csgov_step_by_step_overview
+selection_logic: and
+weight: -6
+relationships: {  }

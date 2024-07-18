@@ -1,0 +1,91 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_statsbar.field_csgov_p_stats_items
+    - field.field.paragraph.csgov_statsbar.field_csgov_p_stats_position
+    - field.field.paragraph.csgov_statsbar.field_csgov_p_title
+    - field.field.paragraph.csgov_statsbar.field_csgov_p_variant
+    - paragraphs.paragraphs_type.csgov_statsbar
+  module:
+    - field_group
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_csgov_p_variant
+        - field_csgov_p_stats_position
+      label: Nastavení
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.csgov_statsbar.default
+targetEntityType: paragraph
+bundle: csgov_statsbar
+mode: default
+content:
+  field_csgov_p_stats_items:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Položka
+      title_plural: Položky
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: csgov_statsbar_item
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  field_csgov_p_stats_position:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_csgov_p_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csgov_p_variant:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

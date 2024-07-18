@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_notification_link
+    - node.type.csgov_notification
+  module:
+    - link
+id: node.csgov_notification.field_csgov_notification_link
+field_name: field_csgov_notification_link
+entity_type: node
+bundle: csgov_notification
+label: Odkaz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

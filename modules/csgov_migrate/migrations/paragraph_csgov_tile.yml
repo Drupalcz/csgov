@@ -1,0 +1,66 @@
+id: csgov_migrate_paragraph_csgov_tile
+label: 'Paragraph - Tile'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_csgov_tile.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_subtitle
+      selector: field_csgov_p_subtitle
+    - name: field_csgov_p_icon
+      selector: field_csgov_p_icon
+    - name: field_csgov_p_link
+      selector: field_csgov_p_link
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_tile
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_subtitle: field_csgov_p_subtitle
+
+  field_csgov_p_icon:
+    - plugin: default_value
+      source: field_csgov_p_icon
+      default_value: -1
+    - plugin: migration_lookup
+      migration: csgov_migrate_media_csgov_icon
+      no_stub: true
+    - plugin: csgov_migrate_media_override
+      override: random_image
+
+  field_csgov_p_link: field_csgov_p_link

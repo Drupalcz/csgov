@@ -1,0 +1,47 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_hero
+    - node.type.csgov_page
+  module:
+    - entity_reference_revisions
+id: node.csgov_page.field_csgov_hero
+field_name: field_csgov_hero
+entity_type: node
+bundle: csgov_page
+label: Hlavička
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csgov_hero: csgov_hero
+    negate: 0
+    target_bundles_drag_drop:
+      csgov_accordion:
+        weight: 8
+        enabled: false
+      csgov_accordion_item:
+        weight: 9
+        enabled: false
+      csgov_content:
+        weight: 10
+        enabled: false
+      csgov_hero:
+        weight: 11
+        enabled: true
+      csgov_node_list:
+        weight: 12
+        enabled: false
+      csgov_tile:
+        weight: 13
+        enabled: false
+      csgov_tiles:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

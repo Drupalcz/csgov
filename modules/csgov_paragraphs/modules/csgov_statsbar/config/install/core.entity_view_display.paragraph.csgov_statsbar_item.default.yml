@@ -1,0 +1,54 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_statsbar_item.field_csgov_p_icon
+    - field.field.paragraph.csgov_statsbar_item.field_csgov_p_stats_text
+    - field.field.paragraph.csgov_statsbar_item.field_csgov_p_stats_value
+    - paragraphs.paragraphs_type.csgov_statsbar_item
+  module:
+    - nomarkup
+id: paragraph.csgov_statsbar_item.default
+targetEntityType: paragraph
+bundle: csgov_statsbar_item
+mode: default
+content:
+  field_csgov_p_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: url
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+    weight: 3
+    region: content
+  field_csgov_p_stats_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 5
+    region: content
+  field_csgov_p_stats_value:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

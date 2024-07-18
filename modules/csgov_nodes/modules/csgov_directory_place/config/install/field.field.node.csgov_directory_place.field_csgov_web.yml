@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_web
+    - node.type.csgov_directory_place
+  module:
+    - link
+id: node.csgov_directory_place.field_csgov_web
+field_name: field_csgov_web
+entity_type: node
+bundle: csgov_directory_place
+label: Web
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

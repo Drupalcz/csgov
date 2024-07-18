@@ -1,0 +1,80 @@
+id: csgov_migrate_paragraph_csgov_gallery
+label: 'Paragraph - Gallery'
+migration_group: csgov_migrate
+migration_tags:
+  - csgov_migrate
+  - csgov_migrate_paragraph
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/paragraph_csgov_gallery.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_images
+      selector: field_csgov_p_images
+    - name: field_csgov_p_content
+      selector: field_csgov_p_content
+    - name: field_csgov_p_background
+      selector: field_csgov_p_background
+    - name: field_csgov_p_columns
+      selector: field_csgov_p_columns
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_gallery
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_content/value: field_csgov_p_content
+  field_csgov_p_content/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_p_background: field_csgov_p_background
+
+  field_csgov_p_columns: field_csgov_p_columns
+
+  field_csgov_p_images:
+    - plugin: callback
+      source: field_csgov_p_images
+      callable: csgov_migrate_process_multiple
+    - plugin: default_value
+      default_value:
+        - value: -1
+    - plugin: sub_process
+      process:
+        target_id:
+          - plugin: migration_lookup
+            source: value
+            migration: csgov_migrate_media_image
+            no_stub: true
+          - plugin: csgov_migrate_media_override
+            override: random_image

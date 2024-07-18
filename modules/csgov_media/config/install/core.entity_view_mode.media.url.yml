@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.url
+label: URL
+description: ''
+targetEntityType: media
+cache: true

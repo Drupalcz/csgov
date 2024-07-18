@@ -1,0 +1,60 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.csgov_document_download
+    - field.field.media.document.field_csgov_document_pages
+    - field.field.media.document.field_csgov_media_tags
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - file
+    - layout_builder
+    - nomarkup
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.document.csgov_document_download
+targetEntityType: media
+bundle: document
+mode: csgov_document_download
+content:
+  field_csgov_document_pages:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_csgov_media_tags: true
+  langcode: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

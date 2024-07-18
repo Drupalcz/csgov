@@ -1,0 +1,73 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csgov_gallery.field_csgov_p_background
+    - field.field.paragraph.csgov_gallery.field_csgov_p_columns
+    - field.field.paragraph.csgov_gallery.field_csgov_p_content
+    - field.field.paragraph.csgov_gallery.field_csgov_p_images
+    - field.field.paragraph.csgov_gallery.field_csgov_p_title
+    - paragraphs.paragraphs_type.csgov_gallery
+  module:
+    - entity_class_formatter
+    - nomarkup
+    - text
+id: paragraph.csgov_gallery.default
+targetEntityType: paragraph
+bundle: csgov_gallery
+mode: default
+content:
+  field_csgov_p_background:
+    type: entity_class_formatter
+    label: hidden
+    settings:
+      prefix: background--
+      suffix: ''
+      attr: ''
+      field: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 3
+    region: content
+  field_csgov_p_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_csgov_p_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: ''
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_csgov_p_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_p_columns: true
+  search_api_excerpt: true

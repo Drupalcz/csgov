@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - media
+id: media.csgov_hero
+label: Hero
+description: ''
+targetEntityType: media
+cache: true

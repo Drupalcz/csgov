@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: csgov_statsbar
+label: 'Statistická lišta'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

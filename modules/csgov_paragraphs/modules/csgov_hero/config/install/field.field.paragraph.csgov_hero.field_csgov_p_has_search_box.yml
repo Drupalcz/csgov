@@ -1,0 +1,20 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csgov_p_has_search_box
+    - paragraphs.paragraphs_type.csgov_hero
+id: paragraph.csgov_hero.field_csgov_p_has_search_box
+field_name: field_csgov_p_has_search_box
+entity_type: paragraph
+bundle: csgov_hero
+label: 'Zobrazit vyhledávací box'
+description: 'Zobrazí vyhledávací box. Hlavička musí obsahovat obrázek.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Zapnuto
+  off_label: Vypnuto
+field_type: boolean
