@@ -8,6 +8,7 @@ dependencies:
     - image.style.media_library
     - media.type.image
   module:
+    - decorative_image_widget
     - focal_point
 id: media.image.media_library
 targetEntityType: media
@@ -33,7 +34,9 @@ content:
       preview_image_style: media_library
       preview_link: true
       offsets: '50,50'
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
   name:
     type: string_textfield
     weight: 0

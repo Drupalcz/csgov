@@ -5,6 +5,7 @@ package: CSGOV
 core_version_requirement: ^10
 dependencies:
     - drupal:config_rewrite
+    - drupal:decorative_image_widget
     - drupal:svg_image_field
     - drupal:nomarkup
     - drupal:scheduler
