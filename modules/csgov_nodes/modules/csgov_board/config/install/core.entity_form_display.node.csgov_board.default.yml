@@ -104,7 +104,9 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_csgov_board_type:
     type: entity_reference_autocomplete
     weight: 2

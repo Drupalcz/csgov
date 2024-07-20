@@ -153,7 +153,9 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_csgov_metatags:
     type: metatag_firehose
     weight: 26
