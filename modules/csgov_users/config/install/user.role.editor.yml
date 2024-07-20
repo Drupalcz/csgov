@@ -9,6 +9,7 @@ permissions:
   - 'access contextual links'
   - 'access environment indicator'
   - 'access media overview'
+  - 'access responsive preview'
   - 'access toolbar'
   - 'administer menu'
   - 'clone csgov_board content'
