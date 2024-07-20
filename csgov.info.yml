@@ -97,6 +97,7 @@ dependencies:
   - redirect
   - redirect_404
   - responsive_image
+  - responsive_preview
   - scheduler
   - schema_article
   - schema_event

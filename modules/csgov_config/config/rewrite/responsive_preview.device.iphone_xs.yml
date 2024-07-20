@@ -1,0 +1,11 @@
+langcode: cs
+status: 0
+dependencies: {  }
+id: iphone_xs
+label: 'iPhone XS'
+weight: -4
+orientation: portrait
+dimensions:
+  width: 640
+  height: 1136
+  dppx: 2.0

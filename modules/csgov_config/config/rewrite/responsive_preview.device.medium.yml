@@ -1,0 +1,11 @@
+langcode: cs
+status: 0
+dependencies: {  }
+id: medium
+label: Tablet
+weight: 1
+orientation: portrait
+dimensions:
+  width: 800
+  height: 1280
+  dppx: 1.325

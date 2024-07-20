@@ -76,6 +76,7 @@
     "drupal/real_aes": "^2.5",
     "drupal/redirect": "^1.9",
     "drupal/responsive_favicons": "^2.0",
+    "drupal/responsive_preview": "^2.1",
     "drupal/scheduler": "^2.0",
     "drupal/schema_metatag": "^3.0",
     "drupal/search_api": "^1.29",
@@ -109,6 +110,9 @@
       },
       "drupal/facets": {
         "Facets with AJAX not working in most of situations": "https://www.drupal.org/files/issues/2022-12-22/3052574-168.patch"
+      },
+      "drupal/responsive_preview": {
+        "Fix gin horizontal menu": "https://git.drupalcode.org/project/responsive_preview/-/merge_requests/8.patch"
       }
     }
   }

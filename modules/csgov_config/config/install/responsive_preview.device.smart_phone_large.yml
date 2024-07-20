@@ -1,0 +1,11 @@
+langcode: cs
+status: 1
+dependencies: {  }
+id: smart_phone_large
+label: 'Smart phone large'
+weight: -9
+orientation: portrait
+dimensions:
+  width: 1284
+  height: 2778
+  dppx: 3.0

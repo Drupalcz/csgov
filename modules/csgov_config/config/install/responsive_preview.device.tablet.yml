@@ -1,0 +1,11 @@
+langcode: cs
+status: 1
+dependencies: {  }
+id: tablet
+label: Tablet
+weight: -8
+orientation: portrait
+dimensions:
+  width: 768
+  height: 1024
+  dppx: 1.0

@@ -1,0 +1,11 @@
+langcode: cs
+status: 0
+dependencies: {  }
+id: iphone_xs_max
+label: 'iPhone XS Max'
+weight: -5
+orientation: portrait
+dimensions:
+  width: 1242
+  height: 2688
+  dppx: 3.0

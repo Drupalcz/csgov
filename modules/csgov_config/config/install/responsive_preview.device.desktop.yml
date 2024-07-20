@@ -1,0 +1,11 @@
+langcode: cs
+status: 1
+dependencies: {  }
+id: desktop
+label: Desktop
+weight: -6
+orientation: landscape
+dimensions:
+  width: 1920
+  height: 1080
+  dppx: 1.0

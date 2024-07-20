@@ -1,0 +1,11 @@
+langcode: cs
+status: 1
+dependencies: {  }
+id: smart_phone_small
+label: 'Smart phone small'
+weight: -10
+orientation: portrait
+dimensions:
+  width: 640
+  height: 1136
+  dppx: 2.0

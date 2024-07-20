@@ -1,0 +1,11 @@
+langcode: cs
+status: 1
+dependencies: {  }
+id: laptop
+label: Laptop
+weight: -7
+orientation: landscape
+dimensions:
+  width: 1366
+  height: 768
+  dppx: 1.0

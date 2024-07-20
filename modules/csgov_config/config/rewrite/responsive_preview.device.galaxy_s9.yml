@@ -1,0 +1,11 @@
+langcode: cs
+status: 0
+dependencies: {  }
+id: galaxy_s9
+label: 'Galaxy S9'
+weight: -3
+orientation: portrait
+dimensions:
+  width: 1440
+  height: 2960
+  dppx: 4.0

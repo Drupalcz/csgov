@@ -24,3 +24,4 @@ dependencies:
   - drupal:menu_trail_by_path
   - drupal:antibot
   - drupal:honeypot
+  - drupal:responsive_preview
