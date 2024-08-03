@@ -4,5 +4,5 @@ description: 'Adds config and views for Directory Person content type'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-  - csgov_config
-  - csgov_nodes
+  - csgov_config:csgov_config
+  - csgov_nodes:csgov_nodes

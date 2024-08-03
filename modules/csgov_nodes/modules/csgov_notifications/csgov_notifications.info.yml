@@ -4,13 +4,13 @@ description: 'Adds config and views for Notifications content type'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-  - csgov_config
-  - csgov_nodes
-  - csgov_board
-  - csgov_directory_place
-  - csgov_directory_person
-  - csgov_news
-  - csgov_event
-  - csgov_page
-  - csgov_homepage
-  - csgov_landing_page
+  - csgov_config:csgov_config
+  - csgov_nodes:csgov_nodes
+  - csgov_nodes:csgov_board
+  - csgov_nodes:csgov_directory_person
+  - csgov_nodes:csgov_directory_place
+  - csgov_nodes:csgov_event
+  - csgov_nodes:csgov_homepage
+  - csgov_nodes:csgov_landing_page
+  - csgov_nodes:csgov_news
+  - csgov_nodes:csgov_page

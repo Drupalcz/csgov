@@ -4,6 +4,6 @@ description: 'Adds Image and Respponsive Image styles'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-  - drupal:config_rewrite
-  - drupal:focal_point
-  - drupal:image_style_quality
+  - config_rewrite:config_rewrite
+  - focal_point:focal_point
+  - image_style_quality:image_style_quality

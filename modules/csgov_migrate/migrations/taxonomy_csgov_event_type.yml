@@ -1,5 +1,5 @@
 id: csgov_migrate_taxonomy_csgov_event_type
-label: 'Taxonomy - Event type'
+label: 'Taxonomy - Event Type'
 migration_group: csgov_migrate
 migration_tags:
   - csgov_migrate

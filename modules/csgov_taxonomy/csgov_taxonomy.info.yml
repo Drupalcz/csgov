@@ -3,3 +3,5 @@ type: module
 description: 'Add specific taxonomy config for CSGOV'
 package: CSGOV
 core_version_requirement: ^10
+dependencies:
+  - scheduler:scheduler

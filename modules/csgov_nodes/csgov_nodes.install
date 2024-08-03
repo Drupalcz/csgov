@@ -6,15 +6,17 @@ function csgov_nodes_install() {
   // List of modules for installation.
   $submodules = [
     'csgov_board',
-    'csgov_directory_place',
     'csgov_directory_person',
-    'csgov_news',
+    'csgov_directory_place',
     'csgov_event',
-    'csgov_gallery_node',
-    'csgov_page',
     'csgov_homepage',
     'csgov_landing_page',
+    'csgov_news',
     'csgov_notifications',
+    'csgov_page',
+    'csgov_step_by_step_node',
+    // Modules dependent on others.
+    'csgov_gallery_node',
   ];
 
   foreach ($submodules as $module) {

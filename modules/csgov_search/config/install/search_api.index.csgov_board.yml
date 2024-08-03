@@ -13,7 +13,7 @@ description: ''
 read_only: false
 field_settings:
   field_csgov_board_type:
-    label: 'Typ Úřední desky'
+    label: 'Typ úřední desky'
     datasource_id: 'entity:node'
     property_path: field_csgov_board_type
     type: integer

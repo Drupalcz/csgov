@@ -4,10 +4,10 @@ description: 'Add Media entities related config.'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-    - drupal:config_rewrite
-    - drupal:decorative_image_widget
-    - drupal:svg_image_field
-    - drupal:nomarkup
-    - drupal:scheduler
+    - csgov_taxonomy:csgov_taxonomy
     - drupal:media
-    - csgov_taxonomy
+    - config_rewrite:config_rewrite
+    - decorative_image_widget:decorative_image_widget
+    - nomarkup:nomarkup
+    - scheduler:scheduler
+    - svg_image_field:svg_image_field

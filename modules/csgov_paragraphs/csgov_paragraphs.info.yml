@@ -4,12 +4,12 @@ description: 'Add paragraphs for CSGOV.'
 package: CSGOV
 core_version_requirement: ^10
 dependencies:
-  - drupal:config_rewrite
-  - drupal:field_group
-  - drupal:paragraphs
-  - drupal:paragraphs_ee
-  - drupal:paragraphs_features
-  - drupal:viewsreference
-  - drupal:entity_reference_revisions
-  - drupal:entity_class_formatter
-  - drupal:entity_reference_display
+  - config_rewrite:config_rewrite
+  - entity_class_formatter:entity_class_formatter
+  - entity_reference_display:entity_reference_display
+  - entity_reference_revisions:entity_reference_revisions
+  - field_group:field_group
+  - paragraphs:paragraphs
+  - paragraphs_ee:paragraphs_ee
+  - paragraphs_features:paragraphs_features
+  - viewsreference:viewsreference

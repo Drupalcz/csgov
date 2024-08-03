@@ -8,7 +8,7 @@ id: node.csgov_board.field_csgov_board_type
 field_name: field_csgov_board_type
 entity_type: node
 bundle: csgov_board
-label: 'Typ Úřední desky'
+label: 'Typ úřední desky'
 description: 'Vyberte nebo vytvořte novou Kategorii pro záznamy Úřední desky. '
 required: false
 translatable: false

@@ -17,7 +17,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Typ Úřední desky'
+name: 'Typ úřední desky'
 vid: csgov_board_type
 description: ''
 weight: 0

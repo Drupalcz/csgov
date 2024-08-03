@@ -1,5 +1,5 @@
-id: csgov_migrate_taxonomy_news_type
-label: 'Taxonomy - News type'
+id: csgov_migrate_taxonomy_csgov_news_type
+label: 'Taxonomy - News Type'
 migration_group: csgov_migrate
 migration_tags:
   - csgov_migrate
@@ -9,7 +9,7 @@ source:
   plugin: url
   data_fetcher_plugin: file
   data_parser_plugin: json
-  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/taxonomy_news_type.json'
+  urls: 'profiles/contrib/csgov/modules/csgov_migrate/data/taxonomy_csgov_news_type.json'
   item_selector: ''
 
   ids:
@@ -34,7 +34,7 @@ source:
 
 destination:
   plugin: entity:taxonomy_term
-  default_bundle: news_type
+  default_bundle: csgov_news_type
 
 process:
   uuid: uuid
