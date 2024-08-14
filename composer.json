@@ -30,7 +30,7 @@
     "drupal/entity_reference_display": "^2.0",
     "drupal/entity_reference_revisions": "^1.9",
     "drupal/environment_indicator": "^4.0",
-    "drupal/facets": "^2.0",
+    "drupal/facets": "2.0.7",
     "drupal/field_group": "^3.2",
     "drupal/focal_point": "^2.0",
     "drupal/gin": "^3.0@alpha",
@@ -92,6 +92,9 @@
       "drupal/core": {
         "Plugin blocks cannot set their own attributes when put in the layout": "https://git.drupalcode.org/project/drupal/-/merge_requests/1426.patch",
         "Add menu_link_content support into views": "https://www.drupal.org/files/issues/2022-11-21/drupal-2777749-menu_link_content-views-support-23.patch"
+      },
+      "drupal/facets": {
+        "Facets with AJAX not working in most of situations": "https://www.drupal.org/files/issues/2024-05-07/3052574-212.patch"
       }
     }
   },
