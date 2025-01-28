@@ -4,7 +4,7 @@ base theme: gin
 tags: sub-theme
 version: 1.x
 
-core_version_requirement: ^10.1
+core_version_requirement: ^10.4
 
 libraries:
   - csgov_admin/base

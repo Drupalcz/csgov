@@ -3,7 +3,7 @@ name: 'CSGOV Install'
 type: theme
 base theme: claro
 description: 'Warning: Used for CSGOV installation only.'
-core_version_requirement: ^10.1
+core_version_requirement: ^10.4
 regions:
   header: 'Header'
   pre_content: 'Pre-content'
