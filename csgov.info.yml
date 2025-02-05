@@ -1,5 +1,5 @@
 name: 'CSGOV'
-version: 2.5.1
+version: 2.5.2
 core_version_requirement: ^10.4
 type: profile
 description: 'A feature-rich Drupal 10 distribution for Czech and Slovak eGovernment sites.'
@@ -19,7 +19,6 @@ dependencies:
   - big_pipe
   - block
   - block_content
-  - book
   - breakpoint
   - ckeditor5
   - config
@@ -103,7 +102,6 @@ dependencies:
   - schema_metatag
   - schema_web_page
   - schema_web_site
-  - sdc
   - search_api
   - search_api_db
   - simple_sitemap
