@@ -1,6 +1,6 @@
 name: 'CSGOV'
-version: 2.5.2
-core_version_requirement: ^10.4
+version: 2.6.0
+core_version_requirement: ^11.2
 type: profile
 description: 'A feature-rich Drupal 10 distribution for Czech and Slovak eGovernment sites.'
 
@@ -11,8 +11,6 @@ distribution:
     theme: csgov_install
 dependencies:
   - address
-  - admin_toolbar
-  - admin_toolbar_tools
   - antibot
   - auto_entitylabel
   - automated_cron
@@ -76,6 +74,7 @@ dependencies:
   - metatag_verification
   - metatag_views
   - module_filter
+  - navigation
   - node
   - nomarkup
   - office_hours

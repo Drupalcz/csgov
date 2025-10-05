@@ -2,7 +2,7 @@ name: 'CSGOV node: Directory place'
 type: module
 description: 'Adds config and views for Directory Place content type'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
   - csgov_config:csgov_config
   - csgov_nodes:csgov_nodes

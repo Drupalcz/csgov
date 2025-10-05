@@ -2,7 +2,7 @@ name: 'CSGOV image styles'
 type: module
 description: 'Adds Image and Respponsive Image styles'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
   - config_rewrite:config_rewrite
   - focal_point:focal_point

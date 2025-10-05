@@ -2,7 +2,7 @@ name: 'CSGOV paragraphs'
 type: module
 description: 'Add paragraphs for CSGOV.'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
   - config_rewrite:config_rewrite
   - entity_class_formatter:entity_class_formatter

@@ -2,4 +2,4 @@ name: 'CSGOV paragraph: Content'
 type: module
 description: 'Add Content paragraph for CSGOV.'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2

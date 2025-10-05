@@ -2,4 +2,4 @@ name: 'CSGOV paragraph: Attachments'
 type: module
 description: 'Add Attachments paragraph for CSGOV.'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
