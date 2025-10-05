@@ -2,7 +2,7 @@ name: 'CSGOV media'
 type: module
 description: 'Add Media entities related config.'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
     - csgov_taxonomy:csgov_taxonomy
     - drupal:media

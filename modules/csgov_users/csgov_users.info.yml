@@ -2,7 +2,7 @@ name: 'CSGOV users'
 type: module
 description: 'Add settings and user roles permissions'
 package: CSGOV
-core_version_requirement: ^10.1
+core_version_requirement: ^11.2.1
 dependencies:
   - environment_indicator:environment_indicator
   - override_node_options:override_node_options

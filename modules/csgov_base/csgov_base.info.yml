@@ -1,4 +1,4 @@
 name: CSGOV base
 type: module
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2

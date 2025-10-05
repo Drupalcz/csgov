@@ -2,7 +2,7 @@ name: 'CSGOV basic config'
 type: module
 description: 'Adds various config for the platform'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
   - antibot:antibot
   - config_rewrite:config_rewrite

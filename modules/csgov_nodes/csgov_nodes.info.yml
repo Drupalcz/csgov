@@ -2,7 +2,7 @@ name: 'CSGOV nodes'
 type: module
 description: 'Adds nodes for CSGOV'
 package: CSGOV
-core_version_requirement: ^10
+core_version_requirement: ^11.2
 dependencies:
   - csgov_paragraphs:csgov_paragraphs
   - drupal:taxonomy
