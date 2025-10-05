@@ -11,8 +11,6 @@ distribution:
     theme: csgov_install
 dependencies:
   - address
-  - admin_toolbar
-  - admin_toolbar_tools
   - antibot
   - auto_entitylabel
   - automated_cron
@@ -76,6 +74,7 @@ dependencies:
   - metatag_verification
   - metatag_views
   - module_filter
+  - navigation
   - node
   - nomarkup
   - office_hours
