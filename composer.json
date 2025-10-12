@@ -105,9 +105,6 @@
       "drupal/core": {
         "Add menu_link_content support into views": "https://git.drupalcode.org/project/drupal/-/merge_requests/6932.patch",
         "Let the upload document name not be filled automatically": "https://www.drupal.org/files/issues/2021-12-24/3185321-30.patch"
-      },
-      "drupal/responsive_preview": {
-        "Remove the Navigation toolbar": "https://git.drupalcode.org/project/responsive_preview/-/merge_requests/25.patch"
       }
     }
   }
