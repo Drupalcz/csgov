@@ -1,4 +1,3 @@
 config_rewrite:
-  replace: ["requirements"]["cdn"]
-requirements:
-  cdn: false
+  replace: 'requirements.cdn'
+  value: false

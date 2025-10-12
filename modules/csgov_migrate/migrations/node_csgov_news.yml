@@ -13,6 +13,7 @@ migration_dependencies:
     - csgov_migrate_paragraph_csgov_tiles
     - csgov_migrate_paragraph_csgov_infopanel
     - csgov_migrate_paragraph_csgov_statsbar
+    - csgov_migrate_paragraph_csgov_gallery
 
 source:
   plugin: url
@@ -123,6 +124,7 @@ process:
             - csgov_migrate_paragraph_csgov_tiles
             - csgov_migrate_paragraph_csgov_infopanel
             - csgov_migrate_paragraph_csgov_statsbar
+            - csgov_migrate_paragraph_csgov_gallery
           no_stub: true
     - plugin: callback
       callable: csgov_migrate_process_reference

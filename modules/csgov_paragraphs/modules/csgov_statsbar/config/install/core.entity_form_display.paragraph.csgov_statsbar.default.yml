@@ -9,9 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.csgov_statsbar
   module:
     - field_group
-    - paragraphs
-    - paragraphs_ee
-    - paragraphs_features
 third_party_settings:
   field_group:
     group_settings:

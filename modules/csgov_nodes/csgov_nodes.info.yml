@@ -4,6 +4,9 @@ description: 'Adds nodes for CSGOV'
 package: CSGOV
 core_version_requirement: ^11.2
 dependencies:
+  - paragraphs:paragraphs
+  - paragraphs_features:paragraphs_features
+  - paragraphs_ee:paragraphs_ee
   - csgov_paragraphs:csgov_paragraphs
   - drupal:taxonomy
   - address:address
@@ -13,8 +16,5 @@ dependencies:
   - geofield:geofield
   - leaflet:leaflet
   - office_hours:office_hours
-  - paragraphs:paragraphs
-  - paragraphs_ee:paragraphs_ee
-  - paragraphs_features:paragraphs_features
   - search_api:search_api_db
   - smart_date:smart_date_recur

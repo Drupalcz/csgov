@@ -3,15 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_csgov_notification_on
-    - node.type.csgov_board
-    - node.type.csgov_directory_person
-    - node.type.csgov_directory_place
-    - node.type.csgov_event
-    - node.type.csgov_homepage
-    - node.type.csgov_landing_page
-    - node.type.csgov_news
     - node.type.csgov_notification
-    - node.type.csgov_page
 id: node.csgov_notification.field_csgov_notification_on
 field_name: field_csgov_notification_on
 entity_type: node

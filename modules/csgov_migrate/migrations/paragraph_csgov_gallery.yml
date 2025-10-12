@@ -51,16 +51,28 @@ process:
   status: status
   created: created
 
-  field_csgov_p_title: field_csgov_p_title
+  field_csgov_p_title: 
+    - plugin: default_value
+      source: field_csgov_p_title
+      default_value:
+        - value: 'Fotogalerie'
 
   field_csgov_p_content/value: field_csgov_p_content
   field_csgov_p_content/format:
     plugin: default_value
     default_value: basic_html
 
-  field_csgov_p_background: field_csgov_p_background
+  field_csgov_p_background: 
+    - plugin: default_value
+      source: field_csgov_p_background
+      default_value:
+        - value: 'secondary'
 
-  field_csgov_p_columns: field_csgov_p_columns
+  field_csgov_p_columns:
+    - plugin: default_value
+      source: field_csgov_p_columns
+      default_value:
+        - value: 3
 
   field_csgov_p_images:
     - plugin: callback

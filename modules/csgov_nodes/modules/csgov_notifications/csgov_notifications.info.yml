@@ -6,9 +6,9 @@ core_version_requirement: ^11.2
 dependencies:
   - csgov_config:csgov_config
   - csgov_nodes:csgov_nodes
-  - csgov_nodes:csgov_board
   - csgov_nodes:csgov_directory_person
   - csgov_nodes:csgov_directory_place
+  - csgov_nodes:csgov_board
   - csgov_nodes:csgov_event
   - csgov_nodes:csgov_homepage
   - csgov_nodes:csgov_landing_page

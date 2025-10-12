@@ -10,9 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.csgov_step_by_step
   module:
     - field_group
-    - paragraphs
-    - paragraphs_ee
-    - paragraphs_features
     - text
 third_party_settings:
   field_group:

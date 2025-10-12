@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_csgov_ref_person
     - node.type.csgov_board
-    - node.type.csgov_directory_person
 id: node.csgov_board.field_csgov_ref_person
 field_name: field_csgov_ref_person
 entity_type: node

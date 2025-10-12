@@ -7,6 +7,7 @@
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\Row;
 use Drupal\views\Views;
 
 /**
@@ -184,5 +185,30 @@ function csgov_migrate_entity_field_access_alter(array &$grants, array $context)
   ) {
     $grants[':default'] = AccessResult::allowed()
       ->inheritCacheability($grants[':default']);
+  }
+}
+
+/**
+ * Implements hook_migrate_prepare_row().
+ * 
+ * Cleanup text content.
+ */
+function csgov_migrate_migrate_prepare_row(Row $row, $migration_id) {
+  if ($row->hasSourceProperty('field_csgov_teaser')) {
+    $html = $row->getSourceProperty('field_csgov_teaser');
+    $text = strip_tags($html);
+    $text = html_entity_decode(trim($text));
+    $row->setSourceProperty('field_csgov_teaser', $text);
+  }
+
+  // Add cs langcode if it is missing in source.
+  if ($row->hasSourceProperty('langcode')) {
+    $lang = $row->getSourceProperty('langcode');
+    if (empty($lang)) {
+      $row->setSourceProperty('langcode', 'cs');
+    }
+  }
+  else {
+    $row->setSourceProperty('langcode', 'cs');
   }
 }
