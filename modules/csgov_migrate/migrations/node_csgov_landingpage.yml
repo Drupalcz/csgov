@@ -9,10 +9,11 @@ migration_dependencies:
     - csgov_migrate_media_image
     - csgov_migrate_paragraph_csgov_accordion
     - csgov_migrate_paragraph_csgov_content
-    - csgov_migrate_paragraph_csgov_node_list
     - csgov_migrate_paragraph_csgov_tiles
     - csgov_migrate_paragraph_csgov_infopanel
     - csgov_migrate_paragraph_csgov_statsbar
+  optional:
+    - csgov_migrate_paragraph_csgov_node_list
 
 source:
   plugin: url
@@ -110,7 +111,6 @@ process:
           migration:
             - csgov_migrate_paragraph_csgov_accordion
             - csgov_migrate_paragraph_csgov_content
-            - csgov_migrate_paragraph_csgov_node_list
             - csgov_migrate_paragraph_csgov_tiles
             - csgov_migrate_paragraph_csgov_infopanel
             - csgov_migrate_paragraph_csgov_statsbar

@@ -5,9 +5,12 @@ package: CSGOV
 core_version_requirement: ^11.2
 dependencies:
     - csgov_taxonomy:csgov_taxonomy
+    - csgov_image_styles:csgov_image_styles
     - drupal:media
     - config_rewrite:config_rewrite
+    - crop:crop
     - decorative_image_widget:decorative_image_widget
+    - focal_point:focal_point
     - nomarkup:nomarkup
     - scheduler:scheduler
     - svg_image_field:svg_image_field

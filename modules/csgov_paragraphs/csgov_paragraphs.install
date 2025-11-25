@@ -4,6 +4,15 @@
  * Implements hook_install().
  */
 function csgov_paragraphs_install() {
+  // Set paragraphs settings (replaces config_rewrite which has timing issues).
+  \Drupal::configFactory()->getEditable('paragraphs.settings')
+    ->set('show_unpublished', TRUE)
+    ->save(TRUE);
+
+  \Drupal::configFactory()->getEditable('paragraphs_features.settings')
+    ->set('dropdown_to_button', TRUE)
+    ->save(TRUE);
+
   // List of modules for installation.
   $submodules = [
     'csgov_accordion',

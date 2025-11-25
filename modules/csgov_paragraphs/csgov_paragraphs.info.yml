@@ -4,7 +4,6 @@ description: 'Add paragraphs for CSGOV.'
 package: CSGOV
 core_version_requirement: ^11.2
 dependencies:
-  - config_rewrite:config_rewrite
   - entity_reference_revisions:entity_reference_revisions
   - paragraphs:paragraphs
   - paragraphs_features:paragraphs_features
@@ -13,3 +12,5 @@ dependencies:
   - entity_class_formatter:entity_class_formatter
   - entity_reference_display:entity_reference_display
   - viewsreference:viewsreference
+  - nomarkup:nomarkup
+  - csgov_media:csgov_media

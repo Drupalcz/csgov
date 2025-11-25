@@ -5,12 +5,11 @@ migration_tags:
   - csgov_migrate
   - csgov_migrate_paragraph
 migration_dependencies:
-  optional:
-    - csgov_migrate_node_board
-    - csgov_migrate_node_event
-    - csgov_migrate_node_news
+  required:
+    - csgov_migrate_node_csgov_board
+    - csgov_migrate_node_csgov_event
+    - csgov_migrate_node_csgov_news
     - csgov_migrate_node_csgov_page
-    - csgov_migrate_node_person
 
 source:
   plugin: url

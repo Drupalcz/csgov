@@ -36,7 +36,7 @@ source:
 
 destination:
   plugin: entity_reference_revisions:paragraph
-  default_bundle: csgov_content
+  default_bundle: csgov_infopanel
 
 process:
   uuid: uuid
