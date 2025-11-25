@@ -1,0 +1,33 @@
+[
+    {
+        "uuid": "a1000031-0001-0001-0001-000000000001",
+        "status": "1",
+        "created": "1730822400",
+        "field_csgov_p_title": "Příklad příloh",
+        "field_csgov_p_content": "<p>Zde by se zobrazil seznam souborů ke stažení s ikonami podle typu souboru.</p>",
+        "field_csgov_p_icon": "",
+        "field_csgov_p_image": "",
+        "field_csgov_p_images": "",
+        "field_csgov_p_iat_position": "",
+        "field_csgov_p_link": "",
+        "field_csgov_p_attachments_files": "g1002002-0001-0001-0001-000000000001",
+        "field_csgov_p_accordion_items": "",
+        "field_csgov_p_variant": "",
+        "field_csgov_p_infopanel_type": "",
+        "field_csgov_p_tiles": "",
+        "field_csgov_p_columns": "",
+        "field_csgov_p_no_border": null,
+        "field_csgov_p_nodes": "",
+        "field_csgov_p_view_mode": "",
+        "field_csgov_p_background": "default",
+        "field_csgov_p_expanded": null,
+        "field_csgov_p_image_caption": null,
+        "field_csgov_p_full_width": null,
+        "field_csgov_p_size": "",
+        "field_csgov_p_trigger_tag": "",
+        "field_csgov_p_stats_items": "",
+        "field_csgov_p_stats_position": null,
+        "field_csgov_p_stats_value": null,
+        "field_csgov_p_stats_text": null
+    }
+]

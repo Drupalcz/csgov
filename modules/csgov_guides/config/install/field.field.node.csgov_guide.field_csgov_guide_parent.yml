@@ -1,0 +1,28 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_guide_parent
+    - node.type.csgov_guide
+    - node.type.csgov_guide_overview
+id: node.csgov_guide.field_csgov_guide_parent
+field_name: field_csgov_guide_parent
+entity_type: node
+bundle: csgov_guide
+label: 'Nadřazená stránka'
+description: "Slouží ke zpětnému provázání kroku návodu na celý přehled.\r\nNa základě hodnoty tohoto pole je vygenerována správná URL adresa."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      csgov_guide_overview: csgov_guide_overview
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

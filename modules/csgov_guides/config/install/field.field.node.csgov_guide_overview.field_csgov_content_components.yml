@@ -1,0 +1,25 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_content_components
+    - node.type.csgov_guide_overview
+  module:
+    - entity_reference_revisions
+id: node.csgov_guide_overview.field_csgov_content_components
+field_name: field_csgov_content_components
+entity_type: node
+bundle: csgov_guide_overview
+label: Obsah
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

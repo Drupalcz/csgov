@@ -1,0 +1,15 @@
+name: 'CSGOV Guides'
+type: module
+description: 'Guide/documentation content types and pre-built guide content for editors'
+package: CSGOV
+core_version_requirement: ^11.2.1
+dependencies:
+  - drupal:node
+  - drupal:field
+  - drupal:text
+  - drupal:entity_reference_revisions
+  - csgov_config:csgov_config
+  - csgov_migrate:csgov_migrate
+  - csgov_nodes:csgov_nodes
+  - csgov_paragraphs:csgov_paragraphs
+  - csgov_media:csgov_media

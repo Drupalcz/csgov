@@ -1,0 +1,71 @@
+id: csgov_migrate_paragraph_guides_image
+label: 'Paragraph - Image (Consolidated)'
+migration_group: csgov_guides
+migration_tags:
+  - csgov_guides
+  - csgov_migrate
+  - csgov_migrate_paragraph
+  - csgov_migrate_editor_guide
+migration_dependencies:
+  required:
+    - csgov_migrate_media_guides_image
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_guides/data/paragraph_csgov_image.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_image
+      selector: field_csgov_p_image
+    - name: field_csgov_p_image_caption
+      selector: field_csgov_p_image_caption
+    - name: field_csgov_p_full_width
+      selector: field_csgov_p_full_width
+    - name: field_csgov_p_view_mode
+      selector: field_csgov_p_view_mode
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_image
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_image:
+    plugin: migration_lookup
+    source: field_csgov_p_image
+    migration: csgov_migrate_media_guides_image
+    no_stub: true
+
+  field_csgov_p_image_caption: field_csgov_p_image_caption
+
+  field_csgov_p_full_width: field_csgov_p_full_width
+
+  field_csgov_p_view_mode: field_csgov_p_view_mode

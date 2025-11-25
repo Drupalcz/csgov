@@ -26,6 +26,12 @@ function csgov_install_tasks(&$install_state) {
     ];
   }
 
+  if (!empty($install_state['parameters']['csgov_guides'])) {
+    $tasks['csgov_install_guides'] = [
+      'display_name' => '- ' . t('Documentation'),
+    ];
+  }
+
   return $tasks;
 }
 
@@ -56,4 +62,17 @@ function csgov_install_migrate_batch(&$install_state) {
     ->set('page.front', '/node/1')->save(TRUE);
   // Process migrations.
   return _csgov_migrate_get_batch('import');
+}
+
+/**
+ * Installs guides module and content during installation.
+ *
+ * The csgov_guides module's hook_install() handles all migrations,
+ * so we just need to install the module.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ */
+function csgov_install_guides(&$install_state) {
+  \Drupal::service('module_installer')->install(['csgov_guides']);
 }

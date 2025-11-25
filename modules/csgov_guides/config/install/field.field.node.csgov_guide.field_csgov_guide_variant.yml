@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_guide_variant
+    - node.type.csgov_guide
+  module:
+    - options
+id: node.csgov_guide.field_csgov_guide_variant
+field_name: field_csgov_guide_variant
+entity_type: node
+bundle: csgov_guide
+label: Varianta
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

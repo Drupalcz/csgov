@@ -1,0 +1,353 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the CSGOV Guides module.
+ */
+
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_install().
+ */
+function csgov_guides_install() {
+  // Add csgov_guide_overview to node list target bundles so it can be
+  // referenced in csgov_node_list paragraphs.
+  _csgov_guides_update_node_list_target_bundles('add');
+
+  // Hide guide content types from main admin/content view.
+  _csgov_guides_update_content_view_filter('add');
+
+  // Import all guide migrations automatically.
+  // This follows the pattern from csgov_migrate.module.
+  $migration_manager = \Drupal::service('plugin.manager.migration');
+  $migrations = $migration_manager->createInstancesByTag('csgov_guides');
+
+  // Sort migrations by dependencies
+  $ordered_migrations = _csgov_guides_sort_migrations($migrations);
+
+  // First pass: Import all migrations
+  foreach (array_keys($ordered_migrations) as $migration_id) {
+    _csgov_guides_import_migration($migration_id);
+  }
+
+  // Second pass: Re-import migrations that have circular dependencies.
+  // This handles cases where paragraphs reference nodes that are created later,
+  // or overviews need steps to exist for the migration_lookup to work.
+  foreach (_csgov_guides_get_second_pass_migrations() as $migration_id) {
+    _csgov_guides_import_migration($migration_id);
+    \Drupal::logger('csgov_guides')->info(
+      'Re-imported @id to resolve circular dependencies',
+      ['@id' => $migration_id]
+    );
+  }
+
+  // Set path alias for the main documentation page.
+  _csgov_guides_set_dokumentace_alias();
+
+  \Drupal::messenger()->addMessage(t('Guide documentation has been installed successfully.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function csgov_guides_uninstall() {
+  // Remove csgov_guide_overview from node list target bundles.
+  _csgov_guides_update_node_list_target_bundles('remove');
+
+  // Remove the /dokumentace path alias.
+  _csgov_guides_remove_dokumentace_alias();
+
+  // Restore guide content types in main admin/content view.
+  _csgov_guides_update_content_view_filter('remove');
+
+  // Rollback all guide migrations on uninstall
+  $migration_manager = \Drupal::service('plugin.manager.migration');
+  $migrations = $migration_manager->createInstancesByTag('csgov_guides');
+
+  // Sort by dependencies and reverse for rollback
+  $ordered_migrations = _csgov_guides_sort_migrations($migrations);
+  $ordered_migrations = array_reverse($ordered_migrations, TRUE);
+
+  foreach ($ordered_migrations as $migration_id => $migration) {
+    try {
+      // Clear any stuck status
+      $status = $migration->getStatus();
+      if ($status !== MigrationInterface::STATUS_IDLE) {
+        $migration->setStatus(MigrationInterface::STATUS_IDLE);
+        \Drupal::logger('csgov_guides')->warning(
+          'Reset stuck migration @id from status @status',
+          ['@id' => $migration_id, '@status' => $status]
+        );
+      }
+
+      // Prepare and execute rollback
+      $migration->getIdMap()->prepareUpdate();
+      $executable = new MigrateExecutable($migration, new MigrateMessage());
+      $executable->rollback();
+
+      \Drupal::logger('csgov_guides')->info('Rolled back migration @id', ['@id' => $migration_id]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('csgov_guides')->error(
+        'Failed to rollback migration @id: @message',
+        ['@id' => $migration_id, '@message' => $e->getMessage()]
+      );
+    }
+  }
+
+  // Delete the guide content types.
+  _csgov_guides_delete_content_types(['csgov_guide', 'csgov_guide_overview']);
+}
+
+/**
+ * Sort migrations by their dependencies.
+ *
+ * @param array $migrations
+ *   Array of migration instances.
+ *
+ * @return array
+ *   Sorted array of migrations.
+ */
+function _csgov_guides_sort_migrations(array $migrations) {
+  $sorted = [];
+  $processed = [];
+
+  // Helper function to recursively add migrations with dependencies
+  $add_migration = function($migration_id) use ($migrations, &$sorted, &$processed, &$add_migration) {
+    // Skip if already processed
+    if (isset($processed[$migration_id])) {
+      return;
+    }
+
+    // Skip if migration doesn't exist
+    if (!isset($migrations[$migration_id])) {
+      return;
+    }
+
+    $migration = $migrations[$migration_id];
+    $dependencies = $migration->getMigrationDependencies();
+
+    // Process required dependencies first
+    if (!empty($dependencies['required'])) {
+      foreach ($dependencies['required'] as $dependency) {
+        $add_migration($dependency);
+      }
+    }
+
+    // Add this migration
+    $sorted[$migration_id] = $migration;
+    $processed[$migration_id] = TRUE;
+  };
+
+  // Process all migrations
+  foreach (array_keys($migrations) as $migration_id) {
+    $add_migration($migration_id);
+  }
+
+  return $sorted;
+}
+
+/**
+ * Delete content types and all their nodes.
+ *
+ * @param array $content_types
+ *   Array of content type machine names to delete.
+ */
+function _csgov_guides_delete_content_types(array $content_types) {
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  foreach ($content_types as $type) {
+    // First delete all nodes of this type.
+    $nids = $node_storage->getQuery()
+      ->condition('type', $type)
+      ->accessCheck(FALSE)
+      ->execute();
+
+    if (!empty($nids)) {
+      $nodes = $node_storage->loadMultiple($nids);
+      $node_storage->delete($nodes);
+      \Drupal::logger('csgov_guides')->info(
+        'Deleted @count nodes of type @type',
+        ['@count' => count($nids), '@type' => $type]
+      );
+    }
+
+    // Then delete the content type itself.
+    $node_type = NodeType::load($type);
+    if ($node_type) {
+      $node_type->delete();
+      \Drupal::logger('csgov_guides')->info(
+        'Deleted content type @type',
+        ['@type' => $type]
+      );
+    }
+  }
+}
+
+/**
+ * Remove the /dokumentace path alias.
+ */
+function _csgov_guides_remove_dokumentace_alias() {
+  $path_alias_storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+  $aliases = $path_alias_storage->loadByProperties(['alias' => '/dokumentace']);
+
+  if (!empty($aliases)) {
+    $path_alias_storage->delete($aliases);
+    \Drupal::logger('csgov_guides')->info('Removed /dokumentace path alias');
+  }
+}
+
+/**
+ * Set path alias for the main documentation page (Dokumentace).
+ */
+function _csgov_guides_set_dokumentace_alias() {
+  // Find the Dokumentace node by UUID.
+  $dokumentace_uuid = 'a1040000-0000-0000-0000-000000000000';
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadByProperties(['uuid' => $dokumentace_uuid]);
+
+  if (empty($nodes)) {
+    \Drupal::logger('csgov_guides')->warning('Dokumentace node not found');
+    return;
+  }
+
+  $node = reset($nodes);
+  $alias = '/dokumentace';
+  $langcode = $node->language()->getId();
+
+  // Check if alias already exists.
+  $path_alias_storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+  $existing = $path_alias_storage->loadByProperties([
+    'alias' => $alias,
+    'langcode' => $langcode,
+  ]);
+
+  if (!empty($existing)) {
+    \Drupal::logger('csgov_guides')->info('Path alias @alias already exists', ['@alias' => $alias]);
+    return;
+  }
+
+  // Create the path alias.
+  $path_alias = $path_alias_storage->create([
+    'path' => '/node/' . $node->id(),
+    'alias' => $alias,
+    'langcode' => $langcode,
+  ]);
+  $path_alias->save();
+
+  \Drupal::logger('csgov_guides')->info(
+    'Created path alias @alias for Dokumentace node @nid',
+    ['@alias' => $alias, '@nid' => $node->id()]
+  );
+}
+
+/**
+ * Add or remove csgov_guide_overview from node list target bundles.
+ *
+ * The csgov_node_list paragraph has a field_csgov_p_nodes entity reference
+ * field with restricted target bundles. This function adds/removes the
+ * csgov_guide_overview content type to/from that list.
+ *
+ * @param string $operation
+ *   Either 'add' or 'remove'.
+ */
+function _csgov_guides_update_node_list_target_bundles($operation) {
+  $config_name = 'field.field.paragraph.csgov_node_list.field_csgov_p_nodes';
+  $field_config = \Drupal::configFactory()->getEditable($config_name);
+
+  if ($field_config->isNew()) {
+    // Field config doesn't exist, nothing to do.
+    return;
+  }
+
+  $settings = $field_config->get('settings');
+
+  if ($operation === 'add') {
+    $settings['handler_settings']['target_bundles']['csgov_guide_overview'] = 'csgov_guide_overview';
+    \Drupal::logger('csgov_guides')->info('Added csgov_guide_overview to node list target bundles');
+  }
+  elseif ($operation === 'remove') {
+    unset($settings['handler_settings']['target_bundles']['csgov_guide_overview']);
+    \Drupal::logger('csgov_guides')->info('Removed csgov_guide_overview from node list target bundles');
+  }
+
+  $field_config->set('settings', $settings)->save();
+}
+
+/**
+ * Add or remove guide content types from main admin/content view filter.
+ *
+ * This hides csgov_guide and csgov_guide_overview from the main content
+ * listing since they have their own dedicated view at /admin/content/documentation.
+ *
+ * @param string $operation
+ *   Either 'add' (to hide guides) or 'remove' (to show guides again).
+ */
+function _csgov_guides_update_content_view_filter($operation) {
+  $view_config = \Drupal::configFactory()->getEditable('views.view.content');
+
+  if ($view_config->isNew()) {
+    \Drupal::logger('csgov_guides')->warning('Content view not found');
+    return;
+  }
+
+  $guide_types = ['csgov_guide', 'csgov_guide_overview'];
+
+  // Get the default display filters.
+  $filters = $view_config->get('display.default.display_options.filters');
+
+  if ($operation === 'add') {
+    // Add a filter to exclude guide content types.
+    // Check if there's already a type filter we can modify.
+    if (isset($filters['type']) && isset($filters['type']['value'])) {
+      // There's an existing type filter - we need to add exclusion differently.
+      // Add a new filter that excludes guide types.
+      $filters['type_exclude_guides'] = [
+        'id' => 'type_exclude_guides',
+        'table' => 'node_field_data',
+        'field' => 'type',
+        'entity_type' => 'node',
+        'entity_field' => 'type',
+        'plugin_id' => 'bundle',
+        'operator' => 'not in',
+        'value' => array_combine($guide_types, $guide_types),
+        'group' => 1,
+        'exposed' => false,
+      ];
+    }
+    else {
+      // No existing type filter, add one that excludes guides.
+      $filters['type_exclude_guides'] = [
+        'id' => 'type_exclude_guides',
+        'table' => 'node_field_data',
+        'field' => 'type',
+        'entity_type' => 'node',
+        'entity_field' => 'type',
+        'plugin_id' => 'bundle',
+        'operator' => 'not in',
+        'value' => array_combine($guide_types, $guide_types),
+        'group' => 1,
+        'exposed' => false,
+      ];
+    }
+    \Drupal::logger('csgov_guides')->info('Hidden guide types from main content view');
+  }
+  elseif ($operation === 'remove') {
+    // Remove the exclusion filter.
+    unset($filters['type_exclude_guides']);
+    \Drupal::logger('csgov_guides')->info('Restored guide types in main content view');
+  }
+
+  $view_config->set('display.default.display_options.filters', $filters)->save();
+
+  // Clear views cache.
+  if (\Drupal::hasService('cache.discovery')) {
+    \Drupal::service('cache.discovery')->invalidateAll();
+  }
+  \Drupal::service('plugin.manager.views.display')->clearCachedDefinitions();
+}

@@ -1,0 +1,63 @@
+id: csgov_migrate_paragraph_guides_statsbar_item
+label: 'Paragraph - Statsbar Item (Consolidated)'
+migration_group: csgov_guides
+migration_tags:
+  - csgov_guides
+  - csgov_migrate
+  - csgov_migrate_paragraph
+  - csgov_migrate_editor_guide
+migration_dependencies:
+  required:
+    - csgov_migrate_media_guides_icon
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_guides/data/paragraph_csgov_statsbar_item.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_stats_value
+      selector: field_csgov_p_stats_value
+    - name: field_csgov_p_stats_text
+      selector: field_csgov_p_stats_text
+    - name: field_csgov_p_icon
+      selector: field_csgov_p_icon
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_statsbar_item
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_stats_value: field_csgov_p_stats_value
+
+  field_csgov_p_stats_text: field_csgov_p_stats_text
+
+  field_csgov_p_icon:
+    plugin: migration_lookup
+    source: field_csgov_p_icon
+    migration: csgov_migrate_media_guides_icon
+    no_stub: true

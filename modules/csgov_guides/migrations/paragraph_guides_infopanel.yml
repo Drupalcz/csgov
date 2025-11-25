@@ -1,0 +1,70 @@
+id: csgov_migrate_paragraph_guides_infopanel
+label: 'Paragraph - Infopanel (Consolidated)'
+migration_group: csgov_guides
+migration_tags:
+  - csgov_guides
+  - csgov_migrate
+  - csgov_migrate_paragraph
+  - csgov_migrate_editor_guide
+migration_dependencies:
+  required:
+    - csgov_migrate_media_guides_icon
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_guides/data/paragraph_csgov_infopanel.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_content
+      selector: field_csgov_p_content
+    - name: field_csgov_p_infopanel_type
+      selector: field_csgov_p_infopanel_type
+    - name: field_csgov_p_icon
+      selector: field_csgov_p_icon
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_infopanel
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_content/value: field_csgov_p_content
+  field_csgov_p_content/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_p_infopanel_type: field_csgov_p_infopanel_type
+
+  field_csgov_p_icon:
+    plugin: migration_lookup
+    source: field_csgov_p_icon
+    migration: csgov_migrate_media_guides_icon
+    no_stub: true

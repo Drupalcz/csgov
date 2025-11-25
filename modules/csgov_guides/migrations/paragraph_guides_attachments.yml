@@ -1,0 +1,72 @@
+id: csgov_migrate_paragraph_guides_attachments
+label: 'Paragraph - Attachments (Consolidated)'
+migration_group: csgov_guides
+migration_tags:
+  - csgov_guides
+  - csgov_migrate
+  - csgov_migrate_paragraph
+  - csgov_migrate_editor_guide
+migration_dependencies:
+  required:
+    - csgov_migrate_media_guides_document
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'profiles/contrib/csgov/modules/csgov_guides/data/paragraph_csgov_attachments.json'
+  item_selector: ''
+
+  ids:
+    uuid:
+      type: string
+
+  fields:
+    - name: uuid
+      selector: uuid
+    - name: langcode
+      selector: langcode
+    - name: status
+      selector: status
+    - name: created
+      selector: created
+    - name: field_csgov_p_title
+      selector: field_csgov_p_title
+    - name: field_csgov_p_content
+      selector: field_csgov_p_content
+    - name: field_csgov_p_attachments_files
+      selector: field_csgov_p_attachments_files
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: csgov_attachments
+
+process:
+  uuid: uuid
+  id:
+    plugin: entity_lookup
+    source: uuid
+    entity_type: paragraph
+    value_key: uuid
+  langcode: langcode
+  status: status
+  created: created
+
+  field_csgov_p_title: field_csgov_p_title
+
+  field_csgov_p_content/value: field_csgov_p_content
+  field_csgov_p_content/format:
+    plugin: default_value
+    default_value: basic_html
+
+  field_csgov_p_attachments_files:
+    - plugin: callback
+      source: field_csgov_p_attachments_files
+      callable: csgov_migrate_process_multiple
+    - plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: value
+          migration: csgov_migrate_media_guides_document
+          no_stub: true

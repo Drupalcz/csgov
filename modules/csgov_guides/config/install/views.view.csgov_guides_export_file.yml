@@ -1,0 +1,143 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - csgov_guides
+    - file
+    - rest
+    - serialization
+id: csgov_guides_export_file
+label: 'CSGOV Guides - export file'
+module: csgov_guides
+description: ''
+tag: ''
+base_table: file_managed
+base_field: fid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      fields:
+        uuid:
+          id: uuid
+          table: file_managed
+          field: uuid
+          entity_type: file
+          entity_field: uuid
+          plugin_id: field
+          label: ''
+        langcode:
+          id: langcode
+          table: file_managed
+          field: langcode
+          entity_type: file
+          entity_field: langcode
+          plugin_id: field
+          label: ''
+        status:
+          id: status
+          table: file_managed
+          field: status
+          entity_type: file
+          entity_field: status
+          plugin_id: field
+          label: ''
+        filename:
+          id: filename
+          table: file_managed
+          field: filename
+          entity_type: file
+          entity_field: filename
+          plugin_id: field
+          label: ''
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          entity_type: file
+          entity_field: filemime
+          plugin_id: field
+          label: ''
+        created:
+          id: created
+          table: file_managed
+          field: created
+          entity_type: file
+          entity_field: created
+          plugin_id: field
+          label: ''
+        changed:
+          id: changed
+          table: file_managed
+          field: changed
+          entity_type: file
+          entity_field: changed
+          plugin_id: field
+          label: ''
+        uri:
+          id: uri
+          table: file_managed
+          field: uri
+          entity_type: file
+          entity_field: uri
+          plugin_id: field
+          label: ''
+      pager:
+        type: none
+      filters:
+        uri:
+          id: uri
+          table: file_managed
+          field: uri
+          entity_type: file
+          entity_field: uri
+          plugin_id: string
+          operator: starts
+          value: 'public://'
+          expose:
+            operator_id: ''
+            label: ''
+            identifier: ''
+            required: false
+      cache:
+        type: none
+  rest_export_1:
+    id: rest_export_1
+    display_title: 'REST export'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      pager:
+        type: none
+      row:
+        type: data_field
+        options:
+          field_options:
+            uuid:
+              alias: ''
+              raw_output: true
+            langcode:
+              alias: ''
+              raw_output: true
+            status:
+              alias: ''
+              raw_output: true
+            filename:
+              alias: ''
+              raw_output: true
+            filemime:
+              alias: ''
+              raw_output: true
+            created:
+              alias: ''
+              raw_output: true
+            changed:
+              alias: ''
+              raw_output: true
+            uri:
+              alias: ''
+              raw_output: true
+      path: csgov-guides/export/file

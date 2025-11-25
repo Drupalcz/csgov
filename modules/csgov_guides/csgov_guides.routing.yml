@@ -1,0 +1,9 @@
+csgov_guides.export:
+  path: '/admin/csgov/guides/export'
+  defaults:
+    _form: '\Drupal\csgov_guides\Form\ExportForm'
+    _title: 'CSGOV Guides Export'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,34 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.csgov_guide_overview.field_csgov_content_components
+    - field.field.node.csgov_guide_overview.field_csgov_guide_items
+    - field.field.node.csgov_guide_overview.field_csgov_teaser
+    - node.type.csgov_guide_overview
+  module:
+    - nomarkup
+    - user
+id: node.csgov_guide_overview.teaser
+targetEntityType: node
+bundle: csgov_guide_overview
+mode: teaser
+content:
+  field_csgov_teaser:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden:
+  field_csgov_content_components: true
+  field_csgov_guide_items: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

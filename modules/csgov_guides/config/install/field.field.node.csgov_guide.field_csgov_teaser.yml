@@ -1,0 +1,18 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_csgov_teaser
+    - node.type.csgov_guide
+id: node.csgov_guide.field_csgov_teaser
+field_name: field_csgov_teaser
+entity_type: node
+bundle: csgov_guide
+label: Perex
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,236 @@
+<?php
+
+/**
+ * @file
+ * CSGOV Guides module functions.
+ */
+
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
+use Drupal\views\Views;
+
+/**
+ * Get list of migrations that need to run twice due to circular dependencies.
+ *
+ * These migrations reference entities that are created by later migrations:
+ * 1. First pass: Create entities (references will be empty)
+ * 2. Second pass: Update entities (populate references after dependencies exist)
+ *
+ * @return array
+ *   Array of migration IDs that need a second pass.
+ */
+function _csgov_guides_get_second_pass_migrations() {
+  return [
+    // Node list paragraphs reference guide_overview nodes which are created
+    // after paragraphs. Second pass resolves these references.
+    'csgov_migrate_paragraph_guides_node_list',
+  ];
+}
+
+/**
+ * Import a single guide migration.
+ *
+ * Similar to _csgov_migrate_import_operation() in csgov_migrate.module.
+ * Creates a fresh migration instance and executes import.
+ *
+ * @param string $migration_id
+ *   The migration ID.
+ *
+ * @return int
+ *   The migration result status.
+ */
+function _csgov_guides_import_migration($migration_id) {
+  $migration_manager = \Drupal::service('plugin.manager.migration');
+
+  if (!$migration_manager->hasDefinition($migration_id)) {
+    \Drupal::logger('csgov_guides')->warning(
+      'Migration @id does not exist',
+      ['@id' => $migration_id]
+    );
+    return 0;
+  }
+
+  try {
+    // Create a fresh migration instance
+    /** @var \Drupal\migrate\Plugin\MigrationInterface $migration */
+    $migration = $migration_manager->createInstance($migration_id);
+
+    // Clear any stuck status
+    $status = $migration->getStatus();
+    if ($status !== \Drupal\migrate\Plugin\MigrationInterface::STATUS_IDLE) {
+      $migration->setStatus(\Drupal\migrate\Plugin\MigrationInterface::STATUS_IDLE);
+      \Drupal::logger('csgov_guides')->warning(
+        'Reset stuck migration @id from status @status',
+        ['@id' => $migration_id, '@status' => $status]
+      );
+    }
+
+    // Prepare and execute import
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $result = $executable->import();
+
+    \Drupal::logger('csgov_guides')->info(
+      'Imported migration @id with result @result',
+      ['@id' => $migration_id, '@result' => $result]
+    );
+
+    return $result;
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('csgov_guides')->error(
+      'Failed to import migration @id: @message',
+      ['@id' => $migration_id, '@message' => $e->getMessage()]
+    );
+    return 0;
+  }
+}
+
+/**
+ * Get list of entity types and bundles to be exported for guides.
+ *
+ * @return array[]
+ *   The list of bundles, keyed by entity types.
+ */
+function _csgov_guides_get_migrations() {
+  return [
+    'file' => [NULL],
+    'media' => [
+      'image',
+      'document',
+      'csgov_icon',
+    ],
+    'paragraph' => [
+      'csgov_content',
+      'csgov_accordion_item',
+      'csgov_accordion',
+      'csgov_infopanel',
+      'csgov_image',
+      'csgov_image_text',
+      'csgov_gallery',
+      'csgov_attachments',
+      'csgov_tiles',
+      'csgov_tile',
+      'csgov_node_list',
+      'csgov_statsbar_item',
+      'csgov_statsbar',
+    ],
+    'node' => [
+      'csgov_guide',
+      'csgov_guide_overview',
+    ],
+  ];
+}
+
+/**
+ * Prepare batch to export guide content.
+ *
+ * @param string $direction
+ *   The migration direction ('export').
+ *
+ * @return array
+ *   The batch array.
+ */
+function _csgov_guides_get_batch($direction) {
+  $function = '_csgov_guides_' . $direction . '_operation';
+
+  // Get entity types and bundles to be processed.
+  $migrations = _csgov_guides_get_migrations();
+
+  // Prepare a single operation for every bundle.
+  $operations = [];
+  foreach ($migrations as $entity_type => $bundles) {
+    foreach ($bundles as $bundle) {
+      $operations[] = [$function, [$entity_type, $bundle]];
+    }
+  }
+
+  return [
+    'operations' => $operations,
+    'title' => t(ucfirst($direction) . 'ing guide content'),
+  ];
+}
+
+/**
+ * Implements callback_batch_operation().
+ *
+ * Performs batch import of guide content.
+ *
+ * @param string $entity_type
+ *   The entity type.
+ * @param string $bundle
+ *   The entity bundle.
+ * @param array $context
+ *   The batch context.
+ */
+function _csgov_guides_import_operation($entity_type, $bundle, &$context) {
+  $id = implode('_', array_filter(['csgov_migrate', $entity_type, 'guides', $bundle]));
+  $migration_manager = \Drupal::service('plugin.manager.migration');
+  if ($migration_manager->hasDefinition($id)) {
+    /** @var \Drupal\migrate\Plugin\MigrationInterface $migration */
+    $migration = $migration_manager->createInstance($id);
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $executable->import();
+    $context['message'] = t('Imported @id', ['@id' => $id]);
+  }
+}
+
+/**
+ * Implements callback_batch_operation().
+ *
+ * Performs batch export of guide content.
+ *
+ * @param string $entity_type
+ *   The entity type.
+ * @param string $bundle
+ *   The entity bundle.
+ * @param array $context
+ *   The batch context.
+ */
+function _csgov_guides_export_operation($entity_type, $bundle, &$context) {
+  $id = implode('_', array_filter([$entity_type, $bundle]));
+  $view_id = 'csgov_guides_export_' . $entity_type;
+  $view = Views::getView($view_id);
+  if (!empty($view) && !empty($view->storage->getDisplay('rest_export_1'))) {
+    $view->setArguments([$bundle]);
+    $result = $view->render('rest_export_1');
+    $json = \Drupal::service('renderer')->render($result);
+    if (!empty($json)) {
+      // Pretty-print JSON for easier diff review during development.
+      $data = json_decode($json, TRUE);
+
+      // For file exports, copy files and flatten URIs.
+      if ($entity_type === 'file' && !empty($data)) {
+        $file_system = \Drupal::service('file_system');
+        $module_files_dir = dirname(__FILE__) . '/files/';
+
+        foreach ($data as &$item) {
+          if (!empty($item['uri'])) {
+            $filename = basename($item['uri']);
+            $destination = $module_files_dir . $filename;
+
+            // Copy file from Drupal's files to module's files folder.
+            if (!file_exists($destination)) {
+              $source_path = $file_system->realpath($item['uri']);
+              if ($source_path && file_exists($source_path)) {
+                copy($source_path, $destination);
+              }
+            }
+
+            // Flatten URI to just filename.
+            $item['uri'] = 'public://' . $filename;
+          }
+        }
+        unset($item);
+      }
+
+      $json_pretty = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+      $directory = dirname(__FILE__) . '/data/';
+      $path = $directory . $id . '.json';
+      file_put_contents($path, $json_pretty);
+      $context['message'] = t('Exported @id', ['@id' => $id]);
+    }
+  }
+}

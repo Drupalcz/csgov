@@ -1,0 +1,6 @@
+csgov_guides.export:
+  title: 'CSGOV Guides Export'
+  description: 'Export guide content to JSON files for migration.'
+  route_name: csgov_guides.export
+  parent: csgov_admin_improvements.csgov
+  weight: 20

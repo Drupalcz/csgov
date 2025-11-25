@@ -1,0 +1,381 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_csgov_document_pages
+    - field.storage.media.field_csgov_media_tags
+    - field.storage.media.field_media_document
+    - field.storage.media.field_media_image
+    - field.storage.media.field_media_svg
+  module:
+    - csgov_guides
+    - csgov_migrate
+    - media
+    - rest
+    - serialization
+id: csgov_guides_export_media
+label: 'CSGOV Guides - export media'
+module: csgov_guides
+description: ''
+tag: ''
+base_table: media_field_data
+base_field: mid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      fields:
+        uuid:
+          id: uuid
+          table: media
+          field: uuid
+          entity_type: media
+          entity_field: uuid
+          plugin_id: field
+          label: ''
+        langcode:
+          id: langcode
+          table: media_field_data
+          field: langcode
+          entity_type: media
+          entity_field: langcode
+          plugin_id: field
+          label: ''
+        status:
+          id: status
+          table: media_field_data
+          field: status
+          entity_type: media
+          entity_field: status
+          plugin_id: field
+          label: ''
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          entity_type: media
+          entity_field: name
+          plugin_id: field
+          label: ''
+        created:
+          id: created
+          table: media_field_data
+          field: created
+          entity_type: media
+          entity_field: created
+          plugin_id: field
+          label: ''
+        changed:
+          id: changed
+          table: media_field_data
+          field: changed
+          entity_type: media
+          entity_field: changed
+          plugin_id: field
+          label: ''
+        field_media_document:
+          id: field_media_document
+          table: media__field_media_document
+          field: field_media_document
+          plugin_id: field
+          label: ''
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_media_image:
+          id: field_media_image
+          table: media__field_media_image
+          field: field_media_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_media_image_alt:
+          id: field_media_image_alt
+          table: media__field_media_image
+          field: field_media_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_media_image_alt__alt }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          click_sort_column: alt
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: alt
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_media_svg:
+          id: field_media_svg
+          table: media__field_media_svg
+          field: field_media_svg
+          plugin_id: field
+          label: ''
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_media_tags:
+          id: field_csgov_media_tags
+          table: media__field_csgov_media_tags
+          field: field_csgov_media_tags
+          plugin_id: field
+          label: ''
+          click_sort_column: target_id
+          type: entity_reference_entity_uuid
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_csgov_document_pages:
+          id: field_csgov_document_pages
+          table: media__field_csgov_document_pages
+          field: field_csgov_document_pages
+          plugin_id: field
+          label: ''
+          click_sort_column: value
+          type: number_integer
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: none
+      cache:
+        type: none
+      arguments:
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          entity_type: media
+          entity_field: bundle
+          plugin_id: string
+          default_action: default
+          default_argument_type: raw
+          default_argument_options:
+            index: 3
+          summary_options:
+            base_path: ''
+            count: true
+          specify_validation: false
+          validate:
+            type: none
+      relationships: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+      tags:
+        - 'config:field.storage.media.field_csgov_document_pages'
+        - 'config:field.storage.media.field_csgov_media_tags'
+        - 'config:field.storage.media.field_media_document'
+        - 'config:field.storage.media.field_media_image'
+        - 'config:field.storage.media.field_media_svg'
+  rest_export_1:
+    id: rest_export_1
+    display_title: 'REST export'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      pager:
+        type: none
+      row:
+        type: data_field
+        options:
+          field_options:
+            uuid:
+              alias: ''
+              raw_output: true
+            langcode:
+              alias: ''
+              raw_output: true
+            status:
+              alias: ''
+              raw_output: true
+            name:
+              alias: ''
+              raw_output: true
+            created:
+              alias: ''
+              raw_output: true
+            changed:
+              alias: ''
+              raw_output: true
+            field_media_document:
+              alias: ''
+              raw_output: false
+            field_media_image:
+              alias: ''
+              raw_output: false
+            field_media_image_alt:
+              alias: ''
+              raw_output: false
+            field_media_svg:
+              alias: ''
+              raw_output: false
+            field_csgov_media_tags:
+              alias: ''
+              raw_output: false
+            field_csgov_document_pages:
+              alias: ''
+              raw_output: false
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+        simple_sitemap_display_extender: {  }
+      path: csgov-guides/export/media/%bundle
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+      tags:
+        - 'config:field.storage.media.field_csgov_document_pages'
+        - 'config:field.storage.media.field_csgov_media_tags'
+        - 'config:field.storage.media.field_media_document'
+        - 'config:field.storage.media.field_media_image'
+        - 'config:field.storage.media.field_media_svg'
