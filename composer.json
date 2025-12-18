@@ -43,7 +43,7 @@
     "drupal/gin_lb": "^3.0",
     "drupal/gin_login": "^2.1",
     "drupal/gin_toolbar": "^3.0",
-    "drupal/gov_cz": "4.1",
+    "drupal/gov_cz": "^4.1",
     "drupal/honeypot": "^2.2",
     "drupal/image_style_quality": "^1.7",
     "drupal/inline_entity_form": "^3.0@RC",
