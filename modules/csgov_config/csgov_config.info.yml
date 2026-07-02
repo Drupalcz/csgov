@@ -4,6 +4,7 @@ description: 'Adds various config for the platform'
 package: CSGOV
 core_version_requirement: ^11.2
 dependencies:
+  - drupal:node
   - antibot:antibot
   - config_rewrite:config_rewrite
   - responsive_preview:responsive_preview

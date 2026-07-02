@@ -1,5 +1,5 @@
 name: 'CSGOV'
-version: 2.7.1
+version: 2.7.2
 core_version_requirement: ^11.2
 type: profile
 description: 'A feature-rich Drupal 10 distribution for Czech and Slovak eGovernment sites.'
@@ -97,6 +97,7 @@ dependencies:
   - redirect_404
   - responsive_image
   - responsive_preview
+  - responsive_preview_navigation
   - scheduler
   - schema_article
   - schema_event
