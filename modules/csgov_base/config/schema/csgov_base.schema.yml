@@ -1,0 +1,10 @@
+block.settings.csgov_theme_switch:
+  type: block_settings
+  label: 'Theme switch block settings'
+  mapping:
+    switch_size:
+      type: string
+      label: 'Switch size'
+    switch_label_visible:
+      type: boolean
+      label: 'Show the mode label'
