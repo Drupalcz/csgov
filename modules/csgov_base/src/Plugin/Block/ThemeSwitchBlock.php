@@ -25,7 +25,7 @@ class ThemeSwitchBlock extends BlockBase {
    */
   public function defaultConfiguration(): array {
     return [
-      'switch_size' => 's',
+      'switch_size' => 'm',
       'switch_label_visible' => FALSE,
     ] + parent::defaultConfiguration();
   }
