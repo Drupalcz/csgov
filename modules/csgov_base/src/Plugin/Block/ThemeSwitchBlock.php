@@ -66,12 +66,19 @@ class ThemeSwitchBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build(): array {
+    // The SDC lives in the active theme's namespace so that starterkit
+    // derivatives of csgov_theme (which carry their own copy of the
+    // component) keep working.
+    $theme = \Drupal::theme()->getActiveTheme()->getName();
     return [
       '#type' => 'component',
-      '#component' => 'csgov_theme:theme-switch',
+      '#component' => $theme . ':theme-switch',
       '#props' => [
         'switch_size' => $this->configuration['switch_size'],
         'switch_label_visible' => (bool) $this->configuration['switch_label_visible'],
+      ],
+      '#cache' => [
+        'contexts' => ['theme'],
       ],
     ];
   }
